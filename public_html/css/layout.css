@@ -1,0 +1,789 @@
+@charset "utf-8";
+
+/*this css contains everything doing with bg images & layout*/
+
+/*id for DIV which will contain all the site content */
+body {
+	background-image: none;
+	background-color: white;
+	background-repeat: no-repeat;
+	padding:0px;
+	background-position: center top;
+}
+
+#Main_content_Holder {
+	height: auto;
+	width: 935px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	top: auto;
+}
+#Main_copyright_Holder {
+  height: 10px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+}
+
+#Travelweek_Holder {
+  height: 40px;
+  width: 144px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 18px;
+
+}
+
+#login_image_holder {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	left: 0px;
+	width: 935px;
+	height: 500px;
+}
+
+
+#rotating_image_holder {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	padding-top: 0px;
+	left: 0px;
+	width: 620px;
+	float:left;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #003399;
+	border-right:none;
+	height: 440px;
+}
+
+#agent_login_holder {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	padding-top: 0px;
+	left: 0px;
+	width: 310px;
+	float:left;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #003399;
+	border-right-color: #003399;
+}
+
+#Login_Logo_Holder {
+	height: 150px;
+	width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+#supplier_login_holder {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	padding-top: 0px;
+	left: 0px;
+	width: 310px;
+	float:left;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: solid;
+	border-top-color: #003399;
+	border-right-color: #003399;
+	border-bottom-style: solid;
+	border-bottom-color: #003399;
+/*	height: 289px;  */
+	text-align:center;
+}
+
+
+#Login_Holder {
+  height: 262px;
+  width: 598px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/main_login_Bg_image.png);
+  background-repeat: no-repeat;
+
+}
+#Suppier_Login_Holder {
+	height: 345px;
+	width: 602px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: none;
+	background-repeat: no-repeat;
+	padding-top: 60px;
+	border: thin solid #000000;
+}
+#Disclaimer_Holder {
+  height: 15px;
+  width: 100%;
+  display: block;
+  float: left;
+}
+#Logo_Menu_Holder {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	width: 915px;
+	height: 118px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+#Logo_Holder {
+	width: 350px;
+	height: 118px;
+	float:left;
+	}
+#Login_Travel_Agents {
+  height: 99px;
+  width: 297px;
+  display: block;
+  float: left;
+  margin-left: 5px;
+  background-image: url(../img/bg_images/travel_Agents_bg_login_Screen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+#Login_Suppliers_Agents {
+  height: 99px;
+  width: 294px;
+  display: block;
+  float: left;
+  background-image: url(../img/bg_images/travel_Agents_bg_login_Screen.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 60px;
+  margin-bottom: 75px;
+}
+#Account_Login_Text {
+  height: 56px;
+  width: 244px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#Password_Form_Holder {
+  height: 37px;
+  width: 383px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/password_form_box_bg.png);
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+#Submit_Button_Holder {
+  height: 69px;
+  width: 178px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+#Register_Content_Holder {
+  height: 38px;
+  width: 592px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/register_content_bg.png);
+  background-repeat: no-repeat;
+  padding-top: 12px;
+}
+/*
+#Submit_btn {
+	width: 177px;
+	height: 69px;
+	background-image: url(../img/assets/btn_files/Submit_Btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+#Submit_btn:hover{
+	background-position: bottom left;
+
+}
+*/
+/*JAY BUTTON SECTION*/
+
+
+#Submit_btn {
+	background:transparent url(../img/assets/btn_files/Submit_Btn.png) no-repeat scroll left top;
+	border:0 none;
+	cursor: Pointer;
+	width: 177px;
+	height: 70px;
+	margin:0;
+	padding:0;
+	text-indent:-1000em;
+	vertical-align:middle;
+	text-decoration: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+#Submit_btn:hover {
+  background:transparent url(../img/assets/btn_files/Submit_Btn.png) no-repeat scroll left bottom;
+  border:0 none;
+  cursor: Pointer;
+  width: 177px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#Submit_Order_btn {
+  background:transparent url(../img/assets/btn_files/submit-order.png) no-repeat scroll left top;
+  border:0 none;
+  cursor: Pointer;
+  width: 250px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#Submit_Order_btn:hover {
+  background:transparent url(../img/assets/btn_files/submit-order.png) no-repeat scroll left bottom;
+  border:0 none;
+  cursor: Pointer;
+  width: 177px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#Confirm_Order_btn {
+  background:transparent url(../img/assets/btn_files/confirm-order_btn.png) no-repeat scroll left top;
+  border:0 none;
+  cursor: Pointer;
+  width: 250px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#Confirm_Order_btn:hover {
+  background:transparent url(../img/assets/btn_files/confirm-order_btn.png) no-repeat scroll left bottom;
+  border:0 none;
+  cursor: Pointer;
+  width: 250px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#Submit_btn_profile {
+  background:transparent url(../img/assets/btn_files/Submit_Btn.png) no-repeat scroll left top;
+  border:0 none;
+  cursor: Pointer;
+  width: 177px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+#Submit_btn_profile:hover {
+  background:transparent url(../img/assets/btn_files/Submit_Btn.png) no-repeat scroll left bottom;
+  border:0 none;
+  cursor: Pointer;
+  width: 177px;
+  height: 69px;
+  margin:0;
+  padding:0;
+  text-indent:-1000em;
+  vertical-align:middle;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+/*END OF JAY SUBMIT BUTTON SECTION*/
+
+#Agents_btn {
+  width: 261px;
+  height: 99px;
+  background-image: url(../img/assets/btn_files/Travel_Agents_btn.png);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Agents_btn:hover{
+  background-position: bottom left;
+
+}
+#Suppliers_btn {
+  width: 261px;
+  height: 99px;
+  background-image: url(../img/assets/btn_files/Suppliers_btn.png);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Suppliers_btn:hover{
+  background-position: bottom left;
+
+}
+
+
+
+
+/*05.26.09 vaughn new css items*/
+
+
+
+#Forgotpassword_Holder {
+  height: 368px;
+  width: 598px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/forgotpassword_bg_inset.png);
+  background-repeat: no-repeat;
+}
+#contactus_Holder {
+  height: 532px;
+  width: 594px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/contact_us_bg_inset.png);
+  background-repeat: no-repeat;
+}
+#forgotpasword_header_txt {
+  height: 96px;
+  width: 590px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#user_register_header_txt {
+  height: 96px;
+  width: 590px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+#blank_form_holder_bg {
+  height: 38px;
+  width: 257px;
+  display: block;
+  float: left;
+  background-image: url(../img/bg_images/blank_form_bg_holder.png);
+}
+.form_content_field_left {
+  height: 60px;
+  width: 260px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.form_content_field_left1 {
+  height: 60px;
+  width: 260px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.form_content_field_left2 {
+  height: 60px;
+  width: 260px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-right: 15px;
+}
+.form_content_field_left5 {
+  display: block;
+  float: left;
+  margin-left: 65px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.form_content_field_full {
+  height: 60px;
+  width: 100%;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+#edit_content_holder {
+  height: 335px;
+  width: 90%;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-left: 10px;
+  background-image: url(../img/bg_images/edit_content_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#form_content_field_right {
+  height: 60px;
+  width: 257px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.User_Name_Form_Holder {
+  height: 23px;
+  width: 250px;
+}
+
+#User_Name_Form_Holder2 {
+  height: 23px;
+  width: 250px;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+#blank_form_holder_comments {
+  height: 159px;
+  width: 552px;
+  display: block;
+  float: left;
+  background-image: url(../img/bg_images/blank_form_bg_holder_comments.png);
+}
+
+.blank_form_holder_bg2 {
+  height: 38px;
+  width: 257px;
+  display: block;
+  float: left;
+  /*
+	background-image: url(../img/bg_images/blank_form_bg_holder2.png);
+	background-position: left;
+	background-repeat: no-repeat;
+  */
+  border: solid 1px #b9b9b9;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color:#E4E4E4;
+}
+
+.blank_form_holder_bg5 {
+  height: 16px;
+  width: 175px;
+  display: block;
+  float: left;
+  /*
+	background-image: url(../img/bg_images/blank_form_bg_holder2.png);
+	background-position: left;
+	background-repeat: no-repeat;
+  */
+  border: solid 1px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color:#FFF;
+}
+
+/*05.28.09*/
+#blank_form_holder_privacy {
+  height: 416px;
+  width: 552px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/Privacy_bg_tile.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#form_content_discription_left {
+  width: 260px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+#blank_form_holder_bg3 {
+  height: 108px;
+  width: 255px;
+  display: block;
+  float: left;
+  background-image: url(../img/bg_images/blank_form_bg_holder3.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.blank_form_holder_bg9 {
+  min-height: 108px;
+  display: block;
+  float: left;
+  border: solid 1px #b9b9b9;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color:#E4E4E4;
+}
+
+#form_content_file_left {
+  height: 65px;
+  width: 450px;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+#registration_Holder {
+  height: 427px;
+  width: 594px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../img/bg_images/registration_content_bg.png);
+  background-repeat: no-repeat;
+}
+#profile_submit_Holder {
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 0px;
+}
+#confirm_order_Holder {
+height:125px
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 20px;
+}
+#profile_submit_Holder2 {
+  height: 125px;
+  width: 95%;
+  display: block;
+  float: left;
+  margin-top: 50px;
+}
+
+ul.form_radio_btns {
+  list-style: none;
+  display:block;
+  clear:both;
+  float:left;
+}
+
+ul.form_radio_btns li{
+  display:block;
+  margin-bottom: 10px;
+}
+
+ul.form_radio_btns li input {
+  height: 15px;
+  width:10px;
+}
+
+ul.form_radio_btns li label {
+  height: 15px;
+}
+
+
+.popup form {
+  margin-left: auto;
+  margin-right:auto;
+  font-size: 1.1em;
+}
+
+.popup fieldset {
+  float: left;
+  clear: left;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #B7B7B7;
+  margin-bottom: 20px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.popup legend {
+  margin-left: 1em;
+  color: #000000;
+  font-weight: bold;
+}
+
+.popup fieldset ol{
+  padding: 1em 1em 0 1em;
+  list-style: none;
+
+}
+.popup fieldset li{
+  float: left;
+  clear: left;
+  width: 100%;
+  padding-bottom: 1em;
+
+}
+
+.popup fieldset.submit {
+  float: none;
+  width: auto;
+  border: 0 none #FFF;
+  padding-left: 16em;
+}
+
+.popup label {
+  float: left;
+  width: 8em;
+  margin-right: 1em;
+
+}
+
+.popup input {
+  padding:0px;
+}
+
+.popup #agent-ajax-result {
+  display:block;
+  float:left;
+  clear:both;
+}
+
+.tools {
+  float:right;
+  margin:10px;
+
+}
+
+.tools2 {
+   margin:10px;
+
+}
+
+textarea#BrochureDescription {
+  min-height:100px;
+  min-width: 250px;
+}
+
+#edit_brochure_info_right {
+  width: 300px;
+  height: 185px;
+  float: right;
+  margin-top: 30px;
+
+}
+
+.button {
+	background-image: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(243,243,243,1) 100%);
+	background-image:    -moz-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(243,243,243,1) 100%);
+	background-image:     -ms-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(243,243,243,1) 100%);
+	background-image:      -o-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(243,243,243,1) 100%);
+	background-image:         linear-gradient(top, rgba(252,252,252,1) 0%,rgba(243,243,243,1) 100%);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(255,255,255,1)inset, 0px -16px 0px 0px rgba(237,237,237,1)inset;
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(255,255,255,1)inset, 0px -16px 0px 0px rgba(237,237,237,1)inset;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(255,255,255,1)inset, 0px -16px 0px 0px rgba(237,237,237,1)inset;
+	border: solid 1px #5E5E5E;
+	border-color: #5E5E5E #888888 #696969 #888888;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 0px 10px 0px 10px;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 22px;
+	color: #0000CC;
+	text-decoration: none;
+}
+.button:hover {
+}
+.button:active {
+   background-image: -webkit-linear-gradient(top, rgba(167,199,225,1) 0%,rgba(124,176,222,1) 100%);
+   background-image:    -moz-linear-gradient(top, rgba(167,199,225,1) 0%,rgba(124,176,222,1) 100%);
+   background-image:     -ms-linear-gradient(top, rgba(167,199,225,1) 0%,rgba(124,176,222,1) 100%);
+   background-image:      -o-linear-gradient(top, rgba(167,199,225,1) 0%,rgba(124,176,222,1) 100%);
+   background-image:         linear-gradient(top, rgba(167,199,225,1) 0%,rgba(124,176,222,1) 100%);
+   -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(182,226,244,1)inset, 0px -16px 0px 0px rgba(99,165,219,1)inset;
+      -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(182,226,244,1)inset, 0px -16px 0px 0px rgba(99,165,219,1)inset;
+           box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.15), 0px -2px 3px 0px rgba(182,226,244,1)inset, 0px -16px 0px 0px rgba(99,165,219,1)inset;
+   border: solid 1px #323D9F;
+   border-color: #323D9F #3365B4 #3365B4 #3365B4;
+}

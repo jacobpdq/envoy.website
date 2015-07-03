@@ -1,0 +1,265 @@
+.clearfix:after,
+.index:after,
+dl:after,
+#Main_body_content_admin_body:after
+{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+#admin{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#admin .inner-content-wrapper {
+  margin: 10px 0 10px 0;
+  padding:10px;
+  width:940px;
+}
+
+#Main_admin_logout_Holder {
+  height: 40px;
+  width: 100%;
+  display: block;
+  background-image: url(../img/bg_images/admin_header_loguttile.png);
+  background-repeat: repeat-x;
+}
+
+#admin .index {
+  float: left;
+}
+
+#admin h2 {
+  font-size: 1.6em;
+  margin-bottom: 1em;
+}
+
+#form-table {
+  width:925px;
+  margin-bottom: 15px;
+}
+
+#admin  table {
+  width:925px;
+  margin-bottom: 15px;
+}
+
+#admin tr {
+
+}
+
+
+#admin tr.rushorder {
+  background-color: #FFD1D1;
+}
+
+#admin tr:hover {
+  color: #ffffff;
+  background-color: #990000;
+}
+
+#admin tr:hover a{
+  color: #ffffff;
+}
+
+#admin th {
+  font-weight: bold;
+  padding:5px 2px 5px 2px;
+  text-align: center;
+  border-right:1px solid #b7b7b7;
+  border-top:1px solid #b7b7b7;
+  border-bottom:1px solid #b7b7b7;
+  text-align: center;
+
+}
+
+#admin th a {
+  text-decoration: none;
+  color: #000;
+
+}
+
+#admin td {
+  border-right:1px dotted #BBBBBB;
+  border-bottom:1px dotted #BBBBBB;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  padding:4px;
+}
+
+#admin td.blankrow {
+ border-right:1px dotted #BBBBBB;
+  border-bottom:0px dotted #BBBBBB;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  padding:4px;
+}
+
+#admin td.brochure_name {
+  text-align:left;
+}
+
+
+td.red {
+color: red;
+}
+
+#Welcome_inset_Header_admin,div.actions {
+  width: 916px;
+  height: 38px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg_images/site_welcome_inset.png);
+  float: left;
+  padding-top: 0px;
+  padding-left: 6px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+div.paging {
+  width: auto;
+  margin-left: 200px;
+}
+
+div.paging #paging_numbers {
+  float:left;
+  padding-top:12px;
+  margin: 0 10px 0 10px;
+}
+
+div.paging .current {
+  font-weight: bold;
+  color: red;
+}
+
+div.paging a {
+  text-decoration: none;
+  color: #000;
+}
+
+div.actions h3 {
+  float:left;
+  margin-left: 15px;
+}
+
+div.actions ul li {
+  float:left;
+  display: inline;
+  padding:10px;
+}
+
+form {
+  width: 850px;
+  margin-left: auto;
+  margin-right:auto;
+  font-size: 1.1em;
+}
+
+fieldset {
+  float: left;
+  clear: left;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #B7B7B7;
+  margin-bottom: 20px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+legend {
+  margin-left: 1em;
+  color: #000000;
+  font-weight: bold;
+}
+
+fieldset ol{
+  padding: 1em 1em 0 1em;
+  list-style: none;
+
+}
+fieldset li{
+  float: left;
+  clear: left;
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+fieldset li.deliverymode{
+  float: left;
+  clear: left;
+  width: 100%;
+  padding-bottom: 0em;
+}
+
+fieldset.submit {
+  float: none;
+  width: auto;
+  border: 0 none #FFF;
+  padding-left: 16em;
+}
+
+label {
+  float: left;
+  width: 12em;
+  margin-right: 3em;
+  padding:3px;
+
+}
+
+input {
+  padding:3px;
+  width: 32em;
+}
+
+input.smallinput {
+ width:30px;
+} 
+
+input.autoinput {
+ width:auto;
+}
+
+input.green {
+  padding:3px;
+  width: 32em;
+  color:darkgreen;
+}
+
+select.green {
+color:darkgreen;
+}
+
+dl {
+  width: 935px;
+  clear: both;
+  border-bottom:1px dotted #BBBBBB;
+}
+
+dt {
+  float: left;
+  width: 190px;
+  clear:left;
+  padding: 6px;
+  text-align: right;
+  padding-right: 10px;
+  border-right:1px dotted #BBBBBB;
+  border-left:1px dotted #BBBBBB;
+}
+
+dd {
+  float: left;
+  clear: right;
+  padding: 6px;
+  padding-left: 20px;
+  width: 675px;
+  border-right:1px dotted #BBBBBB;
+}
+
+.altrow {
+  background-color:#eeeded;
+}

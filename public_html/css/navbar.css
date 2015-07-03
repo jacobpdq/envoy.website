@@ -1,0 +1,711 @@
+@charset "utf-8";
+
+#Main_Navbar_Interface {
+	width: 935px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3c589f;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #3c589f;
+	border-bottom-color: #3c589f;
+	margin-bottom:10px;
+	padding-left:1px;
+	padding-right:1px;
+}
+
+#Welcome_holder {
+	width:auto;
+	height:30px;
+	padding-left:5px;
+/*	display:table-cell;
+	vertical-align: middle; */
+	float: left;
+	
+	margin-top:6px;
+}
+
+#Main_Navbar_Holder {
+    width:auto;
+	height:30px;
+	display:inline;
+	list-style:none;
+	float:right;
+	margin-top:6px;
+}
+
+#Main_Navbar_Holder li {
+	width: auto;
+	float: left;
+	height: 30px;
+	text-decoration: none;
+	display: block;
+	margin-right:10px;
+	margin-left:20px;
+	}
+	
+#Main_Navbar_Holder a {
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #94bd49;
+	}	
+	
+#Main_Navbar_Interface_admin {
+	width: 930px;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../img/bg_images/admin_main_navbar_bg.png);
+	background-repeat: no-repeat;
+	padding-right: 0px;
+}
+#logout_Interface_admin {
+	width: 935px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#logout_admin_btn {
+	width: 81px;
+	float: right;
+	height: 40px;
+	background-image: url(../img/assets/btn_files/logout_admin_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+
+#AboutUs {
+	width: 185px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/about_us_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#AboutUs:hover{
+	background-position: bottom left;
+}
+
+#Myprofile {
+	width: auto;
+	float: right;
+	height: 28px;
+	text-decoration: none;
+	display: block;
+	margin-right:10px;
+}
+#Myprofile:hover {
+	cursor: pointer;
+	background-position: left bottom;
+}
+#MyBrochures {
+	width: 195px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/My_Brochures_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#MyBrochures:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#agentBrochures {
+	width: 195px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/agent_brochure_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#agentBrochures:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Orders {
+	width: 180px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/My_Orders_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Orders:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#agentOrders {
+	width: 180px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/agent_orders_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#agentOrders:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Contact {
+	width: 205px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Contact_us_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Contact:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Home_btn {
+	width: 76px;
+	float: left;
+	height: 18px;
+	background-image: url(../img/assets/btn_files/Home_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Home_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Privacy_Policy_btn {
+	width: 115px;
+	float: left;
+	height: 18px;
+	background-image: url(../img/assets/btn_files/Privacy_Policy_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Privacy_Policy_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Terms_Conditions_btn {
+	width: 149px;
+	float: left;
+	height: 18px;
+	background-image: url(../img/assets/btn_files/Terms_Conditions_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Terms_Conditions_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#logout_btn {
+	width: 76px;
+	float: left;
+	height: 18px;
+	background-image: url(../img/assets/btn_files/logout_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#logout_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+
+}
+#View_online_catalog_btn {
+	width: 336px;
+	float: left;
+	height: 52px;
+	background-image: url(../img/assets/btn_files/View_online_catalog_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+
+#View_online_catalog_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#View_my_online_catalog_btn {
+	width: 336px;
+	float: left;
+	height: 52px;
+	background-image: url(../img/assets/btn_files/view_myonline_catalogs.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+
+#View_my_online_catalog_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#quick_order_btn {
+	width: 180px;
+	float: left;
+	height: 52px;
+	background-image: url(../img/assets/btn_files/quick_order_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	margin-top: 2px;
+	margin-right: 10px;
+}
+
+#quick_order_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+#place_order_btn {
+	width: 180px;
+	float: left;
+	height: 52px;
+	background-image: url(../img/assets/btn_files/place_order_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	margin-top: 2px;
+	margin-right: 10px;
+}
+
+#place_order_btn:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+#Search_GO_button {
+	width: 62px;
+	float: right;
+	height: 34px;
+	background-image: url(../img/assets/btn_files/Search_Go_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+
+#Search_GO_button:hover{
+	cursor: pointer;
+	background-position: bottom left;
+
+}
+
+#View_orders_btn {
+	width: 132px;
+	height: 28px;
+	float: right;
+	background-image: url(../img/assets/btn_files/View_All_Oders_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+#View_orders_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Add_a_brochure_btn {
+	width: 132px;
+	height: 28px;
+	float: right;
+	background-image: url(../img/assets/btn_files/Add_a_brochure_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 7px;
+	margin-right: 4px;
+}
+#Add_a_brochure_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#sort_by_btn {
+	width: 88px;
+	height: 28px;
+	float: right;
+	background-image: url(../img/assets/btn_files/sort_by.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+#Add_a_supplier_btn {
+	width: 132px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Add_a_supplier_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#Add_a_supplier_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Add_a_agent_btn {
+	width: 132px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Add_a_agent_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#Add_a_agent_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Add_Brochure_admin_btn {
+	width: 141px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Add_Brochure_admin_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#Add_Brochure_admin_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#sup_waiting_users_btn {
+	width: 141px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/sup_waiting_users_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#sup_waiting_users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#sup_login_users_btn {
+	width: 188px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/sup_login_users_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#sup_login_users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Suspended_users_btn {
+	width: 132px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Suspended_users_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#Suspended_users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Active_users_btn {
+	width: 106px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Active_users_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#Active_users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#All_users_btn {
+	width: 93px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/All_users_btn.png);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+#All_users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Add_a_brochure_btn2 {
+	width: 180px;
+	height: 52px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Add_a_brochure_btn2.png);
+	background-repeat: no-repeat;
+	margin-top: 2px;
+	margin-right: 6px;
+}
+#Add_a_brochure_btn2:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+
+#Process_order_btn {
+	background:transparent url(../img/assets/btn_files/Process_Orders_Btn.png) no-repeat scroll left top;
+	border:0 none;
+	cursor: Pointer;
+	width: 132px;
+	height: 28px;
+	margin:0;
+	padding:0;
+	float: left;
+	text-indent:-1000em;
+	vertical-align:middle;
+	text-decoration: none;
+	display: block;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+#Process_order_btn:hover {
+	background:transparent url(../img/assets/btn_files/Process_Orders_Btn.png) no-repeat scroll left bottom;
+	border:0 none;
+	cursor: Pointer;
+	width: 132px;
+	height: 28px;
+	margin:0;
+	float: left;
+	padding:0;
+	text-indent:-1000em;
+	vertical-align:middle;
+	text-decoration: none;
+	display: block;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+
+
+#update_order_btn {
+	background:transparent url(../img/assets/btn_files/Update_Order.png) no-repeat scroll left top;
+	border:0 none;
+	cursor: Pointer;
+	width: 132px;
+	height: 28px;
+	margin:0;
+	padding:0;
+	float: left;
+	text-indent:-1000em;
+	vertical-align:middle;
+	text-decoration: none;
+	display: block;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+#update_order_btn:hover {
+	background:transparent url(../img/assets/btn_files/Update_Order.png) no-repeat scroll left bottom;
+	border:0 none;
+	cursor: Pointer;
+	width: 132px;
+	height: 28px;
+	margin:0;
+	float: left;
+	padding:0;
+	text-indent:-1000em;
+	vertical-align:middle;
+	text-decoration: none;
+	display: block;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+#continue_viewing_btn {
+	width: 132px;
+	height: 28px;
+	float: left;
+	background-image: url(../img/assets/btn_files/Continue_Viewing_Btn.png);
+	background-repeat: no-repeat;
+	margin-top: 7px;
+	margin-right: 6px;
+}
+#continue_viewing_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+
+/* JAY DARKEN SCREEN*/
+.darkenBackground {
+background-color: rgb(255, 255, 255);
+opacity: 0.85; /* Safari, Opera */
+-moz-opacity:0.85; /* FireFox */
+filter: alpha(opacity=85); /* IE */
+height: 100%;
+width: 100%;
+background-repeat:repeat;
+position:fixed;
+top: 0px;
+left: 0px;
+}
+/* END OF JAY"S DARKEN SCREEN */
+
+
+/* 005.28.09 */
+#paginate_btn {
+	width: 120px;
+	height: 30px;
+	float: left;
+	background-image: url(../img/bg_images/pagnate_g_image.png);
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-left: 10px;
+	padding-top: 8px;
+}
+/* 005.29.09 ADMIN BTN STUFF FOR THE ADMIN SECTIONS*/
+#admin_suppliers_btn {
+	width: 154px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_suppliers_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_suppliers_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#admin_agents_btn {
+	width: 155px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_agents_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_agents_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#admin_brochures_btn {
+	width: 154px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_brochures_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_brochures_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#admin_orders_btn {
+	width: 154px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_orders_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_orders_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#admin_invoices_btn {
+	width: 155px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_invoices_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_invoices_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+#admin_shipping_btn {
+	width: 154px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/admin_shipping_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#admin_shipping_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+#Manage_Users_btn {
+	width: 185px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Manage_Users_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Manage_Users_btn:hover{
+	cursor: pointer;
+	background-position: bottom left;
+}
+
+#Products {
+	width: 170px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Products_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Products:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Manage_Orders {
+	width: 195px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Manage_Orders_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Manage_Orders:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Invoices {
+	width: 180px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Invoices_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Invoices:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
+#Shipping {
+	width: 205px;
+	float: left;
+	height: 70px;
+	background-image: url(../img/assets/btn_files/Shipping_btn.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+}
+#Shipping:hover {
+	cursor: pointer;
+	background-position: bottom left;
+}
