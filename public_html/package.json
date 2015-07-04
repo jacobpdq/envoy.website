@@ -14,7 +14,7 @@
     "img": "npm run img:minify",
     "img:minify": "imagemin-newer src/images dist/img",
 
-    "sass": "node-sass -rwq src/sass/style.scss style.css",
+    "sass": "node-sass -rwq src/sass/style.scss dist/css/style.css",
 
     "prejs": "make clean...js",
     "js": "cp src/js/main.js dist/js/main.js",
