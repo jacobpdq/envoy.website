@@ -1,0 +1,31 @@
+{
+  "name": "base",
+  "devDependencies": {
+    "node-sass": "latest",
+    "livereload": "latest",
+    "jshint": "latest",
+    "uglify": "latest",
+    "imagemin-newer": "latest",
+    "watch": "latest"
+  },
+  "scripts": {
+
+    "preimg": "make clean...img",
+    "img": "npm run img:minify",
+    "img:minify": "imagemin-newer src/images dist/img",
+
+    "sass": "node-sass -rwq src/sass/style.scss style.css",
+
+    "prejs": "make clean...js",
+    "js": "cp src/js/main.js dist/js/main.js",
+
+  	"livereload": "livereload .",
+
+    "predev": "make clean && make scaffold",
+  	"dev": "npm run sass & npm run js & npm run livereload -s ",
+    "postdev": "npm run watch:img & npm run watch:js",
+
+    "watch:img": "watch 'npm run img' src/images",
+    "watch:js": "watch 'npm run js' src/js"
+  }
+}
