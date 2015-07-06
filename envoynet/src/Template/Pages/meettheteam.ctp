@@ -1,13 +1,11 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('About Us'));?>
+<?php $this->set('title_for_layout', __('Meet the Team'));?>
 
 <div class="article-content">
 
 
 <p>
-<a id="article-header">Meet the Team</a>
-<br />
 
 <div id="article-column">
 <strong>Glen Harwood</strong><br />

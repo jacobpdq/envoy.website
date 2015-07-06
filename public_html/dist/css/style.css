@@ -160,7 +160,8 @@ p {
 
 section.alltext {
   max-width: 850px;
-  padding-left: 100px; }
+  padding-left: 100px;
+  padding-bottom: 10vh; }
   section.alltext p {
     max-width: 700px; }
 

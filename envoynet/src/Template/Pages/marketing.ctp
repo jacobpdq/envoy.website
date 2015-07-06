@@ -1,4 +1,9 @@
 <div class="inner-content-wrapper">
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('h1').hide();
+	})
+</script>
 
 <section class="alltext">
 <h2 class="tagline">Complete and integrated solutions - giving you a powerful edge in today's market.

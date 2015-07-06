@@ -1,4 +1,9 @@
 <div class="inner-content-wrapper">
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('h1').hide();
+	})
+</script>
 
 <?php // $this->set('title_for_layout', __('Services'));?>
 
