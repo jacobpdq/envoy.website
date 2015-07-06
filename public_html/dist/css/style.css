@@ -680,10 +680,10 @@ h1 {
   color: #707A7E !important; }
 
 h4 {
-  font-size: 3.0rem;
-  color: #3C568F;
-  font-weight: bolder;
-  text-transform: uppercase; }
+  font-size: 3.0rem !important;
+  color: #3C568F !important;
+  font-weight: bolder !important;
+  text-transform: uppercase !important; }
 
 h6 {
   font-size: 1.5rem !important;
