@@ -93,12 +93,11 @@
       height: 65px;
       width: 35%;
       float: left;
-      margin-left: 0;
-      text-align: center;
-      }
+      margin-left: 20px;
+      text-align: center; }
     .tabs__content input[type="password"] {
       height: 65px;
-      width: 40%;
+      width: 33%;
       text-align: center;
       position: relative;
       z-index: 2;
@@ -121,9 +120,9 @@
       text-transform: uppercase;
       display: inline-block;
       height: 65px !important;
-      width: 70px;
+      width: 100px;
       position: absolute;
-      line-height: 40px;
+      line-height: 20px;
       right: 30px;
       z-index: 1000;
       padding-right: 69px; }

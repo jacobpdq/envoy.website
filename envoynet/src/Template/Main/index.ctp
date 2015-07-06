@@ -83,20 +83,29 @@
 
 
           <button class="button" type="submit">Login</button>
-    <?php echo $this->Form->end(); ?>
+          <?php echo $this->Form->end(); ?>
+
                        </div> 
                    </div>
                     
                     <div class="tabs__tabItem">
+                    
                        <input type="radio" id="tab-3" name="tab-group-1">
                        <label for="tab-3">SUPPLIER</label>
                      
                        <div class="tabs__content">
-                           <form>
-                            <input placeholder="Username" type="text" name="username">
-                            <input placeholder="Password"id="password" type="password" name="password">
-                            <input type="submit" value="Login">
-                          </form>
+
+
+                        <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'Form_holder_style5', 'placeholder'=>"Username")) ?>
+
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'class'=>'Form_holder_style5', 'placeholder'=>"Password")) ?>
+
+                        <button class="button" type="submit">Login</button>
+
+                         <?php echo $this->Form->end(); ?>
+
                        </div> 
                    </div>
                     
