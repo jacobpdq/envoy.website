@@ -1112,7 +1112,9 @@ section.overview {
 }
 
 
-
+p + h2 {
+  margin-top:12vh;
+}
 
 h1 {
     font-size: 3rem !important;
@@ -1121,6 +1123,21 @@ h1 {
     text-transform: uppercase !important;
     /* margin-left: 90px; */
     color: #707A7E !important
+}
+h4 {
+  font-size: 3.0rem;
+    color: #3C568F;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+h6 {
+    font-size: 1.5rem !important;
+    font-weight: bolder !important;
+    letter-spacing: 0px !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px solid #ddd !important;
+    display: inline-block !important;
+    color: #555 !important
 }
 
 
