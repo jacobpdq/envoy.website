@@ -1,7 +1,5 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('Services'));?>
-
 <section class="alltext">
 
 <h2 class="tagline">Custom collateral, a fleet of vehicles, and secure storage.</h2>

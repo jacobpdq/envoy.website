@@ -1,7 +1,5 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('About Us'));?>
-
 <section class="alltext">
 
 <h2 class="tagline">Envoy is a distribution and fulfillment company that specializes in providing the travel industry with custom marketing solutions.
