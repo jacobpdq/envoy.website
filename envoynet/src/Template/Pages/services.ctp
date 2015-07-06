@@ -1,5 +1,9 @@
 <div class="inner-content-wrapper">
-
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('h1').hide();
+	})
+</script>
 <section class="alltext">
 
 <h2 class="tagline">Custom collateral, a fleet of vehicles, and secure storage.</h2>
