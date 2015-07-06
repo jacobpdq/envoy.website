@@ -1045,7 +1045,6 @@ FONTS
         FIRST SECTION
         *************/
   #first-section {
-    height: 100%;
     background-color: white; }
   #first-paragraph-container {
     width: 50%; }
@@ -1062,7 +1061,6 @@ FONTS
         SECOND SECTION
         *************/
   #second-section {
-    height: 100%;
     width: 100%;
     background-color: #3c5791;
     margin-top: -20px; }
@@ -1126,7 +1124,6 @@ FONTS
     border-radius: 100%;
     text-align: center;
     width: 100%;
-    height: 100%;
     float: right;
     padding-top: 36%; }
   #logistics {
