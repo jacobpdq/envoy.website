@@ -12,9 +12,9 @@
     display: none; } }
 
 .button {
+  border-radius: 3px;
   border: 0px;
-  font-size: 1.8rem;
-  padding: 10px 20px !important;
+  padding: 20px !important;
   letter-spacing: 1px;
   height: auto; }
   .button a {
@@ -34,15 +34,14 @@
 @media (min-width: 400px) and (max-width: 959px) {
   .button {
     border: 0px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 10px 10px;
     letter-spacing: 1px; } }
 
 @media (min-width: 959px) {
   .button {
     border: 0px;
-    font-size: 1.8rem;
-    padding: 10px 10px;
+    font-size: 1.5rem;
     letter-spacing: 1px; } }
 
 .tabs {
@@ -52,17 +51,18 @@
   clear: both;
   margin: 0px 0px 0px 0px;
   max-width: 50%;
+  width: 50%;
   float: right; }
   .tabs__tabItem {
     float: left; }
     .tabs__tabItem label {
       background: #e8e9e7;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       padding-left: 50px;
       padding-right: 50px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 5px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
       margin-left: -1px;
       position: relative;
       left: 1px;
@@ -85,11 +85,11 @@
     margin-left: 5px; }
     .tabs__content input[type="text"] {
       height: 55px;
-      width: 70%;
+      width: 30%;
       float: left; }
     .tabs__content input[type="password"] {
       height: 55px;
-      width: 70%;
+      width: 30%;
       float: left; }
     .tabs__content #password {
       clear: left; }
@@ -274,14 +274,13 @@ SECOND SECTION
   html, body {
     height: 100%; }
   #wrapper {
-    display: flex;
     min-height: 100%; }
   input[type=checkbox] {
     position: fixed;
     opacity: 0; }
-  label {
+  label[for="toggle"] {
     position: fixed;
-    top: 10px;
+    top: 45px;
     right: 40px;
     z-index: 1;
     display: block;
@@ -311,6 +310,8 @@ SECOND SECTION
     top: 0;
     height: 100%;
     transition: all 0.4s; }
+    #main-header .menu ul {
+      list-style: none; }
   .slide-menu h1 {
     margin: 10px; }
   .menu {
@@ -323,10 +324,15 @@ SECOND SECTION
     color: #fff;
     width: 100%;
     font-size: 1.1em;
-    padding: 15px;
-    background: #3c5791; }
+    padding: 10px;
+    background: #3c5791;
+    text-transform: uppercase; }
+  .menu ul ul {
+    font-size: 90%;
+    list-style: square !important;
+    color: white; }
   .menu a:hover {
-    background: #8bc64b; }
+    color: #8bc64b; }
   /******************
         END CHECK BOX HACK CSS
         ************************/ }
@@ -339,7 +345,7 @@ SECOND SECTION
   .section__content {
     width: 1080px; }
   header#main-header #logo {
-    padding: 40px 0;
+    padding: 40px 0 10px 0;
     min-width: 260px;
     max-width: 260px;
     margin-top: -5px; }
@@ -437,13 +443,13 @@ SECOND SECTION
       display: none; }
     #masthead h2 {
       display: inline-block;
-      margin: 0 auto 5% auto;
-      padding-left: 3%;
+      margin: 0 auto 4vh auto;
       font-size: 3.5rem;
       text-align: center;
       max-width: 463px;
       color: #3c5791;
-      font-weight: 500; }
+      font-weight: 600;
+      letter-spacing: 0.5px; }
   /************
         SECOND SECTION
         *************/

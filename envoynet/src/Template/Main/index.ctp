@@ -82,12 +82,8 @@
                        </div>  -->
                        <div class="tabs__content">
                            <form>
-                            <br>
                             <input placeholder="Username" type="text" name="username">
-                            <br>
-                            <br>
                             <input placeholder="Password"id="password" type="password" name="password">
-                            <br>
                             <input type="submit" value="Login">
                           </form>
                        </div> 
@@ -99,12 +95,8 @@
                      
                        <div class="tabs__content">
                            <form>
-                            <br>
                             <input placeholder="Username" type="text" name="username">
-                            <br>
-                            <br>
                             <input placeholder="Password"id="password" type="password" name="password">
-                            <br>
                             <input type="submit" value="Login">
                           </form>
                        </div> 
