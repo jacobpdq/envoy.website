@@ -341,7 +341,8 @@ SECOND SECTION
     width: 1080px; }
   header#main-header #logo {
     padding: 40px 0;
-    min-width: 260px; }
+    min-width: 260px;
+    max-width: 260px; }
   /***********
     HEADER
   ***********/
@@ -415,7 +416,7 @@ SECOND SECTION
     background-color: #3c5791;
     padding-top: 5%;
     margin-top: -40px;
-    background-image: url(../img/mastheadBgVans.png), url(../img/mastheadBgWarehouse.jpg);
+    background-image: url(img/assets/mastheadBgVans.png), url(img/assets/mastheadBgWarehouse.jpg);
     background-size: contain, cover;
     background-position: 120% center, center center;
     background-repeat: no-repeat, no-repeat; }
@@ -447,7 +448,7 @@ SECOND SECTION
     text-align: center;
     margin-bottom: -10px;
     font-weight: 400; }
-  section.overview img[src="dist/img/mastheadBgVans.png"] {
+  section.overview img[src="img/assets/mastheadBgVans.png"] {
     display: none; }
   #service-button {
     width: 30%;

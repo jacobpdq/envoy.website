@@ -605,6 +605,7 @@ header#main-header {
   & #logo {
     padding:40px 0;
     min-width:260px;
+    max-width:260px;
   }
 }
 
@@ -756,7 +757,7 @@ header#main-header {
                 background-color:$blue;
                 padding-top:5%;
                 margin-top: -40px;
-                background-image: url(../img/mastheadBgVans.png), url(../img/mastheadBgWarehouse.jpg);
+                background-image: url(img/assets/mastheadBgVans.png), url(img/assets/mastheadBgWarehouse.jpg);
                 background-size:contain, cover;
                 background-position:120% center, center center;
                 background-repeat:no-repeat, no-repeat;
@@ -819,7 +820,7 @@ header#main-header {
         }
 
 section.overview {
-  img[src="dist/img/mastheadBgVans.png"] {
+  img[src="img/assets/mastheadBgVans.png"] {
     display:none
   }
 
