@@ -36,7 +36,7 @@
       
       <header id="main-header" class="section__content " >
       
-          <img id="logo" src="src/img/envoy-logo.png">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
           
           <label for="toggle"><img id='menu-button' src="src/img/menu-button.png"></label>
 
