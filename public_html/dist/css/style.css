@@ -26,8 +26,7 @@
       color: white;
       text-decoration: none; }
   .button--white {
-    background: white;
-    }
+    background: white; }
     .button--white a {
       color: #3c5791;
       text-decoration: none; }
@@ -130,7 +129,7 @@ header#top-header {
       padding: 0 4px 0 4px; }
 
 .section__content {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto; }
 
 /*******
@@ -181,7 +180,6 @@ h1, h2, h3 {
 
 header#top-header {
   width: 100%;
-  padding-right: 5%;
   background: #3c5791;
   padding-top: 1%;
   letter-spacing: 1px; }
@@ -343,7 +341,8 @@ SECOND SECTION
   header#main-header #logo {
     padding: 40px 0;
     min-width: 260px;
-    max-width: 260px; }
+    max-width: 260px;
+    margin-top: -5px; }
   /***********
     HEADER
   ***********/
@@ -359,8 +358,10 @@ SECOND SECTION
         ***********/
   header#top-header nav {
     margin-left: 0px;
-    width: 100%;
-    display: inline-block; }
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+    padding: 8px 0 35px 0; }
   header#top-header #login {
     display: none; }
   header#top-header ul {
@@ -368,8 +369,9 @@ SECOND SECTION
     header#top-header ul li {
       margin-left: 20px;
       color: white;
-      font-size: 1.1rem;
-      opacity: 0.7; }
+      font-size: 1rem;
+      opacity: 0.5;
+      line-height: 20px; }
       header#top-header ul li:last-child {
         opacity: 1; }
   #main-header {
@@ -382,14 +384,45 @@ SECOND SECTION
     #main-header .menu ul {
       margin-bottom: 5%;
       margin-top: -10px;
-      padding-bottom: 0%; }
+      padding-bottom: 0%;
+      text-transform: uppercase; }
     #main-header .menu li {
       display: inline-block;
+      position: relative;
       margin-top: 80px;
       margin-left: 60px; }
       #main-header .menu li a {
         font-size: 1.9rem;
-        letter-spacing: 2px; }
+        letter-spacing: 2px;
+        padding: 10px 0; }
+      #main-header .menu li:hover ul {
+        display: block; }
+      #main-header .menu li ul {
+        position: absolute;
+        display: none;
+        background: #3c5791;
+        left: -50px;
+        margin-top: 50px;
+        width: 200px;
+        margin: 0;
+        top: 30px;
+        padding: 0;
+        z-index: 1000;
+        border-radius: 3px; }
+        #main-header .menu li ul li {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          border-bottom: rgba(255, 255, 255, 0.3); }
+          #main-header .menu li ul li a {
+            color: white;
+            font-size: 90%;
+            text-align: center;
+            padding: 20px 20px;
+            display: block; }
+            #main-header .menu li ul li a:hover {
+              color: #8bc64b; }
   nav.menu a {
     font-size: 2.2rem;
     color: #707a7e;
@@ -408,7 +441,9 @@ SECOND SECTION
       padding-left: 3%;
       font-size: 3.5rem;
       text-align: center;
-      max-width: 463px; }
+      max-width: 463px;
+      color: #3c5791;
+      font-weight: 500; }
   /************
         SECOND SECTION
         *************/
