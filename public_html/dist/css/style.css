@@ -222,6 +222,12 @@ FONTS
 .white-text.font-small {
   font-size: 0.8rem; }
 
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #3c5791;
+  padding: 4vh 0; }
+
 h2 {
   font-size: 3rem; }
 

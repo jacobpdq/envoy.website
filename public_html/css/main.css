@@ -94,28 +94,6 @@ iframe[name="google_conversion_frame"] {
   margin-top: 8px;
 }
 
-.inner-content-wrapper {
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  width: 910px;
-  min-height: 38px;
-  margin-bottom: 2px;
-  background: #fff;
-  border: solid #BBBBBB 1px;
-  padding: 2px;
-  float: left;
-  margin-left: 10px;
-  margin-top: 8px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1#pg-title {
-  padding: 10px;
-  font-size: 150%;
-  clear:none;
-  float:left;
-  text-transform: uppercase;
-}
 
 
 #brochures-suppliers-scrollpane{
