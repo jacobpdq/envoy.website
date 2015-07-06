@@ -1,10 +1,7 @@
-<div class="inner-content-wrapper">
+<section class="section__content"
 
 <?php $this->set('title_for_layout', __('Contact Us'));?>
 
-<div class="article-content">
-
-<div id="article-column">
 <p>
 <strong>Corporate Office:
 <br /></strong>
@@ -25,9 +22,7 @@ L1W 3J9<br />
 905 831 0006<br />
 <a href="mailto:eastwarehouse@envoynetworks.ca">eastwarehouse@envoynetworks.ca</a>
 </p>
-</div>
 
-<div id="article-column">
 <p>
 <strong>Western Canada Warehouse:
 <br /></strong>
@@ -37,9 +32,6 @@ V6W 1H6<br />
 604 278 1020<br />
 <a href="mailto:westwarehouse@envoynetworks.ca">westwarehouse@envoynetworks.ca</a>
 </p>
-</div>
  
-</div> 
- 
- </div>
+ </section>
  

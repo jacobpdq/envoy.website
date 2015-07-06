@@ -1,33 +1,18 @@
 <!-- Top Navigation Bar -->
   <header id="top-header">
-
-
-    
     <nav >
       <ul id="login">
         <li>LOGIN</li>
         <li><a href="#">TRAVEL AGENT<a></li>
         <li><a href="#">SUPPLIER</a></li>
       </ul>
-
-
-
       <ul class="desktop">
         <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
         <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
       </ul>
-    </nav>
-
-    
+    </nav> 
   </header>
-
-
-
-
-
-
-
 
 <div id="wrapper">
   <input id="toggle" type="checkbox">

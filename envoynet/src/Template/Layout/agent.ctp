@@ -171,7 +171,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div id="main-content">
 
           <div class="inner-content-wrapper">
-            <h1 id="pg-title"><?php echo $title_for_layout; ?></h1>
+            <h1><?php echo $title_for_layout; ?></h1>
 <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ?>
               <div id="Cart_Header_items">
          <!--       <span class="Base_txt">Items in Cart: </span>
