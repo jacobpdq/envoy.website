@@ -358,13 +358,6 @@ color:$white;
 
 }
 
-
-h1 {
-  font-size:4rem;
-  font-weight:600;
-  color:$blue;
-  padding:4vh 0;
-}
 h2 {
   font-size:3rem;
 }
@@ -1100,6 +1093,17 @@ section.overview {
 
 }
 
+
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    /* margin-left: 90px; */
+    color: #707A7E;
+}
 
 
 
