@@ -249,7 +249,7 @@ $font-large: 2.5rem;
 
 section.alltext {
   max-width:850px;
-
+  padding-left:100px;
   & p {
     max-width:700px;
   }
@@ -262,11 +262,15 @@ h2.tagline {
     line-height: 5rem;
     max-width: 820px;
     color: #8FB957;
-    font-size: 150%;
     padding: 10px 0;
     font-style: italic;
     letter-spacing: 10px;
+    & small {
+      color:#444;
+      font-size:2em;
+    }
 }
+
 
 section#partners {
 

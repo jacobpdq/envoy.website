@@ -159,7 +159,8 @@ p {
     z-index: 1; }
 
 section.alltext {
-  max-width: 850px; }
+  max-width: 850px;
+  padding-left: 100px; }
   section.alltext p {
     max-width: 700px; }
 
@@ -169,10 +170,12 @@ h2.tagline {
   line-height: 5rem;
   max-width: 820px;
   color: #8FB957;
-  font-size: 150%;
   padding: 10px 0;
   font-style: italic;
   letter-spacing: 10px; }
+  h2.tagline small {
+    color: #444;
+    font-size: 2em; }
 
 section#partners {
   background: #efefef; }
