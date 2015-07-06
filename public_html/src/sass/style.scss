@@ -38,11 +38,14 @@ $font-large: 2.5rem;
 
 // component: buttons 
 .button {
+  text-transform:uppercase;
   border-radius:3px;
   border:0px;
   padding:20px !important;
-  letter-spacing:1px;
+  letter-spacing:2px;
   height:auto;
+
+  font-size:1.5rem;
   & a {
     display:block;
   }
@@ -50,20 +53,29 @@ $font-large: 2.5rem;
   &--green {
     background:$green;
     color:white;
+
     
     & a {
       color:white;
-
+      font-weight:600 !important;
       text-decoration:none;
+      &:hover {
+        color: #EDFDDF;
+        text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.4);
+      }
     }
   }
 
   &--white {
     background:white;
     & a {
-      color:$blue;
-
+      color:$blue !important;
       text-decoration:none;
+      font-weight:700 !important;
+      &:hover {
+        text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.2);
+        /* text-decoration: underline; */
+      }
       
     }
   } 
@@ -183,14 +195,14 @@ $font-large: 2.5rem;
             letter-spacing:2px;
             margin-left:-10px;
             padding:10px;
-            font-size:1.6rem;
+            font-size:1.5rem;
             height:65px;
             text-transform:uppercase;
     display: inline-block;
     height: 65px !important;
     width: 100px;
+    font-weight:600;
     position: absolute;
-    line-height: 20px;
     right: 30px;
     z-index: 1000;
     padding-right: 69px;
@@ -263,6 +275,7 @@ $font-large: 2.5rem;
 
 
 header#main-header {
+  padding:0;
   & #logo {
   }
 }
@@ -271,6 +284,7 @@ header#main-header {
 .section__content {
   max-width: 960px;
   margin: 0 auto;
+  padding:8vh 0;
 }
 
 
@@ -349,10 +363,14 @@ header#top-header {
     padding-top:1%;
     letter-spacing:1px;
 }
-#masthead {
+
+section#masthead {
+  padding:0;
   .section__content {
     text-align:center;
+    padding:0;
   }
+
 }
 
 
@@ -369,12 +387,9 @@ header#main-header {
   }
 }
 
-
 .box.overview {
  margin-top:0px;
 }
-
-
 section {
   padding:14px 4%;
 }
@@ -744,7 +759,7 @@ header#main-header {
               & ul {
                 position:absolute;
                 display:none;
-                background:$blue;
+                background:$green;
                 left: -50px;
                 margin-top: 50px;
                 width: 200px;
@@ -761,12 +776,14 @@ header#main-header {
                   border-bottom:rgba(255,255,255,0.3);
                   & a {
                     color:white;
-                    font-size:90%;  
+                    font-size:1.5rem;  
                     text-align:center;
                     padding:20px 20px;
                     display:block;
                     &:hover {
-                      color:$green;
+                      color: #EDFDDF;
+    text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.4);
+    /* text-decoration: underline; */
                     }
                   }
                 }
@@ -834,7 +851,7 @@ header#main-header {
       .box.box__blue.overview {
                 max-width: 100%;
                 background-color:$blue;
-                padding-top:5%;
+                padding:0;
                 margin-top: -40px;
                 background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
                 background-size:contain, cover;
@@ -844,40 +861,49 @@ header#main-header {
 
           & p {
             text-align: center;
-            margin-left:8%;
+            margin-left:2%;
             // padding-right:40%;
             // padding-left:2%;
-            font-size: 2.3rem;
-            max-width: 40%;
+            margin-top:16px;
+            line-height:3.3rem;
+            font-size: 1.2em;
+            max-width: 52%;
             max-height: 30%;
           }
           & h5 {
-            margin-left:4%;
-            padding-left:10%; 
+            text-align: center;
+            margin-left:2%;
+            // padding-right:40%;
+            // padding-left:2%;
+            margin-top:10px;
+            line-height:3.5rem;
+            font-size: 1.2em;
+            max-width: 52%;
+            max-height: 30%;
+            font-style:italic;
+            letter-spacing:1px;
           }
 
           & ul { 
-            margin-left: 7%;
-            padding-left:6%; 
+
+            text-align: center;
+            margin-left:2%;
+            // padding-right:40%;
+            // padding-left:2%;
+            margin-top:10px;
+            line-height:3.5rem;
+            font-size: 1.2em;
+            font-weight:300;
+            max-width: 52%;
+            max-height: 30%;
+            font-style:italic;
+            letter-spacing:1px;
+            margin-bottom:20px;
           }
           & button {
-              height: 70px;
-  font-size: 2rem;
   width: 41%;
-  letter-spacing: 0.5px;
   margin-left: 8%;
 
-
-
-
-            // margin-left: 1;
-            & a {
-              color:$gray;
-              // padding-left:20%;
-              // padding-right:20%;
-              // text-align: center;
-
-            }
           }
         }
 

@@ -12,11 +12,13 @@
     display: none; } }
 
 .button {
+  text-transform: uppercase;
   border-radius: 3px;
   border: 0px;
   padding: 20px !important;
-  letter-spacing: 1px;
-  height: auto; }
+  letter-spacing: 2px;
+  height: auto;
+  font-size: 1.5rem; }
   .button a {
     display: block; }
   .button--green {
@@ -24,12 +26,20 @@
     color: white; }
     .button--green a {
       color: white;
+      font-weight: 600 !important;
       text-decoration: none; }
+      .button--green a:hover {
+        color: #EDFDDF;
+        text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.4); }
   .button--white {
     background: white; }
     .button--white a {
-      color: #3c5791;
-      text-decoration: none; }
+      color: #3c5791 !important;
+      text-decoration: none;
+      font-weight: 700 !important; }
+      .button--white a:hover {
+        text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.2);
+        /* text-decoration: underline; */ }
 
 @media (min-width: 400px) and (max-width: 959px) {
   .button {
@@ -115,14 +125,14 @@
       letter-spacing: 2px;
       margin-left: -10px;
       padding: 10px;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       height: 65px;
       text-transform: uppercase;
       display: inline-block;
       height: 65px !important;
       width: 100px;
+      font-weight: 600;
       position: absolute;
-      line-height: 20px;
       right: 30px;
       z-index: 1000;
       padding-right: 69px; }
@@ -156,9 +166,13 @@ header#top-header {
       display: inline-block;
       padding: 0 4px 0 4px; }
 
+header#main-header {
+  padding: 0; }
+
 .section__content {
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 8vh 0; }
 
 /*******
 FONTS
@@ -212,8 +226,11 @@ header#top-header {
   padding-top: 1%;
   letter-spacing: 1px; }
 
-#masthead .section__content {
-  text-align: center; }
+section#masthead {
+  padding: 0; }
+  section#masthead .section__content {
+    text-align: center;
+    padding: 0; }
 
 @media (min-width: 400px) and (max-width: 959px) {
   header#main-header #logo {
@@ -435,7 +452,7 @@ SECOND SECTION
       #main-header .menu li ul {
         position: absolute;
         display: none;
-        background: #3c5791;
+        background: #8bc64b;
         left: -50px;
         margin-top: 50px;
         width: 200px;
@@ -452,12 +469,14 @@ SECOND SECTION
           border-bottom: rgba(255, 255, 255, 0.3); }
           #main-header .menu li ul li a {
             color: white;
-            font-size: 90%;
+            font-size: 1.5rem;
             text-align: center;
             padding: 20px 20px;
             display: block; }
             #main-header .menu li ul li a:hover {
-              color: #8bc64b; }
+              color: #EDFDDF;
+              text-shadow: 1px 1px 0px rgba(14, 48, 8, 0.4);
+              /* text-decoration: underline; */ }
   nav.menu a {
     font-size: 2.2rem;
     color: #707a7e;
@@ -486,7 +505,7 @@ SECOND SECTION
   .box.box__blue.overview {
     max-width: 100%;
     background-color: #3c5791;
-    padding-top: 5%;
+    padding: 0;
     margin-top: -40px;
     background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
     background-size: contain, cover;
@@ -494,24 +513,37 @@ SECOND SECTION
     background-repeat: no-repeat, no-repeat; }
     .box.box__blue.overview p {
       text-align: center;
-      margin-left: 8%;
-      font-size: 2.3rem;
-      max-width: 40%;
+      margin-left: 2%;
+      margin-top: 16px;
+      line-height: 3.3rem;
+      font-size: 1.2em;
+      max-width: 52%;
       max-height: 30%; }
     .box.box__blue.overview h5 {
-      margin-left: 4%;
-      padding-left: 10%; }
+      text-align: center;
+      margin-left: 2%;
+      margin-top: 10px;
+      line-height: 3.5rem;
+      font-size: 1.2em;
+      max-width: 52%;
+      max-height: 30%;
+      font-style: italic;
+      letter-spacing: 1px; }
     .box.box__blue.overview ul {
-      margin-left: 7%;
-      padding-left: 6%; }
+      text-align: center;
+      margin-left: 2%;
+      margin-top: 10px;
+      line-height: 3.5rem;
+      font-size: 1.2em;
+      font-weight: 300;
+      max-width: 52%;
+      max-height: 30%;
+      font-style: italic;
+      letter-spacing: 1px;
+      margin-bottom: 20px; }
     .box.box__blue.overview button {
-      height: 70px;
-      font-size: 2rem;
       width: 41%;
-      letter-spacing: 0.5px;
       margin-left: 8%; }
-      .box.box__blue.overview button a {
-        color: #707a7e; }
   .white-text.center-button-text {
     padding-top: 20px;
     padding-bottom: 20px;
