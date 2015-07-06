@@ -43,9 +43,22 @@
       
         <nav class="menu">
           <ul>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">Services</a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>">Logistics</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>">Digital support</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>">Marketing solutions</a></li> 
+              </ul>
+
+            </li>
+            <li><a href="#">About Us</a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>">Overview</a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>">Meet the Team</a></li>
+              </ul>
+            </li>
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>">Contact Us</a> 
+   </li>
             </ul>
         </nav>
 
@@ -394,20 +407,12 @@
       <ul id="navbar">
        <li>
         <a>Services1</a> 
-        <ul>
-           <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>">Logistics</a></li> 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>">Digital support</a></li> 
-<li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>">Marketing solutions</a></li> 
-        </ul>
+        
     </li>
 
     <li>
       <a> About Us</a>
-        <ul>
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>">Overview</a></li>
 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>">Meet the Team</a></li>
-        </ul>
     </li>
 
      <li id="last">
