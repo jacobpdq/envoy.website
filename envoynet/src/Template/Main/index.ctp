@@ -36,9 +36,9 @@
       
       <header id="main-header" class="section__content " >
       
-      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
           
-          <label for="toggle"><img id='menu-button' src="src/img/menu-button.png"></label>
+          <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
 
       
         <nav class="menu">
@@ -120,7 +120,7 @@
 
           <section class="box box__blue overview">
             
-              <img src="dist/img/mastheadBgVans.png" />
+             <?php echo $this->Html->image('assets/mastheadBgVans.png');?> 
               
               <div class="section__content ">
                 <p>
