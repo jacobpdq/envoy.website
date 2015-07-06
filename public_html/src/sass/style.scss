@@ -764,12 +764,9 @@ there.
 
 
 
-
-
-
 * {
   box-sizing: border-box;
-  font-family: "Open Sans"
+  font-family: "Open Sans";
 }
 
 
@@ -780,8 +777,244 @@ $white: rgb(255,255,255);
 $gray: rgb(112,122,126);
 $circle_green: rgb(130, 190, 78);
 
-$font-small: 0.5rem;
+$font-small: 0.8rem;
 $font-large: 2.5rem;
+
+
+
+// MOBILE HIDING 
+
+@media (min-width: 959px) {
+
+  .mobile {
+    display:none;
+  }
+
+}
+
+@media (min-width: 400px) and (max-width: 959px) {
+
+  .desktop {
+    display:none;
+  }
+
+}
+
+
+// component: buttons 
+.button {
+  border:0px;
+  font-size: 1.8rem;
+  padding:10px 20px !important;
+  letter-spacing:1px;
+  height:auto;
+  & a {
+    display:block;
+  }
+
+  &--green {
+    background:$green;
+    color:white;
+    
+    & a {
+      color:white;
+
+      text-decoration:none;
+    }
+  }
+
+  &--white {
+    background:white;
+    & a {
+      color:$blue;
+
+      text-decoration:none;
+      
+    }
+  } 
+}
+
+@media (min-width: 400px) and (max-width: 959px) {
+  .button {
+    border:0px;
+    font-size: 1.8rem;
+    padding:10px 10px;
+    letter-spacing:1px;
+  }
+}
+
+@media (min-width: 959px) {
+  .button {
+    border:0px;
+    font-size: 1.8rem;
+    padding:10px 10px;
+    letter-spacing:1px;
+  }
+}
+
+.tabs {
+  position: relative;   
+  min-height: 300px; /* This part sucks */
+  clear: both;
+  margin: 0px 0px 0px 0px;
+  max-width:50%;
+  float:right;
+  // padding-left:5%;
+    
+  &__tabItem {
+      float: left;
+
+      & label {
+        background: rgb(232, 233, 231); 
+        padding-top: 10px; 
+        padding-bottom: 10px;
+        padding-left:50px;
+        padding-right:50px;
+        // border: 1px solid #ccc;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        margin-left: -1px; 
+        position: relative;
+        left: 1px; 
+        left: 6px;
+        text-transform: uppercase;
+        color:$blue;
+        z-index: 3;
+      }
+      & [type=radio] {
+        display: none;   
+      }
+  }
+
+  &__content {
+          position: absolute;
+          top: 28px;
+          left: 0;
+          background: rgb(245, 246, 246);
+          right: 0;
+          bottom: 0;
+          padding: 10px;
+          // border: 1px solid #ccc;
+          width: 100%;
+          height: 58%;
+          margin-left: 5px;
+
+          & input[type="text"] {
+            height: 55px ;
+            width:70%;
+            float:left;
+          }
+
+          & input[type="password"] {
+            height: 55px ;
+            width:70%;
+            float:left;
+          }
+
+          // & #login {
+          //   float: left;
+          //   margin-bottom: 43px;
+          //   margin-top: -24px;
+          //   margin-left: 0px;
+          // }
+
+          & #password {
+            clear:left;
+
+          }
+
+
+
+          & [type=submit] {
+            background-color:$green;
+            color:white;
+            display: inline-block;
+            // padding: 20px;
+            // width: 10%;
+            height:55px !important;
+            // padding-top:20px;
+            // padding-bottom:20px;
+            // padding-left:15px;
+            // padding-right:15px;
+          }
+          
+  
+      }
+
+  & [type=radio] + label + .tabs__content {
+    display:none;
+  }
+
+  & [type=radio]:checked + label + .tabs__content {
+    display:block;
+}
+
+  [type=radio]:checked ~ label {
+    background: rgb(245, 246, 246);
+    // border-bottom: 1px solid white;
+    z-index: 2;
+  }
+  [type=radio]:checked ~ label ~ .content {
+    z-index: 1;
+  }
+
+}
+
+
+
+
+
+
+.box {
+  &__blue {
+    background:$blue;
+    color:white;
+    & a {
+      color:$green;
+    }
+  }
+}
+
+
+
+
+
+ header#top-header {
+    color:$green;
+    font-size:$font-small;
+    
+    & a {
+      color:white;
+      &:hover {
+        color:$green;
+      }
+    }
+    & nav {
+      & ul {
+        margin-bottom:0;
+        padding: 0 4px 0 40px;
+        & li {
+          display:inline-block;
+          padding: 0 4px 0 4px;
+          
+
+        }
+      }
+    }
+  } 
+
+
+header#main-header {
+  & #logo {
+  }
+}
+
+
+.section__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 
 
 
@@ -799,7 +1032,6 @@ FONTS
 
 .white-text {
 color:$white;
-
 }
 
 .gray-text {
@@ -813,150 +1045,141 @@ color:$white;
 }
 
 
+h2 {
+  font-size:3rem;
+}
+h1, h2, h3 {
+  font-weight:600;
+  color:$blue;
+  letter-spacing:2.5px
+}
 
-@media (min-width: 400px) and (max-width: 750px) {
 
-$font-small: 0.5rem;
+.box {
+  & p:first-of-type {
+    margin-top:4rem;
+  }
+}
+
+
+.overview {
+  & img {
+    width:60%;
+    margin-right:-20%;
+    float:right;
+  }
+  & ul {
+    margin-top:10px;
+     & li {
+      display:inline-block;
+      font-style:italic;
+      color:$green;
+      font-size:120%;
+      &:not(:first-child):before {
+        content:"•";
+        color:white;
+        margin-right:5px;
+
+      }
+    }
+  }
+}
+
+header#top-header {
+    width: 100%;
+    padding-right:5%;
+    background: #3c5791;
+    padding-top:1%;
+    letter-spacing:1px;
+}
+#masthead {
+  .section__content {
+    text-align:center;
+  }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 959px) {
+
+$font-small: 0.75rem;
 $font-large: 2.5rem;
+
+header#main-header {
+  & #logo {
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+}
+
+
+.box.overview {
+ margin-top:0px;
+}
+
+
+section {
+  padding:14px 4%;
+}
 
 
 
         /***********
          HEADER
          ***********/
-        nav {
-          background: $blue;
-
-          & li {
-          display: inline-block;
-          margin-right: 2%;
-          margin-top: auto;
-          margin-bottom: auto;
-          border: 10px 10px 10px 10px;
-          
-          }
-
-        }
-
-        #top-bar-menu {
-          margin: auto 20% auto 8%;
-          padding-top: 3%;
-          padding-bottom:3%;
-
-        }
-
-        #desktop-top-bar {
-          display: none;
-
-        }
-
-        #logo-and-menu-button li{
-            display: inline-block;
-            margin-right: 15%;
-
-
-        }
-
-        
-
-        #menu-logo {
-          margin-top: 5%;
-          margin-right: 50%;
-          margin-left: 10%;
-
-        }
-
-        #menu-button {
-          margin-left: 50%;
-          padding-bottom: 0%;
-          margin-bottom: 40%;
-          margin-top: 50%;
-          
-        }
-
-        h1 {
-          color:$blue;
-        }
+     
 
 
 
         /************
         FIRST SECTION
-        *************/
+        *************/ 
 
-        #first-section{
-          height: 100%;
-          background-color: $white;
+   #masthead {
 
+      & h2 {
+        text-align:center;
+        margin-bottom: 0px;
+      }
+        & button {
+          margin:0 auto;
+          display:block;
+          z-index:1000;
+          position:relative;
+          // margin-top:10px;
+          margin-bottom:-40px;
         }
+    }
 
-        // #first-paragraph-container {
-        //   margin:0px;
-        //   background-color: red;
-        // } 
-
-        #first-paragraph{
-          font-size: $font-large;
-          color:$blue;
-          // display: inline-block;
-          // margin-left: 10px;
-          text-align: center;
-          line-height: 1.2em;
-        }
-
-
-        /************
-        SECOND SECTION
-        *************/
-
-        #second-section{
-          height: 100%;
-          background-color: $blue;
-          margin-top: -20px;
-
-        }
+       
 
 
 
-        .call-to-action {
-          
-          display: inline-block;
-          
-          height: 50px;
-          width:50%;
+/************
+SECOND SECTION
+*************/
+
+
+
+        .button.button--white.button--full-width {
+          margin-left: auto;
+           margin-right: auto; 
+           margin-bottom: 0px;
+           width:95%;
+           display:block;
+           & a {color:$blue;}
            
-          padding: 10px 10px;
-          margin-left: 25%;
-          margin-right: 25%;
-          
-          
+          }
 
+
+        #green-circle {
+          padding: 0px;
+
+          & p {
+            // min-width: 20%;
+            text-align: center;
+          }
         }
-        .white-text.center-button-text {
-          
-          height: 50px;
-          padding-top:15px;
-          padding-bottom:10px;
-        background-color: $green;
-          border-radius: 4px;
-          text-align: center;
-          
-
-        }
-
-        p #second-section-text {
-          margin-left:20px;
-
-        }
-
-        #second-paragraph {
-         display:inline-block;
-         margin-top:50px;
-         color:$white;
-         margin-left:20px;
-         text-align:margin-right;
-        }
-
 
 
 
@@ -1053,11 +1276,11 @@ $font-large: 2.5rem;
              min-height: 100%;
           }
           input[type=checkbox] {
-             position: absolute;
+             position: fixed;
              opacity: 0;
           }
           label {
-             position: absolute;
+             position: fixed;
              top: 10px;
              
              right: 40px;
@@ -1086,19 +1309,19 @@ $font-large: 2.5rem;
           input[type=checkbox]:checked ~ .slide-menu .menu li {
              width: 100%;
           }
-          .slide-menu {
+          #main-header .menu {
              transform: translate3d(250px, 0, 0);
              position: absolute;
              width: 250px;
-             background: $green;
+             background: $blue;
              color: $green;
              right:0;
+             top:0;
              height: 100%;
              transition: all .4s;
           }
           .slide-menu h1 {
              margin: 10px;
-             text-shadow: 1px 1px 1px #000;
           }
           .menu {
              list-style: none;
@@ -1109,15 +1332,13 @@ $font-large: 2.5rem;
              display: block;
              text-decoration: none;
              color: #fff;
+             width:100%;
              font-size: 1.1em;
              padding: 15px;
-             background: $blue ;
-             border-bottom: 1px solid #1e222b;
-             box-shadow: inset 0px 1px 1px #8b9db3;
+             background: $blue;
           }
           .menu a:hover {
              background: $green;
-             box-shadow: inset 0px 1px 1px #475059;
           }
         /******************
         END CHECK BOX HACK CSS
@@ -1135,131 +1356,126 @@ $font-large: 2.5rem;
 
   
 
-@media (min-width: 751px)  {
+@media (min-width: 959px)  {
 
-  $font-small: 2.5rem;
+  $font-small: 2.0rem;
 $font-large: 4.5rem;
 
+
+.section__content{
+  width:1080px;
+}
+
+header#main-header {
+  & #logo {
+    padding:40px 0;
+    min-width:260px;
+  }
+}
 
 
 /***********
     HEADER
   ***********/
-        nav {
-          background: $blue;
 
-          & li {
-          display: inline-block;
-          margin-right: 2%;
-          margin-top: auto;
-          margin-bottom: auto;
-          border: 10px 10px 10px 10px;
-          
-          }
+        /***********
+        MOBILE STYLES OFF
+        ***********/
 
-        }
-
-
-
-        label  {
+        header label  {
           display: none;
 
         }
         #toggle {
           display: none;
         }
+        /***********
+        MOBILE STYLES OFF
+        ***********/
 
+        
 
-        #top-bar-menu {
-          display:none;
+        header#top-header {
+
+            & nav {
+              margin-left: 0px;
+              width: 100%;
+              display: inline-block;
+            }
+
+            & #login {
+              display: none;
+            }
+
+            & ul {
+              float:right;
+
+              & li {
+                margin-left: 20px;
+                color:white;
+                font-size: 1.1rem;
+                opacity:0.7;
+                &:last-child {
+                  opacity:1;
+                }
+              }
+            }
+
+            
 
         }
 
-        #desktop-top-bar {
-          margin-top :auto;
-          margin-bottom: auto;
-          padding-top:12px;
-          padding-bottom: 12px;
-        }
 
-        #desktop-top-bar li {
+        #main-header {
+          width: 100%;
           
-          // margin-left: ;
-        }
+          display: block;
+            
+            & #logo {
 
-        ul#desktop-top-bar {
-          margin-left:40%;
-        }
+              padding:40px 0;
 
-        #logo-and-menu-button {
-            display: inline-block;
-            margin-right: 15%;
-            list-style-type: none;
-            float:left;
+            }
+            & nav{
+              
+              
+              // padding-right:5%;
+              float: right;
+            }
 
+            & .menu ul {
+              margin-bottom: 5%;
+              margin-top: -10px;
+              padding-bottom: 0%;
+            }
 
-        }
+            & .menu li{
 
-        .menu li{
-          background-color: $white;
-          float: left;
-          display: inline-block;
-          // margin: 10px;
-          margin-top: 50px;
-          margin-left: 60px;
-          white-space:nowrap;
-    overflow:hidden;
-        }
-
-
-
-
-
-        #desktop-menu {
-          float:right;
+              display: inline-block;
+              margin-top: 80px;
+              margin-left: 60px;
+              // font-size: 1.5rem;
+              & a { 
+                font-size:1.9rem;
+                letter-spacing:2px;
+              }
+            }
 
         }
+        
 
 
 
-
-
-
-        #menu-logo {
-          margin-top: 15%;
-          // margin-right: 80%;
-          margin-left: 10%;
-          float:left;
-          
-
-
-        }
-
-        #menu-button {
-          margin-left: 50%;
-          padding-bottom: 0%;
-          margin-bottom: 40%;
-          margin-top: 50%;
-          
-        }
 
         nav.menu a {
-          font-size: 2.5rem;
+          font-size: 2.2rem;
           color: $gray;
           text-decoration: none;
 
         }
 
 
-        #first-paragraph{
-          font-size: $font-large;
-          color:$blue;
-          display: block;
-          
-          text-align: center;
-          line-height: 1.2em;
-          clear: both;  
-        }
+      
 
 
 
@@ -1267,70 +1483,99 @@ $font-large: 4.5rem;
         FIRST SECTION
         *************/
 
-        #first-section{
-          background-color: $white;
+       
+
+
+
+        #masthead  {
+
+          background-color:white;
+          width: 100%;
+
+          & .mobile {
+            display: none;
+          }
+
+          & h2 {
+              display: inline-block;
+              margin: 0 auto 5% auto;
+              padding-left: 3%;
+              font-size: 3.5rem;
+              text-align: center;
+              max-width: 463px;
+          }
 
         }
 
-        #first-paragraph-container {
-          // margin-left: 0;
-          // background-color: red;
-          // float:left;
-          width:50%;
-        } 
 
-        #first-paragraph{
-          font-size: $font-large;
-          color:$blue;
-          // display: inline-block;
-          margin-left: 20%;
-          text-align: center;
-          line-height: 1.2em;
-          float:left;
-        }
+        
 
-        .about-heading {
-          font-weight: 400;
-        }
+         
 
 
         /************
         SECOND SECTION
         *************/
+      .box.box__blue.overview {
+                max-width: 100%;
+                background-color:$blue;
+                padding-top:5%;
+                margin-top: -40px;
+                background-image: url(../img/mastheadBgVans.png), url(../img/mastheadBgWarehouse.jpg);
+                background-size:contain, cover;
+                background-position:120% center, center center;
+                background-repeat:no-repeat, no-repeat;
 
-        #second-section{
-          width:100%;
-          background-color: $blue;
-          margin-top: -20px;
-          // float: left;
+
+          & p {
+            text-align: center;
+            margin-left:8%;
+            // padding-right:40%;
+            // padding-left:2%;
+            font-size: 2.3rem;
+            max-width: 40%;
+            max-height: 30%;
+          }
+          & h5 {
+            margin-left:4%;
+            padding-left:10%; 
+          }
+
+          & ul { 
+            margin-left: 7%;
+            padding-left:6%; 
+          }
+          & button {
+              height: 70px;
+  font-size: 2rem;
+  width: 41%;
+  letter-spacing: 0.5px;
+  margin-left: 8%;
 
 
+
+
+            // margin-left: 1;
+            & a {
+              color:$gray;
+              // padding-left:20%;
+              // padding-right:20%;
+              // text-align: center;
+
+            }
+          }
         }
 
 
 
-        .call-to-action {
+      
           
-          display: inline-block;
-          
-          height: 50%;
-          width:30%;
-           
-           // padding-top: 20px;
-          // padding: 10px 10px;
-          // // padding-bottom: 20px;
-          margin-left: 10%;
-          // margin-right: 25%;
+          .white-text.center-button-text {
           
           
-
-        }
-        .white-text.center-button-text {
-          
-          // height: 50px;
           padding-top:20px;
           padding-bottom:20px;
-        background-color: $green;
+          background-color: $green;
           border-radius: 4px;
           text-align: center;
           margin-bottom: -10px;
@@ -1338,22 +1583,12 @@ $font-large: 4.5rem;
 
         }
 
-        p #second-section-text {
-          margin-left:20px;
+section.overview {
+  img[src="dist/img/mastheadBgVans.png"] {
+    display:none
+  }
 
-        }
-
-        #second-paragraph {
-         display:inline-block;
-         margin-top:50px;
-         color:$white;
-         margin-left:20px;
-         text-align:margin-right;
-         font-size: $font-small;
-         text-align: center;
-         width:50%;
-        }
-
+}
 
 
 
@@ -1417,6 +1652,7 @@ $font-large: 4.5rem;
           border-radius: 100%;
           text-align: center;
           width:100%;
+          height:100%;
           float:right;
           padding-top: 36%;
           // font-size: $font-large;
@@ -1435,6 +1671,28 @@ $font-large: 4.5rem;
           margin: auto;
           clear: both;
         }
+
+
+
+
+
+
+#login-area {
+  border:1px solid red;
+  
+  float: right;
+
 }
+
+
+
+}
+
+
+
+
+ 
+
+
 
 

@@ -30,8 +30,11 @@
       <div id="menu-logo-with-button">
         
         <ul id="logo-and-menu-button">
-          <li><img id='menu-logo' src="src/img/envoy-logo.png"></li>
-          <li><label for="toggle"><img id='menu-button' src="src/img/menu-button.png"></label></li>
+       
+          <li> <?php echo $this->Html->image('assets/img/main_envoy_logo.png',  array('id' => 'menu-logo'));?></li>
+          <li><label for="toggle">
+             
+         <?php echo $this->Html->image('assets/img/menu-button.png',  array('id' => 'menu-button'));?></label></li>
         </ul>
       
         <div class="slide-menu ">
@@ -261,26 +264,7 @@
 </section> -->
 
 
-<section id="team">
-  <h2>Our Team</h2>
 
-   <ul class="list">
-
-            <li>
-      
-              <a href="mailto:"></a>
-              
-              <a href="tel:"><span class="contactNumber"></span></a>
-              
-
-              <span class="contactNumber"></span><br>
-            
-           </li>
-
-            </ul>
-
-
-</section>
 
 
 
