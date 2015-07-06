@@ -801,8 +801,7 @@ FONTS
          HEADER
          ***********/
   nav {
-    background: #3c5791;
-    height: 100%; }
+    background: #3c5791; }
     nav li {
       display: inline-block;
       margin-right: 2%;
