@@ -83,17 +83,7 @@
 
 
           <button class="button" type="submit">Login</button>
-       <!--    <?php echo $this->Html->link('Register',array('controller' => 'agents', 'action' => 'register','prefix' => 'agent'));?> /-->
-
     <?php echo $this->Form->end(); ?>
-
-
-
-                           <form>
-                            <input placeholder="Username" type="text" name="username">
-                            <input placeholder="Password"id="password" type="password" name="password">
-                            <input type="submit" value="Login">
-                          </form>
                        </div> 
                    </div>
                     
