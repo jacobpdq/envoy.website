@@ -1,6 +1,12 @@
 <div class="inner-content-wrapper">
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('h1').hide();
+	})
+</script>
 
 <section class="alltext">
+
 
 <h2 class="tagline">Envoy is a distribution and fulfillment company that specializes in providing the travel industry with custom marketing solutions.
 </h2>
