@@ -2,7 +2,7 @@
 
 <?php $this->set('title_for_layout', __('Services'));?>
 
-<section>
+<section class="alltext">
 
 <h4>Digital support</h4>
 

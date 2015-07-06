@@ -158,6 +158,11 @@ p {
   .tabs [type=radio]:checked ~ label ~ .content {
     z-index: 1; }
 
+section.alltext {
+  max-width: 850px; }
+  section.alltext p {
+    max-width: 700px; }
+
 section#partners {
   background: #efefef; }
   section#partners h3 {
@@ -654,9 +659,9 @@ SECOND SECTION
     float: right; } }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.6px !important;
+  text-transform: uppercase !important;
   /* margin-left: 90px; */
-  color: #707A7E; }
+  color: #707A7E !important; }
