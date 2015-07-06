@@ -757,7 +757,7 @@ header#main-header {
                 background-color:$blue;
                 padding-top:5%;
                 margin-top: -40px;
-                background-image: url(img/assets/mastheadBgVans.png), url(img/assets/mastheadBgWarehouse.jpg);
+                background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
                 background-size:contain, cover;
                 background-position:120% center, center center;
                 background-repeat:no-repeat, no-repeat;
@@ -820,7 +820,7 @@ header#main-header {
         }
 
 section.overview {
-  img[src="img/assets/mastheadBgVans.png"] {
+  img[src$="mastheadBgVans.png"] {
     display:none
   }
 

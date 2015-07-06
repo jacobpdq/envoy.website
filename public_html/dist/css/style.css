@@ -416,7 +416,7 @@ SECOND SECTION
     background-color: #3c5791;
     padding-top: 5%;
     margin-top: -40px;
-    background-image: url(img/assets/mastheadBgVans.png), url(img/assets/mastheadBgWarehouse.jpg);
+    background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
     background-size: contain, cover;
     background-position: 120% center, center center;
     background-repeat: no-repeat, no-repeat; }
@@ -448,7 +448,7 @@ SECOND SECTION
     text-align: center;
     margin-bottom: -10px;
     font-weight: 400; }
-  section.overview img[src="img/assets/mastheadBgVans.png"] {
+  section.overview img[src$="mastheadBgVans.png"] {
     display: none; }
   #service-button {
     width: 30%;
