@@ -46,10 +46,12 @@ ul {
           background: url(bg.gif) repeat-x; text-align: center }
 #banner a { color: white; }
 
+iframe[name="google_conversion_frame"] {
+  height:0px;
+  overflow:hidden;
+}
 
 .clearfix:after,
-#wrapper:after,
-#main-content:after,
 .paging:after
 {content:".";display:block;height:0;clear:both;visibility:hidden;}
 
