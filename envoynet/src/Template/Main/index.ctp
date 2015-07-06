@@ -170,8 +170,9 @@
  <!--Start copyright Line content /-->
 
  <section class="" id="partners">
-
+<div class="section__content">
  <h3 class="blue-text">Our Partners</h3>
+ </div>
  <div class="section__images section__content">
     <?php echo $this->Html->image('assets/partners/usa.png');?>
     <?php echo $this->Html->image('assets/partners/g-adventures.png');?>
@@ -183,13 +184,13 @@
   </div>
  </section>
 
-    <div class="Hippo_Copyright_Line" id="Main_copyright_Holder">© Copyright Envoy Network Inc. 2015
-      <div id="Travelweek_Holder">
-	  <a href="http://travelweek.ca" target="_blank">
-	  <?php echo $this->Html->image('assets/site_logos/travel_week_logo.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
-      </div>
-    </div>
-    <!--End copyright Line content /-->
+  <section class="" id="footer">
+  <div class="section__content">
+    <p>© Copyright Envoy Network Inc. 2015</p>
+    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/travel_week_logo.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+</a>
+  </div>
+  </section>
 
 <script type="text/javascript" language="javascript">
         $(".iframe-link").fancybox({
