@@ -19,6 +19,273 @@
   </header>
 
 
+<div id="wrapper">
+  <input id="toggle" type="checkbox">
+
+
+  
+
+  
+  <div class="content"> 
+      <div id="menu-logo-with-button">
+        
+        <ul id="logo-and-menu-button">
+          <li><img id='menu-logo' src="src/img/envoy-logo.png"></li>
+          <li><label for="toggle"><img id='menu-button' src="src/img/menu-button.png"></label></li>
+        </ul>
+      
+        <div class="slide-menu ">
+          <nav class="menu">
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </nav>
+        </div>
+      </div>
+
+      <!-- <div class="slide-menu desktop-menu">
+      
+        <nav class="menu">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About US</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </nav>
+      </div> -->
+
+
+
+
+            <section id="first-section">
+              <div class="row " >
+                <div id="first-paragraph-container">
+                  <p id="first-paragraph">Serving the Travel <br/>and Tourism Industry<br/> for over 15 years.</p>
+                </div>
+
+                
+              </div>
+            </section>
+          
+          <div class="call-to-action">
+              <p class="white-text center-button-text"><span>JOIN OUR NETWORK</span></p>
+            </div>
+
+
+          <section id="second-section">
+            
+            <div id="second-section-text">
+           
+              
+              <p id="second-paragraph">Envoy is a distribution and fulfillment<br/> company that specializes in providing the travel industry with <span class="green-text" ><u>custom marketing solutions</u></span>.
+              <br/>
+              <br/>
+              
+              Our business is built on:
+              <br/>
+              <br/>
+              
+              <span class="green-text"><em>Partnerships Intelligence Reach</em></span></p>
+            </div>
+            <div id="service-button">
+              <p class="center-button-text blue-text" >VIEW OUR SERVICES</p>
+            </div>
+
+          </section>
+          
+          <section id="green-circle">
+                      
+                      <p class=" white-text " id="third-section-paragraph">With significant investments in equipment, vehicles, infrastructure and technology. Envoy represents its modern position by exceeding the requirements of the Travel & Tourism industry.</p>
+          </section>
+
+
+          <section id="third-section">
+            <h3 class="blue-text about-heading">About ENVOY</h3>
+            <p class="gray-text font-large" >Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets</p>
+
+
+          </section>
+
+          
+
+
+
+  </div>
+  
+  <!-- <div class="slide-menu">
+    
+    <nav class="menu">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About US</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </nav>
+  </div> -->
+
+</div>
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/><br/>
+<br/>
+
+
+<section id="logistics">
+  <div >
+    <h1 class="border-outline">SERVICES</h1>
+   <div class="border-outline"> 
+      <h3>LOGISTICS</h3> 
+
+      <h3>Fulfillment:</h3> <p>Our full-service custom fulfillment includes: media-generated responses, consumer requests for assets, collateral material management, poster/video/promotional document fulfillment, response card requests, label generation and a host of solutions for all your needs. Barcode technology and customized pick and pack software provide accurate and efficient order processing.</p> 
+
+      <h3>Delivery:</h3> <p>With a fleet of vehicles in Toronto and Vancouver, we provide our customers with timely delivery windows and no consolidation. Our network of industry-specific subcontractors provide service to all other 
+      major cities.</p> 
+
+      <h3>Warehousing:</h3> <p>We offer secure and insured storage of printed materials and valuable goods utilizing an 
+      electronic inventory management system. We have scalable facilities in both Pickering, Ontario and Richmond, British Columbia.</p>
+
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<br/>
+
+<section id="DIGITAL_SUPPORT">
+  <div >
+    <h1 class="border-outline">SERVICES</h1>
+   <div class="border-outline"> 
+      <h3>DIGITAL SUPPORT</h3> 
+
+      <h3>Online brochure re-ordering:</h3> <p>Our comprehensive website is the easiest and most efficient way for travel agents to order brochures. Orders are processed immediately upon reciept and fulfilled in a timely manner. Online supplier access through a secure login allows you to view your order history, track shipments, place new orders and monitor inventory levels. </p> 
+
+      <h3>Brochure order capturing:</h3> <p>This allows full control over who receives your collateral. Your brochure is hosted at envoynetworks.ca, the agent order is captured and complete order details are emailed directly to you for fulfillment. </p> 
+
+      <h3>Brochure pre-order:</h3> <p>Exclusive to ENVOY, agents have the capacity to pre-order brochures in advance of their official release. These orders are captured through our website, a weekly email campaign and printed order form included with Travelweek magazine allowing for more targeted initial distribution and savings on printing costs. </p>
+
+      <h3>Brochure hosting:</h3> <p>By hosting your digital brochures with envoynetworks.ca, they can be viewed online or downloaded as a pdf allowing travel agents the flexibility of accessing material immediately. </p>
+
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<br/>
+
+<section id="MARKETING-SOLUTIONS">
+  <div >
+    <h1 class="border-outline">SERVICES</h1>
+   <div class="border-outline"> 
+      <h3>MARKETING SOLUTIONS</h3> 
+
+      <h3>Mailing house services:</h3> <p> ENVOY offers customized mailing services based on your specific requirements; from polybagged brochures and boxed materials to postcards and self-mailers. </p> 
+
+      <h3>Marketing support:</h3> <p>TYour marketing collateral is promoted to travel agents through digital and print copies 
+      of Travelweek magazine at no extra charge.  </p> 
+
+      <h3>Targeted mailing lists:</h3> <p>We create tailored mailing lists based on your specific marketing needs utilizing 
+      our extensive database of travel agents. This service is complimentary if used in conjunction with ENVOY's mailing service.  </p>
+
+      <h3>Printing services:</h3> <p>Our on-site web and sheet-fed presses offer all the benefits of a full service printing house 
+      to complement to our logistic and digital support. </p>
+
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+<br/>
+
+<section id="ABOUT-US">
+  <div >
+    <h1 class="border-outline">ABOUT US</h1>
+   <div class="border-outline"> 
+      <h3>OVERVIEW</h3> 
+
+       <p> Envoy is a distribution and fulfillment company that specializes in providing the travel industry with custom marketing solutions. </p> 
+
+      <p>Established in 1998 under the name Hippo Express, Envoy was originally set up to handle the fulfillment and distribution of the industry-leading magazine Travelweek. With significant investments in equipment, vehicles and infrastructure, Envoy now offers a complete range of specialized logistics and warehouse capabilities specific—but not limited to—the travel and tourism industry. Our intrinsic knowledge and connections within this industry give us a unique advantage for our customers. We speak their language and as a result, anticipate their needs.</p> 
+
+      
+
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- <section id="ABOUT-US">
+  <div >
+    <h1 class="border-outline">ABOUT US</h1>
+   <div class="border-outline"> 
+      <h3>MEET THE TEAM</h3> 
+
+       
+
+      
+
+      </p>
+    </div>
+  </div>
+
+</section> -->
+
+
+<section id="team">
+  <h2>Our Team</h2>
+
+   <ul class="list">
+
+            <li>
+      
+              <a href="mailto:"></a>
+              
+              <a href="tel:"><span class="contactNumber"></span></a>
+              
+
+              <span class="contactNumber"></span><br>
+            
+           </li>
+
+            </ul>
+
+
+</section>
+
+
+
+
+
 
 
 
