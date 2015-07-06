@@ -147,12 +147,19 @@
   .tabs [type=radio]:checked ~ label ~ .content {
     z-index: 1; }
 
-section#partners .section__images {
-  display: flex; }
-  section#partners .section__images img {
-    max-width: 200px;
-    width: 200px;
-    height: auto; }
+section#partners {
+  background: #efefef; }
+  section#partners h3 {
+    text-align: center; }
+  section#partners .section__images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    section#partners .section__images img {
+      width: auto;
+      height: 40px;
+      margin: 30px; }
 
 .box__blue {
   background: #3c5791;
@@ -182,6 +189,9 @@ header#main-header {
   margin: 0 auto;
   padding: 8vh 0; }
 
+p {
+  line-height: 1.5rem; }
+
 /*******
 FONTS
 *********/
@@ -207,6 +217,12 @@ h1, h2, h3 {
   font-weight: 600;
   color: #3c5791;
   letter-spacing: 2.5px; }
+
+h3 {
+  margin: 0 auto 4vh auto;
+  font-size: 2.8rem;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px; }
 
 .box p:first-of-type {
   margin-top: 4rem; }

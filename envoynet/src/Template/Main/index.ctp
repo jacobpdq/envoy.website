@@ -169,10 +169,10 @@
 
  <!--Start copyright Line content /-->
 
- <section class="section__content" id="partners">
+ <section class="" id="partners">
 
  <h3 class="blue-text">Our Partners</h3>
- <div class="section__images">
+ <div class="section__images section__content">
     <?php echo $this->Html->image('assets/partners/usa.png');?>
     <?php echo $this->Html->image('assets/partners/g-adventures.png');?>
     <?php echo $this->Html->image('assets/partners/travel-guard.png');?>
