@@ -158,7 +158,7 @@
 
           <section  class="section__content">
             <h3 class="blue-text about-heading">About ENVOY</h3>
-            <p class="gray-text font-large" class="section__content">Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets</p>
+            <p class="gray-text font-large" class="section__content">Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets.</p>
 
 
           </section>

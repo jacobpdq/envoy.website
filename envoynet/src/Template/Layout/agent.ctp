@@ -64,6 +64,62 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php echo $sso_session_check; ?>
 </head>
 <body>
+
+
+
+<header id="top-header">
+    <nav >
+      <ul class="desktop">
+        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
+        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+      </ul>
+    </nav> 
+  </header>
+
+
+
+  <input id="toggle" type="checkbox">
+ 
+      
+      <header id="main-header" class="section__content " >
+
+       <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>   
+           <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>">
+            <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
+           <?php else: ?>
+           <a href="<?php echo $this->Url->build(array('controller' => 'main', 'action' => 'index', 'prefix' => false)); ?>">
+           <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
+           <?php endif; ?>
+      
+      
+          
+          <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
+
+      
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Services</a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>">Logistics</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>">Digital support</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>">Marketing solutions</a></li> 
+              </ul>
+
+            </li>
+            <li><a href="#">About Us</a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>">Overview</a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>">Meet the Team</a></li>
+              </ul>
+            </li>
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>">Contact Us</a> 
+   </li>
+            </ul>
+        </nav>
+
+      </header>
+
     
     
     <div id="Main_content_Holder">
@@ -74,50 +130,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
          <div id="Logo_Menu_Holder">
   
            
-           <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>   
-           <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>">
-            <?php echo $this->Html->image("assets/site_logos/main_envoy_logo.png");?></a>
-           <?php else: ?>
-           <a href="<?php echo $this->Url->build(array('controller' => 'main', 'action' => 'index', 'prefix' => false)); ?>">
-           <?php echo $this->Html->image("assets/site_logos/main_envoy_logo.png");?> </a>
-           <?php endif; ?>
-             
-          
-       
-    
-
-     <div id="Search_Interface">
-      
-      <ul id="navbar">
-       <li>
-        <a>Services</a> 
-       <ul>
-           <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>false)); ?>">Logistics</a></li> 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix' => false)) ?>">Digital support</a></li> 
-<li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix' => false)) ?>">Marketing solutions</a></li> 
-        </ul>
-    </li>
-
-    <li>
-      <a> About Us</a>
-        <ul>
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix' => false)); ?>">Overview</a></li>
-
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix' => false)); ?>">Meet the Team</a></li>
-        </ul>
-    </li>
-
-     <li id="last">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix' => false)); ?>">Contact Us</a> 
-    </li> 
-      </ul>
-      
-     </div>
-    
-  </div>
-
-    
-    
+  
 
     <!--Site navbar /-->
     <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>

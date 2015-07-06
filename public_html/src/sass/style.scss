@@ -325,7 +325,7 @@ header#main-header {
 .section__content {
   max-width: 960px;
   margin: 0 auto;
-  padding:10vh 0;
+  padding:12.5vh 0;
 }
 
 
@@ -837,7 +837,8 @@ header#main-header {
                   }
                   & a {
                     color:white;
-                    font-size:1.5rem;  
+                    font-size:1.5rem; 
+                    letter-spacing:1px; 
                     text-align:center;
                     padding:20px 20px;
                     display:block;
@@ -914,7 +915,7 @@ header#main-header {
                 margin-top: -40px;
                 background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
                 background-size:contain, cover;
-                background-position:120% center, center center;
+                background-position:110% center, center bottom;
                 background-repeat:no-repeat, no-repeat;
 
 
@@ -1023,8 +1024,8 @@ section.overview {
         *************/
 
         #green-circle {
-          height: 470px;
-          width: 470px;
+          height: 500px;
+          width: 500px;
           float: right;
           margin-right: 8%;
           margin-top: -70px;
@@ -1051,15 +1052,15 @@ section.overview {
           background-color: $circle_green;
           border-radius: 100%;
           text-align: center;
-    width: 350px;
+    width: 400px;
     margin-right:0%;
-    margin-top:-50px;
-    height: 350px;
+    margin-top:-70px;
+    height: 400px;
     font-style:italic;
           float:right;
-          line-height:2em;
+          line-height:2.4em;
           font-size:1em;
-          padding-top: 100px;
+          padding-top: 120px;
           // font-size: $font-large;
         }
 
