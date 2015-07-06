@@ -72,15 +72,23 @@
                        <input type="radio" id="tab-1" name="tab-group-1" checked>
                        <label for="tab-1">TRAVEL AGENT</label>
                        
-                       <!-- <div class="tabs__content">
-                          <form>
-                           <br>
-                            <input  type="text" name="login">
-                            <br>
-                            <input  id="login" type="submit" value="Login">
-                          </form>
-                       </div>  -->
-                       <div class="tabs__content">
+                <div class="tabs__content">
+
+
+          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+
+
+          <button class="button" type="submit">Login</button>
+       <!--    <?php echo $this->Html->link('Register',array('controller' => 'agents', 'action' => 'register','prefix' => 'agent'));?> /-->
+
+    <?php echo $this->Form->end(); ?>
+
+
+
                            <form>
                             <input placeholder="Username" type="text" name="username">
                             <input placeholder="Password"id="password" type="password" name="password">
@@ -440,51 +448,8 @@
     
      <!--agent login start/-->
          <div id="agent_login_holder">
-   <?php /*if ($this->request->session()->check('Message.auth')): ?>
-    <?php echo $this->request->session()->flash('auth'); ?>
-    <?php endif; */ ?> 
-    
-    <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
-      <h1 id="agent-login-text">Travel Agent Login</h1>
-          <div class="form_content_field_left5">
-      
-        <div class="blank_form_holder_bg5">
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'Form_holder_style5', 'placeholder'=>"Username")) ?>
-        </div>
-      </div>
+  
 
-      <div class="form_content_field_left5">
-       
-        <div class="blank_form_holder_bg5">
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'class'=>'Form_holder_style5', 'placeholder'=>"Password")) ?>
-        </div>
-      </div>
-<!--
-    <ul id="phone-input">
-      <li>
-        <?php /* echo $this->Form->input('digits1', array('div' => false, 'label' => false, 'type' => 'text','minlength'=>'3', 'MAXLENGTH' => '3','class'=>"required number", 'placeholder'=>"123")) ?>
-      </li>
-    
-      <li>
-        <?php echo $this->Form->input('digits2', array('div' => false, 'label' => false, 'type' => 'text','minlength'=>'3', 'MAXLENGTH' => '3','class'=>"required number", 'placeholder'=>"123")) ?>
-      </li>
-    
-      <li>
-        <?php echo $this->Form->input('digits3', array('div' => false, 'label' => false, 'type' => 'text','minlength'=>'4', 'MAXLENGTH' => '4','class'=>"required number", 'placeholder'=>"1234")) */ ?>
-      </li>
-    </ul>
-      <div id="agent-login-instructions">
- (Enter your phone number)
-  </div>
--->
-
-        <div id="profile_submit_Holder">
-          <button class="button" type="submit">Login</button>
-       <!--    <?php echo $this->Html->link('Register',array('controller' => 'agents', 'action' => 'register','prefix' => 'agent'));?> /-->
-        </div>
-
-
-    <?php echo $this->Form->end(); ?>
         </div>
           <!--agent login end/-->
           

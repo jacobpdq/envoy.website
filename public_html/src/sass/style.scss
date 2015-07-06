@@ -92,19 +92,25 @@ $font-large: 2.5rem;
   clear: both;
   margin: 0px 0px 0px 0px;
   max-width:50%;
-  width:50%;
+  width:45%;
   float:right;
   // padding-left:5%;
     
   &__tabItem {
       float: left;
+      width:50%;
+      text-align:center;
+      font-size:1.7rem;
 
       & label {
+        &:hover {
+          cursor:pointer;
+        }
+        letter-spacing:1px;
+        font-weight:bolder;
         background: rgb(232, 233, 231); 
         padding-top: 20px; 
         padding-bottom: 20px;
-        padding-left:50px;
-        padding-right:50px;
         // border: 1px solid #ccc;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
@@ -123,7 +129,7 @@ $font-large: 2.5rem;
 
   &__content {
           position: absolute;
-          top: 28px;
+          top: 60px;
           left: 0;
           background: rgb(245, 246, 246);
           right: 0;
@@ -131,19 +137,28 @@ $font-large: 2.5rem;
           padding: 10px;
           // border: 1px solid #ccc;
           width: 100%;
-          height: 58%;
+          height: 129px;
           margin-left: 5px;
-
+          padding-top:30px;
           & input[type="text"] {
-            height: 55px ;
-            width:30%;
+            height: 65px ;
+            width:35%;
             float:left;
+            margin-left:20px;
+            text-align:center;
           }
 
           & input[type="password"] {
-            height: 55px ;
-            width:30%;
+            height: 65px ;
+            width:40%;
+            text-align:center;
+            position:relative;
+            z-index:2;
+            margin-left:-5px;
             float:left;
+            border-left:0px;
+            border-top-left-radius:0;
+            border-bottom-left-radius:0;
           }
 
           // & #login {
@@ -154,7 +169,6 @@ $font-large: 2.5rem;
           // }
 
           & #password {
-            clear:left;
 
           }
 
@@ -162,15 +176,24 @@ $font-large: 2.5rem;
 
           & [type=submit] {
             background-color:$green;
+            border:none;
+            border-radius:3px;
             color:white;
-            display: inline-block;
-            // padding: 20px;
-            // width: 10%;
-            height:55px !important;
-            // padding-top:20px;
-            // padding-bottom:20px;
-            // padding-left:15px;
-            // padding-right:15px;
+            font-weight:bold;
+            letter-spacing:2px;
+            margin-left:-10px;
+            padding:10px;
+            font-size:1.6rem;
+            height:65px;
+            text-transform:uppercase;
+    display: inline-block;
+    height: 65px !important;
+    width: 70px;
+    position: absolute;
+    line-height: 40px;
+    right: 30px;
+    z-index: 1000;
+    padding-right: 69px;
           }
           
   
@@ -611,7 +634,7 @@ $font-large: 4.5rem;
 
 header#main-header {
   & #logo {
-    padding:40px 0 10px 0;
+    padding:40px 0 25px 0;
     min-width:260px;
     max-width:260px;
     margin-top:-5px;
@@ -707,10 +730,11 @@ header#main-header {
               display: inline-block;
               position:relative;
               margin-top: 80px;
-              margin-left: 60px;
+              margin-left: 50px;
               // font-size: 1.5rem;
               & a { 
-                font-size:1.9rem;
+                font-size:1.7rem;
+                font-weight:600;
                 letter-spacing:2px;
                 padding:10px 0;
               }
@@ -787,10 +811,11 @@ header#main-header {
           & h2 {
               display: inline-block;
               margin: 0 auto 4vh auto;
-              font-size: 3.5rem;
+              font-size: 3.3rem;
               text-align: center;
               max-width: 463px;
               color:$blue;
+              padding-top:0;
               font-weight:600;
               letter-spacing:0.5px;
           }

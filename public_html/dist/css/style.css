@@ -51,16 +51,19 @@
   clear: both;
   margin: 0px 0px 0px 0px;
   max-width: 50%;
-  width: 50%;
+  width: 45%;
   float: right; }
   .tabs__tabItem {
-    float: left; }
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 1.7rem; }
     .tabs__tabItem label {
+      letter-spacing: 1px;
+      font-weight: bolder;
       background: #e8e9e7;
       padding-top: 20px;
       padding-bottom: 20px;
-      padding-left: 50px;
-      padding-right: 50px;
       border-top-right-radius: 3px;
       border-top-left-radius: 3px;
       margin-left: -1px;
@@ -70,34 +73,59 @@
       text-transform: uppercase;
       color: #3c5791;
       z-index: 3; }
+      .tabs__tabItem label:hover {
+        cursor: pointer; }
     .tabs__tabItem [type=radio] {
       display: none; }
   .tabs__content {
     position: absolute;
-    top: 28px;
+    top: 60px;
     left: 0;
     background: #f5f6f6;
     right: 0;
     bottom: 0;
     padding: 10px;
     width: 100%;
-    height: 58%;
-    margin-left: 5px; }
+    height: 129px;
+    margin-left: 5px;
+    padding-top: 30px; }
     .tabs__content input[type="text"] {
-      height: 55px;
-      width: 30%;
-      float: left; }
+      height: 65px;
+      width: 35%;
+      float: left;
+      margin-left: 20px;
+      text-align: center; }
     .tabs__content input[type="password"] {
-      height: 55px;
-      width: 30%;
-      float: left; }
-    .tabs__content #password {
-      clear: left; }
+      height: 65px;
+      width: 40%;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-left: -5px;
+      float: left;
+      border-left: 0px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
     .tabs__content [type=submit] {
       background-color: #8bc64b;
+      border: none;
+      border-radius: 3px;
       color: white;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-left: -10px;
+      padding: 10px;
+      font-size: 1.6rem;
+      height: 65px;
+      text-transform: uppercase;
       display: inline-block;
-      height: 55px !important; }
+      height: 65px !important;
+      width: 70px;
+      position: absolute;
+      line-height: 40px;
+      right: 30px;
+      z-index: 1000;
+      padding-right: 69px; }
   .tabs [type=radio] + label + .tabs__content {
     display: none; }
   .tabs [type=radio]:checked + label + .tabs__content {
@@ -345,7 +373,7 @@ SECOND SECTION
   .section__content {
     width: 1080px; }
   header#main-header #logo {
-    padding: 40px 0 10px 0;
+    padding: 40px 0 25px 0;
     min-width: 260px;
     max-width: 260px;
     margin-top: -5px; }
@@ -396,9 +424,10 @@ SECOND SECTION
       display: inline-block;
       position: relative;
       margin-top: 80px;
-      margin-left: 60px; }
+      margin-left: 50px; }
       #main-header .menu li a {
-        font-size: 1.9rem;
+        font-size: 1.7rem;
+        font-weight: 600;
         letter-spacing: 2px;
         padding: 10px 0; }
       #main-header .menu li:hover ul {
@@ -444,10 +473,11 @@ SECOND SECTION
     #masthead h2 {
       display: inline-block;
       margin: 0 auto 4vh auto;
-      font-size: 3.5rem;
+      font-size: 3.3rem;
       text-align: center;
       max-width: 463px;
       color: #3c5791;
+      padding-top: 0;
       font-weight: 600;
       letter-spacing: 0.5px; }
   /************
