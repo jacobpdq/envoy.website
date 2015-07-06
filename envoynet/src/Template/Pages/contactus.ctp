@@ -1,4 +1,3 @@
-<section>
 
 <?php $this->set('title_for_layout', __('Contact Us'));?>
 

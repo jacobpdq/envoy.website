@@ -1,6 +1,6 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('Services'));?>
+<?php // $this->set('title_for_layout', __('Services'));?>
 
 <section class="alltext">
 
