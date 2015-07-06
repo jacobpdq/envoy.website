@@ -4,6 +4,8 @@
 
 <section class="alltext">
 
+<h2 class="tagline">Custom collateral, a fleet of vehicles, and secure storage.</h2>
+
 <h4>Logistics</h4>
 <h6>Fulfillment</h6>
 <p>Our full-service custom fulfillment includes: media-generated responses, consumer requests for assets, collateral material management, poster/video/promotional document fulfillment, response card requests, label generation and a host of solutions for all your needs. Barcode technology and customized pick and pack software provide accurate and efficient order processing. 
@@ -15,6 +17,8 @@
 <h6>Warehousing</h6>
 <p>We offer secure and insured storage of printed materials and valuable goods utilizing an electronic inventory management system. We have scalable facilities in both Pickering, Ontario and Richmond, British Columbia.
 </p>
+
+<h2 class="tagline">Giving you flexibility with the power of digital distribution, ordering, and pre-ordering.</h2>
 
 <h4>Digital support</h4>
 
@@ -33,6 +37,8 @@
 <h6>Brochure hosting</h6>
 <p>By hosting your digital brochures with envoynetworks.ca, they can be viewed online or downloaded as a pdf allowing travel agents the flexibility of accessing material immediately.
 </p>
+
+<h2 class="tagline">A dedicated team, Envoy is here maximize your advertising and marketing presence.</h2>
 
 <h4>Marketing solutions</h4>
 

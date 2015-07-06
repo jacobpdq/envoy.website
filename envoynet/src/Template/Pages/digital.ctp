@@ -4,6 +4,8 @@
 
 <section class="alltext">
 
+<h2 class="tagline">Giving you flexibility with the power of digital distribution, ordering, and pre-ordering.</h2>
+
 <h4>Digital support</h4>
 
 <h6>Online brochure re-ordering:</h6>

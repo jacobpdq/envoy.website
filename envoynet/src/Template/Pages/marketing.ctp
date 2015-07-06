@@ -3,8 +3,10 @@
 <?php $this->set('title_for_layout', __('Services'));?>
 
 <section class="alltext">
-<h3 class="tagline">
-</h3>
+<h2 class="tagline">Complete and integrated solutions - giving you a powerful edge in today's market.
+</h2>
+
+
 <h4>Marketing Solutions</h4>
 <h6>Mailing house services:</h6>
 <p>ENVOY offers customized mailing services based on your specific requirements; from polybagged brochures and boxed materials to postcards and self-mailers.</p>

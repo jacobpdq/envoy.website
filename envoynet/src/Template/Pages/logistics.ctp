@@ -1,11 +1,8 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('Services'));?>
-
 <section class="alltext">
 
-<h2 class="tagline">Full-services physical asset management and excellent distribution opportunities meet here.
-<small>Timely, efficient, and reliable delivery</small>
+<h2 class="tagline">Full-service asset management and excellent distribution opportunities meet here.
 </h2>
 
 <h4>Logistics</h4>
