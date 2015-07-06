@@ -187,7 +187,7 @@
   <section class="" id="footer">
   <div class="section__content">
     
-    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/travel_week_logo-blue.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/travel_week_logo-white.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
     <p>© Copyright Envoy Network Inc. 2015</p>
 </a>
   </div>
