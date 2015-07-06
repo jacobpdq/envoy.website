@@ -196,7 +196,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           </div>
   
           
-
+<br style="clear:both" />
           <section class="" id="footer">
   <div class="section__content">
     
