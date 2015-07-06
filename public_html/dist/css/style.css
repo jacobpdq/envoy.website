@@ -26,7 +26,8 @@
       color: white;
       text-decoration: none; }
   .button--white {
-    background: white; }
+    background: white;
+    }
     .button--white a {
       color: #3c5791;
       text-decoration: none; }
@@ -190,8 +191,8 @@ header#top-header {
 
 @media (min-width: 400px) and (max-width: 959px) {
   header#main-header #logo {
-    padding-top: 14px;
-    padding-bottom: 14px; }
+    padding: 20px;
+    max-width: 60%; }
   .box.overview {
     margin-top: 0px; }
   section {
