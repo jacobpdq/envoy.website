@@ -89,7 +89,7 @@
                    </div>
                     
                     <div class="tabs__tabItem">
-                    
+
                        <input type="radio" id="tab-3" name="tab-group-1">
                        <label for="tab-3">SUPPLIER</label>
                      
@@ -98,9 +98,9 @@
 
                         <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
 
-                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'Form_holder_style5', 'placeholder'=>"Username")) ?>
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
 
-                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'class'=>'Form_holder_style5', 'placeholder'=>"Password")) ?>
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
                         <button class="button" type="submit">Login</button>
 
