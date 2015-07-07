@@ -1,5 +1,6 @@
 <section class="alltext">
-<?php $this->set('title_for_layout', __('Contact Us'));?>
+
+<h1>Contact Us</h1>
 
 <div class="address">
 <h4>Corporate Office</h4>
