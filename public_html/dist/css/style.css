@@ -6,6 +6,9 @@
 p {
   line-height: 3rem; }
 
+#footer {
+  clear: both; }
+
 @media (min-width: 959px) {
   .mobile {
     display: none; } }
