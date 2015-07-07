@@ -848,7 +848,6 @@ SECOND SECTION
           label[for="toggle"] {
              position: fixed;
              top: 96px;
-             
              right: 40px;
              z-index: 1;
              display: block;
@@ -856,13 +855,14 @@ SECOND SECTION
              color: #444;
              cursor: pointer;
              transform: translate3d(0, 0, 0);
+             transform: translate3d(0, 0, 0);
              transition: transform .4s;
           }
           input[type=checkbox]:checked ~ label {
              transform: translate3d(-250px, 0, 0) rotate(90deg);
           }
           .content {
-             
+    
              transform: translate3d(0, 0, 0);
              transition: transform .4s;
           }

@@ -5,6 +5,7 @@
     "livereload": "latest",
     "jshint": "latest",
     "uglify": "latest",
+    "prefixr": "latest",
     "imagemin-newer": "latest",
     "watch": "latest"
   },
@@ -14,8 +15,9 @@
     "img": "npm run img:minify",
     "img:minify": "imagemin-newer src/images dist/img",
 
-    "sass": "node-sass -rwq src/sass/style.scss dist/css/style.css",
+    "sass": "node-sass -rq src/sass/style.scss dist/css/style.css",
     
+    "css": "prefixr -i dist/css/style.css -o dist/css/style.css",
     "prejs": "make clean...js",
     "js": "cp src/js/main.js dist/js/main.js",
 
@@ -23,10 +25,10 @@
 
     "predev": "make clean && make scaffold",
   	"dev": "npm run sass & npm run js & npm run livereload -s ",
-    "postdev": "npm run watch:img & npm run watch:js",
+    "postdev": "npm run watch:img & npm run watch:js && npm run watch:css",
 
     "watch:img": "watch 'npm run img' src/images",
     "watch:js": "watch 'npm run js' src/js",
-    "watch:css": "watch 'npm run css' dist/css"
+    "watch:css": "watch 'npm run sass && npm run css' src/css"
   }
 }
