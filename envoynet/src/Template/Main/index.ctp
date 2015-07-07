@@ -144,7 +144,7 @@
                 </h2>
                   <br/>
                   <button class=" button button--green">
-                  <a href="<?php echo $this->Url->build(array('controller' => 'agent', 'action' => 'register','prefix'=>'agent')); ?>">
+                  <a href="<?php echo $this->Url->build(array('controller' => 'agent', 'action' => 'register','prefix'=>'agents')); ?>">
                     <span> BECOME A PART OF THE NETWORK</span>
                   </a>
                 </button>
