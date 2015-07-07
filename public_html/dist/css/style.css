@@ -895,3 +895,56 @@ h6 {
   border-bottom: 1px solid #ddd !important;
   display: inline-block !important;
   color: #555 !important; }
+
+#Main_Navbar_Interface {
+  border: none !important;
+  background: none !important;
+  padding: 0;
+  height: 0px !important;
+  border-radius: 3px;
+  margin-top: -40px !important;
+  width: 960px !important;
+  clear: both !important; }
+
+#Welcome_holder {
+  font-style: italic;
+  color: #888; }
+  #Welcome_holder ul {
+    margin: 0; }
+  #Welcome_holder li {
+    margin: 0 !important;
+    height: auto !important; }
+
+#Main_Navbar_Holder {
+  margin-top: -40px !important;
+  background: #efefef;
+  height: 52px !important;
+  margin-bottom: 0; }
+  #Main_Navbar_Holder ul {
+    margin: 0 !important; }
+  #Main_Navbar_Holder li {
+    margin: 0 !important; }
+
+#Welcome_holder {
+  position: absolute;
+  top: 14px;
+  letter-spacing: 0.5px;
+  color: white;
+  font-size: 1rem; }
+
+#Main_Navbar_Holder {
+  border-radius: 3px;
+  margin-bottom: -40px !important; }
+
+#Main_Navbar_Holder a {
+  font-weight: 600;
+  color: #3c5791 !important;
+  padding: 15px 30px;
+  margin: 0;
+  display: block; }
+  #Main_Navbar_Holder a:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: #3c5791 !important; }
+
+.paging li {
+  list-style: none; }

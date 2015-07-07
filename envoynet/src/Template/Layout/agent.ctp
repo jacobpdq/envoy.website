@@ -184,7 +184,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>
    <div id="Main_Navbar_Interface">
 
-    <div id="Welcome_holder">Welcome: <?php echo $agentname; ?> </div> 
+    <div id="Welcome_holder">Welcome, <?php echo $agentname; ?> </div> 
     
      <ul id="Main_Navbar_Holder">
      

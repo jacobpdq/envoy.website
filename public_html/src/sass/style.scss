@@ -1400,11 +1400,67 @@ h6 {
 }
 
 
+#Main_Navbar_Interface {
+  border:none !important;
+  background:none !important;
+  padding:0;
+  height:0px !important;
+  border-radius:3px;
+  margin-top:-40px !important;
+  width:960px !important;
+  clear:both !important;
 
+}
+#Welcome_holder {
+  font-style:italic; 
+  color:#888;
+  & ul {
+    margin:0;
+  }
+  & li {
+    margin:0 !important;
+    height:auto !important;
+  }
+}
+#Main_Navbar_Holder {
+  margin-top:-40px !important;
+  background:#efefef;
+  height:52px !important;
+  margin-bottom:0;
+  & ul {
+    margin:0 !important;
+  }
+  & li {
+    margin:0 !important;
+  }
+}
 
+#Welcome_holder {
+  position:absolute;
+  top:14px;
+  letter-spacing:0.5px;
+  color:white;
+  font-size:1rem;
+}
+#Main_Navbar_Holder {
+border-radius:3px;
+margin-bottom:-40px !important;
+}
+#Main_Navbar_Holder a {
+  font-weight:600;
+  color:$blue !important;
+  padding:15px 30px;
+  margin:0;
+  display:block;
+  &:hover {
+    background:rgba(0,0,0,0.05) !important;
+    color:$blue !important;
+  }
+}
 
-
-
+.paging li {
+  list-style:none;
+}
 
 
  

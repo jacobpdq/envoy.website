@@ -91,7 +91,7 @@
       
          <div id="Main_Navbar_Interface">
 <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ;?>
-    <div id="Welcome_holder">Welcome: <?php echo $suppliername; ?> </div> 
+    <div id="Welcome_holder">Welcome,  <?php echo $suppliername; ?> </div> 
     
      <ul id="Main_Navbar_Holder">
      
