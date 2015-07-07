@@ -383,8 +383,8 @@ section.alltext.contact {
   section.alltext {
     padding-left: 20px !important; }
   section.alltext.contact iframe {
-    margin-top: 2vh;
-    float: none;
+    margin-top: 2vh !important;
+    float: none !important;
     max-width: 500px;
     width: 100%; }
   #team ul li {

@@ -568,8 +568,8 @@ section.alltext {
 
 section.alltext.contact {
     & iframe {
-    margin-top: 2vh;
-    float: none;
+    margin-top: 2vh !important;
+    float: none !important;
     max-width: 500px;
     width: 100%;
   }
