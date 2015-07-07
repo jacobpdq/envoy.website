@@ -443,6 +443,10 @@ section#masthead {
 
 @media (min-width: 400px) and (max-width: 959px) {
 
+  .wrapper {
+    overflow-x:hidden;
+  }
+
 $font-small: 0.75rem;
 $font-large: 2.5rem;
 
@@ -459,6 +463,26 @@ header#main-header {
 section {
   padding:14px 4%;
 }
+.section__content {
+  padding:14px 4% !important;
+}
+
+#green-circle {
+  padding:0px !important;
+}
+
+#masthead h2 {
+      display: inline-block;
+      margin: 0 auto 4vh auto !important;
+      font-size: 3.3rem;
+      text-align: center;
+      max-width: 463px;
+      color:$blue;
+      padding-top:0;
+
+      font-weight:600;
+      letter-spacing:0.5px;
+  }
 
 
 

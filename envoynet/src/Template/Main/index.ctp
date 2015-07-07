@@ -1,11 +1,52 @@
 <!-- Top Navigation Bar -->
   <header id="top-header">
     <nav >
-      <ul id="login">
-        <li>LOGIN</li>
-        <li><a href="#">TRAVEL AGENT<a></li>
-        <li><a href="#">SUPPLIER</a></li>
-      </ul>
+
+         <section id="login" class="tabs mobile ">
+
+                   <div class="tabs__tabItem">
+                       <input type="radio" id="tab-1" name="tab-group-1">
+                       <label for="tab-1">TRAVEL AGENT</label>
+                       
+                <div class="tabs__content">
+
+
+          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+
+
+          <button class="button" type="submit">Login</button>
+          <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                    <div class="tabs__tabItem">
+
+                       <input type="radio" id="tab-3" name="tab-group-1">
+                       <label for="tab-3">SUPPLIER</label>
+                     
+                       <div class="tabs__content">
+
+
+                        <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+
+                        <button class="button" type="submit">Login</button>
+
+                         <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                </section>
+
       <ul class="desktop">
         <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
