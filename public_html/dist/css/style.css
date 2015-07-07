@@ -364,7 +364,7 @@ section.alltext.contact {
   section.alltext.contact .address {
     font-style: italic;
     clear: both;
-    margin-top: 10vh;
+    margin-bottom: 10vh;
     line-height: 120%;
     color: #888;
     float: left;
@@ -382,6 +382,11 @@ section.alltext.contact {
 @media (min-width: 400px) and (max-width: 959px) {
   section.alltext {
     padding-left: 20px !important; }
+  section.alltext.contact iframe {
+    margin-top: 2vh;
+    float: none;
+    max-width: 500px;
+    width: 100%; }
   #team ul li {
     width: 100% !important; }
     #team ul li img {
