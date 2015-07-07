@@ -16,13 +16,15 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
-
+  list-style:none;
   & li {
     width:50%;
+    margin-bottom:10vh;
     & h3 {
-      color:$blue;
-      padding-bottom:0;
-      margin-bottom:0;
+      color:$blue !important;
+      font-size:80%;
+      padding-bottom:0 !important;
+      margin-bottom:0 !important;
     }
   }
   & img {
