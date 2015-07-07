@@ -1,7 +1,6 @@
 
 <section class="alltext team">
 
-
 <script type="text/javascript">
 	jQuery(document).ready(function($){
 		$('.inner-content-wrapper h1').hide();
