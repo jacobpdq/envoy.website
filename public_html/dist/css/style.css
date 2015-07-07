@@ -9,6 +9,22 @@ p {
 #footer {
   clear: both; }
 
+#team ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left; }
+  #team ul li {
+    width: 50%; }
+  #team ul img {
+    float: left;
+    width: 150px;
+    height: auto;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    margin-bottom: 10vh;
+    margin-right: 20px; }
+
 @media (min-width: 959px) {
   .mobile {
     display: none; } }

@@ -11,6 +11,31 @@ p {
   clear:both
 }
 
+#team ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  & li {
+    width:50%;
+    & h3 {
+      color:$blue;
+      padding-bottom:0;
+      margin-bottom:0;
+    }
+  }
+  & img {
+    float: left;
+    width: 150px;
+    height: auto;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    margin-bottom: 10vh;
+    margin-right:20px;
+  }
+}
+
 // Color pallet
 $blue: rgb(60,87,145);
 $green: rgb(139,198,75);
@@ -280,7 +305,6 @@ h2.tagline {
     letter-spacing: 1px;
 }
 
-
 section#partners {
 
     background:#efefef;
@@ -305,6 +329,7 @@ section#partners {
     }
   }
 }
+
 
 
 

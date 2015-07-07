@@ -1,6 +1,14 @@
 
 <div class="alltext">
-<?php $this->set('title_for_layout', __('Meet the Team'));?>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.inner-content-wrapper h1').hide();
+	})
+</script>
+
+<h1>Meet the Team</h1>
 
 
 
