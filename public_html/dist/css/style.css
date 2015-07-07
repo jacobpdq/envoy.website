@@ -353,12 +353,18 @@ div.message:before {
   color: #DCE47E; }
 
 @media (min-width: 400px) and (max-width: 959px) {
+  .alltext {
+    padding-left: 20px; }
   #team ul li {
     width: 100% !important; }
     #team ul li img {
-      display: block;
-      float: none;
-      margin-bottom: 5vh; }
+      float: left;
+      width: 60px;
+      height: auto;
+      border-radius: 1000px;
+      border: 1px solid #ccc;
+      margin-bottom: 120px;
+      margin-right: 20px; }
   [type=radio]:checked ~ label {
     color: #8bc64b !important; }
   .tabs {
@@ -503,7 +509,7 @@ SECOND SECTION
     opacity: 0; }
   label[for="toggle"] {
     position: fixed;
-    top: 80px;
+    top: 50px;
     right: 40px;
     z-index: 1;
     display: block;

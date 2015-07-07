@@ -18,7 +18,7 @@
 <li>  
 <?php echo $this->Html->image('assets/team/glen-harwood.png');?>
 <h3>Glen Harwood</h3>
-<h5>President<</h5>
+<h5>President</h5>
 <a tel="4163651500">(416) 365-1500 x 133</a>
 <a href="mailto:gharwood@envoynetworks.ca">gharwood@envoynetworks.ca</a>
 </li>
