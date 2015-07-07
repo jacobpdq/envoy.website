@@ -1,4 +1,4 @@
-<section class="alltext">
+<section class="alltext contact" >
 
 <script type="text/javascript">
 	jQuery(document).ready(function($){

@@ -532,6 +532,18 @@ div.message:before {
 }
 
 
+section.alltext.contact {
+  max-width:960px !important;
+
+  & .address {
+    float:left;
+    width:300px;
+    & + iframe {
+      float:right;
+    }
+  }
+}
+
 @media (min-width: 400px) and (max-width: 959px) {
 
 section.alltext {
@@ -804,7 +816,7 @@ SECOND SECTION
           }
           label[for="toggle"] {
              position: fixed;
-             top: 50px;
+             top: 96px;
              
              right: 40px;
              z-index: 1;

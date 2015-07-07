@@ -6,9 +6,7 @@
 		$('.inner-content-wrapper h1').hide();
 	})
 </script>
-
-<h1 class="alltext">Meet the Team</h1>
-
+<br /><br />
 <div id="team">
  
 <ul>
