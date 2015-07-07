@@ -49,9 +49,9 @@
 
       </header>
 
-            <section id="masthead" class="section__content desktop">
+            <section id="masthead" class="section__content ">
 
-                <section class="tabs">
+                <section class="tabs desktop">
                     
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-1" name="tab-group-1" checked>
@@ -104,8 +104,7 @@
                   <br/>
                   <button class=" button button--green">
                   <a href="#">
-                    <span class="desktop">BECOME A PART OF THE NETWORK</span>
-                    <span class="mobile">JOIN OUR NETWORK</span>
+                    <span> BECOME A PART OF THE NETWORK</span>
                   </a>
                 </button>
 

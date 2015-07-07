@@ -12,7 +12,8 @@ p {
 
 @media (min-width: 400px) and (max-width: 959px) {
   .desktop {
-    display: none; } }
+    /* display: none; */
+    } }
 
 .button {
   text-transform: uppercase;
