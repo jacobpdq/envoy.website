@@ -95,7 +95,10 @@ p {
       .tabs__tabItem label:hover {
         cursor: pointer; }
     .tabs__tabItem [type=radio] {
-      display: none; }
+      /* display: none; */
+      }
+  .tabs [type=radio]:checked ~ label {
+    background: black; }
   .tabs__content {
     position: absolute;
     top: 60px;
@@ -284,19 +287,68 @@ section#masthead {
     text-align: center;
     padding: 0; }
 
+div.message {
+  padding: 2vh 4% !important;
+  font-size: 1.5rem; }
+
+div.message.error:before {
+  padding: 11px 16px 14px 7px;
+  color: #C3232D;
+  content: "x"; }
+
+div.message:before {
+  line-height: 0px;
+  font-size: 20px;
+  height: 0px !important;
+  width: 2px !important;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  left: -11px;
+  background-color: #FFF;
+  padding: 12px 14px 12px 10px;
+  content: "i";
+  color: #DCE47E; }
+
 @media (min-width: 400px) and (max-width: 959px) {
+  [type=radio]:checked ~ label {
+    color: #8bc64b !important; }
+  .tabs {
+    z-index: 10000; }
+  .tabs__content {
+    top: 47px; }
   .tabs.mobile {
     padding: 0;
     width: 100%;
     max-width: 100%;
     min-height: 0;
-    background: #3c5791; }
+    background: #3c5791;
+    font-size: 1em; }
+    .tabs.mobile > span {
+      float: left;
+      display: inline-block;
+      background: #3c5791;
+      color: white;
+      font-size: 1em !important;
+      color: white;
+      font-size: 0.5em !important;
+      padding: 2vh 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #8bc64b;
+      font-weight: 400; }
     .tabs.mobile .tabs__tabItem {
       width: auto; }
       .tabs.mobile .tabs__tabItem label {
         background: #3c5791;
         color: white;
-        font-size: 1em; }
+        font-size: 1em !important;
+        color: white;
+        font-size: 0.5em !important;
+        padding: 2vh 8px;
+        font-weight: normal; }
   .wrapper {
     overflow-x: hidden; }
   header#main-header #logo {
@@ -405,7 +457,7 @@ SECOND SECTION
     opacity: 0; }
   label[for="toggle"] {
     position: fixed;
-    top: 45px;
+    top: 105px;
     right: 40px;
     z-index: 1;
     display: block;

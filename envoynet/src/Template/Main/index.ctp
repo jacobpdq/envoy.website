@@ -5,8 +5,8 @@
          <section id="login" class="tabs mobile ">
                   <span>Login</span>
                    <div class="tabs__tabItem">
-                       <input type="radio" id="tab-1" name="tab-group-1">
-                       <label for="tab-1">TRAVEL AGENT</label>
+                       <input type="radio" id="tab-one" name="tab-group-one">
+                       <label for="tab-one">TRAVEL AGENT</label>
                        
                 <div class="tabs__content">
 
@@ -26,8 +26,8 @@
                     
                     <div class="tabs__tabItem">
 
-                       <input type="radio" id="tab-3" name="tab-group-1">
-                       <label for="tab-3">SUPPLIER</label>
+                       <input type="radio" id="tab-two" name="tab-group-one">
+                       <label for="tab-two">SUPPLIER</label>
                      
                        <div class="tabs__content">
 

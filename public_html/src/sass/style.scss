@@ -111,6 +111,8 @@ $font-large: 2.5rem;
   }
 }
 
+
+
 .tabs {
   position: relative;   
   min-height: 300px; /* This part sucks */
@@ -150,6 +152,10 @@ $font-large: 2.5rem;
       & [type=radio] {
         display: none;   
       }
+  }
+
+  [type=radio]:checked ~ label {
+    background:black;
   }
 
   &__content {
@@ -439,9 +445,47 @@ section#masthead {
 
 }
 
+div.message {
+  padding:2vh 4% !important;
+  font-size:1.5rem;
+}
+
+div.message.error:before {
+    padding: 11px 16px 14px 7px;
+    color: #C3232D;
+    content: "x";
+}
+div.message:before {
+    line-height: 0px;
+    font-size: 20px;
+    height: 0px !important;
+    width: 2px !important;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    left: -11px;
+    background-color: #FFF;
+    padding: 12px 14px 12px 10px;
+    content: "i";
+    color: #DCE47E;
+}
 
 
 @media (min-width: 400px) and (max-width: 959px) {
+
+    [type=radio]:checked ~ label {
+    color:$green !important;
+    }
+
+    .tabs {
+      z-index:10000;
+    }
+
+    .tabs__content {
+      top:47px;
+    }
 
   .tabs.mobile {
     padding:0;
@@ -449,13 +493,34 @@ section#masthead {
     max-width:100%;
     min-height:0;
     background:$blue;
+    font-size:1em;
+    & > span {
+      float:left;
+      display:inline-block;
+      background:$blue;
+      color:white;
+      font-size:1em !important;
+      color: white;
+      font-size: 0.5em !important;
+      padding: 2vh 14px;
+      font-weight: normal;
+      text-transform:uppercase;
+      color:$green;
+      font-weight:400;
+    }
+
     & .tabs__tabItem {
 
       width:auto;
       & label {
         background:$blue;
         color:white;
-        font-size:1em;
+        font-size:1em !important;
+        color: white;
+        font-size: 0.5em !important;
+        padding: 2vh 8px;
+        font-weight: normal;
+
 
       }
     }
@@ -660,7 +725,7 @@ SECOND SECTION
           }
           label[for="toggle"] {
              position: fixed;
-             top: 45px;
+             top: 105px;
              
              right: 40px;
              z-index: 1;
