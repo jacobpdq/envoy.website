@@ -13,9 +13,16 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left; }
+  justify-content: left;
+  list-style: none; }
   #team ul li {
-    width: 50%; }
+    width: 50%;
+    margin-bottom: 10vh; }
+    #team ul li h3 {
+      color: #3c5791 !important;
+      font-size: 80%;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important; }
   #team ul img {
     float: left;
     width: 150px;

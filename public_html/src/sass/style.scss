@@ -11,6 +11,18 @@ p {
   clear:both
 }
 
+
+
+// Color pallet
+$blue: rgb(60,87,145);
+$green: rgb(139,198,75);
+$white: rgb(255,255,255);
+$gray: rgb(112,122,126);
+$circle_green: rgb(130, 190, 78);
+
+$font-small: 0.8rem;
+$font-large: 2.5rem;
+
 #team ul {
   display: flex;
   flex-direction: row;
@@ -37,18 +49,6 @@ p {
     margin-right:20px;
   }
 }
-
-// Color pallet
-$blue: rgb(60,87,145);
-$green: rgb(139,198,75);
-$white: rgb(255,255,255);
-$gray: rgb(112,122,126);
-$circle_green: rgb(130, 190, 78);
-
-$font-small: 0.8rem;
-$font-large: 2.5rem;
-
-
 
 // MOBILE HIDING 
 
