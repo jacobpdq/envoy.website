@@ -953,7 +953,9 @@ SECOND SECTION
 ********************************/
 
 
-
+a[href="#"] {
+  cursor:default;
+}
   
 
 @media (min-width: 959px)  {

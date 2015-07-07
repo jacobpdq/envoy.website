@@ -627,6 +627,9 @@ SECOND SECTION
 /********************************
             DESKTOP
 ********************************/
+a[href="#"] {
+  cursor: default; }
+
 @media (min-width: 959px) {
   section#masthead {
     height: 227px !important; }

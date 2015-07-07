@@ -144,7 +144,7 @@
                 </h2>
                   <br/>
                   <button class=" button button--green">
-                  <a href="#">
+                  <a href="<?php echo $this->Url->build(array('controller' => 'agent', 'action' => 'register','prefix'=>'agent')); ?>">
                     <span> BECOME A PART OF THE NETWORK</span>
                   </a>
                 </button>
@@ -170,7 +170,8 @@
                   <li>Intelligence</li>
                   <li>Reach</li></ul>
           
-                <button class="button button--white button--full-width "><a href="#">View Our Services</a></button>
+                <button class="button button--white button--full-width "> <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview')); ?>">
+                The Envoy Overview</a></button>
                 <br style="clear:both" />
               </div>
           </section>
