@@ -856,15 +856,24 @@ SECOND SECTION
              cursor: pointer;
              transform: translate3d(0, 0, 0);
              transform: translate3d(0, 0, 0);
+             -webkit-transition: transform .4s;
+             -moz-transition: transform .4s;
+             -ms-transition: transform .4s;
              transition: transform .4s;
           }
           input[type=checkbox]:checked ~ label {
              transform: translate3d(-250px, 0, 0) rotate(90deg);
+             -webkit-transform: translate3d(-250px, 0, 0) rotate(90deg);
+             -moz-transform: translate3d(-250px, 0, 0) rotate(90deg);
+             -ms-transform: translate3d(-250px, 0, 0) rotate(90deg);
           }
           .content {
     
              transform: translate3d(0, 0, 0);
              transition: transform .4s;
+             -webkit-transition: transform .4s;
+             -moz-transition: transform .4s;
+             -ms-transition: transform .4s;
           }
           input[type=checkbox]:checked ~ .content {
              transform: translate3d(-250px, 0, 0);
@@ -886,6 +895,9 @@ SECOND SECTION
              top:0;
              height: 100%;
              transition: all .4s;
+             -webkit-transition: all .4s;
+             -moz-transition: all .4s;
+             -ms-transition: all .4s;
              & ul {
               list-style:none;
              }
