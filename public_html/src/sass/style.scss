@@ -29,11 +29,18 @@ $font-large: 2.5rem;
   flex-wrap: wrap;
   justify-content: left;
   list-style:none;
+  & h5 {
+    color:#666;
+  }
+  & small {
+    font-style:italic;
+    color:#aaa;
+  }
   & a {
     display:block;
-    color:#888;
+    color:$blue;
     &:hover {
-      color:$blue;
+      cursor:pointer;
     }
   }
   & li {
@@ -520,6 +527,19 @@ div.message:before {
 
 
 @media (min-width: 400px) and (max-width: 959px) {
+
+
+
+#team ul {
+  
+  & li {
+    & img {
+      display:block;
+      float:none;
+      margin-bottom:5vh;
+    }
+    width:1000%;
+  }
 
     [type=radio]:checked ~ label {
     color:$green !important;

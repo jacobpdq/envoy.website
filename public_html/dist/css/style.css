@@ -15,11 +15,16 @@ p {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none; }
+  #team ul h5 {
+    color: #666; }
+  #team ul small {
+    font-style: italic;
+    color: #aaa; }
   #team ul a {
     display: block;
-    color: #888; }
+    color: #3c5791; }
     #team ul a:hover {
-      color: #3c5791; }
+      cursor: pointer; }
   #team ul li {
     width: 50%;
     margin-bottom: 10vh; }
