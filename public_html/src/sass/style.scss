@@ -538,8 +538,9 @@ div.message:before {
       float:none;
       margin-bottom:5vh;
     }
-    width:1000%;
+    width:100% !important;
   }
+}
 
     [type=radio]:checked ~ label {
     color:$green !important;

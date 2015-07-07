@@ -1,5 +1,5 @@
 
-<div class="alltext">
+<section class="alltext">
 
 
 <script type="text/javascript">

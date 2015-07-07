@@ -353,6 +353,12 @@ div.message:before {
   color: #DCE47E; }
 
 @media (min-width: 400px) and (max-width: 959px) {
+  #team ul li {
+    width: 100% !important; }
+    #team ul li img {
+      display: block;
+      float: none;
+      margin-bottom: 5vh; }
   [type=radio]:checked ~ label {
     color: #8bc64b !important; }
   .tabs {
