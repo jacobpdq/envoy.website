@@ -572,6 +572,11 @@ section.alltext {
   padding-left:20px !important;
 }
 
+h2.tagline {
+  font-size:2.5rem !important;
+  line-height:3rem !important;
+}
+
 section.alltext.contact {
     & iframe {
     margin-bottom: 10vh !important;
@@ -667,6 +672,7 @@ header#main-header {
     padding:20px;
     padding-left:0;
     max-width:60%;
+    margin-left:-12px;
   }
 }
 
@@ -887,6 +893,7 @@ SECOND SECTION
              transform: translate3d(250px, 0, 0);
              position: absolute;
              width: 250px;
+             padding-top:62px;
              background: $blue;
              color: $green;
              right:0;
@@ -895,6 +902,9 @@ SECOND SECTION
              transition: all .4s;
              & ul {
               list-style:none;
+             }
+             & li {
+              margin-bottom:0;
              }
           }
           .slide-menu h1 {
@@ -911,7 +921,7 @@ SECOND SECTION
              color: #fff;
              width:100%;
              font-size: 1.1em;
-             padding: 10px;
+             padding: 5px;
              background: $blue;
              text-transform:uppercase;
           }
@@ -919,6 +929,12 @@ SECOND SECTION
             font-size:90%;
             list-style:square !important;
             color:white;
+            margin-top:0;
+            & li {
+              font-size:80%;
+              letter-spacing:1.5px;
+              font-weight:normal;
+            }
           }
           .menu a:hover {
             color:$green;

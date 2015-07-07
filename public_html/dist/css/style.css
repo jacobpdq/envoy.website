@@ -389,6 +389,9 @@ section.alltext.contact {
 @media (min-width: 400px) and (max-width: 959px) {
   section.alltext {
     padding-left: 20px !important; }
+  h2.tagline {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important; }
   section.alltext.contact iframe {
     margin-bottom: 10vh !important;
     float: none !important;
@@ -450,7 +453,8 @@ section.alltext.contact {
   header#main-header #logo {
     padding: 20px;
     padding-left: 0;
-    max-width: 60%; }
+    max-width: 60%;
+    margin-left: -12px; }
   .box.overview {
     margin-top: 0px; }
   section {
@@ -578,6 +582,7 @@ SECOND SECTION
     transform: translate3d(250px, 0, 0);
     position: absolute;
     width: 250px;
+    padding-top: 62px;
     background: #3c5791;
     color: #8bc64b;
     right: 0;
@@ -586,6 +591,8 @@ SECOND SECTION
     transition: all 0.4s; }
     #main-header .menu ul {
       list-style: none; }
+    #main-header .menu li {
+      margin-bottom: 0; }
   .slide-menu h1 {
     margin: 10px; }
   .menu {
@@ -598,13 +605,18 @@ SECOND SECTION
     color: #fff;
     width: 100%;
     font-size: 1.1em;
-    padding: 10px;
+    padding: 5px;
     background: #3c5791;
     text-transform: uppercase; }
   .menu ul ul {
     font-size: 90%;
     list-style: square !important;
-    color: white; }
+    color: white;
+    margin-top: 0; }
+    .menu ul ul li {
+      font-size: 80%;
+      letter-spacing: 1.5px;
+      font-weight: normal; }
   .menu a:hover {
     color: #8bc64b; }
   /******************
