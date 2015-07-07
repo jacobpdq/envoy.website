@@ -67,8 +67,55 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 
-<header id="top-header">
+<!-- Top Navigation Bar -->
+  <header id="top-header">
     <nav >
+
+         <section id="login" class="tabs mobile ">
+                  <span>Login</span>
+                   <div class="tabs__tabItem">
+                       <input type="radio" id="tab-one" name="tab-group-one">
+                       <label for="tab-one">TRAVEL AGENT</label>
+                       
+                <div class="tabs__content">
+
+
+          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+
+
+          <button class="button" type="submit">Login</button>
+          <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                    <div class="tabs__tabItem">
+
+                       <input type="radio" id="tab-two" name="tab-group-one">
+                       <label for="tab-two">SUPPLIER</label>
+                     
+                       <div class="tabs__content">
+
+
+                        <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+
+                        <button class="button" type="submit">Login</button>
+
+                         <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                </section>
+
       <ul class="desktop">
         <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>

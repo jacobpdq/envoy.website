@@ -238,6 +238,10 @@ $font-large: 2.5rem;
     display:none;
   }
 
+    & [type=radio] {
+    display:none;
+  }
+
   & [type=radio]:checked + label + .tabs__content {
     display:block;
 }
@@ -725,7 +729,7 @@ SECOND SECTION
           }
           label[for="toggle"] {
              position: fixed;
-             top: 105px;
+             top: 80px;
              
              right: 40px;
              z-index: 1;

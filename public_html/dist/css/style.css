@@ -95,8 +95,7 @@ p {
       .tabs__tabItem label:hover {
         cursor: pointer; }
     .tabs__tabItem [type=radio] {
-      /* display: none; */
-      }
+      display: none; }
   .tabs [type=radio]:checked ~ label {
     background: black; }
   .tabs__content {
@@ -152,6 +151,8 @@ p {
         cursor: pointer;
         background: #71a935; }
   .tabs [type=radio] + label + .tabs__content {
+    display: none; }
+  .tabs [type=radio] {
     display: none; }
   .tabs [type=radio]:checked + label + .tabs__content {
     display: block; }
@@ -457,7 +458,7 @@ SECOND SECTION
     opacity: 0; }
   label[for="toggle"] {
     position: fixed;
-    top: 105px;
+    top: 80px;
     right: 40px;
     z-index: 1;
     display: block;
