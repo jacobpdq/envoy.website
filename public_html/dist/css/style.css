@@ -383,10 +383,13 @@ section.alltext.contact {
   section.alltext {
     padding-left: 20px !important; }
   section.alltext.contact iframe {
-    margin-top: 2vh !important;
+    margin-bottom: 10vh !important;
     float: none !important;
     max-width: 500px;
-    width: 100%; }
+    width: 100%;
+    margin-top: 2vh !important; }
+  section.alltext.contact .address {
+    margin-bottom: 0px !important; }
   #team ul li {
     width: 100% !important; }
     #team ul li img {

@@ -568,11 +568,15 @@ section.alltext {
 
 section.alltext.contact {
     & iframe {
-    margin-top: 2vh !important;
+    margin-bottom: 10vh !important;
     float: none !important;
     max-width: 500px;
     width: 100%;
+    margin-top:2vh !important;
   }
+    & .address {
+      margin-bottom:0px !important;
+    }
 }
 
 #team ul {
