@@ -1,5 +1,5 @@
 
-<section class="alltext">
+<section class="alltext team">
 
 
 <script type="text/javascript">
@@ -8,9 +8,7 @@
 	})
 </script>
 
-<h1>Meet the Team</h1>
-
-
+<h1 class="alltext">Meet the Team</h1>
 
 <div id="team">
  
@@ -34,7 +32,7 @@
 <li>  
 <?php echo $this->Html->image('assets/team/denys-cruz.png');?>
 <h3>Denys Cruz</h3>
-<h5>Vice President<<br /><small>Operations</small></h5>
+<h5>Vice President<br /><small>Operations</small></h5>
 <a tel="9058310006">(905) 831-0006</a>
 <a href="mailto:dcruz@envoynetworks.ca">dcruz@envoynetworks.ca</a>
 </li>

@@ -9,6 +9,9 @@ p {
 #footer {
   clear: both; }
 
+.alltext.team {
+  max-width: 960px; }
+
 #team ul {
   display: flex;
   flex-direction: row;
@@ -26,8 +29,9 @@ p {
     #team ul a:hover {
       cursor: pointer; }
   #team ul li {
-    width: 50%;
-    margin-bottom: 10vh; }
+    width: 40%;
+    margin-bottom: 10vh;
+    margin-right: 10%; }
     #team ul li h3 {
       color: #3c5791 !important;
       font-size: 3rem;
@@ -38,11 +42,11 @@ p {
       font-size: 90%; }
   #team ul img {
     float: left;
-    width: 150px;
+    width: 120px;
     height: auto;
     border-radius: 1000px;
     border: 1px solid #ccc;
-    margin-bottom: 10vh;
+    margin-bottom: 100px;
     margin-right: 20px; }
 
 @media (min-width: 959px) {

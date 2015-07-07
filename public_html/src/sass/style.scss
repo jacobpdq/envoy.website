@@ -23,6 +23,10 @@ $circle_green: rgb(130, 190, 78);
 $font-small: 0.8rem;
 $font-large: 2.5rem;
 
+
+.alltext.team {
+  max-width:960px;
+}
 #team ul {
   display: flex;
   flex-direction: row;
@@ -44,8 +48,9 @@ $font-large: 2.5rem;
     }
   }
   & li {
-    width:50%;
+    width:40%;
     margin-bottom:10vh;
+    margin-right:10%;
     & h3 {
       color:$blue !important;
       font-size:3rem;
@@ -60,12 +65,12 @@ $font-large: 2.5rem;
   }
   & img {
     float: left;
-    width: 150px;
+    width: 120px;
     height: auto;
     border-radius: 1000px;
     border: 1px solid #ccc;
-    margin-bottom: 10vh;
-    margin-right:20px;
+    margin-bottom: 100px;
+    margin-right: 20px;
   }
 }
 
