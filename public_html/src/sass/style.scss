@@ -29,14 +29,26 @@ $font-large: 2.5rem;
   flex-wrap: wrap;
   justify-content: left;
   list-style:none;
+  & a {
+    display:block;
+    color:#888;
+    &:hover {
+      color:$blue;
+    }
+  }
   & li {
     width:50%;
     margin-bottom:10vh;
     & h3 {
       color:$blue !important;
-      font-size:80%;
+      font-size:3rem;
       padding-bottom:0 !important;
       margin-bottom:0 !important;
+    }
+    & em {
+      color:#888;
+      font-size:90%;
+
     }
   }
   & img {

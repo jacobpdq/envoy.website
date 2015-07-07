@@ -15,14 +15,22 @@ p {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none; }
+  #team ul a {
+    display: block;
+    color: #888; }
+    #team ul a:hover {
+      color: #3c5791; }
   #team ul li {
     width: 50%;
     margin-bottom: 10vh; }
     #team ul li h3 {
       color: #3c5791 !important;
-      font-size: 80%;
+      font-size: 3rem;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important; }
+    #team ul li em {
+      color: #888;
+      font-size: 90%; }
   #team ul img {
     float: left;
     width: 150px;
