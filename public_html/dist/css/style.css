@@ -353,8 +353,8 @@ div.message:before {
   color: #DCE47E; }
 
 @media (min-width: 400px) and (max-width: 959px) {
-  .alltext {
-    padding-left: 20px; }
+  section.alltext {
+    padding-left: 20px !important; }
   #team ul li {
     width: 100% !important; }
     #team ul li img {

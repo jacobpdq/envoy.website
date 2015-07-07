@@ -528,8 +528,8 @@ div.message:before {
 
 @media (min-width: 400px) and (max-width: 959px) {
 
-.alltext {
-  padding-left:20px;
+section.alltext {
+  padding-left:20px !important;
 }
 
 #team ul {
