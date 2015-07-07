@@ -27,6 +27,9 @@ $font-large: 2.5rem;
   max-width:960px;
   padding-left:0;
 }
+.alltext a {
+  color:$blue;
+}
 
 #team ul {
   display: flex;
@@ -44,6 +47,7 @@ $font-large: 2.5rem;
   & a {
     display:block;
     color:$blue;
+    font-size:14px;
     &:hover {
       cursor:pointer;
     }
@@ -579,7 +583,7 @@ section.alltext.contact {
 }
 
 #team ul {
-  
+ 
   & li {
     & img {
     float: left;
@@ -589,6 +593,9 @@ section.alltext.contact {
     border: 1px solid #ccc;
     margin-bottom: 120px;
     margin-right: 20px;
+    }
+    & a {
+       font-size:12px;
     }
     width:100% !important;
   }

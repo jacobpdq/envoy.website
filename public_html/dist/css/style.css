@@ -13,6 +13,9 @@ p {
   max-width: 960px;
   padding-left: 0; }
 
+.alltext a {
+  color: #3c5791; }
+
 #team ul {
   display: flex;
   flex-direction: row;
@@ -26,7 +29,8 @@ p {
     color: #aaa; }
   #team ul a {
     display: block;
-    color: #3c5791; }
+    color: #3c5791;
+    font-size: 14px; }
     #team ul a:hover {
       cursor: pointer; }
   #team ul li {
@@ -400,6 +404,8 @@ section.alltext.contact {
       border: 1px solid #ccc;
       margin-bottom: 120px;
       margin-right: 20px; }
+    #team ul li a {
+      font-size: 12px; }
   [type=radio]:checked ~ label {
     color: #8bc64b !important; }
   .tabs {
