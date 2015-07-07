@@ -128,6 +128,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
   <input id="toggle" type="checkbox">
  
+   <div class="content">
       
       <header id="main-header" class="section__content " >
 
@@ -253,7 +254,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   </div>
   </section>
 
-
+</div>
 
 
 
