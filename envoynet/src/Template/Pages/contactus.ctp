@@ -1,4 +1,4 @@
-</section class="alltext">
+<section class="alltext">
 <?php $this->set('title_for_layout', __('Contact Us'));?>
 
 <div class="address">
