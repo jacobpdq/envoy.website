@@ -13,7 +13,7 @@ p {
 @media (min-width: 400px) and (max-width: 959px) {
   .desktop {
     display: none; } }
-    
+
 .button {
   text-transform: uppercase;
   border-radius: 3px;
@@ -65,13 +65,13 @@ p {
 
 .tabs {
   position: relative;
-  min-height: 300px;/* This part sucks */
+  min-height: 300px;
+  /* This part sucks */
   clear: both;
   margin: 0px 0px 0px 0px;
-  /* max-width: 50%; */
-  width: 100%;
-  float: right;
-  }
+  max-width: 50%;
+  width: 45%;
+  float: right; }
   .tabs__tabItem {
     float: left;
     width: 50%;
@@ -285,6 +285,18 @@ section#masthead {
     padding: 0; }
 
 @media (min-width: 400px) and (max-width: 959px) {
+  .tabs.mobile {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    background: #3c5791; }
+    .tabs.mobile .tabs__tabItem {
+      width: auto; }
+      .tabs.mobile .tabs__tabItem label {
+        background: #3c5791;
+        color: white;
+        font-size: 1em; }
   .wrapper {
     overflow-x: hidden; }
   header#main-header #logo {

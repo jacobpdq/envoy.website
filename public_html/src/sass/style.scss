@@ -443,6 +443,24 @@ section#masthead {
 
 @media (min-width: 400px) and (max-width: 959px) {
 
+  .tabs.mobile {
+    padding:0;
+    width:100%;
+    max-width:100%;
+    min-height:0;
+    background:$blue;
+    & .tabs__tabItem {
+
+      width:auto;
+      & label {
+        background:$blue;
+        color:white;
+        font-size:1em;
+
+      }
+    }
+  }
+
   .wrapper {
     overflow-x:hidden;
   }

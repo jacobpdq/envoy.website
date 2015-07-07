@@ -3,7 +3,7 @@
     <nav >
 
          <section id="login" class="tabs mobile ">
-
+                  <span>Login</span>
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-1" name="tab-group-1">
                        <label for="tab-1">TRAVEL AGENT</label>
