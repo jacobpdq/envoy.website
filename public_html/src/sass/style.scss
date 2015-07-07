@@ -30,6 +30,9 @@ $font-large: 2.5rem;
 .alltext a {
   color:$blue;
 }
+h3 {
+  color:$blue;
+}
 
 #team ul {
   display: flex;
@@ -662,6 +665,7 @@ $font-large: 2.5rem;
 header#main-header {
   & #logo {
     padding:20px;
+    padding-left:0;
     max-width:60%;
   }
 }

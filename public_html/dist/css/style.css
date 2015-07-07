@@ -16,6 +16,9 @@ p {
 .alltext a {
   color: #3c5791; }
 
+h3 {
+  color: #3c5791; }
+
 #team ul {
   display: flex;
   flex-direction: row;
@@ -446,6 +449,7 @@ section.alltext.contact {
     overflow-x: hidden; }
   header#main-header #logo {
     padding: 20px;
+    padding-left: 0;
     max-width: 60%; }
   .box.overview {
     margin-top: 0px; }
