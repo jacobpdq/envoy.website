@@ -1,5 +1,11 @@
 <section class="alltext">
 
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('.inner-content-wrapper h1').hide();
+	})
+</script>
+
 <h1>Contact Us</h1>
 
 <div class="address">
