@@ -5,7 +5,7 @@
        <?php echo $this->Html->image("assets/header_files/Privacy_Policy_txt.png");?>
     </div>
 
-    <div id="blank_form_holder_privacy"><div id="data_base_txt_scroll"><span class="base_txt_14"><span class="base_txt_11">This Privacy Policy outlines the information</span> <span class="base_txt">Hippo Express.ca </span><span class="base_txt_11">will
+    <div id="blank_form_holder_privacy"><span class="base_txt_14"><span class="base_txt_11">This Privacy Policy outlines the information</span> <span class="base_txt">Hippo Express.ca </span><span class="base_txt_11">will
             collect on this web site and how it will use that information. It will
             also tell you who to contact about the personal information  which is
             collected and what to do if you do not want your personal information
@@ -78,7 +78,7 @@
             1376 Cliveden Avenue
             Annacis Business Park
             Delta, BC V3M 6K2
-            Canada</span></span></div>
+            Canada</span></span>
     </div>
 
   </div>

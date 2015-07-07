@@ -5,7 +5,7 @@
       <?php echo $this->Html->image("assets/header_files/Terms_and_Conditions_txt.png");?>
     </div>
 
-    <div id="blank_form_holder_privacy"><div id="data_base_txt_scroll"><span class="base_txt_14"><span class="base_txt_11">This Privacy Policy outlines the information</span> <span class="base_txt">Hippo Express.ca </span><span class="base_txt_11">will
+    <div id="blank_form_holder_privacy"><span class="base_txt_14"><span class="base_txt_11">This Privacy Policy outlines the information</span> <span class="base_txt">Hippo Express.ca </span><span class="base_txt_11">will
             collect on this web site and how it will use that information. It will
             also tell you who to contact about the personal information  which is
             collected and what to do if you do not want your personal information
@@ -74,7 +74,7 @@
             </strong>If you wish to find out  what information we have about you,
             ask a question about the information in  your file or request a change
             to the information in your file, please write to: ATTN: Marketing
-            Department *</span><span class="base_txt">Hippo Express.ca, Inc.</span></span></div>
+            Department *</span><span class="base_txt">Hippo Express.ca, Inc.</span></span>
     </div>
 
   </div>
