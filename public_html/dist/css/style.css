@@ -375,7 +375,7 @@ section.alltext.contact {
     section.alltext.contact .address a {
       font-style: normal; }
     section.alltext.contact .address + iframe {
-      margin-top: 10vh;
+      margin-bottom: 10vh;
       float: right;
       max-width: 500px; }
 
