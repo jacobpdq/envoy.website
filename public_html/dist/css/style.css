@@ -358,12 +358,26 @@ div.message:before {
   color: #DCE47E; }
 
 section.alltext.contact {
-  max-width: 960px !important; }
+  max-width: 960px !important;
+  margin-bottom: 10vh;
+  margin-bottom: 10vh; }
   section.alltext.contact .address {
+    font-style: italic;
+    clear: both;
+    margin-top: 10vh;
+    line-height: 120%;
+    color: #888;
     float: left;
     width: 300px; }
+    section.alltext.contact .address h4 {
+      font-style: normal;
+      line-height: 120%; }
+    section.alltext.contact .address a {
+      font-style: normal; }
     section.alltext.contact .address + iframe {
-      float: right; }
+      margin-top: 10vh;
+      float: right;
+      max-width: 500px; }
 
 @media (min-width: 400px) and (max-width: 959px) {
   section.alltext {

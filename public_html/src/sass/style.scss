@@ -534,14 +534,30 @@ div.message:before {
 
 section.alltext.contact {
   max-width:960px !important;
-
+  margin-bottom:10vh;
   & .address {
+    font-style:italic;
+    clear:both;
+    margin-top:10vh;
+    line-height:120%;
+    color:#888;
+    h4 {
+      font-style:normal;
+      line-height:120%;
+    }
+    & a {
+      font-style:normal;
+    }
     float:left;
     width:300px;
     & + iframe {
+      margin-top:10vh;
       float:right;
+      max-width:500px;
     }
   }
+  margin-bottom:10vh;
+
 }
 
 @media (min-width: 400px) and (max-width: 959px) {
