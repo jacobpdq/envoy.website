@@ -223,6 +223,14 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
+Configure::write('Session', [
+    'defaults' => 'php',
+    'ini' => [
+        'session.cookie_path' => '/'
+    ]
+]);
+
+
 if ($session->check('Config.language')) {
 
  switch($session->read('Config.language')) {
