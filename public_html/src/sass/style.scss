@@ -154,6 +154,9 @@ h3 {
     letter-spacing:1px;
   }
 }
+#footer img {
+  max-width:300px;
+}
 
 @media (min-width: 959px) {
   .button {
@@ -1406,7 +1409,6 @@ h6 {
   padding:0;
   height:0px !important;
   border-radius:3px;
-  margin-top:-40px !important;
   width:960px !important;
   clear:both !important;
 
@@ -1460,6 +1462,37 @@ margin-bottom:-40px !important;
 
 .paging li {
   list-style:none;
+}
+
+#brochures-sidebar {
+    height: 690px;
+    width: 180px;
+    float: left;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+ul#supplier-list li a {
+  background:none !important;
+  color:$blue !important;
+  line-height:140%;
+  height:auto !important;
+  margin:0 !important;
+  padding:5px 0 !important;
+  border:0px !important;
+  font-family:'Open Sans' !important;
+  border-bottom:1px solid #efefef !important;
+  font-weight:600;
+  padding:3px 5px !important;
+
+    &:hover {
+    cursor: pointer;
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #efefef !important;
+    margin-left: 0px;
+    }
 }
 
 

@@ -184,8 +184,7 @@
 
     <div class="Hippo_Copyright_Line" id="Main_copyright_Holder">© Copyright Envoy Network Inc. 2013
       <div id="Travelweek_Holder">
-	  <a href="http://travelweek.ca" target="_blank">
-	  <?php echo $this->Html->image('assets/site_logos/travel_week_logo.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+	 <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
       </div>
     </div>
     <!--End copyright Line content /-->
