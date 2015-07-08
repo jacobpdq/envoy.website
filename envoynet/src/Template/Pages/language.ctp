@@ -24,3 +24,13 @@ if ($language) {
 
 ?>
     
+
+    <script type="text/javascript">
+	jQuery(document).ready(function($){
+		$('h1').hide();
+	})
+</script>
+
+<script type="text/javascript">
+	window.location = document.referrer;
+</script>
