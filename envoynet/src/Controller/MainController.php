@@ -7,6 +7,7 @@ use Cake\Core\Configure;
 use Cake\Routing\Router;
 use Cake\Event\Event;
 use Cake\Network\Http\Client;
+use Cake\I18n\I18n;
 
 
 
@@ -293,20 +294,17 @@ class MainController extends AppController {
 
   }
 
-  public function language() {
+  public function language($language = null) {
 
-    echo ini_get('intl.default_locale');
-
-  if(ini_get('intl.default_locale') === 'fr_CA') {
-
-    ini_set('intl.default_locale', 'en_CA');
-
-  } else {
-    ini_set('intl.default_locale', 'fr_CA');
-  }
-//return $this->redirect($this->referer());
-
-    echo ini_get('intl.default_locale');
+    switch($language) {
+      case "en":
+      I18n::locale('en_CA');
+      break;
+      case "fr":
+      I18n::locale('fr_CA');
+      default:
+      I18n::locale('en_CA');    
+    }
 
   }
 
