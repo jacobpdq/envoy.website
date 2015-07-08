@@ -89,7 +89,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?php echo $sso_session_check; ?>
 </head>
-<body>
+<body class="<?php echo ini_get('intl.default_locale'); ?>">
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 

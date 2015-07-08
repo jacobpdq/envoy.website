@@ -38,7 +38,8 @@
   
     <?= $this->fetch('script') ?>
 </head>
-    <body>
+    <body class="<?php echo ini_get('intl.default_locale'); ?>">
+
       <!--Site Header /-->
   <div id="Main_content_Holder">
 

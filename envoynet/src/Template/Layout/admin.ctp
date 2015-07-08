@@ -34,7 +34,8 @@
     ?>
     <?= $this->fetch('script') ?>
 </head>
-    <body>
+<body class="<?php echo ini_get('intl.default_locale'); ?>">
+
       <div id="Main_admin_logout_Holder">
         <div id="logout_Interface_admin">
           <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'admin'));?>">
