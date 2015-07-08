@@ -10,15 +10,15 @@
     <div id="confirm_data_holder" class="Base_red_form_txt">
     <span class="data_Headers_Bl_txt">Order Details</span>
 
-        <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Order Id: </span><span class="data_Headers_Bl_txt"><?php echo $order['id']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Company Name: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_company']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"> <span class="Base_txt">First Name: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_firstname']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Last Name: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_lastname']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt">Address1: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address1']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Address 2: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address2']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> City: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_city']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Province: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_province']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Postal Code: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Order Id'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['id']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Company Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_company']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('First Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_firstname']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Last Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_lastname']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address1'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address1']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address2'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address2']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('City'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_city']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Province'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_province']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Postal Code'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br></div>
        </div> 
         </div>
         
@@ -26,9 +26,9 @@
 <div id="order_column_06">
     <div id="confirm_data_holder" class="Base_red_form_txt">        
     <br>    
-    <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Order Date: </span><span class="data_Headers_Bl_txt"><?php echo $order['created']; ?></span></div>     
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Tel: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_phonenumber']; ?></span></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Email: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_email']; ?></span><br></div>
+    <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Date'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['created']; ?></span></div>     
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Tel'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_phonenumber']; ?></span></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Email'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_email']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Order Source: </span><span class="data_Headers_Bl_txt"><?php echo $order_owners[$order['owner_type']]; ?></span></div> 
   <?php if($order['priority']=='1'):?>              
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Delivery Type: </span><span class="data_Headers_Bl_txt">Rush</span><br></div>

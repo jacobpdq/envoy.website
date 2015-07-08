@@ -9,14 +9,14 @@
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Company Information</span></div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Company name:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Company Name'); ?>:</div>
             <?php echo $this->Form->input('company', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Contact Information</span></div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Email:<?php echo $this->request->data['email']; ?></div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Email'); ?>:<?php echo $this->request->data['email']; ?></div>
             
         </div>
 

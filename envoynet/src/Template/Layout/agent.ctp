@@ -72,10 +72,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav >
 
          <section id="login" class="tabs mobile ">
-                  <span>Login</span>
+                  <span><?php echo __('Login'); ?></span>
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-one" name="tab-group-one">
-                       <label for="tab-one">TRAVEL AGENT</label>
+                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
                        
                 <div class="tabs__content">
 
@@ -87,7 +87,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
 
-          <button class="button" type="submit">Login</button>
+          <button class="button" type="submit"><?php echo __(' Login'); ?></button>
           <?php echo $this->Form->end(); ?>
 
                        </div> 
@@ -96,7 +96,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <div class="tabs__tabItem">
 
                        <input type="radio" id="tab-two" name="tab-group-one">
-                       <label for="tab-two">SUPPLIER</label>
+                       <label for="tab-two"><?php echo __('Supplier'); ?></label>
                      
                        <div class="tabs__content">
 
@@ -107,7 +107,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
                         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
-                        <button class="button" type="submit">Login</button>
+                        <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
                          <?php echo $this->Form->end(); ?>
 
@@ -147,21 +147,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       
         <nav class="menu">
           <ul>
-            <li><a href="#">Services</a>
+            <li><a href="#"><?php echo __('Services'); ?></a>
               <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>">Logistics</a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>">Digital support</a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>">Marketing solutions</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
               </ul>
 
             </li>
-            <li><a href="#">About Us</a>
+            <li><a href="#"><?php echo __('About Us'); ?></a>
               <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>">Overview</a></li>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>">Meet the Team</a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
               </ul>
             </li>
-            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>">Contact Us</a> 
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
    </li>
             </ul>
         </nav>
@@ -184,14 +184,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>
    <div id="Main_Navbar_Interface">
 
-    <div id="Welcome_holder">Welcome, <?php echo $agentname; ?> </div> 
+    <div id="Welcome_holder"><?php echo __('Welcome'); ?>, <?php echo $agentname; ?> </div> 
     
      <ul id="Main_Navbar_Holder">
      
-     <li>    <a href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_profile', 'prefix' => 'agent')); ?>">My Profile</a>  </li>
-      <li>  <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>">Brochures</a> </li>
-     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'agent')); ?>">My Orders</a>  </li>
-           <li> </a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'agent'));?>">Logout</a> </li>
+     <li>    <a href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_profile', 'prefix' => 'agent')); ?>"><?php echo __('My Profile'); ?></a>  </li>
+      <li>  <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>"><?php echo __('Brochures'); ?></a> </li>
+     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'agent')); ?>"><?php echo __('My Orders'); ?></a>  </li>
+           <li> </a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'agent'));?>"><?php echo __('Logout'); ?></a> </li>
       
 
          
@@ -231,7 +231,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
       <!--    </span> &nbsp;&nbsp;   -->
 
-          <a class="Cart_items" href="<?php echo $this->Url->build(array('controller' => 'ShoppingCart', 'action' => 'index', 'prefix' => 'agent')); ?>">Checkout / View items in cart: <?php echo $itemNr;?></a>&nbsp;
+          <a class="Cart_items" href="<?php echo $this->Url->build(array('controller' => 'ShoppingCart', 'action' => 'index', 'prefix' => 'agent')); ?>"><?php echo __('Checkout'); ?> / <?php echo __('View Items in Cart'); ?>: <?php echo $itemNr;?></a>&nbsp;
         </div>
 <?php endif; ?>
       </div>

@@ -31,7 +31,7 @@
             {
               $newArrivalsClass='selected';
             }
-            echo $this->Html->link(__('** New Arrivals'),
+            echo $this->Html->link(__('New Arrivals'),
                     array('controller'=>'brochures','action'=>'index','prefix' => 'agent'),
                     array('class'=>$newArrivalsClass));
             ?>
@@ -95,7 +95,7 @@
             {
               echo $selectedSupplier->first()->company;
             } else {
-              echo __("** New Arrivals **");
+              echo __("New Arrivals");
             }
 
            ?>

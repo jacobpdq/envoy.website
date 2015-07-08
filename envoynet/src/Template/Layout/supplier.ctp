@@ -59,25 +59,25 @@
       
        <ul id="navbar">
        <li>
-        <a>Services</a> 
+        <a><?php echo __('Services'); ?></a> 
         <ul>
-           <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix' => false)); ?>">Logistics</a></li> 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix' => false)) ?>">Digital support</a></li> 
-<li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix' => false)) ?>">Marketing solutions</a></li> 
+           <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix' => false)); ?>"><?php echo __('Logistics'); ?></a></li> 
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix' => false)) ?>"><?php echo __('Digital Support'); ?></a></li> 
+<li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix' => false)) ?>"> <?php echo __('Marketing Solutions'); ?></a></li> 
         </ul>
     </li>
 
     <li>
-      <a> About Us</a>
+      <a> <?php echo __('About Us'); ?></a>
         <ul>
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix' => false)); ?>">Overview</a></li>
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix' => false)); ?>"><?php echo __('Overview'); ?></a></li>
 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix' => false)); ?>">Meet the Team</a></li>
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix' => false)); ?>"><?php echo __('Meet the Team'); ?></a></li>
         </ul>
     </li>
 
      <li id="last">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix' => false)); ?>">Contact Us</a> 
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix' => false)); ?>"><?php echo __('Contact Us'); ?></a> 
     </li> 
       </ul>
       
@@ -91,15 +91,15 @@
       
          <div id="Main_Navbar_Interface">
 <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ;?>
-    <div id="Welcome_holder">Welcome,  <?php echo $suppliername; ?> </div> 
+    <div id="Welcome_holder"><?php echo __('Welcome'); ?>,  <?php echo $suppliername; ?> </div> 
     
      <ul id="Main_Navbar_Holder">
      
-     <li>    <a href="<?php echo $this->Url->build(array('controller' => 'suppliers', 'action' => 'profile', 'prefix' => 'supplier')); ?>">My Profile</a>  </li>
-      <li>  <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>">Brochures</a> </li>
-     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'supplier')); ?>">My Orders</a>  </li>
-     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'receipts', 'action' => 'index', 'prefix' => 'supplier')); ?>">My Receipts</a>  </li>
-           <li> </a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'supplier'));?>">Logout</a> </li>
+     <li>    <a href="<?php echo $this->Url->build(array('controller' => 'suppliers', 'action' => 'profile', 'prefix' => 'supplier')); ?>"><?php echo __('My Profile'); ?></a>  </li>
+      <li>  <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('Brochures'); ?></a> </li>
+     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Orders'); ?></a>  </li>
+     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'receipts', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Receipts'); ?></a>  </li>
+           <li> </a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'supplier'));?>"><?php echo __('Logout'); ?></a> </li>
       
 <?php else: ?>
          

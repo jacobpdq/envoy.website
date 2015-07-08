@@ -1,12 +1,19 @@
+<?php 
+
+print Configure::version();
+ ?>
+
 <!-- Top Navigation Bar -->
   <header id="top-header">
     <nav >
+
+
 
          <section id="login" class="tabs mobile ">
                   <span>Login</span>
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-one" name="tab-group-one">
-                       <label for="tab-one">TRAVEL AGENT</label>
+                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
                        
                 <div class="tabs__content">
 
@@ -18,7 +25,7 @@
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
 
-          <button class="button" type="submit">Login</button>
+          <button class="button" type="submit"><?php echo __('Login'); ?></button>
           <?php echo $this->Form->end(); ?>
 
                        </div> 
@@ -27,7 +34,7 @@
                     <div class="tabs__tabItem">
 
                        <input type="radio" id="tab-two" name="tab-group-one">
-                       <label for="tab-two">SUPPLIER</label>
+                       <label for="tab-two"><?php echo __('Supplier'); ?></label>
                      
                        <div class="tabs__content">
 
@@ -38,7 +45,7 @@
 
                         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
-                        <button class="button" type="submit">Login</button>
+                        <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
                          <?php echo $this->Form->end(); ?>
 
@@ -69,21 +76,21 @@
       
         <nav class="menu">
           <ul>
-            <li><a href="#">Services</a>
+            <li><a href="#"><?php echo __('Services'); ?></a>
               <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>">Logistics</a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>">Digital support</a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>">Marketing solutions</a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
               </ul>
 
             </li>
-            <li><a href="#">About Us</a>
+            <li><a href="#"><?php echo __('About Us'); ?></a>
               <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>">Overview</a></li>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>">Meet the Team</a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
               </ul>
             </li>
-            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>">Contact Us</a> 
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
    </li>
             </ul>
         </nav>
@@ -96,7 +103,7 @@
                     
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-1" name="tab-group-1" checked>
-                       <label for="tab-1">TRAVEL AGENT</label>
+                       <label for="tab-1"><?php echo __('Travel Agent'); ?></label>
                        
                 <div class="tabs__content">
 
@@ -108,7 +115,7 @@
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
 
-          <button class="button" type="submit">Login</button>
+          <button class="button" type="submit"><?php echo __('Login'); ?></button>
           <?php echo $this->Form->end(); ?>
 
                        </div> 
@@ -117,7 +124,7 @@
                     <div class="tabs__tabItem">
 
                        <input type="radio" id="tab-3" name="tab-group-1">
-                       <label for="tab-3">SUPPLIER</label>
+                       <label for="tab-3"><?php echo __('Supplier'); ?></label>
                      
                        <div class="tabs__content">
 
@@ -128,7 +135,7 @@
 
                         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
-                        <button class="button" type="submit">Login</button>
+                        <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
                          <?php echo $this->Form->end(); ?>
 
