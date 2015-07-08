@@ -49,11 +49,14 @@ Router::scope('/', function ($routes) {
      */ 
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
-    $routes->connect('/language',['controller'=>'Main','action'=>'language']);
+
     Router::prefix('agent', function ($routes) {
         // All routes here will be prefixed with `/agent`
         // And have the prefix => agent route element added.
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'agent'));
+
+        $routes->connect('/language',['controller'=>'Main','action'=>'language', 'prefix' => 'agent']);
+
 
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'agent'));
         $routes->connect('/my-profile', array('controller' => 'Agents', 'action' => 'sso_profile', 'prefix' => 'agent'));
@@ -66,6 +69,7 @@ Router::scope('/', function ($routes) {
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'supplier'));
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'supplier'));
         $routes->connect('/my-profile', array('controller' => 'Suppliers', 'action' => 'profile', 'prefix' => 'supplier'));
+        $routes->connect('/language',['controller'=>'Main','action'=>'language', 'prefix' => 'supplier']);
         
         $routes->fallbacks('InflectedRoute');
     });
@@ -78,6 +82,7 @@ Router::scope('/', function ($routes) {
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'admin'));
 
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'admin'));
+            $routes->connect('/language',['controller'=>'Main','action'=>'language', 'prefix' => 'admin']);
         $routes->fallbacks('InflectedRoute');
     });
 
