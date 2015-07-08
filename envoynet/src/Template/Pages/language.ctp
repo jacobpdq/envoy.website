@@ -2,7 +2,7 @@
 
  use Cake\I18n\I18n;
 
-if (isset($_POST["username"]) {
+if (isset($_POST["username"])) {
 
  switch($_POST['language']) {
       case "en":
