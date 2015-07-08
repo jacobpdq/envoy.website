@@ -55,9 +55,6 @@ Router::scope('/', function ($routes) {
         // And have the prefix => agent route element added.
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'agent'));
 
-        $routes->connect('/language',['controller'=>'Main','action'=>'language', 'prefix' => 'agent']);
-
-
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'agent'));
         $routes->connect('/my-profile', array('controller' => 'Agents', 'action' => 'sso_profile', 'prefix' => 'agent'));
         $routes->fallbacks('InflectedRoute');
