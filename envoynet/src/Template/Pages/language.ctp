@@ -23,6 +23,6 @@ if ($language) {
 ?>
 
 <script>
-document.URL = document.referrer;
+document.location = document.referrer;
 </script>
     
