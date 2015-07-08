@@ -38,7 +38,13 @@
   
     <?= $this->fetch('script') ?>
 </head>
-    <body class="<?php echo ini_get('intl.default_locale'); ?>">
+<body class="<?php echo $this->request->session()->read('language'); ?>">
+
+<script type="text/javascript">
+  if (/language/.test(window.location.href)) {
+  window.location = document.referrer;
+}
+</script>
 
       <!--Site Header /-->
   <div id="Main_content_Holder">

@@ -89,7 +89,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?php echo $sso_session_check; ?>
 </head>
-<body class="<?php echo ini_get('intl.default_locale'); ?>">
+<body class="<?php echo $this->request->session()->read('language'); ?>">
+<script type="text/javascript">
+  if (/language/.test(window.location.href)) {
+  window.location = document.referrer;
+}
+</script>
+
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 

@@ -67,6 +67,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
 
+<script type="text/javascript">
+  if (/language/.test(window.location.href)) {
+  window.location = document.referrer;
+}
+</script>
+
 
 <!-- Top Navigation Bar -->
   <header id="top-header">

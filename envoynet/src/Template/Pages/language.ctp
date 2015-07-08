@@ -31,6 +31,4 @@ if ($language) {
 	})
 </script>
 
-<script type="text/javascript">
-	window.location = document.referrer;
-</script>
+
