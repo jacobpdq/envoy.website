@@ -226,7 +226,7 @@ Type::build('datetime')->useLocaleParser();
 if (isset($_POST["language"])) {
 
  switch($_POST['language']) {
-
+    }
 } else {
     $_POST["language"] = "en";
 }
