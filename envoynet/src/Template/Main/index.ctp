@@ -1,8 +1,3 @@
-<?php 
-
-print Configure::version();
- ?>
-
 <!-- Top Navigation Bar -->
   <header id="top-header">
     <nav >

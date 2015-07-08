@@ -1,0 +1,187 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Loco Demo\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-08 04:55+0100\n"
+"PO-Revision-Date: 2015-07-08 05:17+0100\n"
+"Last-Translator: jacob\n"
+"Language-Team: jacob\n"
+"Language: English (Canada)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: en_CA\n"
+"X-Loco-Target-Locale: en_CA\n"
+"X-Loco-Project-Id: 8736\n"
+"X-Loco-Api-Version: 1.0.11"
+
+#: loco:559c9fa014d725e47e8b456a
+msgid "Travel Agent"
+msgstr "Travel Agent"
+
+#: loco:559c9fbf14d72523088b456c
+msgid "Supplier"
+msgstr "Supplier"
+
+#: loco:559c9fcc14d725107f8b456a
+msgid "Logistics"
+msgstr "Logistics"
+
+#: loco:559c9fd214d72519058b456d
+msgid "Digital Support"
+msgstr "Digital Support"
+
+#: loco:559c9fd914d7254a088b4569
+msgid "Marketing Solutions"
+msgstr "Marketing Solutions"
+
+#: loco:559c9fdf14d725f97e8b4580
+msgid "Meet the Team"
+msgstr "Meet the Team"
+
+#: loco:559c9fe414d725cd048b4568
+msgid "Welcome"
+msgstr "Welcome"
+
+#: loco:559c9fe914d7254a088b456b
+msgid "Brochures"
+msgstr "Brochures"
+
+#: loco:559c9fed14d725867f8b456a
+msgid "New Arrivals"
+msgstr "New Arrivals"
+
+#: loco:559c9ff314d725e47e8b456c
+msgid "My Profile"
+msgstr "My Profile"
+
+#: loco:559c9ff814d725f97e8b4582
+msgid "My Orders"
+msgstr "My Orders"
+
+#: loco:559c9ffd14d72523088b456e
+msgid "Logout"
+msgstr "Logout"
+
+#: loco:559ca00214d7254a088b456d
+msgid "Checkout"
+msgstr "Checkout"
+
+#: loco:559ca00a14d725cd048b456a
+msgid "View Items in Cart"
+msgstr "View Items in Cart"
+
+#: loco:559ca00f14d725ed7e8b456f
+msgid "Add to Order"
+msgstr "Add to Order"
+
+#: loco:559ca01714d725867f8b456d
+msgid "Quantity"
+msgstr "Quantity"
+
+#: loco:559ca01d14d72523088b4570
+msgid "Update Order"
+msgstr "Update Order"
+
+#: loco:559ca02214d725e47e8b456e
+msgid "Continue Viewing"
+msgstr "Continue Viewing"
+
+#: loco:559ca02914d7254a088b4570
+msgid "Process Order"
+msgstr "Process Order"
+
+#: loco:559ca02e14d725f97e8b4584
+msgid "Shopping Cart"
+msgstr "Shopping Cart"
+
+#: loco:559ca03314d725a77e8b456b
+msgid "Company Name"
+msgstr "Company Name"
+
+#: loco:559ca03814d72523088b4572
+msgid "First Name"
+msgstr "First Name"
+
+#: loco:559ca03c14d725e47e8b4570
+msgid "Last Name"
+msgstr "Last Name"
+
+#: loco:559ca04114d7254a088b4572
+msgid "Address1"
+msgstr "Address1"
+
+#: loco:559ca04514d725a77e8b456d
+msgid "Address"
+msgstr "Address"
+
+#: loco:559ca05414d72519058b456f
+msgid "City"
+msgstr "City"
+
+#: loco:559ca05914d725ed7e8b4571
+msgid "Province"
+msgstr "Province"
+
+#: loco:559ca06014d725107f8b456c
+msgid "Postal Code"
+msgstr "Postal Code"
+
+#: loco:559ca06514d725867f8b456f
+msgid "Email"
+msgstr "Email"
+
+#: loco:559ca06814d725cd048b456c
+msgid "Tel"
+msgstr "Tel"
+
+#: loco:559ca06d14d72519058b4571
+msgid "Country"
+msgstr "Country"
+
+#: loco:559ca07514d7254a088b4574
+msgid "Order Number"
+msgstr "Order Number"
+
+#: loco:559ca0fb14d72523088b4574
+msgid "Date"
+msgstr "Date"
+
+#: loco:559ca10114d725e47e8b4572
+msgid "View Order"
+msgstr "View Order"
+
+#: loco:559ca11214d725867f8b4571
+msgid "Order Comments"
+msgstr "Order Comments"
+
+#: loco:559ca11714d725cd048b456e
+msgid "Order Id"
+msgstr "Order Id"
+
+#: loco:559ca11b14d72519058b4573
+msgid "Brochure Name"
+msgstr "Brochure Name"
+
+#: loco:559ca12014d725ed7e8b4573
+msgid "Qty Ordered"
+msgstr "Qty Ordered"
+
+#: loco:559ca12314d725107f8b456f
+msgid "Qty Shipped"
+msgstr "Qty Shipped"
+
+#: loco:559ca12614d725867f8b4573
+msgid "Status"
+msgstr "Status"
+
+#: loco:559ca12b14d72523088b4576
+msgid "Shipped Via"
+msgstr "Shipped Via"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Tracking Num"
+msgstr "Tracking Num"
