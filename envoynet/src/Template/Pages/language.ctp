@@ -2,7 +2,7 @@
 
 use Cake\I18n\I18n;
 
-if ($session->read('Config.language')) {
+if ($session->check('Config.language')) {
 
  switch($session->read('Config.language')) {
       case "fr":
