@@ -5,6 +5,11 @@ use App\Controller\AppController;
 
 class LanguageController extends AppController
 {
+
+    	public function index($language = null) {
+    		echo 'test';
+    	}
+
     	public function language($language = null) {
 
 		switch($language) {
