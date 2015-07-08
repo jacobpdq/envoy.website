@@ -708,7 +708,8 @@ a[href="#"] {
       #main-header .menu li ul {
         position: absolute;
         display: none;
-        left: -50px;
+        left: 50%;
+        margin-left: -100px;
         margin-top: 50px;
         width: 200px;
         margin: 0;
@@ -772,7 +773,7 @@ a[href="#"] {
     margin-top: -40px;
     background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
     background-size: contain, cover;
-    background-position: 110% center, center bottom;
+    background-position: 125% center, center bottom;
     background-repeat: no-repeat, no-repeat; }
     .box.box__blue.overview p {
       text-align: center;

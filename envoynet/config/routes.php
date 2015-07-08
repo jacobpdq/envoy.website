@@ -41,6 +41,9 @@ use Cake\Routing\Router;
  */
 Router::defaultRouteClass('Route');
 
+// Using the static method.
+Router::connect('/language', ['controller' => 'Main', 'action' => 'language']);
+
 Router::scope('/', function ($routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -49,6 +52,8 @@ Router::scope('/', function ($routes) {
      */ 
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
+
+
 
     Router::prefix('agent', function ($routes) {
         // All routes here will be prefixed with `/agent`
@@ -66,7 +71,6 @@ Router::scope('/', function ($routes) {
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'supplier'));
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'supplier'));
         $routes->connect('/my-profile', array('controller' => 'Suppliers', 'action' => 'profile', 'prefix' => 'supplier'));
-        
         $routes->fallbacks('InflectedRoute');
     });
 

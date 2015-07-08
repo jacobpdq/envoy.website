@@ -202,3 +202,8 @@ msgstr "Nous Joindre"
 msgid "Login"
 msgstr "S'Inscrire"
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "Overview"
+msgstr "Summaire"
+
+

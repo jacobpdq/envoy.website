@@ -223,5 +223,5 @@ DispatcherFactory::add('ControllerFactory');
 Type::build('datetime')->useLocaleParser();
 
 
-ini_set('intl.default_locale', 'fr_CA');
+
 

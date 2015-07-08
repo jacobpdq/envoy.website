@@ -293,6 +293,21 @@ class MainController extends AppController {
 
   }
 
+  public function language() {
+
+
+  if(ini_get('intl.default_locale') == 'fr_CA') {
+
+  ini_set('intl.default_locale', 'en_CA');
+
+  } else {
+    ini_set('intl.default_locale', 'fr_CA');
+  }
+
+    return $this->redirect($this->referer());
+
+  }
+
   function contact() {
     $this->layout = "infobox";
     if (!empty($this->request->data)) {

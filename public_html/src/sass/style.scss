@@ -1087,7 +1087,8 @@ header#main-header {
                 position:absolute;
                 display:none;
 
-                left: -50px;
+                left: 50%;
+                margin-left:-100px;
                 margin-top: 50px;
                 width: 200px;
                 margin:0;
@@ -1194,9 +1195,8 @@ header#main-header {
                 margin-top: -40px;
                 background-image: url(../../img/assets/mastheadBgVans.png), url(../../img/assets/mastheadBgWarehouse.jpg);
                 background-size:contain, cover;
-                background-position:110% center, center bottom;
+                background-position:125% center, center bottom;
                 background-repeat:no-repeat, no-repeat;
-
 
           & p {
             text-align: center;
@@ -1222,7 +1222,6 @@ header#main-header {
             font-style:italic;
             letter-spacing:1px;
           }
-
           & ul { 
 
             text-align: center;
