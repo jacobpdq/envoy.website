@@ -20,9 +20,7 @@ if ($language) {
     $this->request->session()->write('language', 'en');
 }
 
-?>
 
-<script>
-document.location = document.referrer;
-</script>
+
+?>
     
