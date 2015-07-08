@@ -16,18 +16,20 @@ class LanguageController extends AppController
 			default:
 			I18n::locale('en_CA');    
 		}
-
+		echo 'test;';
 		return $this->redirect($this->referer());
 	}
 
     public function en()
     {
     	I18n::locale('en_CA'); 
+    	echo 'teenst;';
     	return $this->redirect($this->referer());
     }
         public function fr()
     {
-    	I18n::locale('en_FR'); 
+    	I18n::locale('en_FR');
+    	echo 'tefrst;'; 
     	return $this->redirect($this->referer());
     }
 }
