@@ -79,9 +79,10 @@ class AppController extends Controller {
     } else {
         $this->request->session()->write('language', 'en');
     }
-    if($this->request->params['pass'][0] == 'language') {
+    if($this->request->params['pass'][0] === 'language') {
     $this->redirect($this->referer());
   }
+  echo $this->request->params['pass'][0];
 
 
     if (isset($this->request['prefix'])) {
