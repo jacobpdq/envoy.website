@@ -2,6 +2,8 @@
 
 use Cake\I18n\I18n;
 
+echo $_POST["language"] = "en";
+
 if (isset($_POST["language"])) {
 
  switch($_POST['language']) {
@@ -23,6 +25,8 @@ if (isset($_POST["language"])) {
 } else {
 	$_POST["language"] = "en";
 }
+
+echo $_POST["language"] = "en";
 
 ?>
     
