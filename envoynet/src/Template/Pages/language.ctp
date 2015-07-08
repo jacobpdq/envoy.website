@@ -2,33 +2,21 @@
 
 use Cake\I18n\I18n;
 
+if ($session->read('Config.language')) {
 
-
-if (isset($_SESSION["language"])) {
-
-
-	echo 'isset';
-
- switch($_SESSION['language']) {
-      case "en":
-      I18n::locale('fr_CA');
-      $_SESSION['language'] = 'fr';
-      echo 'variable now french';
-      break;
+ switch($session->read('Config.language')) {
       case "fr":
-      I18n::locale('en_CA');
-      $_SESSION['language'] = 'en';
-      echo 'post now english';
+      I18n::locale('fr_CA');
+      $session->write('Config.language', 'en');
       break;
-      default:
+      case "en":
       I18n::locale('en_CA');
-      $_SESSION['language'] == "en";
-      break;   
+      $session->write('Config.language', 'fr');
+      break;
     }
 } else {
-	$_SESSION["language"] = "en";
+    $session->write('Config.language', 'en');
 }
-
 
 ?>
     

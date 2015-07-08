@@ -223,9 +223,9 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
-if (isset($_SESSION["language"])) {
+if ($session->read('Config.language')) {
 
- switch($_SESSION['language']) {
+ switch($session->read('Config.language')) {
       case "fr":
       I18n::locale('fr_CA');
       break;
@@ -237,7 +237,7 @@ if (isset($_SESSION["language"])) {
       break;   
     }
 } else {
-    $_SESSION["language"] = "en";
+    $session->write('Config.language', 'en');
 }
 
 
