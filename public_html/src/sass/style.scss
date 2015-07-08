@@ -1088,7 +1088,7 @@ header#main-header {
                 display:none;
 
                 left: 50%;
-                margin-left:-100px;
+                
                 margin-top: 50px;
                 width: 200px;
                 margin:0;
@@ -1096,6 +1096,7 @@ header#main-header {
                 padding:0;
                 z-index:1000;
                 border-radius:3px;
+                margin-left:-100px;
                 & li {
                   &:first-of-type {
                     border-top-left-radius:3px;
@@ -1495,6 +1496,11 @@ ul#supplier-list li a {
 }
 
 
+
+ul.language {
+  float:right;
+  
+}
  
 
 

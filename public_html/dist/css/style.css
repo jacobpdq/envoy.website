@@ -709,14 +709,14 @@ a[href="#"] {
         position: absolute;
         display: none;
         left: 50%;
-        margin-left: -100px;
         margin-top: 50px;
         width: 200px;
         margin: 0;
         top: 30px;
         padding: 0;
         z-index: 1000;
-        border-radius: 3px; }
+        border-radius: 3px;
+        margin-left: -100px; }
         #main-header .menu li ul li {
           background: #8bc64b;
           width: 100%;
@@ -978,3 +978,6 @@ ul#supplier-list li a {
     text-decoration: none;
     background-color: #efefef !important;
     margin-left: 0px; }
+
+ul.language {
+  float: right; }

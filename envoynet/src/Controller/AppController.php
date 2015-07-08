@@ -81,9 +81,9 @@ class AppController extends Controller {
     }
 
 
+  $languageaction = $this->request->params['pass'][0] == 'language' || false;
 
-
-    if($this->request->params['pass'][0] == 'language') {
+  if($languageaction) {
     return $this->redirect($this->referer());
   }
 
