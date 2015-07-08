@@ -223,10 +223,3 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
-Configure::write('Session', [
-    'defaults' => 'php',
-    'ini' => [
-        'session.cookie_path' => '/'
-    ]
-]);
-
