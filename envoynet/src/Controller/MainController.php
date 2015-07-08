@@ -293,6 +293,23 @@ class MainController extends AppController {
 
   }
 
+  public function language() {
+    /*switch($language) {
+      case "en":
+      I18n::locale('en_CA');
+      break;
+      case "fr":
+      I18n::locale('fr_CA');
+      break;
+      default:
+      I18n::locale('en_CA'); 
+      break;   
+    }
+
+    */
+    echo 'test';
+  }
+
   function contact() {
     $this->layout = "infobox";
     if (!empty($this->request->data)) {

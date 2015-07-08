@@ -49,7 +49,7 @@ Router::scope('/', function ($routes) {
      */ 
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
-
+    $routes->connect('/language',['controller'=>'Main','action'=>'language']);
     Router::prefix('agent', function ($routes) {
         // All routes here will be prefixed with `/agent`
         // And have the prefix => agent route element added.
