@@ -295,16 +295,16 @@ class MainController extends AppController {
 
   public function language() {
 
+  if(ini_get('intl.default_locale') === 'fr_CA') {
 
-  if(ini_get('intl.default_locale') == 'fr_CA') {
-
-  ini_set('intl.default_locale', 'en_CA');
+    ini_set('intl.default_locale', 'en_CA');
 
   } else {
     ini_set('intl.default_locale', 'fr_CA');
   }
+//return $this->redirect($this->referer());
 
-    return $this->redirect($this->referer());
+    echo ini_get('intl.default_locale');
 
   }
 
