@@ -19,4 +19,15 @@ class LanguageController extends AppController
 
 		return $this->redirect($this->referer());
 	}
+
+    public function en()
+    {
+    	I18n::locale('en_CA'); 
+    	return $this->redirect($this->referer());
+    }
+        public function fr()
+    {
+    	I18n::locale('en_FR'); 
+    	return $this->redirect($this->referer());
+    }
 }
