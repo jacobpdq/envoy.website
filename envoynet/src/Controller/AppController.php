@@ -60,6 +60,25 @@ class AppController extends Controller {
     $this->loadComponent('Flash');
     $this->loadComponent('Session');
 
+    $language = $this->request->session()->read('Config.language');
+
+    if ($language) {
+
+     switch($language) {
+          case "fr":
+          I18n::locale('fr_CA');
+          break;
+          case "en":
+          I18n::locale('en_CA');
+          break;
+          default:
+          I18n::locale('en_CA');
+          break;   
+        }
+    } else {
+        $this->request->session()->write('Config.language', 'en');
+    }
+
     if (isset($this->request['prefix'])) {
       if ($this->request['prefix'] == 'admin') {
         $this->loadComponent('Auth', [

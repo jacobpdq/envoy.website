@@ -230,23 +230,6 @@ Configure::write('Session', [
     ]
 ]);
 
-$language = $this->request->session()->read('Config.language');
 
-if ($language) {
-
- switch($language) {
-      case "fr":
-      I18n::locale('fr_CA');
-      break;
-      case "en":
-      I18n::locale('en_CA');
-      break;
-      default:
-      I18n::locale('en_CA');
-      break;   
-    }
-} else {
-    $this->request->session()->write('Config.language', 'en');
-}
 
 
