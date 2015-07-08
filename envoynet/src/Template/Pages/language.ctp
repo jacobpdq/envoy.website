@@ -1,6 +1,6 @@
  <?php
 
- use Cake\I18n\I18n;
+use Cake\I18n\I18n;
 
 if (isset($_POST["language"])) {
 
@@ -18,7 +18,6 @@ if (isset($_POST["language"])) {
       default:
       I18n::locale('en_CA');
       $_POST['language'] == "en";
-
       break;   
     }
 } else {
