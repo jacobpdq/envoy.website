@@ -231,5 +231,7 @@ Configure::write('Session', [
 ]);
 
 
-
+    $language = $this->request->session()->read('Config.language');
+echo $language;
+   
 
