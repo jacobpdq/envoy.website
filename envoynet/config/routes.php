@@ -42,9 +42,7 @@ use Cake\Routing\Router;
 Router::defaultRouteClass('Route');
 
 
-Router::connect('/language/en', ['controller' => 'Language', 'action'=>'en']);
-Router::connect('/language/fr', ['controller' => 'Language', 'action'=>'fr']);
-Router::connect('/language', ['controller' => 'Language']);
+
 Router::scope('/', function ($routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -54,6 +52,9 @@ Router::scope('/', function ($routes) {
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
 
+    $routes->connect('language/en', ['controller' => 'Language', 'action'=>'en']);
+    $routes->connect('language/fr', ['controller' => 'Language', 'action'=>'fr']);
+    $routes->connect('language', ['controller' => 'Language']);
 
 
     Router::prefix('agent', function ($routes) {
