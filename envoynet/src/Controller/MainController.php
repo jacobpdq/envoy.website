@@ -7,7 +7,6 @@ use Cake\Core\Configure;
 use Cake\Routing\Router;
 use Cake\Event\Event;
 use Cake\Network\Http\Client;
-use Cake\I18n\I18n;
 
 
 
@@ -291,16 +290,6 @@ class MainController extends AppController {
   public function index() {
     
     
-
-  }
-
-
-
-  public function language() {
-
-    echo 'test';
-    return $this->redirect($this->referer());
-
 
   }
 
