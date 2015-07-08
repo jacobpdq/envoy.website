@@ -226,6 +226,15 @@ Type::build('datetime')->useLocaleParser();
 if (isset($_POST["language"])) {
 
  switch($_POST['language']) {
+      case "en":
+      I18n::locale('fr_CA');
+      break;
+      case "fr":
+      I18n::locale('en_CA');
+      break;
+      default:
+      I18n::locale('en_CA');
+      break;   
     }
 } else {
     $_POST["language"] = "en";
