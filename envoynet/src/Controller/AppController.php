@@ -80,7 +80,7 @@ class AppController extends Controller {
         $this->request->session()->write('language', 'en');
     }
 
-    print_r($this->params);
+    print_r($this->request->param('controller'));
 
     if (isset($this->request['prefix'])) {
       if ($this->request['prefix'] == 'admin') {
