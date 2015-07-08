@@ -42,6 +42,7 @@ use Cake\Core\Configure;
 
 use Cake\ORM\TableRegistry;
 use Cake\Controller\Component\AuthComponent;
+use Cake\I18n\I18n;
 
 class AppController extends Controller {
 
