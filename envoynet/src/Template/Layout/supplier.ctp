@@ -46,53 +46,74 @@
 }
 </script>
 
-      <!--Site Header /-->
-  <div id="Main_content_Holder">
 
-    <!--Start Login screen content /-->
 
-    <!--Envoy Logo /-->
-         <div id="Logo_Menu_Holder">
-  
-           
-             
-          <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'index','prefix' => 'supplier'));?>">
-              <?php echo $this->Html->image("assets/site_logos/main_envoy_logo.png");?>
-          </a>
-       
-    
+<!-- Top Navigation Bar -->
+  <header id="top-header">
+    <nav >
 
-     <div id="Search_Interface">
-      
-       <ul id="navbar">
-       <li>
-        <a><?php echo __('Services'); ?></a> 
-        <ul>
-           <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix' => false)); ?>"><?php echo __('Logistics'); ?></a></li> 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix' => false)) ?>"><?php echo __('Digital Support'); ?></a></li> 
-<li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix' => false)) ?>"> <?php echo __('Marketing Solutions'); ?></a></li> 
-        </ul>
-    </li>
+         <section id="login" class="tabs mobile ">
+                  <span><?php echo __('Login'); ?></span>
+                   <div class="tabs__tabItem">
+                       <input type="radio" id="tab-one" name="tab-group-one">
+                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
+                       
+                <div class="tabs__content">
 
-    <li>
-      <a> <?php echo __('About Us'); ?></a>
-        <ul>
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix' => false)); ?>"><?php echo __('Overview'); ?></a></li>
 
-            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix' => false)); ?>"><?php echo __('Meet the Team'); ?></a></li>
-        </ul>
-    </li>
+          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
 
-     <li id="last">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix' => false)); ?>"><?php echo __('Contact Us'); ?></a> 
-    </li> 
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+
+
+          <button class="button" type="submit"><?php echo __(' Login'); ?></button>
+          <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                    <div class="tabs__tabItem">
+
+                       <input type="radio" id="tab-two" name="tab-group-one">
+                       <label for="tab-two"><?php echo __('Supplier'); ?></label>
+                     
+                       <div class="tabs__content">
+
+
+                        <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+
+                        <button class="button" type="submit"><?php echo __('Login'); ?></button>
+
+                         <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                </section>
+
+                      <ul class="language">
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><span class="english">EN</span><span class="french">FR</span></a></li>
       </ul>
-      
-     </div>
-    
-  </div>
 
-      <!--End Site Header /-->
+      <ul class="desktop">
+        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
+        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+      </ul>
+
+
+
+
+      
+    </nav> 
+  </header>
+
 
       <!--Site navbar /-->
       

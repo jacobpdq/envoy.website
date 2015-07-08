@@ -47,7 +47,13 @@
                        </div> 
                    </div>
                     
+
                 </section>
+
+      <ul class="language">
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><span class="english">EN</span><span class="french">FR</span></a></li>
+      </ul>
+
 
       <ul class="desktop">
         <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
@@ -215,11 +221,13 @@
   <section class="" id="footer">
   <div class="section__content">
     
-    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/travel_week_logo-white.png',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+      <div id="Travelweek_Holder">
+   <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
     <p>© Copyright Envoy Networks Inc. 2015</p>
 </a>
   </div>
   </section>
+
 
 <script type="text/javascript" language="javascript">
         $(".iframe-link").fancybox({
