@@ -52,9 +52,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
 
-    $routes->connect('language/en', ['controller' => 'Language', 'action'=>'en']);
-    $routes->connect('language/fr', ['controller' => 'Language', 'action'=>'fr']);
-    $routes->connect('language', ['controller' => 'Language']);
+    $routes->connect('/language', ['controller' => 'Main', 'action'=>'language']);
 
 
     Router::prefix('agent', function ($routes) {
