@@ -94,6 +94,13 @@ h3 {
 
 @media (min-width: 400px) and (max-width: 959px) {
 
+  ul.language {
+    position: absolute !important;
+    top: 12px;
+    right: 12px;
+    z-index: 100000;
+  }
+
   .desktop {
     display:none;
   }
@@ -501,7 +508,6 @@ h3 {
 header#top-header {
     width: 100%;
     background: #3c5791;
-    padding-top:1%;
     letter-spacing:1px;
 }
 
@@ -571,6 +577,13 @@ section.alltext.contact {
 
 @media (min-width: 400px) and (max-width: 959px) {
 
+  ul.language a {
+    font-size:0.000001px !important;
+    & span {
+      font-size:0.8rem;
+    }
+  }
+
 section.alltext {
   padding-left:20px !important;
 }
@@ -639,7 +652,7 @@ section.alltext.contact {
       font-size:1em !important;
       color: white;
       font-size: 0.5em !important;
-      padding: 2vh 14px;
+      padding: 2vh 6px;
       font-weight: normal;
       text-transform:uppercase;
       color:$green;
@@ -655,7 +668,7 @@ section.alltext.contact {
         font-size:1em !important;
         color: white;
         font-size: 0.5em !important;
-        padding: 2vh 8px;
+        padding: 2vh 6px;
         font-weight: normal;
 
 
@@ -1015,7 +1028,7 @@ header#main-header {
               width: 960px;
               margin:0 auto;
               display: block;
-            padding: 8px 0 35px 0;
+            padding: 12px 0 35px 0;
             }
 
             & #login {
@@ -1496,10 +1509,52 @@ ul#supplier-list li a {
 }
 
 
+body.en ul.language {
+  & span.french {
+    opacity:0.5;
+  }
+}
+
+
+body.fr ul.language {
+  & span.english {
+    opacity:0.5;
+  }
+}
+
 
 ul.language {
   float:right;
-  
+  padding-left:0px !important;
+  & a {
+margin-left:0 !important;
+  border-left:1px solid rgba(255,255,255,0.1);
+  padding-left:16px !important;
+    cursor:default;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #9ba9c8;
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 0px;
+    text-decoration:none;
+    color:rgb(155,169,200);
+    &:hover {
+      color:inherit;
+    }
+    & span {
+      &:hover {
+        cursor:pointer;
+        text-decoration:underline;
+        opacity:1 !important;
+        color:white !important;
+      }
+      color:white;
+      display:inline-block;
+      margin:0 0 0 10px;
+    }
+  }
 }
  
 

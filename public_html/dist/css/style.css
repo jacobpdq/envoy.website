@@ -62,6 +62,11 @@ h3 {
     display: none; } }
 
 @media (min-width: 400px) and (max-width: 959px) {
+  ul.language {
+    position: absolute !important;
+    top: 12px;
+    right: 12px;
+    z-index: 100000; }
   .desktop {
     display: none; } }
 
@@ -265,9 +270,7 @@ header#top-header {
       color: #8bc64b; }
   header#top-header nav ul {
     margin-bottom: 0;
-    padding: 0 4px 0 40px;
-    margin-top: 10px;
-    }
+    padding: 0 4px 0 40px; }
     header#top-header nav ul li {
       display: inline-block;
       padding: 0 4px 0 4px; }
@@ -335,7 +338,6 @@ h3 {
 header#top-header {
   width: 100%;
   background: #3c5791;
-  padding-top: 1%;
   letter-spacing: 1px; }
 
 section#masthead {
@@ -392,6 +394,10 @@ section.alltext.contact {
       max-width: 500px; }
 
 @media (min-width: 400px) and (max-width: 959px) {
+  ul.language a {
+    font-size: 0.000001px !important; }
+    ul.language a span {
+      font-size: 0.8rem; }
   section.alltext {
     padding-left: 20px !important; }
   h2.tagline {
@@ -438,7 +444,7 @@ section.alltext.contact {
       font-size: 1em !important;
       color: white;
       font-size: 0.5em !important;
-      padding: 2vh 14px;
+      padding: 2vh 6px;
       font-weight: normal;
       text-transform: uppercase;
       color: #8bc64b;
@@ -451,7 +457,7 @@ section.alltext.contact {
         font-size: 1em !important;
         color: white;
         font-size: 0.5em !important;
-        padding: 2vh 8px;
+        padding: 2vh 6px;
         font-weight: normal; }
   .wrapper {
     overflow-x: hidden; }
@@ -670,7 +676,7 @@ a[href="#"] {
     width: 960px;
     margin: 0 auto;
     display: block;
-    padding: 8px 0 35px 0; }
+    padding: 12px 0 35px 0; }
   header#top-header #login {
     display: none; }
   header#top-header ul {
@@ -981,5 +987,37 @@ ul#supplier-list li a {
     background-color: #efefef !important;
     margin-left: 0px; }
 
+body.en ul.language span.french {
+  opacity: 0.5; }
+
+body.fr ul.language span.english {
+  opacity: 0.5; }
+
 ul.language {
-  float: right; }
+  float: right;
+  padding-left: 0px !important; }
+  ul.language a {
+    margin-left: 0 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 16px !important;
+    cursor: default;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #9ba9c8;
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 0px;
+    text-decoration: none;
+    color: #9ba9c8; }
+    ul.language a:hover {
+      color: inherit; }
+    ul.language a span {
+      color: white;
+      display: inline-block;
+      margin: 0 0 0 10px; }
+      ul.language a span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        opacity: 1 !important;
+        color: white !important; }
