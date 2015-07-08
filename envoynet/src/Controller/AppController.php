@@ -61,7 +61,7 @@ class AppController extends Controller {
     $this->loadComponent('Flash');
     $this->loadComponent('Session');
 
-    $language = $this->request->session()->read('Config.language');
+    $language = $this->request->session()->read('language');
     echo $language;
 
     if ($language) {
@@ -78,7 +78,7 @@ class AppController extends Controller {
           break;   
         }
     } else {
-        $this->request->session()->write('Config.language', 'en');
+        $this->request->session()->write('language', 'en');
     }
 
     if (isset($this->request['prefix'])) {
