@@ -1046,6 +1046,9 @@ a.Cart_items:link {
   background-image: none !important;
   height: 60vh !important; }
 
+#brochures-suppliers-scrollpane {
+  height: 60vh !important; }
+
 .jspDrag {
   background: #8bc64b !important; }
   .jspDrag:hover {
