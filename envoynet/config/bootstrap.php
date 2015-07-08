@@ -243,6 +243,5 @@ if (isset($_POST["language"])) {
 } else {
     $_POST["language"] = "en";
 }
-}
 
 
