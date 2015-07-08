@@ -35,5 +35,6 @@ class AppView extends View
         echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,300,600', ['plugin' => false]);
         echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,700,400,500,600', ['plugin' => false]);
         echo $this->Html->css('../dist/css/style.css');
+        $this->set('bodyAttr', 'data-lang="french"');
     }
 }
