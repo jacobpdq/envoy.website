@@ -79,9 +79,9 @@ class AppController extends Controller {
     } else {
         $this->request->session()->write('language', 'en');
     }
-
-    var_dump($this->request->params->pass);
-
+    echo '<pre>';
+    var_dump($this->request->params);
+    echo '</pre>';
     if (isset($this->request['prefix'])) {
       if ($this->request['prefix'] == 'admin') {
         $this->loadComponent('Auth', [
