@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
-class MainController extends AppController
+class LanguageController extends AppController
 {
     	public function language($language = null) {
 

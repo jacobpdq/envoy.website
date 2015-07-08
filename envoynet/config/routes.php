@@ -53,7 +53,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
 
     $routes->connect(
-        '/language/:language', // E.g. /blog/3-CakePHP_Rocks
+        '/language', // E.g. /blog/3-CakePHP_Rocks
         ['controller' => 'Main', 'action' => 'language'],
         [
             // Define the route elements in the route template
