@@ -2,34 +2,36 @@
 
 use Cake\I18n\I18n;
 
-echo $_POST["language"];
+session_start();
 
-if (isset($_POST["language"])) {
+echo $_SESSION["language"];
+
+if (isset($_SESSION["language"])) {
 
 
 	echo 'isset';
 
- switch($_POST['language']) {
+ switch($_SESSION['language']) {
       case "en":
       I18n::locale('fr_CA');
-      $_POST['language'] = 'fr';
+      $_SESSION['language'] = 'fr';
       echo 'variable now french';
       break;
       case "fr":
       I18n::locale('en_CA');
-      $_POST['language'] = 'en';
+      $_SESSION['language'] = 'en';
       echo 'post now english';
       break;
       default:
       I18n::locale('en_CA');
-      $_POST['language'] == "en";
+      $_SESSION['language'] == "en";
       break;   
     }
 } else {
-	$_POST["language"] = "en";
+	$_SESSION["language"] = "en";
 }
 
-echo $_POST["language"];
+echo $_SESSION["language"];
 
 ?>
     
