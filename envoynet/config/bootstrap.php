@@ -71,7 +71,7 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
-
+use Cake\I18n\I18n;
 
 
 /**
@@ -229,9 +229,4 @@ Configure::write('Session', [
         'session.cookie_path' => '/'
     ]
 ]);
-
-
-    $language = $this->request->session()->read('Config.language');
-echo $language;
-   
 
