@@ -71,6 +71,7 @@ use Cake\Network\Request;
 use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+use Cake\I18n\I18n;
 
 
 /**
@@ -222,6 +223,19 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
-
+switch($_POST['language']) {
+      case "en":
+      I18n::locale('fr_CA');
+      $_POST['language'] = 'fr';
+      break;
+      case "fr":
+      I18n::locale('en_CA');
+      $_POST['language'] = 'en';
+      break;
+      default:
+      I18n::locale('en_CA');
+      $_POST['language'] == "en";
+      break;   
+}
 
 
