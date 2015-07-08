@@ -2,9 +2,7 @@
 
 use Cake\I18n\I18n;
 
-session_start();
 
-echo $_SESSION["language"];
 
 if (isset($_SESSION["language"])) {
 
@@ -31,7 +29,6 @@ if (isset($_SESSION["language"])) {
 	$_SESSION["language"] = "en";
 }
 
-echo $_SESSION["language"];
 
 ?>
     
