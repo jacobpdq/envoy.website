@@ -44,6 +44,7 @@ Router::defaultRouteClass('Route');
 
 Router::connect('/language/en', ['controller' => 'Language', 'action'=>'en']);
 Router::connect('/language/fr', ['controller' => 'Language', 'action'=>'fr']);
+Router::connect('/language', ['controller' => 'Language']);
 Router::scope('/', function ($routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
