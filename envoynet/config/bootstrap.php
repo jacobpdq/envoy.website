@@ -223,7 +223,9 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
-switch($_POST['language']) {
+if isset($_POST["username"]) {
+
+ switch($_POST['language']) {
       case "en":
       I18n::locale('fr_CA');
       $_POST['language'] = 'fr';
@@ -235,7 +237,9 @@ switch($_POST['language']) {
       default:
       I18n::locale('en_CA');
       $_POST['language'] == "en";
+
       break;   
+    }
 }
 
 
