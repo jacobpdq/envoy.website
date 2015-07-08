@@ -4,6 +4,7 @@ use Cake\I18n\I18n;
 
 $language = $this->request->session()->read('Config.language');
 
+echo $language;
 
 if ($language) {
 
