@@ -223,7 +223,7 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
-if (isset($_POST["username"])) {
+if (isset($_POST["language"])) {
 
  switch($_POST['language']) {
       case "en":
@@ -240,6 +240,9 @@ if (isset($_POST["username"])) {
 
       break;   
     }
+} else {
+    $_POST["language"] = "en";
+}
 }
 
 
