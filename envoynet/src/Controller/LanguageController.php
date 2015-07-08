@@ -6,7 +6,7 @@ use App\Controller\AppController;
 class LanguageController extends AppController
 {
 
-    	public function index($language = null) {
+    	public function index() {
     		echo 'test';
     	}
 
