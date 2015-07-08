@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
   box-sizing: border-box;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans" !important; }
 
 p {
   line-height: 3rem; }
@@ -38,7 +38,7 @@ h3 {
       cursor: pointer; }
   #team ul li {
     width: 40%;
-    margin-bottom: 10vh;
+    margin-bottom: 80px;
     margin-right: 10%; }
     #team ul li h3 {
       color: #3c5791 !important;
@@ -61,7 +61,7 @@ h3 {
   .mobile {
     display: none; } }
 
-@media (min-width: 400px) and (max-width: 959px) {
+@media (max-width: 959px) {
   ul.language {
     position: absolute !important;
     top: 12px;
@@ -98,7 +98,7 @@ h3 {
       text-decoration: none;
       font-weight: 700 !important; }
 
-@media (min-width: 400px) and (max-width: 959px) {
+@media (max-width: 959px) {
   .button {
     border: 0px;
     font-size: 1.5rem;
@@ -224,7 +224,7 @@ h3 {
 section.alltext {
   max-width: 850px;
   padding-left: 100px;
-  padding-bottom: 10vh; }
+  padding-bottom: 80px; }
   section.alltext p {
     max-width: 700px; }
 
@@ -281,7 +281,7 @@ header#main-header {
 .section__content {
   max-width: 960px;
   margin: 0 auto;
-  padding: 12.5vh 0; }
+  padding: 100px 0; }
 
 /*******
 FONTS
@@ -310,7 +310,7 @@ h1, h2, h3 {
   letter-spacing: 2.5px; }
 
 h3 {
-  margin: 0 auto 4vh auto;
+  margin: 0 auto 16px auto;
   font-size: 2.8rem;
   font-weight: 600 !important;
   letter-spacing: 0.5px; }
@@ -373,12 +373,12 @@ div.message:before {
 
 section.alltext.contact {
   max-width: 960px !important;
-  margin-bottom: 10vh;
-  margin-bottom: 10vh; }
+  margin-bottom: 80px;
+  margin-bottom: 80px; }
   section.alltext.contact .address {
     font-style: italic;
     clear: both;
-    margin-bottom: 10vh;
+    margin-bottom: 80px;
     line-height: 120%;
     color: #888;
     float: left;
@@ -389,7 +389,7 @@ section.alltext.contact {
     section.alltext.contact .address a {
       font-style: normal; }
     section.alltext.contact .address + iframe {
-      margin-bottom: 10vh;
+      margin-bottom: 80px;
       float: right;
       max-width: 500px; }
 
@@ -404,11 +404,11 @@ section.alltext.contact {
     font-size: 2.5rem !important;
     line-height: 3rem !important; }
   section.alltext.contact iframe {
-    margin-bottom: 10vh !important;
+    margin-bottom: 80px !important;
     float: none !important;
     max-width: 500px;
     width: 100%;
-    margin-top: 2vh !important; }
+    margin-top: 10px !important; }
   section.alltext.contact .address {
     margin-bottom: 0px !important; }
   #team ul li {
@@ -444,7 +444,7 @@ section.alltext.contact {
       font-size: 1em !important;
       color: white;
       font-size: 0.5em !important;
-      padding: 2vh 6px;
+      padding: 10px 6px;
       font-weight: normal;
       text-transform: uppercase;
       color: #8bc64b;
@@ -457,7 +457,7 @@ section.alltext.contact {
         font-size: 1em !important;
         color: white;
         font-size: 0.5em !important;
-        padding: 2vh 6px;
+        padding: 10px 6px;
         font-weight: normal; }
   .wrapper {
     overflow-x: hidden; }
@@ -1021,3 +1021,26 @@ ul.language {
         text-decoration: underline;
         opacity: 1 !important;
         color: white !important; }
+
+a.Cart_items:link {
+  cursor: pointer;
+  font-family: 'Open Sans' !important;
+  font-size: 0.8rem;
+  font-weight: normal !important;
+  color: #888 !important;
+  text-decoration: underline !important;
+  text-align: center;
+  letter-spacing: 0.5px; }
+  a.Cart_items:link:hover {
+    border: none !important;
+    color: #3c5791 !important; }
+
+#Cart_Header_items {
+  margin: 0 !important; }
+
+.Base_red_txt_nl {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8bc64b !important; }
+
+#brochures-sidebar {
+  height: 70vh !important; }

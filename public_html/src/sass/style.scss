@@ -1,7 +1,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Open Sans" !important;
 }
 
 p {
@@ -57,7 +57,7 @@ h3 {
   }
   & li {
     width:40%;
-    margin-bottom:10vh;
+    margin-bottom:80px;
     margin-right:10%;
     & h3 {
       color:$blue !important;
@@ -92,7 +92,7 @@ h3 {
 
 }
 
-@media (min-width: 400px) and (max-width: 959px) {
+@media (max-width: 959px) {
 
   ul.language {
     position: absolute !important;
@@ -153,7 +153,7 @@ h3 {
   } 
 }
 
-@media (min-width: 400px) and (max-width: 959px) {
+@media (max-width: 959px) {
   .button {
     border:0px;
     font-size: 1.5rem;
@@ -335,7 +335,7 @@ section.alltext {
   & p {
     max-width:700px;
   }
-  padding-bottom:10vh;
+  padding-bottom:80px;
 
 }
 
@@ -426,7 +426,7 @@ header#main-header {
 .section__content {
   max-width: 960px;
   margin: 0 auto;
-  padding:12.5vh 0;
+  padding:100px 0;
 }
 
 
@@ -468,7 +468,7 @@ h1, h2, h3 {
   letter-spacing:2.5px
 }
 h3 {
-    margin: 0 auto 4vh auto;
+    margin: 0 auto 16px auto;
     font-size: 2.8rem;
     font-weight: 600 !important;
     letter-spacing: 0.5px;
@@ -549,11 +549,11 @@ div.message:before {
 
 section.alltext.contact {
   max-width:960px !important;
-  margin-bottom:10vh;
+  margin-bottom:80px;
   & .address {
     font-style:italic;
     clear:both;
-    margin-bottom:10vh;
+    margin-bottom:80px;
     line-height:120%;
     color:#888;
     h4 {
@@ -566,12 +566,12 @@ section.alltext.contact {
     float:left;
     width:300px;
     & + iframe {
-      margin-bottom:10vh;
+      margin-bottom:80px;
       float:right;
       max-width:500px;
     }
   }
-  margin-bottom:10vh;
+  margin-bottom:80px;
 
 }
 
@@ -595,11 +595,11 @@ h2.tagline {
 
 section.alltext.contact {
     & iframe {
-    margin-bottom: 10vh !important;
+    margin-bottom: 80px !important;
     float: none !important;
     max-width: 500px;
     width: 100%;
-    margin-top:2vh !important;
+    margin-top:10px !important;
   }
     & .address {
       margin-bottom:0px !important;
@@ -652,7 +652,7 @@ section.alltext.contact {
       font-size:1em !important;
       color: white;
       font-size: 0.5em !important;
-      padding: 2vh 6px;
+      padding: 10px 6px;
       font-weight: normal;
       text-transform:uppercase;
       color:$green;
@@ -668,7 +668,7 @@ section.alltext.contact {
         font-size:1em !important;
         color: white;
         font-size: 0.5em !important;
-        padding: 2vh 6px;
+        padding: 10px 6px;
         font-weight: normal;
 
 
@@ -1558,6 +1558,31 @@ margin-left:0 !important;
 }
  
 
+ a.Cart_items:link {
+    cursor: pointer;
+    font-family: 'Open Sans' !important;
+    font-size: 0.8rem;
+    font-weight: normal !important;
+    color: #888 !important;
+    text-decoration: underline !important;
+    text-align: center;
+    letter-spacing:0.5px;
+    &:hover {
+      border:none !important;
+      color:$blue !important;
+    }
+}
+#Cart_Header_items {
+  margin:0 !important;
+}
+
+.Base_red_txt_nl {
+    font-family: Arial, Helvetica, sans-serif;
+    color:$green !important;
+}
+#brochures-sidebar {
+  height:70vh !important;
+}
 
 
 
