@@ -1043,4 +1043,10 @@ a.Cart_items:link {
   color: #8bc64b !important; }
 
 #brochures-sidebar {
-  height: 70vh !important; }
+  background-image: none !important;
+  height: 60vh !important; }
+
+.jspDrag {
+  background: #8bc64b !important; }
+  .jspDrag:hover {
+    background: #8bc64b !important; }

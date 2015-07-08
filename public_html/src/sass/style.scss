@@ -1581,7 +1581,14 @@ margin-left:0 !important;
     color:$green !important;
 }
 #brochures-sidebar {
-  height:70vh !important;
+  background-image:none !important;
+  height:60vh !important;
+}
+.jspDrag {
+  background:$green !important;
+  &:hover {
+    background:lighten($green, 0.1) !important;
+  }
 }
 
 
