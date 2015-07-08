@@ -295,6 +295,8 @@ class MainController extends AppController {
 
   public function language() {
 
+    echo ini_get('intl.default_locale');
+
   if(ini_get('intl.default_locale') === 'fr_CA') {
 
     ini_set('intl.default_locale', 'en_CA');
