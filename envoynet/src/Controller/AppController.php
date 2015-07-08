@@ -53,7 +53,7 @@ class AppController extends Controller {
     'Cookie', 
     'Session'
     );
-  public $helpers = array('Html', 'Form','Url', 'Session');
+  public $helpers = array('Html', 'Form','Url');
  
   public function initialize()
   {
