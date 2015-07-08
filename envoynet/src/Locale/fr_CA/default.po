@@ -185,3 +185,20 @@ msgstr "Envoyé par"
 #: loco:559ca12f14d725e47e8b4574
 msgid "Tracking Num"
 msgstr "Numéro de Repérage"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Services"
+msgstr "Services"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "About Us"
+msgstr "À Propos de Nous"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Contact Us"
+msgstr "Nous Joindre"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Login"
+msgstr "S'Inscrire"
+
