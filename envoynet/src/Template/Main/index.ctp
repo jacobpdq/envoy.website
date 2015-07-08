@@ -51,7 +51,7 @@
                 </section>
 
       <ul class="language">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><span class="english">EN</span><span class="french">FR</span></a></li>
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Language: <span class="english">EN</span><span class="french">FR</span></a></li>
       </ul>
 
 

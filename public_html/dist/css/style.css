@@ -265,7 +265,9 @@ header#top-header {
       color: #8bc64b; }
   header#top-header nav ul {
     margin-bottom: 0;
-    padding: 0 4px 0 40px; }
+    padding: 0 4px 0 40px;
+    margin-top: 10px;
+    }
     header#top-header nav ul li {
       display: inline-block;
       padding: 0 4px 0 4px; }
