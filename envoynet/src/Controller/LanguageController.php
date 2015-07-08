@@ -16,5 +16,7 @@ class MainController extends AppController
 			default:
 			I18n::locale('en_CA');    
 		}
+
+		return $this->redirect($this->referer());
 	}
 }
