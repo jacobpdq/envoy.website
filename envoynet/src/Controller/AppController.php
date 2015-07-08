@@ -62,7 +62,6 @@ class AppController extends Controller {
     $this->loadComponent('Session');
 
     $language = $this->request->session()->read('language');
-    echo $language;
 
     if ($language) {
 

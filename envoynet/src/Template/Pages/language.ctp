@@ -4,8 +4,6 @@ use Cake\I18n\I18n;
 
 $language = $this->request->session()->read('language');
 
-echo $language;
-
 if ($language) {
 
  switch($language) {
@@ -22,6 +20,7 @@ if ($language) {
     $this->request->session()->write('language', 'en');
 }
 
+$this->redirect($this->referer());
 
 ?>
     
