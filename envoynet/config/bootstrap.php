@@ -72,6 +72,7 @@ use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
 use Cake\I18n\I18n;
+use App\Error\AppError;
 
 
 /**
@@ -222,4 +223,10 @@ DispatcherFactory::add('ControllerFactory');
  * This is needed for matching the auto-localized string output of Time() class when parsing dates.
  */
 Type::build('datetime')->useLocaleParser();
+
+// Register handler in config/bootstrap.php
+
+
+$errorHandler = new AppError();
+$errorHandler->register();
 

@@ -3,8 +3,8 @@
     <!--Start Login screen content /-->
 
     <!--Hippo Logo /-->
-    <div id="Login_Logo_Holder">
-      <?php echo $this->Html->image('assets/site_logos/main_envoy_logo.png');?>
+    <div id="Login_Logo_Holder" style="padding:10px">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
     </div>
     <!--End Hippo Logo /-->
 
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <button id="Submit_btn" type="submit"></button>
+      <button id="Submit_btn" type="submit">Submit</button>
 
       
     </div>
@@ -46,9 +46,17 @@
 
     <!--Start copyright Line content /-->
 
-    <div class="Hippo_Copyright_Line" id="Main_copyright_Holder">© Copyright Envoy Network Inc. 20013
-      <div id="Travelweek_Holder"><?php echo $this->Html->image('assets/site_logos/travel_week_logo.png',array('alt'=>'Travel Week - A Travel Week Company'));?></div>
-    </div>
+ <br style="clear:both" />
+<section class="" id="footer">
+  <div class="section__content">
+    
+    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+    <p>© Copyright Envoy Network Inc. 2015</p>
+</a>
+  </div>
+  </section>
+
+</div>
     <!--End copyright Line content /-->
   
 

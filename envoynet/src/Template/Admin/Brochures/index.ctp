@@ -51,8 +51,10 @@
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('class' => 'disabled','escape'=>false)); ?>
-      <?php echo $this->Paginator->numbers(); ?>
-      <?php echo $this->Paginator->next('<div id="Next_btn"></div>', array('class' => 'disabled','escape'=>false)); ?>
+            <div id="paging_numbers">
+          <?php echo $this->Paginator->numbers(); ?>
+      </div>
+      <?php echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>', array('class' => 'disabled','escape'=>false)); ?>
       </div>
     </div>
     <div class="actions">

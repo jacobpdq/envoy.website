@@ -45,7 +45,7 @@
       
   <?php echo $this->Form->input('inv_balance', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'disabled' => true)); ?> 
 
-    <!--       <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['Brochure']['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn"></div></a>
+    <!--       <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['Brochure']['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn">View Details</div></a>
          <a href="/supplier/deleteProduct?productId33=595"><div id="Delete_Product_btn"></div></a>     -->
         </div>
      
@@ -79,12 +79,16 @@
       </div>
  <div class="form_content_field_left1">
  <br> <br> <br>
-    Note: Should you wish to change any of these settings, please send request to mail@envoynetworks.ca or phone 905-831-0006
+    <small>Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a>a or phone 905-831-0006</small>
           </div>
     </div>
   </div>
 
+
+
 </div>
+
+<br style="clear:both" />
 <!--  
 <div class="brochures form">
 <?php echo $this->Form->create('Brochure'); ?>

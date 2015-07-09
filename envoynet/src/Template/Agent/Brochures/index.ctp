@@ -107,16 +107,16 @@
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Prev_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
               <div id="paging_numbers">
           <?php echo $this->Paginator->numbers(); ?>
             </div>
         <?php 
-          echo $this->Paginator->next('<div id="Next_btn"></div>',[
+          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Next_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
           ]); 
         ?>
       </div>
@@ -201,13 +201,13 @@
 			 ?>
              <?php 
 			  if (!empty($qtychoice)) {
-			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','options' => $result1));
+			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','placeholder'=>'# of Brochures','options' => $result1));
               foreach($result2 as $result2a):
 		      echo $this->Form->input('OrderItem.qty_choice.'.$result2a,array('div'=>false,'value'=>$result2a,'label'=>false,'type'=>'hidden'));
 			  endforeach;
 			  }
 			  else {
-			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1'));
+			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1','placeholder'=>'# of Brochures'));
 			    echo $this->Form->input('OrderItem.qty_choice',array('div'=>false,'value'=>null,'label'=>false,'type'=>'hidden'));
 			   
 			  }
@@ -218,7 +218,7 @@
           <!--End Quantity/-->
           <!--Start Ad to Order/-->
           <div id="jqueryselector2">
-              <div ref="Add_to_Order_btn2" onClick ="$('#orderBr<?php echo $brochure->id; ?>').submit()" id="Add_to_Order_btn"></div>
+              <div ref="Add_to_Order_btn2" onClick ="$('#orderBr<?php echo $brochure->id; ?>').submit()" id="Add_to_Order_btn"><?php echo __('Add to Order'); ?></div>
           </div>
           <!--End Ad to Order/-->
         </div>
@@ -226,14 +226,8 @@
       <?php echo $this->Form->end();?>
     <?php endforeach;?>
     <?php endif;?>
-  <!--</form>-->
-  </div>
 
-</div>
-
-
-<div class="inner-content-wrapper ">
-<div class="paging">
+     <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
     <?php
         echo $this->Paginator->counter( __('Page {{page}} of {{pages}}'));
@@ -242,19 +236,30 @@
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Prev_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
               <div id="paging_numbers">
           <?php echo $this->Paginator->numbers(); ?>
             </div>
         <?php 
-          echo $this->Paginator->next('<div id="Next_btn"></div>',[
+          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Next_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
           ]); 
         ?>
 </div>
+
+  <!--</form>-->
+  </div>
+
+
+
+</div>
+
+
+<div class="inner-content-wrapper ">
+
 </div>
 
 

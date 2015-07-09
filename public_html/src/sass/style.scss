@@ -1456,6 +1456,7 @@ h6 {
   letter-spacing:0.5px;
   color:white;
   font-size:1rem;
+  margin-top:0px !important;
 }
 #Main_Navbar_Holder {
 border-radius:3px;
@@ -1483,6 +1484,9 @@ margin-bottom:-40px !important;
     float: left;
     margin:0 !important;
     padding:0 !important;
+    &.supplier {
+      margin-left:0px !important;
+    }
 }
 
 ul#supplier-list li a {
@@ -1582,10 +1586,10 @@ margin-left:0 !important;
 }
 #brochures-sidebar {
   background-image:none !important;
-  height:60vh !important;
+  height:100% !important;
 }
 #brochures-suppliers-scrollpane {
-  height:60vh !important;
+  height:100% !important;
 }
 .jspDrag {
   background:$green !important;
@@ -1613,8 +1617,411 @@ color:$blue !important;
   position:relative !important;
 
 }
+#Profile_inset_orders {
+  margin:0 !important;
+}
+#confirm_data_holder {
+  margin:0 !important;
+}
+
+#Welcome_inset_Header_orders {
+  display:none !important;
+}
+#Confirm_order_inset_Holder {
+  margin-left:0 !important;
+}
 
 div.paging {
   margin: 0px !important;
   width: auto !important;
 }
+
+table.index2 {
+  margin:20px 0 !important;
+}
+h5 {
+  color:$blue;
+}
+table {
+  margin-top:14px !important;
+}
+table th {
+  background: #eee !important;
+  font-size:1.4rem !important;
+  padding:10px !important;
+}
+table.index th {
+  font-weight:600 !important;
+}
+table {
+  border-radius:3px !important;
+}
+#profile_info {
+  width:600px !important;
+}
+#Profile_form_holder {
+  margin-top:20px !important;
+}
+#Profile_form_holder span{
+  font-size:1.4rem;
+  color:$blue !important;
+  margin-top:1rem !important;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    margin:0 !important;
+    box-sizing: border-box;
+  }
+
+  .Form_holder_style2 {
+    margin:0 !important;
+  }
+
+  #profile_info {
+    width: 590px;
+    height: 640px;
+    float: left;
+    border-right:0px !important;
+    margin-top: 10px;
+}
+#profile_info2 {
+  border-right:0px !important;
+}
+
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
+        margin-bottom: 1rem !important;
+    border: 0px !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 1px !important;
+    background: #8bc64b !important;
+    background-image:none !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    border-radius: 3px;
+    border: 0px !important;
+    padding: 10px 20px !important;
+    height: auto !important;
+    font-size: 1.5rem !important;
+    font-weight:600 !important;
+    text-indent: 0em !important;
+    text-align:center !important;
+    width:auto !important;
+    & a {
+      color:white !important;
+      text-decoration:none;
+    }
+  }
+  .inner-content-wrapper > h1 {
+    max-width: 270px;
+    max-height: 30px;
+  }
+#paging_numbers li {
+  float:left;
+}
+#profile_info {
+  margin-bottom:80px !important;
+}
+#paging_numbers:empty {
+    display: none !important;
+}
+  #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers  {
+    background:#efefef !important;
+    color:$blue !important;
+    font-size:0.75em !important;
+    margin-top:0 !important;
+    margin-left:5px !important;
+    margin-right:5px !important;
+  }
+  #paging_numbers li {
+    margin:0 2px !important;
+    color:$blue !important;
+  }
+  #paging_numbers  {
+    margin-bottom:0 !important;
+    min-height:37px !important;
+  }
+  #paging_numbers:blank {
+    display:none
+  }
+  #paging_numbers li a {
+    color:$blue !important;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+  .pagnate_top_Header.paging {
+    & li {
+      margin:0 !important;
+      float:right;
+    }
+    min-width:250px !important;
+
+  }
+
+  .ui-button-text a {
+    color:white !important;
+  }
+  table.index {
+    width: 930px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tools {
+  margin-top:0px !important;
+}
+
+.User_Name_Form_Holder {
+    height: 23px;
+    width: 250px;
+    font-size: 0.8em !important;
+}
+
+#Edit_delete_holder {
+  background-image:none !important;
+}
+#Brochures_Main_Holder {
+  border-bottom:1px solid #ccc !important;
+  margin-bottom:20px !important;
+}
+#product_holder {
+  background:none !important;
+}
+
+#pagnate_top_Header {
+
+  margin-top: 10px !important;
+  & li {
+    margin:0 !important;
+  }
+  width:195px !important;
+  & #paging_numbers {
+      display:none
+    }
+  & li {
+    margin:0 !important;
+  }
+  }
+
+#Brochures_Main_Holder_agent {
+  margin-bottom:30px;
+}
+#Company_Title {
+  display:block;
+  width:auto;
+}
+
+.paging:last-of-type {
+    /* margin-top: 50px !important; */
+    /* clear: left; */
+    display: block;
+    top: 40px;
+    }
+
+    .paging li {
+    list-style: none;
+    margin: 0px !important;
+}
+
+
+#Brochures_Main_Holder_agent {
+    height: 120px;
+    width: 715px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+#Company_Title {
+  margin-top:-15px !important;
+}
+#Cart_Header_items {
+    height: 40px !important;
+    float: right !important;
+    margin-top: 12px !important;
+    text-align: right !important;
+    margin-right: 20px !important;
+    margin-top: -24px !important;
+}
+#Header_Company_Holder {
+  margin-bottom:20px;
+}
+
+#Cart_holder {
+  background:none !important;
+}
+
+#Quanity_holder {
+  background:none !important;
+}
+#Quanity_style1 {
+    width: 150px;
+    height: 38px;
+    float: right;
+  }
+  .cart_input {
+    margin-top: 5px;
+    width: 210px;
+    float: left;
+    height: 75px !important;
+}
+
+  #brochures-list {
+    position: relative !important;
+    margin-left: 210px;
+    &.supplier {
+      margin-left:0px !important;
+    }
+}
+ #Cart_Header_items {   height: 45px !important;
+    float: right !important;
+    margin-top: 12px !important;
+    text-align: right !important;
+    margin-right: 20px !important;
+    margin-top: -14px !important;
+}
+#Brochures_Main_Holder_agent {
+  margin-bottom:10px !important;
+}
+
+#Quanity_style1 {
+    width: 150px !important;
+    height:33px !important;
+    float: right;
+  }
+
+
+  .product_cart_holder {
+    height: 50px;
+    width: 960px;
+    margin:0 auto !important;
+    float: left;
+    border:0px !important;
+    margin-bottom:40px !important;
+}
+
+legend {
+  color:$blue;
+}
+.formGroup label {
+  font-weight:400 !important;
+  font-size:1.4rem !important;
+  margin-top:20px;
+}
+#profile_info {
+height: auto !important;
+}
+#Max_Items_holder {
+  margin-top:25px !important;
+}
+
+.blank_form_holder_bg2 {
+    height: 38px;
+    width: 257px;
+    display: block;
+    border:0px !important;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color:transparent !important;
+}
+
+#admin tr:hover {
+    color: inherit !important;
+}
+
+#admin tr:hover {
+    color: #ffffff !important;
+    background-color: $blue !important;
+}
+.actions {
+  background:none !important;
+  & a {
+
+  }
+}
+
+#Welcome_inset_Header_admin, div.actions {
+    width: 916px;
+    height: auto !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: none !important;
+    float: left;
+    padding-top: 0px;
+    padding-left: 6px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#logout_admin_btn {
+  background-image:none !important;
+  background-color:$blue !important;
+}
+#logout_Interface_admin img {
+    float: left;
+    /* padding: 10px; */
+    max-width: 80px;
+}
+
+#Main_admin_logout_Holder {
+    height: 40px;
+    width: 100%;
+    display: block;
+    background-image: none !important;
+    background-repeat: repeat-x;
+}
+
+#Main_Navbar_Interface_admin {
+    width: 930px;
+    height: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: none !important;
+    background-repeat: no-repeat;
+    padding-right: 0px;
+    & a div {
+      margin-right:10px !important;
+    }
+}
+.actions a {
+  text-decoration:none !important;
+
+}
+.actions ul {
+  margin-top:10px;
+  margin-left:10px;
+}
+
+#Suppier_Login_Holder {
+  width:700px !important;
+  & #Submit_btn {
+    top: 18px;
+    position: relative;
+  }
+  margin-bottom:100px !important;
+}
+#Login_Logo_Holder img {
+  max-width:100px !important;
+}
+a.small {
+  font-size:0.8rem;
+  display:inline-block;
+  color:$blue !important;
+}
+#admin_btn {
+  float:left !important;
+}
+
+
+
+
+
+

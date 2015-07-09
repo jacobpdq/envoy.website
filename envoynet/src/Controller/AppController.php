@@ -54,6 +54,10 @@ class AppController extends Controller {
     'Session'
     );
   public $helpers = array('Html', 'Form','Url');
+
+  public function appError($error) {
+    $this->redirect('/',301,false);
+  }
  
   public function initialize()
   {

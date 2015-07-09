@@ -8,7 +8,7 @@
 
 <div class="inner-content-wrapper">
 
-  <div id="brochures-list">
+  <div id="brochures-list" class="supplier">
     
   <!--<form id="form1" name="form1" method="post" action=""> -->
   <div id="Header_Company_Holder">
@@ -26,7 +26,7 @@
               <div id="paging_numbers">
           <?php echo $this->Paginator->numbers(); ?>
             </div>
-        <?php echo $this->Paginator->next('<div id="Next_btn"></div>', array('escape' => false), null, array('class' => 'disabled', 'escape' => false)); ?>
+        <?php echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>', array('escape' => false), null, array('class' => 'disabled', 'escape' => false)); ?>
       </div>
 
   </div>
@@ -59,12 +59,12 @@
 <div id="product_header_holder"> <span class="Product_Title_txt">Inventory Balance:</span></div> <br> 
 <div id="inventory_txt_holder" class="Base_Title_txt_inventory">Ontario <br>BC<br>Total</div>
 <div id="inventory_txt_holder" class="Base_txt_inventory"><?php echo $brochure['Ontario_inventory'];?> <br> <?php echo $brochure['BC_inventory'];?><br><?php echo $brochure['inv_balance'];?></div>
-    <!--       <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn"></div></a>
+    <!--       <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn">View Details</div></a>
          <a href="/supplier/deleteProduct?productId33=595"><div id="Delete_Product_btn"></div></a>     -->
         </div>
         <!--Start Cart/-->
         <div id="Edit_delete_holder">
-    <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn"></div></a>
+    <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'edit',$brochure['id'],'prefix' => 'supplier'));?>"><div id="Edit_Product_btn">View Details</div></a>
           <!--Start Quantity/
           <div id="Quanity_holder">  
              <?php //echo $this->Form->input('OrderItem.brochure_id',array('div'=>false,'value'=>$brochure['id'],'label'=>false,'type'=>'hidden'));?>
@@ -102,7 +102,7 @@
         <div id="paging_numbers">
     <?php echo $this->Paginator->numbers(); ?>
       </div>
-  <?php echo $this->Paginator->next('<div id="Next_btn"></div>', array('escape' => false), null, array('class' => 'disabled', 'escape' => false)); ?>
+  <?php echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>', array('escape' => false), null, array('class' => 'disabled', 'escape' => false)); ?>
 </div>
 </div>
 

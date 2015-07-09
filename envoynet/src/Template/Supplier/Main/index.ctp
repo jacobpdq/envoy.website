@@ -16,7 +16,7 @@
 <!--Start Inventory Overview /-->
 <div id="Current_Inventory_Overview">
     <div id="Over_view_header">
-      <?php echo $this->Html->image("assets/header_files/Inventory_Overview_txt.png");?>
+      <h5>Overview</h5>
     </div>
    
      <div id="Inventory_content" class="inner-content-wrapper"> 
@@ -48,8 +48,9 @@
 <div id="dotted_line"></div>
 <!--Start Orders Overview /-->
 <div id="Current_Orders_Overview">
-  <div id="Over_view_header"> <?php echo $this->Html->image("assets/header_files/Current_Orders_Overview_txt.png");?></div>
-  <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'index','prefix'=>'supplier'));?>"><div id="View_orders_btn"></div></a>
+  <h5>Current Orders Overview  <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'index','prefix'=>'supplier'));?>"><div id="View_orders_btn"><?php echo __('View All Orders'); ?></a></h5>
+ 
+  </div>
    <!--Start  Orders  colum_01 /-->
  <?php $supplierId = $this->request->session()->read('Auth.User.id');?>
    <div id="Overview_content" class="inner-content-wrapper">

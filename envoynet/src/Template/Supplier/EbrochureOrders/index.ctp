@@ -1,5 +1,5 @@
 <div class="inner-content-wrapper">
-    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn"></div></a>
+    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn">Place Order</div></a>
   </div>
 <div class="inner-content-wrapper">
   <div class="tools">
@@ -39,7 +39,7 @@
       <div id="paging_numbers">
           <?php echo $this->Paginator->numbers(); ?>
       </div>
-      <?php echo $this->Paginator->next('<div id="Next_btn"></div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
+      <?php echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
     </div>
 	
 </div>

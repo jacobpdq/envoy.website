@@ -97,9 +97,7 @@
                     
                 </section>
 
-                      <ul class="language">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'supplier')); ?>"><span class="english">EN</span><span class="french">FR</span></a></li>
-      </ul>
+       
 
             <ul class="language">
         <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'supplier')); ?>">Language: <span class="english">EN</span><span class="french">FR</span></a></li>
@@ -120,8 +118,62 @@
 
 
       <!--Site navbar /-->
+
+
+
+
+  <input id="toggle" type="checkbox">
+ 
+   <div class="content">
       
-         <div id="Main_Navbar_Interface">
+      <header id="main-header" class="section__content " >
+
+       <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>   
+           <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>">
+            <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
+           <?php else: ?>
+           <a href="<?php echo $this->Url->build(array('controller' => 'main', 'action' => 'index', 'prefix' => false)); ?>">
+           <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
+           <?php endif; ?>
+      
+      
+          
+          <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
+
+      
+        <nav class="menu">
+          <ul>
+            <li><a href="#"><?php echo __('Services'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
+              </ul>
+
+            </li>
+            <li><a href="#"><?php echo __('About Us'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
+              </ul>
+            </li>
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
+   </li>
+            </ul>
+        </nav>
+
+      </header>
+
+    
+    
+    <div id="Main_content_Holder">
+
+    <!--Start Login screen content /-->
+
+    <!--Envoy Logo /-->
+         <div id="Logo_Menu_Holder">
+  
+   <div id="Main_Navbar_Interface">
 <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ;?>
     <div id="Welcome_holder"><?php echo __('Welcome'); ?>,  <?php echo $suppliername; ?> </div> 
     
@@ -143,7 +195,19 @@
         
 <?php endif; ?>
        
- </div> 
+ </div>            
+  
+
+       
+ </div>  
+
+
+
+
+
+
+      
+      
       
       
       
@@ -214,11 +278,17 @@
 
   <!--Start copyright Line content /-->
 
-    <div class="Hippo_Copyright_Line" id="Main_copyright_Holder">© Copyright Envoy Network Inc. 2013
-      <div id="Travelweek_Holder">
-	 <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
-      </div>
-    </div>
+ <br style="clear:both" />
+<section class="" id="footer">
+  <div class="section__content">
+    
+    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+    <p>© Copyright Envoy Network Inc. 2015</p>
+</a>
+  </div>
+  </section>
+
+</div>
     <!--End copyright Line content /-->
 
 <!--End Footer content /-->
