@@ -119,6 +119,10 @@ msgstr "Panier"
 msgid "Company Name"
 msgstr "Entreprise"
 
+#: loco:559ca033176764d725a77e8b456b
+msgid "Company"
+msgstr "Entreprise"
+
 #: loco:559ca03814d72523088b4572
 msgid "First Name"
 msgstr "Prénom"
