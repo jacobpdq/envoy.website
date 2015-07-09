@@ -135,7 +135,7 @@
 
       <div id="form_content_discription_left">
         <div class="blank_form_holder_bg9"><input type="textarea" id="Form_holder_style_short" name="data[Order][order_comments]"></div>
-        <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn"></button></div>
+        <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn"><?php echo __('Submit'); ?></button></div>
       </div>
     </div>
 

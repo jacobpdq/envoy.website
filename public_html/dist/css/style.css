@@ -1185,11 +1185,11 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 
 #paging_numbers li {
   margin: 0 2px !important;
-  color: white !important; }
+  color: #3c5791 !important; }
 
 #paging_numbers {
   margin-bottom: 0 !important;
-  min-height: 44px !important; }
+  min-height: 34px !important; }
 
 #paging_numbers:blank {
   display: none; }
@@ -1231,3 +1231,7 @@ table.index {
 
 #product_holder {
   background: none !important; }
+
+#pagnate_top_Header {
+  min-width: 200px !important;
+  float: none !important; }

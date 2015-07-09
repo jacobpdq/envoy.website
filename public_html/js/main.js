@@ -19,7 +19,9 @@ $(document).ready(function() {
     return !($.trim($(obj).text()).length) && !($(obj).children().length)
 };
 
-	$('#paging_numbers:nocontent').remove();
+	$('#paging_numbers:nocontent').each(function(){
+		$(this).remove();
+		})
 
 
   });
