@@ -1045,10 +1045,10 @@ a.Cart_items:link {
 
 #brochures-sidebar {
   background-image: none !important;
-  height: 60vh !important; }
+  height: 100% !important; }
 
 #brochures-suppliers-scrollpane {
-  height: 60vh !important; }
+  height: 100% !important; }
 
 .jspDrag {
   background: #8bc64b !important; }
@@ -1241,6 +1241,9 @@ table.index {
     display: none; }
   #pagnate_top_Header li {
     margin: 0 !important; }
+
+#Brochures_Main_Holder_agent {
+  margin-bottom: 30px; }
 
 #Company_Title {
   display: block;

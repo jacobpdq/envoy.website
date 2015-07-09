@@ -1583,10 +1583,10 @@ margin-left:0 !important;
 }
 #brochures-sidebar {
   background-image:none !important;
-  height:60vh !important;
+  height:100% !important;
 }
 #brochures-suppliers-scrollpane {
-  height:60vh !important;
+  height:100% !important;
 }
 .jspDrag {
   background:$green !important;
@@ -1802,7 +1802,9 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   }
   }
 
-
+#Brochures_Main_Holder_agent {
+  margin-bottom:30px;
+}
 #Company_Title {
   display:block;
   width:auto;
