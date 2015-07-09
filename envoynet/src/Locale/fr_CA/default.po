@@ -67,10 +67,9 @@ msgid "Order Details"
 msgstr "Détails du Commande"
 
 
-#: loco:559c9ff814d725f97e8b4582
+#: loco:559c9ff814d725f97e8b45234
 msgid "View Details"
 msgstr "Détails"
-
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "View All Orders"
@@ -266,6 +265,10 @@ msgstr "Suivant"
 #: loco:559ca12f14d725e47e8b4574
 msgid "View Order"
 msgstr "Vue la Commande"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Tracking num"
+msgstr "Numéro de Repérage"
 
 
 
