@@ -207,7 +207,7 @@
 			  endforeach;
 			  }
 			  else {
-			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1'));
+			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1', ,'placeholder'=>'# of Brochures'));
 			    echo $this->Form->input('OrderItem.qty_choice',array('div'=>false,'value'=>null,'label'=>false,'type'=>'hidden'));
 			   
 			  }
