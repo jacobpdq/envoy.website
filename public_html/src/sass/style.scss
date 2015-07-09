@@ -1712,6 +1712,10 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     text-indent: 0em !important;
     text-align:center !important;
     width:auto !important;
+    & a {
+      color:white !important;
+      text-decoration:none;
+    }
   }
   .inner-content-wrapper > h1 {
     max-width: 270px;

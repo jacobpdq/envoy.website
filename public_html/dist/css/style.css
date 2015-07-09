@@ -1163,6 +1163,9 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   text-indent: 0em !important;
   text-align: center !important;
   width: auto !important; }
+  #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
+    color: white !important;
+    text-decoration: none; }
 
 .inner-content-wrapper > h1 {
   max-width: 270px;
