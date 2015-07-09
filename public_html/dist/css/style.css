@@ -1427,3 +1427,6 @@ a.small {
   font-size: 0.8rem;
   display: inline-block;
   color: #3c5791 !important; }
+
+#admin_btn {
+  float: left !important; }
