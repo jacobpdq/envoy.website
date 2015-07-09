@@ -1305,3 +1305,10 @@ table.index {
   text-align: right !important;
   margin-right: 20px !important;
   margin-top: -14px !important; }
+
+#Brochures_Main_Holder_agent {
+  margin-bottom: 10px !important; }
+
+#Quanity_style1 {
+  width: 150px !important;
+  float: right; }

@@ -218,7 +218,7 @@
           <!--End Quantity/-->
           <!--Start Ad to Order/-->
           <div id="jqueryselector2">
-              <div ref="Add_to_Order_btn2" onClick ="$('#orderBr<?php echo $brochure->id; ?>').submit()" id="Add_to_Order_btn"></div>
+              <div ref="Add_to_Order_btn2" onClick ="$('#orderBr<?php echo $brochure->id; ?>').submit()" id="Add_to_Order_btn"><?php echo __('Add to Order'); ?></div>
           </div>
           <!--End Ad to Order/-->
         </div>
