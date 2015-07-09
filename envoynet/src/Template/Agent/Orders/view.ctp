@@ -72,9 +72,10 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
+<br style="clear:both" />
 </div> 
 </div>
+<br style="clear:both" />
 </div>
 </div> 
 <br style="clear:both" />
