@@ -226,10 +226,8 @@
       <?php echo $this->Form->end();?>
     <?php endforeach;?>
     <?php endif;?>
-  <!--</form>-->
-  </div>
 
-  <div class="paging">
+     <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
     <?php
         echo $this->Paginator->counter( __('Page {{page}} of {{pages}}'));
@@ -251,6 +249,11 @@
           ]); 
         ?>
 </div>
+
+  <!--</form>-->
+  </div>
+
+
 
 </div>
 
