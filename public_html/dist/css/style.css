@@ -1078,6 +1078,9 @@ a.Cart_items:link {
 #Profile_inset_orders {
   margin: 0 !important; }
 
+#Profile_inset_orders {
+  background: none !important; }
+
 #confirm_data_holder {
   margin: 0 !important; }
 
@@ -1245,7 +1248,7 @@ table.index {
 
 #pagnate_top_Header {
   margin-top: 10px !important;
-  width: 195px !important; }
+  width: 215px !important; }
   #pagnate_top_Header li {
     margin: 0 !important; }
   #pagnate_top_Header #paging_numbers {

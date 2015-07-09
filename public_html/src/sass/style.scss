@@ -1620,6 +1620,11 @@ color:$blue !important;
 #Profile_inset_orders {
   margin:0 !important;
 }
+
+#Profile_inset_orders {
+  background:none !important;
+}
+
 #confirm_data_holder {
   margin:0 !important;
 }
@@ -1811,7 +1816,7 @@ margin-top:40px !important;
   & li {
     margin:0 !important;
   }
-  width:195px !important;
+  width:215px !important;
   & #paging_numbers {
       display:none
     }
