@@ -6,8 +6,8 @@ use App\Controller\AppController;
 
 class ReceiptsController extends AppController {
 
-  public $name = __('Receipts');
-
+  public $name = 'Receipts';
+  
   
   public $paginate = [];
 

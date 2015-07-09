@@ -1,5 +1,7 @@
 <div class="inner-content-wrapper">
 
+<?php $this->set('title_for_layout', __('Receipts'));  ?>
+
 	<table class="index" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('date');?></th>
