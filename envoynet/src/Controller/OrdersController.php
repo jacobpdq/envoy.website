@@ -8,7 +8,7 @@ use Cake\Form\Form;
 
 class OrdersController extends AppController {
 
-  public $name = __('Orders');
+  public $name = 'Orders';
   public $paginate = [];  
 
   
