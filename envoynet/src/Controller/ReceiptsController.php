@@ -11,7 +11,7 @@ class ReceiptsController extends AppController {
   
   public $paginate = [];
 
-   public function view($id = null) {
+   public function index($id = null) {
 
    	 $this->set('title_for_layout', __('Receipts'));
 

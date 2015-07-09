@@ -8,6 +8,8 @@ class ReceiptsController extends \App\Controller\ReceiptsController {
 
   public function view($id = null) {
 
+      $this->set('title_for_layout', __('Receipts'));
+
   }
   
     
