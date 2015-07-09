@@ -107,7 +107,7 @@
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Prev_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
               <div id="paging_numbers">
@@ -242,7 +242,7 @@
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Prev_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
               <div id="paging_numbers">
