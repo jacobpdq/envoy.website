@@ -72,6 +72,7 @@ use Cake\Routing\DispatcherFactory;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
 use Cake\I18n\I18n;
+use App\Error\AppError;
 
 
 /**
@@ -224,7 +225,7 @@ DispatcherFactory::add('ControllerFactory');
 Type::build('datetime')->useLocaleParser();
 
 // Register handler in config/bootstrap.php
-use App\Error\AppError;
+
 
 $errorHandler = new AppError();
 $errorHandler->register();
