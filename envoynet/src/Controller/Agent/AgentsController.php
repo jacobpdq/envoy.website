@@ -201,11 +201,11 @@ class AgentsController extends \App\Controller\AgentsController {
 
     
 
-    <input type="hidden" name="existing_<?php echo __('Username'); ?>" value="<?php echo $userinfo-><?php echo __('Username'); ?>; ?>" id="existing_<?php echo __('Username'); ?>">
+    <input type="hidden" name="existing_username" value="<?php echo $userinfo->username; ?>" id="existing_username">
     <input type="hidden" name="existing_email" value="<?php echo $userinfo->email; ?>" id="existing_email">
 
     <input type="hidden" name="sso_action" value="profile" id="sso_action">
-    <input type="hidden" name="<?php echo __('Username'); ?>" value="<?php echo $data['<?php echo __('Username'); ?>']; ?>" id="<?php echo __('Username'); ?>">
+    <input type="hidden" name="username" value="<?php echo $data['username']; ?>" id="username">
     
     
     <?php if( $attr['tw_magazine'] ){ $travelweek_sub_type = $data['travelweek_sub_type']; $subscription_dt = $data['subscription_dt']; ?>
@@ -253,7 +253,7 @@ class AgentsController extends \App\Controller\AgentsController {
       <div class="formGroup">
         <div class="fieldHalf">
           <label for=""><?php echo __('Username'); ?> <span class="sso_required_icon">*</span></label>
-          <input type="text" name="<?php echo __('Username'); ?>" value="<?php echo $data['<?php echo __('Username'); ?>']; ?>" id="<?php echo __('Username'); ?>">
+          <input type="text" name="username" value="<?php echo $data['username'] ?>" id="username">
         </div>
         <div class="fieldHalf">
         <div class="disclaimer"><br><?php echo __('Username'); ?> can only consist of letters, numbers, spaces, hyphens and underscores.</div></div>
