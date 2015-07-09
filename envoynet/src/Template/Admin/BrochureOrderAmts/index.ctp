@@ -53,7 +53,7 @@
           <?php echo $this->Paginator->numbers(); ?>
       </div>
       <?php } ?>
-      <?php echo $this->Paginator->next('<div id="Next_btn"></div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
+      <?php echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
       </div>
 </div>
 <div class="actions">

@@ -3,8 +3,8 @@
     <!--Start Login screen content /-->
 
     <!--Hippo Logo /-->
-    <div id="Login_Logo_Holder">
-      <?php echo $this->Html->image('assets/site_logos/main_envoy_logo.png');?>
+    <div id="Login_Logo_Holder" style="padding:10px">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
     </div>
     <!--End Hippo Logo /-->
 
@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <button id="Submit_btn" type="submit"></button>
+      <button id="Submit_btn" type="submit">Submit</button>
 
       
     </div>

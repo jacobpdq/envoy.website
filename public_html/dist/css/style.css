@@ -1145,7 +1145,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, #actions ul li a, #logout_admin_btn {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1344,3 +1344,44 @@ legend {
 
 #Max_Items_holder {
   margin-top: 25px !important; }
+
+.blank_form_holder_bg2 {
+  height: 38px;
+  width: 257px;
+  display: block;
+  border: 0px !important;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: transparent !important; }
+
+#admin tr:hover {
+  color: inherit !important; }
+
+#admin tr:hover {
+  color: #ffffff;
+  background-color: #3c5791 !important; }
+
+.actions {
+  background: none !important; }
+
+#Welcome_inset_Header_admin, div.actions {
+  width: 916px;
+  height: auto !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: none !important;
+  float: left;
+  padding-top: 0px;
+  padding-left: 6px;
+  margin-top: 10px;
+  margin-bottom: 15px; }
+
+#logout_admin_btn {
+  background-image: none !important; }
+
+#Main_admin_logout_Holder {
+  height: 40px;
+  width: 100%;
+  display: block;
+  background-image: none !important;
+  background-repeat: repeat-x; }

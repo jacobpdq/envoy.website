@@ -45,22 +45,22 @@
       <div id="Main_admin_logout_Holder">
         <div id="logout_Interface_admin">
           <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'admin'));?>">
-            <div id="logout_admin_btn"></div>
+            <div id="logout_admin_btn">Logout</div>
           </a>
         </div>
       </div>
       <div id="Main_Navbar_Interface_admin">
         <a href="<?php echo $this->Url->build(array('controller'=>'suppliers','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_suppliers_btn"></div>
+          <div id="admin_suppliers_btn">Suppliers</div>
         </a>
         <a href="<?php echo $this->Url->build(array('controller'=>'agents','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_agents_btn"></div>
+          <div id="admin_agents_btn">Agents</div>
         </a>
         <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_brochures_btn"></div>
+          <div id="admin_brochures_btn">Brochures</div>
         </a>
         <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_orders_btn"></div>
+          <div id="admin_orders_btn">Orders</div>
         </a>
         <!--
         <a href="<?php echo $this->Url->build(array('controller'=>'invoices','action'=>'index','prefix' => 'admin'));?>">
