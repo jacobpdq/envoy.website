@@ -1,14 +1,10 @@
 <div class="inner-content-wrapper">
 
-<div id="Welcome_inset_Header_orders">
-  <div id="Welcome_inset_text" class="Welcome_txt"><img width="136" height="15" alt="Order Information" src="../img/assets/header_files/Order-Information.png"></div>
-</div>
-
-<div id="Profile_inset_orders">
 
 <div id="order_column_05">
     <div id="confirm_data_holder" class="Base_red_form_txt">
-    <span class="data_Headers_Bl_txt">Delivery Address</span>
+    
+        <span class="data_Headers_Bl_txt">Delivery Address</span>
 
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Order Id: </span><span class="data_Headers_Bl_txt"><?php echo $order['id']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Company Name: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_company']; ?></span><br></div>
@@ -18,10 +14,10 @@
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Address 2: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address2']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> City: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_city']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Province: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_province']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Postal Code: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Postal Code: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br>
+    </div>
  </div>
- </div> 
- 
+
 <div id="order_column_06">
     <div id="confirm_data_holder" class="Base_red_form_txt">        
     <br>  
@@ -78,6 +74,6 @@
 <?php endif; ?>
 
 </div> 
-
+</div>
 </div>
 </div> 
