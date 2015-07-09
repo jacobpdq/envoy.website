@@ -206,4 +206,14 @@ msgstr "S'Inscrire"
 msgid "Overview"
 msgstr "Summaire"
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "Overview"
+msgstr "Summaire"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Previous"
+msgstr "Précédent"
+
+
+
 

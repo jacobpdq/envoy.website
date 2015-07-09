@@ -218,6 +218,8 @@ h3 {
   .tabs [type=radio]:checked ~ label {
     background: #f5f6f6;
     z-index: 2; }
+
+label {}
   .tabs [type=radio]:checked ~ label ~ .content {
     z-index: 1; }
 
