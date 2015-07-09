@@ -25,13 +25,13 @@
     <!--    <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Fax: </span><span class="data_Headers_Bl_txt"></span><br></div>  -->
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Email'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_email']; ?></span><br></div>
    <!--     <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Delivery Type: </span><span class="data_Headers_Bl_txt"><?php echo $order['priority']; ?></span><br></div>  -->
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Order Comments: </span><span class="data_Headers_Bl_txt"><?php echo $order['order_comments']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Order Comments'); ?>:</span><span class="data_Headers_Bl_txt"><?php echo $order['order_comments']; ?></span><br></div>
     </div>
 </div>
   
 <div id="order_column_07">
 
-  <div id="Confirm_order_inset_Holder"><span class="data_Headers_Bl_txt">Order Details</span></div>
+  <div id="Confirm_order_inset_Holder"><span class="data_Headers_Bl_txt"><?php echo __('Order Details'); ?></span></div>
 	
 	<?php if (!empty($order['order_items'])):?>
 	<table class="index2">
@@ -71,9 +71,11 @@
 		</tr>
 	<?php endforeach; ?>
 	</table>
+    <br style="clear:both" />
 <?php endif; ?>
 <br style="clear:both" />
 </div> 
+<br style="clear:both" />
 </div>
 <br style="clear:both" />
 </div>
