@@ -29,9 +29,9 @@
     </table>
     
     <div class="product_cart_holder">
-        <button type="submit" id="Process_order_btn"></button>
-        <a href="/agent/brochures?pageNum=0"><div id="continue_viewing_btn"></div></a>
-        <button type="submit" id="update_order_btn"></button>
+        <button type="submit" id="Process_order_btn"><?php echo __('Process Order'); ?></button>
+        <a href="/agent/brochures?pageNum=0"><div id="continue_viewing_btn"><?php echo __(' Continue Viewing'); ?></div></a>
+        <button type="submit" id="update_order_btn"><?php echo __('Update Order'); ?></button>
     </div>
     <?php echo $this->Form->end();?>
 </div>
