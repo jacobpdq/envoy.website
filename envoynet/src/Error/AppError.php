@@ -9,17 +9,14 @@ class AppError extends BaseErrorHandler
 {
     public function _displayError($error, $debug)
     {
-    return $this->redirect('/');
 
     }
     public function _displayException($exception)
     {
-   return $this->redirect('/');
  }
 
 	public function handleFatalError($code, $description, $file, $line)
     {
-   return $this->redirect('/');
  }
 
 }
