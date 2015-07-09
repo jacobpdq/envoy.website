@@ -6,7 +6,9 @@ use App\Controller\AppController;
 
 class ReceiptsController extends \App\Controller\ReceiptsController {
 
+  public function view($id = null) {
 
+  }
   
     
   public function index() {
