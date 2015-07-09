@@ -223,3 +223,9 @@ DispatcherFactory::add('ControllerFactory');
  */
 Type::build('datetime')->useLocaleParser();
 
+// Register handler in config/bootstrap.php
+use App\Error\AppError;
+
+$errorHandler = new AppError();
+$errorHandler->register();
+
