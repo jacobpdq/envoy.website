@@ -28,39 +28,39 @@
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Mailing Information</span></div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Address:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Address'); ?>:</div>
             <?php echo $this->Form->input('address1', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Address2:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Address2'); ?>:</div>
             <?php echo $this->Form->input('address2', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">City:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('City'); ?>:</div>
             <?php echo $this->Form->input('city', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Province:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Province'); ?>:</div>
             <?php echo $this->Form->input('province', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Postal code:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Postal Code'); ?>:</div>
             <?php echo $this->Form->input('postal', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Country:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Country'); ?>:</div>
             <?php echo $this->Form->input('country', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Contact Information</span></div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Email:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Email'); ?>:</div>
             <?php echo $this->Form->input('email', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 

@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="form_content_field_left">
-			<div class="Base_txt" id="User_Name_Form_Holder">Email:</div>
+			<div class="Base_txt" id="User_Name_Form_Holder"><?php echo __('Email'); ?>:</div>
 			<div id="blank_form_holder_bg"><input name="data[Contact][email]" id="Form_holder_style" type="text"/></div>
 		</div>
 
