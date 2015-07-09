@@ -1450,3 +1450,6 @@ a.small {
 
 .index2 td {
   padding: 11px !important; }
+
+.fr .tabs__content [type=submit] {
+  font-size: 0.8rem !important; }
