@@ -236,6 +236,9 @@ msgid "Next"
 msgstr "Suivant"
 
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "View Order"
+msgstr "Vue la Commande"
 
 
 
