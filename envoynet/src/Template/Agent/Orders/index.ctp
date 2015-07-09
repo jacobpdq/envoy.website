@@ -51,7 +51,7 @@
             echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
         ?>
       </div>
-      <?php echo $this->Paginator->prev('<div id="Prev_btn"></div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
+      <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
       <div id="paging_numbers">
           <?php echo $this->Paginator->numbers(); ?>
       </div>
