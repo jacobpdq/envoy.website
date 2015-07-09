@@ -1143,7 +1143,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1156,7 +1156,37 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   border: 0px !important;
   padding: 10px 20px !important;
   height: auto !important;
-  font-size: 1.5rem !important; }
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  text-indent: 0em !important;
+  text-align: center !important;
+  width: auto !important; }
+
+#paging_numbers li {
+  float: left; }
+
+#paginate_btn, #Prev_btn, #Next_btn, #paging_numbers {
+  background: #ccc !important;
+  color: #3c5791 !important;
+  margin-top: 0 !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important; }
+
+#paging_numbers li {
+  margin: 0 2px !important;
+  color: white !important; }
+
+#paging_numbers {
+  margin-bottom: 0 !important;
+  min-height: 44px !important; }
+
+#paging_numbers li a {
+  color: white !important; }
+  #paging_numbers li a:hover {
+    text-decoration: underline; }
+
+.ui-button-text a {
+  color: white !important; }
 
 table.index {
   width: 930px;
@@ -1166,3 +1196,8 @@ table.index {
 
 .tools {
   margin-top: 0px !important; }
+
+.User_Name_Form_Holder {
+  height: 23px;
+  width: 250px;
+  font-size: 0.8em !important; }
