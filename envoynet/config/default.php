@@ -1,6 +1,6 @@
 <?php
 return array (
-  'debug' => true,
+  'debug' => false,
   'App' => 
   array (
     'namespace' => 'App',

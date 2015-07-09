@@ -113,7 +113,8 @@ class AgentsController extends \App\Controller\AgentsController {
     $this->set(compact('provinces'));
   }
 
-  function sso_profile() {
+  public function sso_profile() {
+    $this->set('title_for_layout', __('My Profile'));
     $http = new Client();
     $broker_url = trim(str_replace(array('http://','https://'),'',Router::url('/', true)),'/');
 
