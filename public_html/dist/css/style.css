@@ -967,6 +967,8 @@ h6 {
   float: left;
   margin: 0 !important;
   padding: 0 !important; }
+  #brochures-sidebar.supplier {
+    margin-left: 0px !important; }
 
 ul#supplier-list li a {
   background: none !important;
@@ -1337,3 +1339,6 @@ legend {
 
 #profile_info {
   height: auto !important; }
+
+#Max_Items_holder {
+  margin-top: 25px !important; }

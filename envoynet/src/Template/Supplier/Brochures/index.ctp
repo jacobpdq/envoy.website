@@ -8,7 +8,7 @@
 
 <div class="inner-content-wrapper">
 
-  <div id="brochures-list">
+  <div id="brochures-list" class="supplier">
     
   <!--<form id="form1" name="form1" method="post" action=""> -->
   <div id="Header_Company_Holder">
