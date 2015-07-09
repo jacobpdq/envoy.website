@@ -114,9 +114,9 @@
           <?php echo $this->Paginator->numbers(); ?>
             </div>
         <?php 
-          echo $this->Paginator->next('<div id="Next_btn"></div>',[
+          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Next_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
           ]); 
         ?>
       </div>
@@ -249,9 +249,9 @@
           <?php echo $this->Paginator->numbers(); ?>
             </div>
         <?php 
-          echo $this->Paginator->next('<div id="Next_btn"></div>',[
+          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Next_btn"></div></span>'
+            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
           ]); 
         ?>
 </div>
