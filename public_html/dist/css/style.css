@@ -1162,8 +1162,18 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   text-align: center !important;
   width: auto !important; }
 
+.inner-content-wrapper > h1 {
+  max-width: 270px;
+  max-height: 30px; }
+
 #paging_numbers li {
   float: left; }
+
+#profile_info {
+  margin-bottom: 80px !important; }
+
+#paging_numbers:empty {
+  display: none !important; }
 
 #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers {
   background: #efefef !important;
@@ -1202,3 +1212,13 @@ table.index {
   height: 23px;
   width: 250px;
   font-size: 0.8em !important; }
+
+#Edit_delete_holder {
+  background-image: none !important; }
+
+#Brochures_Main_Holder {
+  border-bottom: 1px solid #ccc !important;
+  margin-bottom: 20px !important; }
+
+#product_holder {
+  background: none !important; }
