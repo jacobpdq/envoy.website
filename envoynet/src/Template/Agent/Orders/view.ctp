@@ -17,7 +17,7 @@
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Postal Code'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br>
     </div>
  </div>
-
+</div>
 <div id="order_column_06">
     <div id="confirm_data_holder" class="Base_red_form_txt">        
     <br>  
