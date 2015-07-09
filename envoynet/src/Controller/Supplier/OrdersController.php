@@ -130,7 +130,7 @@ class OrdersController extends \App\Controller\OrdersController {
 
 
 
-    $this->set('title_for_layout', __('Order #') . $id);
+    $this->set('title_for_layout', __('Order') . " #" . $id);
 
     $order =  $this->Orders->findById($id)->contain([
         'OrderItems.Brochures.Suppliers'
