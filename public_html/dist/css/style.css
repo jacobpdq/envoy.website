@@ -1199,6 +1199,12 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   #paging_numbers li a:hover {
     text-decoration: underline; }
 
+.pagnate_top_Header.paging {
+  min-width: 250px !important; }
+  .pagnate_top_Header.paging li {
+    margin: 0 !important;
+    float: right; }
+
 .ui-button-text a {
   color: white !important; }
 

@@ -1748,6 +1748,14 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
       text-decoration:underline;
     }
   }
+  .pagnate_top_Header.paging {
+    & li {
+      margin:0 !important;
+      float:right;
+    }
+    min-width:250px !important;
+
+  }
 
   .ui-button-text a {
     color:white !important;
