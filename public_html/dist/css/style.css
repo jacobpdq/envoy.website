@@ -1394,7 +1394,7 @@ legend {
   background-image: none !important;
   background-repeat: no-repeat;
   padding-right: 0px; }
-  #Main_Navbar_Interface_admin a {
+  #Main_Navbar_Interface_admin a div {
     margin-right: 10px !important; }
 
 .actions a {
