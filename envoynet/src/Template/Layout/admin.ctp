@@ -72,15 +72,14 @@
           <div id="admin_invoices_btn"></div>
         </a>
           -->
-        <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>">
-          <div id="admin_shipping_btn"><div id="admin_btn">Shipping</div></div>
+        <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>"><div id="admin_btn">Shipping</div>
         </a>
-         <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
+         <a class="small" href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
          
-       <div id="admin_btn"> Receipts</div>
+      Receipts
         </a>
-        <a href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
-         <div id="admin_btn"> SSO Settings</div>
+        <a class="small"href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
+          SSO Settings
         </a>
       
 

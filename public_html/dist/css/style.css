@@ -1422,3 +1422,8 @@ legend {
 
 #Login_Logo_Holder img {
   max-width: 100px !important; }
+
+a.small {
+  font-size: 0.8rem;
+  display: inline-block;
+  color: #3c5791 !important; }
