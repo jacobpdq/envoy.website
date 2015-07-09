@@ -23,7 +23,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
     $cart = $this->request->session()->read('ShoppingCart');
     $this->request->data['Cart'] = $cart;
-    $this->set('title_for_layout', __('Your cart'));
+    $this->set('title_for_layout', __('Your Cart'));
     $orderForm = new Form();
     $this->set(compact('orderForm'));
   }

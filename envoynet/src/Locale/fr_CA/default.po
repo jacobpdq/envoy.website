@@ -223,6 +223,20 @@ msgstr "Toutes les Commandes"
 msgid "My Receipts"
 msgstr "Reçus"
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "Street"
+msgstr "Rue"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Submit"
+msgstr "Completer"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Next"
+msgstr "Suivant"
+
+
+
 
 
 

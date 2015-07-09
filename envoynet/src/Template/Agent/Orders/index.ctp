@@ -1,11 +1,11 @@
 <div class="inner-content-wrapper">
 	<table class="index" cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id','Order number');?></th>
-			<th><?php echo $this->Paginator->sort('created','Date');?></th>
-			<th><?php echo $this->Paginator->sort('shipping_company','Company');?></th>
-                        <th><?php echo $this->Paginator->sort('shipping_firstname','First Name');?></th>
-                        <th><?php echo $this->Paginator->sort('shipping_lastname','Last Name');?></th>
+			<th><?php echo $this->Paginator->sort('id',__('Order Number'));?></th>
+			<th><?php echo $this->Paginator->sort('created',__('Date'));?></th>
+			<th><?php echo $this->Paginator->sort('shipping_company',__('Company'));?></th>
+                        <th><?php echo $this->Paginator->sort('shipping_firstname',__('First Name'));?></th>
+                        <th><?php echo $this->Paginator->sort('shipping_lastname',__('Last Name'));?></th>
 	<!--		<th><?php echo $this->Paginator->sort('owner_id','Agent');?></th>
                         <th>City</th>       
                         <th>Province</th>   
