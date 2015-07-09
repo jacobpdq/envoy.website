@@ -1197,7 +1197,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   display: none; }
 
 #paging_numbers li a {
-  color: white !important; }
+  color: #3c5791 !important; }
   #paging_numbers li a:hover {
     text-decoration: underline; }
 

@@ -1746,7 +1746,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     display:none
   }
   #paging_numbers li a {
-    color:white !important;
+    color:$blue !important;
     &:hover {
       text-decoration:underline;
     }
