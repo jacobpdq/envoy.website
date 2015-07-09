@@ -215,5 +215,10 @@ msgid "Previous"
 msgstr "Précédent"
 
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "View All Orders"
+msgstr "Toutes les Commandes"
+
+
 
 

@@ -80,7 +80,7 @@
   </div>
   <div id="profile_info2">
     <div id="profile_submit_Holder">
-      <button type="submit" id="Submit_btn"></button>
+      <button type="submit" id="Submit_btn">Submit</button>
     </div>
   </div>
   <?php echo $this->Form->end(); ?>

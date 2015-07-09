@@ -1,5 +1,5 @@
 <div class="inner-content-wrapper">
-    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn"></div></a>
+    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn">Place Order</div></a>
 </div>
 <div class="inner-content-wrapper">
   <div class="tools">

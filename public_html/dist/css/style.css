@@ -1073,9 +1073,96 @@ a.Cart_items:link {
 #brochures-list {
   position: relative !important; }
 
+#Profile_inset_orders {
+  margin: 0 !important; }
+
+#confirm_data_holder {
+  margin: 0 !important; }
+
+#Welcome_inset_Header_orders {
+  display: none !important; }
+
+#Confirm_order_inset_Holder {
+  margin-left: 0 !important; }
+
 div.paging {
   margin: 0px !important;
   width: auto !important; }
 
+table.index2 {
+  margin: 20px 0 !important; }
+
 h5 {
   color: #3c5791; }
+
+table {
+  margin-top: 14px !important; }
+
+table th {
+  background: #eee !important;
+  font-size: 1.4rem !important;
+  padding: 10px !important; }
+
+table.index th {
+  font-weight: 600 !important; }
+
+table {
+  border-radius: 3px !important; }
+
+#profile_info {
+  width: 600px !important; }
+
+#Profile_form_holder {
+  margin-top: 20px !important; }
+
+#Profile_form_holder span {
+  font-size: 1.4rem;
+  color: #3c5791 !important;
+  margin-top: 1rem !important; }
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  margin: 0 !important;
+  box-sizing: border-box; }
+
+.Form_holder_style2 {
+  margin: 0 !important; }
+
+#profile_info {
+  width: 590px;
+  height: 640px;
+  float: left;
+  border-right: 0px !important;
+  margin-top: 10px; }
+
+#profile_info2 {
+  border-right: 0px !important; }
+
+#Submit_btn, .ui-button, #place_order_btn {
+  margin-bottom: 1rem !important;
+  border: 0px !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 1px !important;
+  background: #8bc64b !important;
+  background-image: none !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  border-radius: 3px;
+  border: 0px !important;
+  padding: 10px 20px !important;
+  height: auto !important;
+  font-size: 1.5rem !important; }
+
+table.index {
+  width: 930px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.tools {
+  margin-top: 0px !important; }
