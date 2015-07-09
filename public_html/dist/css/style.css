@@ -1053,3 +1053,25 @@ a.Cart_items:link {
   background: #8bc64b !important; }
   .jspDrag:hover {
     background: #8bc64b !important; }
+
+.jspVerticalBar {
+  border-radius: 3px !important; }
+
+.jspArrow {
+  opacity: 0.5 !important; }
+
+.Company_Title_txt_lg {
+  letter-spacing: 0.5px;
+  font-weight: 500 !important;
+  font-size: 3rem !important;
+  color: #3c5791 !important; }
+
+#brochures-sidebar {
+  margin-right: 30px !important; }
+
+#brochures-list {
+  position: relative !important; }
+
+div.paging {
+  margin: 0px !important;
+  width: auto !important; }
