@@ -218,8 +218,6 @@ h3 {
   .tabs [type=radio]:checked ~ label {
     background: #f5f6f6;
     z-index: 2; }
-
-label {}
   .tabs [type=radio]:checked ~ label ~ .content {
     z-index: 1; }
 
@@ -278,9 +276,7 @@ header#top-header {
       padding: 0 4px 0 4px; }
 
 header#main-header {
-  padding: 0;
-  height: 100px;
-  }
+  padding: 0; }
 
 .section__content {
   max-width: 960px;
@@ -945,7 +941,8 @@ h6 {
   top: 14px;
   letter-spacing: 0.5px;
   color: white;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin-top: 0px !important; }
 
 #Main_Navbar_Holder {
   border-radius: 3px;
