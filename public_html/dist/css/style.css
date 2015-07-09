@@ -393,7 +393,7 @@ section.alltext.contact {
       float: right;
       max-width: 500px; }
 
-@media (min-width: 400px) and (max-width: 959px) {
+@media (min-width: 100px) and (max-width: 959px) {
   ul.language a {
     font-size: 0.000001px !important; }
     ul.language a span {
