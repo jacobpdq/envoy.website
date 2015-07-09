@@ -9,17 +9,18 @@ class AppError extends BaseErrorHandler
 {
     public function _displayError($error, $debug)
     {
-        return 'There has been an error!';
+    return $this->redirect(array('controller' => 'Main', 'action' => 'index'));
+
     }
     public function _displayException($exception)
     {
-        return 'There has been an exception!';
-    }
+   return $this->redirect(array('controller' => 'Main', 'action' => 'index'));
+ }
 
 	public function handleFatalError($code, $description, $file, $line)
     {
-        return 'A fatal error has happened';
-    }
+   return $this->redirect(array('controller' => 'Main', 'action' => 'index'));
+ }
 
 }
 
