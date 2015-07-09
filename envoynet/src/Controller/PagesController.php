@@ -45,7 +45,7 @@ class PagesController extends AppController {
       parent::beforeFilter($event);
       $this->Auth->allow(array('display'));
 
-      if ($this->Auth->user('supplier')) {
+      if ($this->Auth->user('role') == 'supplier') {
       	$this->layout = 'supplier';
       } else {
          $this->layout = 'agent';
