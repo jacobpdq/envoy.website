@@ -201,11 +201,11 @@ class AgentsController extends \App\Controller\AgentsController {
 
     
 
-    <input type="hidden" name="existing_username" value="<?php echo $userinfo->username; ?>" id="existing_username">
+    <input type="hidden" name="existing_<?php echo __('Username'); ?>" value="<?php echo $userinfo-><?php echo __('Username'); ?>; ?>" id="existing_<?php echo __('Username'); ?>">
     <input type="hidden" name="existing_email" value="<?php echo $userinfo->email; ?>" id="existing_email">
 
     <input type="hidden" name="sso_action" value="profile" id="sso_action">
-    <input type="hidden" name="username" value="<?php echo $data['username']; ?>" id="username">
+    <input type="hidden" name="<?php echo __('Username'); ?>" value="<?php echo $data['<?php echo __('Username'); ?>']; ?>" id="<?php echo __('Username'); ?>">
     
     
     <?php if( $attr['tw_magazine'] ){ $travelweek_sub_type = $data['travelweek_sub_type']; $subscription_dt = $data['subscription_dt']; ?>
@@ -238,11 +238,11 @@ class AgentsController extends \App\Controller\AgentsController {
       <legend>Personal Information</legend>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="">First Name <span class="sso_required_icon">*</span></label>
+          <label for=""><?php echo __('First Name'); ?> <span class="sso_required_icon">*</span></label>
           <input type="text" name="first_name" value="<?php echo $data['first_name']; ?>" id="first_name">
         </div>
         <div class="fieldHalf">
-          <label for="">Last Name <span class="sso_required_icon">*</span></label>
+          <label for=""><?php echo __('Last Name'); ?> <span class="sso_required_icon">*</span></label>
           <input type="text" name="last_name" value="<?php echo $data['last_name']; ?>" id="last_name">
         </div>
         <div style="clear:both;"></div>
@@ -252,11 +252,11 @@ class AgentsController extends \App\Controller\AgentsController {
     <fieldset>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="">Username <span class="sso_required_icon">*</span></label>
-          <input type="text" name="username" value="<?php echo $data['username']; ?>" id="username">
+          <label for=""><?php echo __('Username'); ?> <span class="sso_required_icon">*</span></label>
+          <input type="text" name="<?php echo __('Username'); ?>" value="<?php echo $data['<?php echo __('Username'); ?>']; ?>" id="<?php echo __('Username'); ?>">
         </div>
         <div class="fieldHalf">
-        <div class="disclaimer"><br>Username can only consist of letters, numbers, spaces, hyphens and underscores.</div></div>
+        <div class="disclaimer"><br><?php echo __('Username'); ?> can only consist of letters, numbers, spaces, hyphens and underscores.</div></div>
         <div style="clear:both;"></div>
       </div>
       
@@ -266,11 +266,11 @@ class AgentsController extends \App\Controller\AgentsController {
       <legend>Preferred Email</legend>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="">Email <span class="sso_required_icon">*</span></label>
+          <label for=""><?php echo __('Email'); ?> <span class="sso_required_icon">*</span></label>
           <input type="email" name="email" value="<?php echo $data['email']; ?>" id="email">
         </div>
         <div class="fieldHalf">
-          <label for="">Confirm Email <span class="sso_required_icon">*</span></label>
+          <label for="">Confirm <?php echo __('Email'); ?> <span class="sso_required_icon">*</span></label>
           <input type="email" name="email_confirm" value="<?php echo $data['email']; ?>" id="email_confirm">
         </div>
         <div style="clear:both;"></div>
@@ -278,14 +278,14 @@ class AgentsController extends \App\Controller\AgentsController {
     </fieldset>
     
     <fieldset>
-      <legend>Password</legend>
+      <legend><?php echo __('Password'); ?>:</legend>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="">Password</label>
+          <label for=""><?php echo __('Password'); ?>:</label>
           <input autocomplete="off" type="password" name="password" value="" id="password">
         </div>
         <div class="fieldHalf">
-          <label for="">Confirm Password</label>
+          <label for="">Confirm <?php echo __('Password'); ?>:</label>
           <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
         </div>
         <div style="clear:both;"></div>
@@ -295,7 +295,7 @@ class AgentsController extends \App\Controller\AgentsController {
     
     <?php $this->sso_form_specific( $data, 'profile', $attr ); ?>
 
-    <p><input type="submit" class="button dark" value="Update Profile &rarr;"></p>
+    <p><input type="submit" class="button dark" value="<?php echo __('Update Profile'); ?>:"></p>
     
   </form>
   
@@ -528,7 +528,7 @@ protected function sso_form_specific( $data = array(), $action = 'profile', $att
     </div>
     <div class="formGroup">
       <div class="fieldSingle">
-        <label for="street">Street</label>
+        <label for="street"><?php echo __('Street'); ?>:</label>
         <input type="text" style="width:12%;display:inline-block;" name="street" value="<?php sso_form_post('street'); ?>" id="street">
         <input type="text" style="width:83%;margin-left:2%;display:inline-block;" name="streetName" value="<?php sso_form_post('streetName'); ?>" id="streetName">
       </div>
@@ -540,14 +540,14 @@ protected function sso_form_specific( $data = array(), $action = 'profile', $att
         <input type="text" name="unitApt" value="<?php sso_form_post('unitApt'); ?>" id="unitApt">
       </div>
       <div class="fieldHalf">
-        <label for="city">City</label>
+        <label for="city"><?php echo __('City'); ?>:</label>
         <input type="text" name="city" value="<?php sso_form_post('city'); ?>" id="city">
       </div>
       <div style="clear:both;"></div>
     </div>
     <div class="formGroup">
       <div class="fieldHalf">
-        <label for="province">Province/State</label>
+        <label for="province"><?php echo __('Province'); ?>:/State</label>
         <select name="province" id="province">
                   <?php $province = sso_form_post('province','Ontario',false); ?>
           <?php foreach( $province_values as $key => $value  ){ if( $key == $province ){ $selected = ' selected="selected" '; }else{ $selected = ''; } ?>
@@ -556,18 +556,18 @@ protected function sso_form_specific( $data = array(), $action = 'profile', $att
         </select>
       </div>
       <div class="fieldHalf">
-        <label for="postal_code">Postal Code</label>
+        <label for="postal_code"><?php echo __('Postal Code'); ?>:</label>
         <input type="text" name="postal_code" value="<?php sso_form_post('postal_code'); ?>" id="postal_code">
       </div>
       <div style="clear:both;"></div>
     </div>
     <div class="formGroup">
       <div class="fieldHalf">
-        <label for="phone_no">Phone</label>
+        <label for="phone_no"><?php echo __('Tel'); ?>:</label>
         <input type="text" name="phone_no" value="<?php sso_form_post('phone_no'); ?>" id="phone_no">
       </div>
       <div class="fieldHalf">
-        <label for="fax">FAX</label>
+        <label for="fax"><?php echo __('Fax'); ?>:</label>
         <input type="text" name="fax" value="<?php sso_form_post('fax'); ?>" id="fax">
       </div>
       <div style="clear:both;"></div>
@@ -584,7 +584,7 @@ protected function sso_form_specific( $data = array(), $action = 'profile', $att
     <?php if( $attr['contact_sml'] ){ ?>
     <div class="formGroup">
       <div class="fieldHalf">
-        <label for="province">Province/State</label>
+        <label for="province"><?php echo __('Province'); ?>:/State</label>
         <select name="province" id="province">
                   <?php $province = sso_form_post('province','Ontario',false); ?>
           <?php foreach( $province_values as $key => $value  ){ if( $key == $province ){ $selected = ' selected="selected" '; }else{ $selected = ''; } ?>
@@ -596,7 +596,7 @@ protected function sso_form_specific( $data = array(), $action = 'profile', $att
     </div>
     <div class="formGroup">
       <div class="fieldHalf">
-        <label for="phone_no">Phone</label>
+        <label for="phone_no"><?php echo __('Tel'); ?>:</label>
         <input type="text" name="phone_no" value="<?php sso_form_post('phone_no'); ?>" id="phone_no">
       </div>
       <div class="fieldHalf">
