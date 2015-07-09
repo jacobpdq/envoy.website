@@ -1795,12 +1795,11 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   & #paging_numbers {
       display:none
     }
-    & li {
-      margin:0 !important;
-    }
+  & li {
+    margin:0 !important;
+  }
   }
 
-}
 
 #Company_Title {
   display:block;
@@ -1858,3 +1857,15 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     height: 38px;
     float: right;
   }
+
+  #brochures-list {
+    position: relative !important;
+    margin-left: 210px;
+}
+ #Cart_Header_items {   height: 45px !important;
+    float: right !important;
+    margin-top: 12px !important;
+    text-align: right !important;
+    margin-right: 20px !important;
+    margin-top: -14px !important;
+}
