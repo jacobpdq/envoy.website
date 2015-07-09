@@ -84,7 +84,7 @@ h3 {
 
 // MOBILE HIDING 
 
-@media (min-width: 959px) {
+@media screen and (min-width: 959px) {
 
   .mobile {
     display:none;
@@ -92,7 +92,7 @@ h3 {
 
 }
 
-@media (max-width: 959px) {
+@media screen and (max-width: 959px) {
 
   ul.language {
     position: absolute !important;
@@ -153,7 +153,7 @@ h3 {
   } 
 }
 
-@media (max-width: 959px) {
+@media screen and (max-width: 959px) {
   .button {
     border:0px;
     font-size: 1.5rem;
@@ -165,7 +165,7 @@ h3 {
   max-width:300px;
 }
 
-@media (min-width: 959px) {
+@media screen and (min-width: 959px) {
   .button {
     border:0px;
     font-size: 1.5rem;
@@ -575,7 +575,7 @@ section.alltext.contact {
 
 }
 
-@media (min-width: 100px) and (max-width: 959px) {
+@media screen and (max-width: 959px) {
 
   ul.language a {
     font-size:0.000001px !important;
@@ -972,7 +972,7 @@ a[href="#"] {
 }
   
 
-@media (min-width: 959px)  {
+@media screen and (min-width: 959px)  {
 
 
   section#masthead {

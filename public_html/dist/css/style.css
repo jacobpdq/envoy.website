@@ -57,11 +57,11 @@ h3 {
     margin-bottom: 100px;
     margin-right: 20px; }
 
-@media (min-width: 959px) {
+@media screen and (min-width: 959px) {
   .mobile {
     display: none; } }
 
-@media (max-width: 959px) {
+@media screen and (max-width: 959px) {
   ul.language {
     position: absolute !important;
     top: 12px;
@@ -98,7 +98,7 @@ h3 {
       text-decoration: none;
       font-weight: 700 !important; }
 
-@media (max-width: 959px) {
+@media screen and (max-width: 959px) {
   .button {
     border: 0px;
     font-size: 1.5rem;
@@ -108,7 +108,7 @@ h3 {
 #footer img {
   max-width: 300px; }
 
-@media (min-width: 959px) {
+@media screen and (min-width: 959px) {
   .button {
     border: 0px;
     font-size: 1.5rem;
@@ -393,7 +393,7 @@ section.alltext.contact {
       float: right;
       max-width: 500px; }
 
-@media (min-width: 100px) and (max-width: 959px) {
+@media screen and (max-width: 959px) {
   ul.language a {
     font-size: 0.000001px !important; }
     ul.language a span {
@@ -648,7 +648,7 @@ SECOND SECTION
 a[href="#"] {
   cursor: default; }
 
-@media (min-width: 959px) {
+@media screen and (min-width: 959px) {
   section#masthead {
     height: 227px !important; }
   .section__content {
