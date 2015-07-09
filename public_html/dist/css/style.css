@@ -278,7 +278,9 @@ header#top-header {
       padding: 0 4px 0 4px; }
 
 header#main-header {
-  padding: 0; }
+  padding: 0;
+  height: 100px;
+  }
 
 .section__content {
   max-width: 960px;
