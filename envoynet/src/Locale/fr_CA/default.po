@@ -62,6 +62,21 @@ msgstr "Profil"
 msgid "My Orders"
 msgstr "Commandes"
 
+#: loco:559c9ff814d725f97e8b4582
+msgid "Order Details"
+msgstr "Détails du Commande"
+
+
+#: loco:559c9ff814d725f97e8b4582
+msgid "View Details"
+msgstr "Détails"
+
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "View All Orders"
+msgstr "Toutes les Commandes"
+
+
 #: loco:559c9ffd14d72523088b456e
 msgid "Logout"
 msgstr "Déconnecter"
@@ -73,6 +88,9 @@ msgstr "Completer la Commande"
 #: loco:559ca00a14d725cd048b456a
 msgid "View Items in Cart"
 msgstr "Articles du Panier"
+
+
+
 
 #: loco:559ca00f14d725ed7e8b456f
 msgid "Add to Order"
@@ -174,6 +192,10 @@ msgstr "Quantité Commandé"
 msgid "Qty Shipped"
 msgstr "Quantité Envoyé"
 
+#: loco:559ca00a14d725cd048b456a
+msgid "Delivery Address"
+msgstr "Addresse D'Envoyé"
+
 #: loco:559ca12614d725867f8b4573
 msgid "Status"
 msgstr "Status"
@@ -218,6 +240,8 @@ msgstr "Précédent"
 #: loco:559ca12f14d725e47e8b4574
 msgid "View All Orders"
 msgstr "Toutes les Commandes"
+
+
 
 msgid "Orders"
 msgstr "Commandes"
