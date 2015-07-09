@@ -68,16 +68,12 @@
         </a>
           -->
         <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>">
-          <div id="admin_shipping_btn"></div>
+          <div id="admin_shipping_btn">Shipping</div>
         </a>
          <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
          
-         
-         <br />
         Receipts
         </a>
-        
-        <br />
         <a href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
         SSO Settings
         </a>

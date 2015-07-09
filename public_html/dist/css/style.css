@@ -1145,7 +1145,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, #actions ul li a, #logout_admin_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'] {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1358,7 +1358,7 @@ legend {
   color: inherit !important; }
 
 #admin tr:hover {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #3c5791 !important; }
 
 .actions {
@@ -1385,3 +1385,21 @@ legend {
   display: block;
   background-image: none !important;
   background-repeat: repeat-x; }
+
+#Main_Navbar_Interface_admin {
+  width: 930px;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: none !important;
+  background-repeat: no-repeat;
+  padding-right: 0px; }
+  #Main_Navbar_Interface_admin a {
+    margin-right: 10px !important; }
+
+.actions a {
+  text-decoration: none !important; }
+
+.actions ul {
+  margin-top: 10px;
+  margin-left: 10px; }
