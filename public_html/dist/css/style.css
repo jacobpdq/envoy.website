@@ -1191,6 +1191,9 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   margin-bottom: 0 !important;
   min-height: 44px !important; }
 
+#paging_numbers:blank {
+  display: none; }
+
 #paging_numbers li a {
   color: white !important; }
   #paging_numbers li a:hover {
