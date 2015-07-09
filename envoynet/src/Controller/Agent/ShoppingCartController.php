@@ -167,13 +167,12 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
       $order = $this->request->data;
 
-
+      $this->request->data['owner_id'] = $this->Auth->user('id');
+      $this->request->data['owner_type'] = "0";
+      $this->request->data['status'] = "0";
 
       $processedOrder = $this->Orders->newEntity($this->request->data);
 
-      $processedOrders->owner_id = $this->Auth->user('id');
-      $processedOrders->owner_type = "0";
-      $processedOrders->status = "0";
 
 
       $order['OrderItems'] = $orderItems;
@@ -230,7 +229,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
           }
         }
       }
-      $processedOrders->order_items = $orderItems;
+      $processedOrder->order_items = $orderItems;
       if ($last = $this->Orders->save($processedOrder)) {
         $this->Flash->set('Order has been placed');
 
