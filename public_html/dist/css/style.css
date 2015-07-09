@@ -1380,7 +1380,13 @@ legend {
   margin-bottom: 15px; }
 
 #logout_admin_btn {
-  background-image: none !important; }
+  background-image: none !important;
+  background-color: #3c5791 !important; }
+
+#logout_Interface_admin img {
+  float: left;
+  padding: 10px;
+  max-width: 150px; }
 
 #Main_admin_logout_Holder {
   height: 40px;
@@ -1406,3 +1412,13 @@ legend {
 .actions ul {
   margin-top: 10px;
   margin-left: 10px; }
+
+#Suppier_Login_Holder {
+  width: 700px !important;
+  margin-bottom: 100px !important; }
+  #Suppier_Login_Holder #Submit_btn {
+    top: 18px;
+    position: relative; }
+
+#Login_Logo_Holder img {
+  max-width: 100px !important; }

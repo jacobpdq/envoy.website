@@ -1963,6 +1963,12 @@ height: auto !important;
 
 #logout_admin_btn {
   background-image:none !important;
+  background-color:$blue !important;
+}
+#logout_Interface_admin img {
+  float:left;
+  padding:10px;
+  max-width:150px;
 }
 
 #Main_admin_logout_Holder {
@@ -1993,3 +1999,20 @@ height: auto !important;
   margin-top:10px;
   margin-left:10px;
 }
+
+#Suppier_Login_Holder {
+  width:700px !important;
+  & #Submit_btn {
+    top: 18px;
+    position: relative;
+  }
+  margin-bottom:100px !important;
+}
+#Login_Logo_Holder img {
+  max-width:100px !important;
+}
+
+
+
+
+

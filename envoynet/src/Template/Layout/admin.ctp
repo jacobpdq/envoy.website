@@ -44,6 +44,11 @@
 
       <div id="Main_admin_logout_Holder">
         <div id="logout_Interface_admin">
+
+     <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
+
+
+
           <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'admin'));?>">
             <div id="logout_admin_btn">Logout</div>
           </a>
@@ -68,14 +73,14 @@
         </a>
           -->
         <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>">
-          <div id="admin_shipping_btn">Shipping</div>
+          <div id="admin_shipping_btn"><div id="admin_btn">Shipping</div></div>
         </a>
          <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
          
-        Receipts
+       <div id="admin_btn"> Receipts</div>
         </a>
         <a href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
-        SSO Settings
+         <div id="admin_btn"> SSO Settings</div>
         </a>
       
 
