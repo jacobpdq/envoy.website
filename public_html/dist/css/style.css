@@ -1430,3 +1430,17 @@ a.small {
 
 #admin_btn {
   float: left !important; }
+
+.order-item-edit .input input {
+  width: 44px !important;
+  float: left !important;
+  height: 35px !important;
+  padding: 0 !important;
+  text-align: center !important; }
+
+.order-item-edit input[type="submit"] {
+  padding: 5px !important;
+  font-size: 10px !important; }
+
+.index2 td {
+  padding: 11px !important; }

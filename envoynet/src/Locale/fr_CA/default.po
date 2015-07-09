@@ -219,6 +219,11 @@ msgstr "Précédent"
 msgid "View All Orders"
 msgstr "Toutes les Commandes"
 
+#: loco:559ca12f14d725e47e8b4574
+msgid "My Receipts"
+msgstr "Reçus"
+
+
 
 
 

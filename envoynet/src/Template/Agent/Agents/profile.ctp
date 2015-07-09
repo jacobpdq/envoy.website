@@ -39,7 +39,7 @@
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Personal Information</span></div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">First name:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('First Name'); ?>:</div>
             <?php echo $this->Form->input('firstname', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
