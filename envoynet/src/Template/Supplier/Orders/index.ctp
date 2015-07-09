@@ -14,11 +14,11 @@
   </div>
 	<table class="index" cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id','Order #');?></th>
-			<th><?php echo $this->Paginator->sort('created','Date');?></th>
-			<th><?php echo $this->Paginator->sort('shipping_company','Company');?></th>
+			<th><?php echo $this->Paginator->sort('id',__('Order Number'));?></th>
+			<th><?php echo $this->Paginator->sort('created',__('Date'));?></th>
+			<th><?php echo $this->Paginator->sort('shipping_company',__('Company'));?></th>
             
-            <th><?php echo $this->Paginator->sort('shipping_city','City');?></th>
+            <th><?php echo $this->Paginator->sort('shipping_city',__('City'));?></th>
             <th>Qty Ordered</th>
                       <th><?php echo $this->Paginator->sort('owner_type','Order source');?></th>
 			<th class="actions">View Order</th>
