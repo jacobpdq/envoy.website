@@ -1695,7 +1695,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 }
 
 #Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
-        margin-bottom: 1rem !important;
+    margin-bottom: 1rem !important;
     border: 0px !important;
     font-size: 1.5rem !important;
     letter-spacing: 1px !important;
@@ -1721,6 +1721,12 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     max-width: 270px;
     max-height: 30px;
   }
+
+
+.fr #Submit_btn, .fr .ui-button, .fr #place_order_btn, .fr #Edit_Product_btn, .fr #paginate_btn, .fr #Prev_btn, .fr #Next_btn, .fr #paging_numbers, .fr #Add_to_Order_btn, .fr #Process_order_btn, .fr #update_order_btn, .fr #continue_viewing_btn, .fr .button.dark, .fr .actions ul li a, .fr #logout_admin_btn, .fr #Main_Navbar_Interface_admin div[id$='_btn'], .fr #Profile_inset_orders input[type="submit"], .fr #View_orders_btn {
+      font-size: 1.3rem !important;
+}
+
 #paging_numbers li {
   float:left;
 }
