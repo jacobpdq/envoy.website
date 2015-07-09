@@ -27,7 +27,7 @@
         </div>
   
   <div class="form_content_field_full">
-            <div class="User_Name_Form_Holder" class="Base_txt">Last Name: </div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Last Name'); ?>: </div>
             <?php echo $this->Form->input('agentlast', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
         

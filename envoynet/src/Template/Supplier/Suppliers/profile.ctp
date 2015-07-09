@@ -21,7 +21,7 @@
         </div>
 
         <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Last name:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Last Name'); ?>:</div>
             <?php echo $this->Form->input('contact_lastname', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
