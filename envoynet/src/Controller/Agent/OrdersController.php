@@ -46,7 +46,7 @@ class OrdersController extends \App\Controller\OrdersController {
       $this->redirect(array('action' => 'index'));
     }
 
-    $this->set('title_for_layout', __('Order #') . $id);
+    $this->set('title_for_layout', __('Order') . ' #' . $id);
     $order = $this->Orders->findById($id)->contain(['OrderItems.Brochures'])->first();
 
     $this->set(compact('order'));

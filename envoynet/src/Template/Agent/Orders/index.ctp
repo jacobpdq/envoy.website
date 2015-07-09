@@ -10,7 +10,7 @@
                         <th>City</th>       
                         <th>Province</th>   
 			<th><?php echo $this->Paginator->sort('status');?></th>   -->
-			<th class="actions">View Order</th>
+			<th class="actions"><?php echo __('View Details'); ?></th>
 	</tr>
 	<?php
 	$i = 0;
