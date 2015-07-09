@@ -1233,6 +1233,7 @@ table.index {
   background: none !important; }
 
 #pagnate_top_Header {
+  margin-top: 10px !important;
   width: 195px !important; }
   #pagnate_top_Header li {
     margin: 0 !important; }
