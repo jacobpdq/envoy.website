@@ -4,9 +4,9 @@
 <div id="order_column_05" >
     <div id="confirm_data_holder" class="Base_red_form_txt">
     
-        <span class="data_Headers_Bl_txt">Delivery Address</span>
+        <span class="data_Headers_Bl_txt"><?php echo __('Delivery Address'); ?></span>
 
-        <div id="Confirm_order_inset_Holder"> <span class="Base_txt">Order Id: </span><span class="data_Headers_Bl_txt"><?php echo $order['id']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Order Number'); ?> </span><span class="data_Headers_Bl_txt"><?php echo $order['id']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Company Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_company']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('First Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_firstname']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Last Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_lastname']; ?></span><br></div>
