@@ -1966,9 +1966,9 @@ height: auto !important;
   background-color:$blue !important;
 }
 #logout_Interface_admin img {
-  float:left;
-  padding:10px;
-  max-width:150px;
+    float: left;
+    /* padding: 10px; */
+    max-width: 80px;
 }
 
 #Main_admin_logout_Holder {
