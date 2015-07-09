@@ -52,9 +52,17 @@
 
     <!--Start copyright Line content /-->
 
-    <div class="Hippo_Copyright_Line" id="Main_copyright_Holder">© Copyright Hippo Express Inc. 2012
-      <div id="Travelweek_Holder"><?php echo $this->Html->image('assets/site_logos/travel_week_logo.png',array('alt'=>'Travel Week - A Travel Week Company'));?></div>
-    </div>
+   <br style="clear:both" />
+<section class="" id="footer">
+  <div class="section__content">
+    
+    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+    <p>© Copyright Envoy Network Inc. 2015</p>
+</a>
+  </div>
+  </section>
+
+</div>
     <!--End copyright Line content /-->
 
 

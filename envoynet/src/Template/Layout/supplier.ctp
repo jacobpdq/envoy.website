@@ -120,9 +120,11 @@
 
 
       <!--Site navbar /-->
-      
-         <div id="Main_Navbar_Interface">
-<?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ;?>
+
+
+<header id="main-header" class="section__content " >
+
+   <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ;?>
     <div id="Welcome_holder"><?php echo __('Welcome'); ?>,  <?php echo $suppliername; ?> </div> 
     
      <ul id="Main_Navbar_Holder">
@@ -142,8 +144,37 @@
         
         
 <?php endif; ?>
-       
- </div> 
+      
+      
+          
+          <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
+
+      
+        <nav class="menu">
+          <ul>
+            <li><a href="#"><?php echo __('Services'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
+              </ul>
+
+            </li>
+            <li><a href="#"><?php echo __('About Us'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
+              </ul>
+            </li>
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
+   </li>
+            </ul>
+        </nav>
+
+      </header>
+
+
+    
       
       
       
