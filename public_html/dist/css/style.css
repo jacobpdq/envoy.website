@@ -1332,7 +1332,8 @@ legend {
 
 .formGroup label {
   font-weight: 400 !important;
-  font-size: 0.8rem !important; }
+  font-size: 1.4rem !important;
+  margin-top: 20px; }
 
 #profile_info {
   height: auto !important; }
