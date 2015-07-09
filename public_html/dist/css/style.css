@@ -1143,7 +1143,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1326,3 +1326,13 @@ table.index {
   float: left;
   border: 0px !important;
   margin-bottom: 40px !important; }
+
+legend {
+  color: #3c5791; }
+
+.formGroup label {
+  font-weight: 400 !important;
+  font-size: 0.8rem !important; }
+
+#profile_info {
+  height: auto !important; }
