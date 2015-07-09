@@ -1691,7 +1691,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   border-right:0px !important;
 }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers{
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn {
         margin-bottom: 1rem !important;
     border: 0px !important;
     font-size: 1.5rem !important;
@@ -1737,7 +1737,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   }
   #paging_numbers  {
     margin-bottom:0 !important;
-    min-height:34px !important;
+    min-height:37px !important;
   }
   #paging_numbers:blank {
     display:none
@@ -1788,9 +1788,73 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 }
 
 #pagnate_top_Header {
-  min-width:200px !important;
-  float:none !important;
+  & li {
+    margin:0 !important;
+  }
+  width:195px !important;
+  & #paging_numbers {
+      display:none
+    }
+    & li {
+      margin:0 !important;
+    }
+  }
+
+}
+
+#Company_Title {
+  display:block;
+  width:auto;
+}
+
+.paging:last-of-type {
+    /* margin-top: 50px !important; */
+    /* clear: left; */
+    display: block;
+    top: 40px;
+    }
+
+    .paging li {
+    list-style: none;
+    margin: 0px !important;
 }
 
 
+#Brochures_Main_Holder_agent {
+    height: 120px;
+    width: 715px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+}
 
+#Company_Title {
+  margin-top:-15px !important;
+}
+#Cart_Header_items {
+    height: 40px !important;
+    float: right !important;
+    margin-top: 12px !important;
+    text-align: right !important;
+    margin-right: 20px !important;
+    margin-top: -24px !important;
+}
+#Header_Company_Holder {
+  margin-bottom:20px;
+  margin-top:-20px;
+}
+
+#Cart_holder {
+  background:none !important;
+}
+
+#Quanity_holder {
+  background:none !important;
+}
+#Quanity_style1 {
+    width: 150px;
+    height: 38px;
+    float: right;
+  }

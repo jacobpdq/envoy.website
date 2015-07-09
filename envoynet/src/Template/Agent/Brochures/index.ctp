@@ -201,7 +201,7 @@
 			 ?>
              <?php 
 			  if (!empty($qtychoice)) {
-			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','options' => $result1));
+			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','placeholder'=>'# of Brochures','options' => $result1));
               foreach($result2 as $result2a):
 		      echo $this->Form->input('OrderItem.qty_choice.'.$result2a,array('div'=>false,'value'=>$result2a,'label'=>false,'type'=>'hidden'));
 			  endforeach;
