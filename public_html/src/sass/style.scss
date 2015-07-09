@@ -1873,6 +1873,9 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   #brochures-list {
     position: relative !important;
     margin-left: 210px;
+    &.supplier {
+      margin-left:0px !important;
+    }
 }
  #Cart_Header_items {   height: 45px !important;
     float: right !important;

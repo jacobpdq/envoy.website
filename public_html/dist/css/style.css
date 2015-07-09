@@ -1304,6 +1304,8 @@ table.index {
 #brochures-list {
   position: relative !important;
   margin-left: 210px; }
+  #brochures-list.supplier {
+    margin-left: 0px !important; }
 
 #Cart_Header_items {
   height: 45px !important;
