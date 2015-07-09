@@ -185,3 +185,7 @@ msgstr "Shipped Via"
 #: loco:559ca12f14d725e47e8b4574
 msgid "Tracking Num"
 msgstr "Tracking Num"
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Previous"
+msgstr "Previous"
