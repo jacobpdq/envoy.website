@@ -627,6 +627,7 @@ section.alltext.contact {
 
     [type=radio]:checked ~ label {
     color:$green !important;
+    text-decoration:none !important;
     }
 
     .tabs {
@@ -2059,6 +2060,18 @@ a.small {
 .fr .tabs__content [type=submit] {
   font-size:0.8rem !important;
 }
+.tabs__content a {
+  position: absolute;
+    /* left: 0; */
+    bottom: 12px;
+    font-size: 0.7rem;
+    right: 36px;
+    color: #bbb;
+    letter-spacing: 1px;
+}
 
+.tabs.mobile a {
+  text-decoration:underline;
+}
 
 

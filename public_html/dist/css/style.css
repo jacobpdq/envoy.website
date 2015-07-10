@@ -424,7 +424,8 @@ section.alltext.contact {
     #team ul li a {
       font-size: 12px; }
   [type=radio]:checked ~ label {
-    color: #8bc64b !important; }
+    color: #8bc64b !important;
+    text-decoration: none !important; }
   .tabs {
     z-index: 10000; }
   .tabs__content {
@@ -1460,3 +1461,15 @@ a.small {
 
 .fr .tabs__content [type=submit] {
   font-size: 0.8rem !important; }
+
+.tabs__content a {
+  position: absolute;
+  /* left: 0; */
+  bottom: 12px;
+  font-size: 0.7rem;
+  right: 36px;
+  color: #bbb;
+  letter-spacing: 1px; }
+
+.tabs.mobile a {
+  text-decoration: underline; }
