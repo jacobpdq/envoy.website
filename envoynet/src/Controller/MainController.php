@@ -26,8 +26,8 @@ class MainController extends AppController {
   }
   public function beforeFilter(Event $event) {
     parent::beforeFilter($event);
-    $this->Auth->allow(array('contact', 'index','login','logout', 'forgot'));
-    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot'));
+    $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send'));
+    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
   }
 
   public function sso_login() {
