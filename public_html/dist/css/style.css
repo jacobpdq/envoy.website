@@ -1479,3 +1479,6 @@ a.small {
 .tabs.mobile .tabs__content a {
   text-decoration: underline;
   color: #bbb !important; }
+
+.box.box__blue.overview h5 {
+  color: white !important; }

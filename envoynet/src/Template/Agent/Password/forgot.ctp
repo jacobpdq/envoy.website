@@ -76,7 +76,9 @@
       
       <header id="main-header" class="section__content " >
       
+      <a href="<?php echo $this->Url->build(array('controller' => 'Main', 'action' => 'index')); ?>">
       <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
+      </a>
           
           <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
 

@@ -45,9 +45,9 @@
       <div id="Main_admin_logout_Holder">
         <div id="logout_Interface_admin">
 
-     <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
-
-
+      <a href="<?php echo $this->Url->build(array('controller' => 'Main', 'action' => 'index')); ?>">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
+      </a>
 
           <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'admin'));?>">
             <div id="logout_admin_btn">Logout</div>
