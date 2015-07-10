@@ -42,7 +42,6 @@ class PasswordController extends AppController
 
             if (substr($broker_url,-1) == '/') {
                 $broker_url = substr($broker_url,0,strlen($broker_url)-1);
-                $broker_url = 'www.travelweekpro.ca';
             }
             $length = 13;
 

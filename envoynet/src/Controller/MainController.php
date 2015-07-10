@@ -27,6 +27,7 @@ class MainController extends AppController {
   public function beforeFilter(Event $event) {
     parent::beforeFilter($event);
     $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send'));
+
     $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'send','sso_login'));
   }
 

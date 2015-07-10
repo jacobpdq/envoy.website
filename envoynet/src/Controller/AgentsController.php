@@ -13,7 +13,7 @@ class AgentsController extends AppController {
   function beforeFilter(Event $event) {
     parent::beforeFilter($event);
     $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send', 'login'));
-    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
+    $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
 	}
 
 }
