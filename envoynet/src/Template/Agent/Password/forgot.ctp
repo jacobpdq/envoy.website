@@ -1,108 +1,167 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <?php echo $this->Html->charset(); ?>
-    <title>
-      <?php echo __('Envoy'); ?>
-      |
-        <?= $this->fetch('title') ?>
-    </title>
-    <?php
-      echo $this->Html->meta('icon');
-      echo $this->Html->css('main');
-      echo $this->Html->css('admin');
-      echo $this->Html->css('layout');
-      echo $this->Html->css('layout_agent');
-      echo $this->Html->css('layout_supplier');
-      echo $this->Html->css('typography');
-      echo $this->Html->css('navbar');
-      echo $this->Html->css('common');
-      echo $this->Html->css('col_grid');
-      echo $this->Html->css('advanced_search');
-      echo $this->Html->css('new_btn');
-       echo $this->Html->css('jquery.ui');
-
-      echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js');
-      echo $this->Html->script('jquery.ui-1.8.11.min.js');
-      echo $this->Html->script('main.js');
-      //echo $this->Html->script('jquery.mousewheel-3.0.4.pack.js');
-     // echo $this->Html->script('jquery.fancybox-1.3.4.js');
-      //echo $this->Html->script('jquery.easing-1.3.pack.js');
-     // echo $this->Html->script('jquery.jscrollpane.min.js');
-
-
-    ?>
-    <?= $this->fetch('script') ?>
-</head>
-<body class="<?php echo $this->request->session()->read('language'); ?>">
-
-<script type="text/javascript">
-  if (/language/.test(window.location.href)) {
-  window.location = document.referrer;
-}
-</script>
-
-      <div id="Main_admin_logout_Holder">
-        <div id="logout_Interface_admin">
-
-     <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
+<!-- Top Navigation Bar -->
+  <header id="top-header">
+    <nav >
 
 
 
-          <a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'admin'));?>">
-            <div id="logout_admin_btn">Logout</div>
-          </a>
-        </div>
-      </div>
-      <div id="Main_Navbar_Interface_admin">
-        <a href="<?php echo $this->Url->build(array('controller'=>'suppliers','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_suppliers_btn">Suppliers</div>
-        </a>
-        <a href="<?php echo $this->Url->build(array('controller'=>'agents','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_agents_btn">Agents</div>
-        </a>
-        <a href="<?php echo $this->Url->build(array('controller'=>'brochures','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_brochures_btn">Brochures</div>
-        </a>
-        <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_orders_btn">Orders</div>
-        </a>
-        <!--
-        <a href="<?php echo $this->Url->build(array('controller'=>'invoices','action'=>'index','prefix' => 'admin'));?>">
-          <div id="admin_invoices_btn"></div>
-        </a>
-          -->
-        <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>"><div id="admin_btn">Shipping</div>
-        </a>
-         <a class="small" href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
-         
-      Receipts
-        </a>
-        <a class="small"href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
-          SSO Settings
-        </a>
+         <section id="login" class="tabs mobile ">
+                  <span>Login As:</span>
+                   <div class="tabs__tabItem">
+                       <input type="radio" id="tab-one" name="tab-group-one">
+                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
+                       
+                <div class="tabs__content">
+
+
+          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+
+          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Forgot Password</a>
+
+
+
+
+          <button class="button" type="submit"><?php echo __('Login'); ?></button>
+          <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+                    <div class="tabs__tabItem">
+
+                       <input type="radio" id="tab-two" name="tab-group-one">
+                       <label for="tab-two"><?php echo __('Supplier'); ?></label>
+                     
+                       <div class="tabs__content">
+
+
+                        <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+
+                        <button class="button" type="submit"><?php echo __('Login'); ?></button>
+
+                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>">Forgot Password</a>
+
+                         <?php echo $this->Form->end(); ?>
+
+                       </div> 
+                   </div>
+                    
+
+                </section>
+
+      <ul class="language">
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Language: <span class="english">EN</span><span class="french">FR</span></a></li>
+      </ul>
+
+
+      <ul class="desktop">
+        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
+        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+      </ul>
+    </nav> 
+  </header>
+
+<div id="wrapper">
+  <input id="toggle" type="checkbox">
+
+  <div class="content "> 
       
-
-      </div>
-      <div id="admin">
-      <div  class="inner-content-wrapper">
-          <div>&nbsp;</div>
-        <?php echo $this->Flash->render(); ?>
-        <?= $this->fetch('content') ?>
+      <header id="main-header" class="section__content " >
+      
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
+          
+          <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
 
       
-      </div>
-      </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="#"><?php echo __('Services'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
+              </ul>
+
+            </li>
+            <li><a href="#"><?php echo __('About Us'); ?></a>
+              <ul>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
+              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
+              </ul>
+            </li>
+            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
+   </li>
+            </ul>
+        </nav>
+
+      </header>
+
+ 	  <h1>Password Retrieval</h1>
+      <p>Forgot your password? Your email address or profile URL. Enter your email address and we'll send you a link to change your password.</p>
+
+        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'retrieve','prefix' => 'agent')));?>
+
+        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+
+        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+
+        <button class="button" type="submit"><?php echo __('Send Password'); ?></button>
+
+
+         <?php echo $this->Form->end(); ?>
+
+
+
+ <!--Start copyright Line content /-->
+
+ <section class="" id="partners">
+<div class="section__content">
+ <h3 class="blue-text">Our Partners</h3>
+ </div>
+ <div class="section__images section__content">
+    <?php echo $this->Html->image('assets/partners/usa.png');?>
+    <?php echo $this->Html->image('assets/partners/g-adventures.png');?>
+    <?php echo $this->Html->image('assets/partners/travel-guard.png');?>
+    <?php echo $this->Html->image('assets/partners/star-clippers.png');?>
+    <?php echo $this->Html->image('assets/partners/resorts-of-ontario.png');?>
+    <?php echo $this->Html->image('assets/partners/ensemble.png');?>
+    <?php echo $this->Html->image('assets/partners/bahia-principe.png');?>
+  </div>
+ </section>
+
+  <section class="" id="footer">
+  <div class="section__content">
+    
+      <div id="Travelweek_Holder">
+   <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
+    <p>© Copyright Envoy Networks Inc. 2015</p>
+</a>
+  </div>
+  </section>
+
 
 <script type="text/javascript" language="javascript">
         $(".iframe-link").fancybox({
-				'width'				: '75%',
-				'height'			: '75%',
+				'width'				: '45%',
+				'height'			: '70%',
 				'autoScale'			: false,
 				'transitionIn'		: 'none',
 				'transitionOut'		: 'none',
 				'type'				: 'iframe'
 			});
 </script>
-  </body>
-</html>
+
+<script type="text/javascript" >
+$(document).ready(function() {
+	$('#LoginDataDigits1, #LoginDataDigits2, #LoginDataDigits3').autotab_magic().autotab_filter('numeric');
+})
+
+</script>
