@@ -103,16 +103,14 @@
         </nav>
 
       </header>
-<div class="section__content">
-      <h1>Password Retrieval</h1>
-</div>
-       <section >
-<div class="section__content">
 
- 	  
+      <div class="section__content" style="padding-top:0;">
+
+      <h1>Password Retrieval</h1>
+
       <p>Forgot your password? Please enter your username or email address and we'll send your password to you.</p>
 
-        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'send','prefix' => 'agent')));?>
+        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'Password','action'=>'send','prefix' => 'agent')));?>
 
         <div  style="margin-right:10px; display:inline-block;">
         <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username or Email")) ?>

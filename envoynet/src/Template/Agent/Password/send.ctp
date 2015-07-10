@@ -104,7 +104,6 @@
 
       </header>
 
-       <section >
 <div class="section__content" style="padding-top:0;">
 
       <h1>Password Retrieval</h1>
