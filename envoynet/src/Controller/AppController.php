@@ -232,7 +232,7 @@ class AppController extends Controller {
     $settings->getcfg();
 
     $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send'));
-    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
+    $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
 
     $this->_setUIVariables();
 
