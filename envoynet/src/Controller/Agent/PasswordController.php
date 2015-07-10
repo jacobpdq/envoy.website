@@ -6,11 +6,20 @@ use App\Controller\AppController;
 
 class PasswordController extends AppController
 {
+
+    public function initialize()
+    {
+
+		$this->layout = 'default';
+
+    }
+
     public function forgot()
 	    {
 
 			$this->layout = 'default';
-			echo 'test';
+
+			
 
 	    }
 

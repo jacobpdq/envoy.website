@@ -28,7 +28,10 @@ class MainController extends AppController {
     parent::beforeFilter($event);
     $this->Auth->allow(array('contact', 'index','login','logout'));
     $this->Auth->allowedActions = array('forgot');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12a4145a50c26cca92c3243485c1187d4e376efc
   }
 
   public function sso_login() {

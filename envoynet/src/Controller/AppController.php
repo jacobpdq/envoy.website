@@ -229,6 +229,7 @@ class AppController extends Controller {
 
   public function beforeFilter(Event $event) {
     
+    $this->Auth->allowedActions = array('forgot');
 
     $settings = TableRegistry::get('Settings');
     $settings->getcfg();
