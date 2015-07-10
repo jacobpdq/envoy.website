@@ -245,7 +245,7 @@ class AppController extends Controller {
         $user_email = $user['email'];
     }
 
-    if( $broker_key ){
+    if( $broker_key && $this->request->params['action'] != 'sso-login'){
         $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key . '/' . $user_email . '/?ver=4.2.2"></script>';
     } else {
       $sso_session_check = '';
