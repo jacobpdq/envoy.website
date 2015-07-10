@@ -50,7 +50,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
 
-     $routes->connect('/password/forgot', array('controller' => 'Main', 'action' => 'passwordForgot'));
+     $routes->connect('/password', array('controller' => 'Main', 'action' => 'passwordForgot'));
    
 
 
