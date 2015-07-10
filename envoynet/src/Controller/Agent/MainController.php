@@ -22,6 +22,7 @@ class MainController extends \App\Controller\MainController {
     parent::initialize();
   }
   public function beforeFilter(Event $event) {
+    pritn_r($event);
     parent::beforeFilter($event);
     $this->Auth->deny('index');
   }
