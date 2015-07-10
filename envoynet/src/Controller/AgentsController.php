@@ -12,7 +12,8 @@ class AgentsController extends AppController {
 
   function beforeFilter(Event $event) {
     parent::beforeFilter($event);
-    $this->Auth->allowedActions = array('forgot','agent_register');
+    $this->Auth->allow(array('contact', 'index','login','logout', 'forgot'));
+    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot'));
 	}
 
  

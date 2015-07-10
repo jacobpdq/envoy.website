@@ -231,7 +231,9 @@ class AppController extends Controller {
     $settings = TableRegistry::get('Settings');
     $settings->getcfg();
 
-
+    $this->Auth->allow(array('contact', 'index','login','logout', 'forgot'));
+    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot'));
+    
     $this->_setUIVariables();
 
     //add check for prefix and redirect if type of user in incorrect
