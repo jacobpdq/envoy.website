@@ -104,24 +104,24 @@
 
       </header>
 
-       <section class="" id="partners">
+      <h1>Password Retrieval</h1>
+       <section >
 <div class="section__content">
 
- 	  <h1>Password Retrieval</h1>
+ 	  
       <p>Forgot your password? Please enter your email address and we'll send your password to you.</p>
 
         <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'retrieve','prefix' => 'agent')));?>
 
-        <div class="float:left" style="margin-right:10px;">
+        <div  style="margin-right:10px; display:inline-block;">
         <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
         </div>
-         <div class="float:left">
+         <div style="display:inline-block;">
         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
         </div>
         <br style="clear:both" />
 
-        <button class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
-
+        <button style="margin-top:40px" class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
 
          <?php echo $this->Form->end(); ?>
          <br /><br /><br />
