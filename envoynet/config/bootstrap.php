@@ -226,7 +226,8 @@ Type::build('datetime')->useLocaleParser();
 
 // Register handler in config/bootstrap.php
 
-
+/*
 $errorHandler = new AppError();
 $errorHandler->register();
+*/
 
