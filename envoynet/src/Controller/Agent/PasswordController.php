@@ -14,7 +14,7 @@ class PasswordController extends AppController
 
     }
 
-    public function forgot()
+    public function forgotAgentPassword()
 	    {
 
 			$this->layout = 'default';
