@@ -16,8 +16,8 @@ class AgentsController extends \App\Controller\AgentsController {
     parent::beforeFilter($event);
     $this->Auth->allowedActions = array('forgot','register','sso_register');
 
-        $this->Auth->allow(array('contact', 'index','login','logout', 'forgot'));
-    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot'));
+        $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'login'));
+    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot', 'login'));
 	}
 
   public function profile() {
