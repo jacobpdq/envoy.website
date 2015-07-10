@@ -25,7 +25,7 @@ class MainController extends \App\Controller\MainController {
 
     parent::beforeFilter($event);
     $this->Auth->deny('index');
-    $this->Auth->allowedActions = array('forgot', 'send');
+    $this->Auth->allowedActions = array('forgot', 'send', 'login');
   
   }
 
