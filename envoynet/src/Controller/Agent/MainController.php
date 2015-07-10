@@ -24,8 +24,8 @@ class MainController extends \App\Controller\MainController {
   public function beforeFilter(Event $event) {
     echo $this->request->params['action'];
 
-    parent::beforeFilter($event);
-    $this->Auth->deny('index');
+    //parent::beforeFilter($event);
+    //$this->Auth->deny('index');
   }
 
   public function login() {
