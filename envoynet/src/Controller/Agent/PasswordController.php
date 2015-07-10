@@ -14,13 +14,7 @@ class PasswordController extends AppController
 
     }
 
-    public function beforeFilter(Event $event) {
-    	
-    	$this->Auth->allowedActions = array('forgot');
-	  
-	}
-
-    public function forgotAgentPassword()
+    public function forgot()
 	    {
 
 			$this->layout = 'default';
