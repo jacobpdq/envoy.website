@@ -21,6 +21,13 @@ class PasswordController extends AppController
 
 	    }
 
+       public function send()
+    {
+
+		$this->layout = 'default';
+
+    }
+
 }
 
 ?>

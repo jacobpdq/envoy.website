@@ -103,16 +103,17 @@
         </nav>
 
       </header>
-<div class="section__content">
-      <h1>Password Retrieval</h1>
-</div>
+
        <section >
-<div class="section__content">
+<div class="section__content" style="padding-top:0;">
 
- 	  
-      <p>Forgot your password? Please enter your username or email address and we'll send your password to you.</p>
+      <h1>Password Retrieval</h1>
 
-        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'send','prefix' => 'agent')));?>
+      <p>Your password has been sent; please check your email.</p>
+      <!-- or { -->
+      <p>We couldn't find your e-mail address or username; did you enter it correctly?</p>
+
+      <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'send','prefix' => 'agent')));?>
 
         <div  style="margin-right:10px; display:inline-block;">
         <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username or Email")) ?>
@@ -126,7 +127,7 @@
 
          <?php echo $this->Form->end(); ?>
          <br /><br /><br />
-         </div>
+    
          </section>
 
 
@@ -147,18 +148,18 @@
 
 <script type="text/javascript" language="javascript">
         $(".iframe-link").fancybox({
-				'width'				: '45%',
-				'height'			: '70%',
-				'autoScale'			: false,
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none',
-				'type'				: 'iframe'
-			});
+        'width'       : '45%',
+        'height'      : '70%',
+        'autoScale'     : false,
+        'transitionIn'    : 'none',
+        'transitionOut'   : 'none',
+        'type'        : 'iframe'
+      });
 </script>
 
 <script type="text/javascript" >
 $(document).ready(function() {
-	$('#LoginDataDigits1, #LoginDataDigits2, #LoginDataDigits3').autotab_magic().autotab_filter('numeric');
+  $('#LoginDataDigits1, #LoginDataDigits2, #LoginDataDigits3').autotab_magic().autotab_filter('numeric');
 })
 
 </script>
