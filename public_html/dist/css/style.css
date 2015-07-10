@@ -1468,8 +1468,15 @@ a.small {
   bottom: 12px;
   font-size: 0.7rem;
   right: 36px;
-  color: #bbb;
+  color: #bbb !important;
   letter-spacing: 1px; }
 
-.tabs.mobile a {
-  text-decoration: underline; }
+.tabs.mobile [type=radio]:checked ~ label {
+  text-decoration: none !important; }
+
+.tabs.mobile [type=radio] ~ label {
+  text-decoration: underline !important; }
+
+.tabs.mobile .tabs__content a {
+  text-decoration: underline;
+  color: #bbb !important; }
