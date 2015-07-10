@@ -60,7 +60,7 @@ Router::scope('/', function ($routes) {
 
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'agent'));
 
-        $routes->connect('/password/forgot', array('controller' => 'Main', 'action' => 'passwordReset', 'prefix' => 'agent'));
+        $routes->connect('/password/forgot', array('controller' => 'Password', 'action' => 'passwordReset', 'prefix' => 'supplier'));
 
         $routes->connect('/my-profile', array('controller' => 'Agents', 'action' => 'sso_profile', 'prefix' => 'agent'));
         $routes->connect('/agents/register', array('controller' => 'Agents', 'action' => 'sso_register', 'prefix' => 'agent'));
@@ -71,7 +71,7 @@ Router::scope('/', function ($routes) {
         // All routes here will be prefixed with `/supplier`
         // And have the prefix => supplier route element added.
 
-        $routes->connect('/password/forgot', array('controller' => 'Main', 'action' => 'passwordReset', 'prefix' => 'supplier'));
+        $routes->connect('/password/forgot', array('controller' => 'Password', 'action' => 'passwordReset', 'prefix' => 'supplier'));
 
         $routes->connect('/login', array('controller' => 'Main', 'action' => 'login', 'prefix' => 'supplier'));
         $routes->connect('/logout', array('controller' => 'Main', 'action' => 'logout', 'prefix' => 'supplier'));
