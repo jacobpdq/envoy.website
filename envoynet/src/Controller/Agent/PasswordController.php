@@ -19,6 +19,8 @@ class PasswordController extends AppController
 
 			$this->layout = 'default';
 
+			
+
 	    }
 
 }
