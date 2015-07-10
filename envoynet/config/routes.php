@@ -50,6 +50,12 @@ Router::scope('/', function ($routes) {
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
     $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
 
+    Router::prefix('password', function ($routes) {
+        // All routes here will be prefixed with `/agent`
+        // And have the prefix => agent route element added.
+        $routes->connect('/forgot', array('controller' => 'Main', 'action' => 'passwordForgot'));
+    });
+
     Router::prefix('agent', function ($routes) {
         // All routes here will be prefixed with `/agent`
         // And have the prefix => agent route element added.

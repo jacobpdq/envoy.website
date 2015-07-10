@@ -285,6 +285,13 @@ class MainController extends AppController {
 
   }
 
+  public function passwordForgot() {
+    $this->layout = 'default';
+
+
+    echo 'test';
+
+  }
 
  
   public function index() {
