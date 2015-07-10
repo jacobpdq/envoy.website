@@ -104,8 +104,11 @@
 
       </header>
 
+       <section class="" id="partners">
+<div class="section__content">
+
  	  <h1>Password Retrieval</h1>
-      <p>Forgot your password? Your email address or profile URL. Enter your email address and we'll send you a link to change your password.</p>
+      <p>Forgot your password? Please enter your email address and we'll send your password to you.</p>
 
         <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'retrieve','prefix' => 'agent')));?>
 
@@ -113,10 +116,13 @@
 
         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
-        <button class="button" type="submit"><?php echo __('Send Password'); ?></button>
+        <button class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
 
 
          <?php echo $this->Form->end(); ?>
+
+         </div>
+         </section>
 
 
 
