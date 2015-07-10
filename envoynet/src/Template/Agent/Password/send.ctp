@@ -127,7 +127,7 @@
          <?php echo $this->Form->end(); ?>
          <br /><br /><br />
     
-         </section>
+         </div>
 
 
 
