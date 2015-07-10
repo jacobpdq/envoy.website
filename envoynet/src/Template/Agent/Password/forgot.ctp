@@ -112,15 +112,19 @@
 
         <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'main','action'=>'retrieve','prefix' => 'agent')));?>
 
+        <div class="float:left" style="margin-right:10px;">
         <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
-
+        </div>
+         <div class="float:left">
         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+        </div>
+        <br style="clear:both" />
 
         <button class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
 
 
          <?php echo $this->Form->end(); ?>
-
+         <br /><br /><br />
          </div>
          </section>
 
@@ -128,20 +132,6 @@
 
  <!--Start copyright Line content /-->
 
- <section class="" id="partners">
-<div class="section__content">
- <h3 class="blue-text">Our Partners</h3>
- </div>
- <div class="section__images section__content">
-    <?php echo $this->Html->image('assets/partners/usa.png');?>
-    <?php echo $this->Html->image('assets/partners/g-adventures.png');?>
-    <?php echo $this->Html->image('assets/partners/travel-guard.png');?>
-    <?php echo $this->Html->image('assets/partners/star-clippers.png');?>
-    <?php echo $this->Html->image('assets/partners/resorts-of-ontario.png');?>
-    <?php echo $this->Html->image('assets/partners/ensemble.png');?>
-    <?php echo $this->Html->image('assets/partners/bahia-principe.png');?>
-  </div>
- </section>
 
   <section class="" id="footer">
   <div class="section__content">
