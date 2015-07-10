@@ -22,12 +22,7 @@ class MainController extends \App\Controller\MainController {
     parent::initialize();
   }
   public function beforeFilter(Event $event) {
-    print_r($event);
-    echo '<pre>';
-    var_dump($event);
-   echo '</pre>';
-
-    echo $event['action'];
+    echo $this->request->params['action'];
 
     parent::beforeFilter($event);
     $this->Auth->deny('index');
