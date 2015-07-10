@@ -27,7 +27,7 @@ class MainController extends AppController {
   public function beforeFilter(Event $event) {
     parent::beforeFilter($event);
     $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send'));
-    $this->Auth->allowActions = (array('contact', 'index','login','logout', 'forgot', 'send'));
+    $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'send','sso_login'));
   }
 
   public function sso_login() {
@@ -289,8 +289,15 @@ class MainController extends AppController {
 
  
   public function index() {
-    
-    
+
+        if ($this->Auth->user('id')){
+		if ($this->Auth->user('role') == 'supplier') {
+		       $link = '/supplier/main';
+		} else {
+		       $link = '/agent/brochures';
+		}
+		$this->redirect($link);
+	}      
 
   }
 

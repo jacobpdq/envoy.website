@@ -117,9 +117,6 @@
         <div  style="margin-right:10px; display:inline-block;">
         <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username or Email")) ?>
         </div>
-         <div style="display:inline-block;">
-        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
-        </div>
         <br style="clear:both" />
 
         <button style="margin-top:40px" class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>

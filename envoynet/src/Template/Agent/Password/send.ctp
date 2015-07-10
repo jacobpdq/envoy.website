@@ -108,8 +108,9 @@
 <div class="section__content" style="padding-top:0;">
 
       <h1>Password Retrieval</h1>
-
+      <?php if ($success) { ?>
       <p>Your password has been sent; please check your email.</p>
+      <?php } else { ?>
       <!-- or { -->
       <p>We couldn't find your e-mail address or username; did you enter it correctly?</p>
 
@@ -126,6 +127,7 @@
         <button style="margin-top:40px" class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
 
          <?php echo $this->Form->end(); ?>
+      <?php } ?>
          <br /><br /><br />
     
          </div>
