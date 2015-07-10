@@ -5,7 +5,7 @@
 
 
          <section id="login" class="tabs mobile ">
-                  <span>Login</span>
+                  <span>Login As:</span>
                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-one" name="tab-group-one">
                        <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
