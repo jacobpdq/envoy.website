@@ -9,9 +9,7 @@ class PasswordController extends AppController
 
 	    public function forgot()
 	    {
-
-			$this->layout = 'default';
-			echo 'test';
+	    	
 
 	    }
 
