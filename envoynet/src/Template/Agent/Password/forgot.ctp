@@ -117,7 +117,7 @@
       <?php
        	} else { 
       ?>
-      <p>We couldn't find your e-mail address or username; did you enter it correctly?</p>
+      <p>We couldn't find your e-mail address; did you enter it correctly?</p>
       <?php
        	}
       }?>
@@ -127,7 +127,7 @@
         <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'Password','action'=>'forgot','prefix' => 'agent')));?>
 
         <div  style="margin-right:10px; display:inline-block;">
-        <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username or Email")) ?>
+        <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"E-mail Address")) ?>
         </div>
         <br style="clear:both" />
 

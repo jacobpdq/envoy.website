@@ -138,13 +138,15 @@
       
       <header id="main-header" class="section__content " >
 
-       <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'agent'): ;?>   
-           <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'agent')); ?>">
+
+<a href="<?php echo $this->Url->build(array('controller' => 'Main', 'action' => 'index')); ?>">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
+      </a>
+
+
+     
+           <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>">
             <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
-           <?php else: ?>
-           <a href="<?php echo $this->Url->build(array('controller' => 'main', 'action' => 'index', 'prefix' => false)); ?>">
-           <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
-           <?php endif; ?>
       
       
           

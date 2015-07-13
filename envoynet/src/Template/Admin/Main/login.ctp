@@ -4,7 +4,9 @@
 
     <!--Hippo Logo /-->
     <div id="Login_Logo_Holder" style="padding:10px">
-      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?>
+<a href="<?php echo $this->Url->build(array('controller' => 'Main', 'action' => 'index')); ?>">
+      <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
+      </a>
     </div>
     <!--End Hippo Logo /-->
 
