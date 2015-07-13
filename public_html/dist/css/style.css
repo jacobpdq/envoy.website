@@ -12,6 +12,9 @@ p {
 #profile_submit_Holder {
   margin-top: 12px; }
 
+th.actions {
+  background: #eee !important; }
+
 .alltext.team {
   max-width: 960px;
   padding-left: 0; }
@@ -1035,7 +1038,8 @@ ul.language {
 a.Cart_items:link {
   cursor: pointer;
   font-family: 'Open Sans' !important;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  margin-top: -20px;
   font-weight: normal !important;
   color: #888 !important;
   text-decoration: underline !important;
