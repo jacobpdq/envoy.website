@@ -48,7 +48,8 @@ Router::scope('/', function ($routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */ 
     $routes->connect('sso-login/*',['controller'=>'Main','action'=>'login','prefix'=>'agent']);
-    $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>'agent']);
+    $routes->connect('sso-logout/*',['controller'=>'Main','action'=>'logout','prefix'=>false]);
+    $routes->connect('sso-logout/',['controller'=>'Main','action'=>'logout','prefix'=>false]);
 
 
 
