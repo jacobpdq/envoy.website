@@ -38,6 +38,10 @@ class PasswordController extends AppController
 		            if (substr($broker_url,-1) == '/') {
 		                $broker_url = substr($broker_url,0,strlen($broker_url)-1);
 		            }
+
+		            if (substr($broker_url,0,3) != 'www') {
+		            	$broker_url = 'www.' . $broker_url;
+		            }
 		            $length = 13;
 
 		            $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
@@ -46,7 +50,7 @@ class PasswordController extends AppController
 		            $params = [
 		                    'action'=>'user_profile',
 		                    'broker_url' => $broker_url,
-		                    'broker_key' => 'b88342f43fc7133b672cd3e5f41a06f77236f34e',//Configure::read('hippo.sso_broker_key'),
+		                    'broker_key' => Configure::read('hippo.sso_broker_key'),
 		                    'email' => $this->request->data['email']
                     
 		                ] ;
@@ -59,6 +63,7 @@ class PasswordController extends AppController
 
 		            if ($user_info) {
 		                $params['action'] = 'user_pwd';
+		                $params['session'] = MD5($randomString);
 		                $http->post(
 		                'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
 		                $params
