@@ -10,7 +10,13 @@ p {
 #footer {
   clear:both
 }
+#profile_submit_Holder {
+  margin-top:12px;
+}
 
+th.actions {
+  background:#eee !important;
+}
 
 
 // Color pallet
@@ -1442,7 +1448,7 @@ h6 {
   }
 }
 #Main_Navbar_Holder {
-  margin-top:-40px !important;
+  margin-top:-60px !important;
   background:#efefef;
   height:52px !important;
   margin-bottom:0;
@@ -1569,7 +1575,8 @@ margin-left:0 !important;
  a.Cart_items:link {
     cursor: pointer;
     font-family: 'Open Sans' !important;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin-top:-20px;
     font-weight: normal !important;
     color: #888 !important;
     text-decoration: underline !important;
@@ -2083,5 +2090,9 @@ a.small {
 
 .box.box__blue.overview h5 {
   color:white !important;
+}
+iframe[name="google_conversion_frame"] {
+  height:0px !important;
+  display:none !important;
 }
 
