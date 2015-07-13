@@ -17,7 +17,7 @@
           <div class="form_content_field_left5">
       
         <div class="blank_form_holder_bg5">
-          <div class="input text"><input type="text" name="username" class="Form_holder_style5" placeholder="Username" id="username"></div>        </div>
+          <div class="input text"><input type="text" name="username" class="Form_holder_style5" placeholder="Email" id="username"></div>        </div>
       </div>
 
       <div class="form_content_field_left5">
@@ -46,7 +46,7 @@
 
           <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
 
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Email")) ?>
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
