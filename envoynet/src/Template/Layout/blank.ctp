@@ -24,6 +24,15 @@
       echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js');
       echo $this->Html->script('jquery.ui-1.8.11.min.js');
       echo $this->Html->script('main.js');
+
+        echo $this->Html->meta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
+     echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,300,600', ['plugin' => false]);
+     echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,700,400,500,600', ['plugin' => false]);
+     echo $this->Html->css('../dist/css/style.css');
+
+      echo $this->Html->script('jquery.validate.min.js');
+    echo $this->Html->script('jquery.autotab-1.1b.js');
+      echo $this->Html->script('main.js');
       //echo $this->Html->script('jquery.mousewheel-3.0.4.pack.js');
      // echo $this->Html->script('jquery.fancybox-1.3.4.js');
       //echo $this->Html->script('jquery.easing-1.3.pack.js');
