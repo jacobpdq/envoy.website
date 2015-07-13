@@ -9,6 +9,9 @@ p {
 #footer {
   clear: both; }
 
+#profile_submit_Holder {
+  margin-top: 12px; }
+
 .alltext.team {
   max-width: 960px;
   padding-left: 0; }
