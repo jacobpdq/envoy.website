@@ -173,9 +173,6 @@ class AppController extends Controller {
         $this->layout = 'agent';
         $this->_initShoppingCart();
         
-        $agentname = $this->Auth->user('company');
-        $this->set('agentname',$agentname);
-        
       } else if ($this->request['prefix'] == 'supplier') {
         
 
@@ -243,6 +240,12 @@ class AppController extends Controller {
 
     if( $user = $this->Auth->user()){
         $user_email = $user['email'];
+        $agentname = $user['company'];
+
+        if ($agentname == '') {
+          $agentname = $user['firstname'] . ' ' . $user['lastname'];
+        }
+        $this->set('agentname',$agentname);
     }
 
     if( $broker_key && $this->request->params['action'] != 'sso-login'){

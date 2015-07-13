@@ -109,10 +109,22 @@
       <div class="section__content" style="padding-top:0;">
 
       <h1>Password Retrieval</h1>
-
-      <p>Forgot your password? Please enter your username or email address and we'll send your password to you.</p>
-
-        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'Password','action'=>'send','prefix' => 'agent')));?>
+      <?php 
+      if (isset($success)) { 
+	     if ($success) { 
+      ?>
+      <p>Your password has been sent; please check your email.</p>
+      <?php
+       	} else { 
+      ?>
+      <p>We couldn't find your e-mail address or username; did you enter it correctly?</p>
+      <?php
+       	}
+      }?>
+      <?php 
+      if (!isset($success) || !$success) { 
+      ?>
+        <?php echo $this->Form->create('Password',array('url'=>array('controller'=>'Password','action'=>'forgot','prefix' => 'agent')));?>
 
         <div  style="margin-right:10px; display:inline-block;">
         <?php echo $this->Form->input('email',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username or Email")) ?>
@@ -121,10 +133,13 @@
 
         <button style="margin-top:40px" class="button button--green" type="submit"><?php echo __('Send Password'); ?></button>
 
-         <?php echo $this->Form->end(); ?>
+         <?php echo $this->Form->end(); 
+       }
+       ?>
+
          <br /><br /><br />
+    
          </div>
-         </section>
 
 
 

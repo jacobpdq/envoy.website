@@ -27,7 +27,6 @@ class MainController extends AppController {
   public function beforeFilter(Event $event) {
     parent::beforeFilter($event);
     $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'send'));
-
     $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'send','sso_login'));
   }
 
@@ -71,7 +70,7 @@ class MainController extends AppController {
             if( $this->request->query['error'] == '201' || $this->request->query['error'] == '999' ){      
 
               if( $this->request->query['error'] == '201' ) { 
-                $this->Flash->error(__('Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/><br/>If you have forgotten your password, please <a href="http://' . SSO_PARENT . '/wp-login.php?action=lostpassword">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>.'));
+                $this->Flash->error(__('Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/><br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>.'));
               } elseif ($this->request->query['error'] == '999' ) {
                 $this->Flash->error(__('Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.<br/><br/><a href="http://' . SSO_PARENT . '/sso-support/">Click here to submit a support request.</a>'));
               }
@@ -95,6 +94,21 @@ class MainController extends AppController {
         //'display_name'=>$user_parts[2] . ' ' . $user_parts[3])
 
         $user_parts = explode("|",$user_info);
+                        //call out to sso parent to verify login
+        $params = [
+                'action'=>'user_profile',
+                'broker_url' => $broker_url,
+                'broker_key' => Configure::read('hippo.sso_broker_key'),
+                'email' => $user_parts[0]
+            
+            ] ;
+        $response = $http->post(
+            'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
+            $params
+
+        );
+        $user_info = $response->body();
+
         $this->loadModel('SsoSessions');
         
         if ($user_id = $this->Auth->user('id')) {
@@ -166,6 +180,9 @@ class MainController extends AppController {
               if ($ssoSession) {
                 $user->password = $ssoSession->password;
               }
+              $user->company = $user_info['company'];
+              $user->phonenumber = $user_info['phone_no'];
+              $user->province = $user_info['province'];
             }
 
             
