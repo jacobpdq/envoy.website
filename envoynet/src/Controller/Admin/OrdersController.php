@@ -31,7 +31,7 @@ class OrdersController extends \App\Controller\OrdersController {
         ),
       'order' => array('Orders.priority' => 'DESC', 'Orders.created' => 'ASC'),
       'limit' => 50,
-      'contain' => 'OrderItems'
+      'contain' => ['OrderItems']
       
     );
     $this->set('orders', $this->paginate());

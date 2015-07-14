@@ -12,7 +12,7 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
 
   
   public function index() {
-    $this->OrderItem->recursive = 0;
+    $this->paginate = ['contain'=>['Brochures']];
     $this->set('orderItems', $this->paginate());
   }
 
@@ -21,7 +21,8 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
       $this->Flash->set(__('Invalid order item'));
       $this->redirect(array('action' => 'index'));
     }
-    $this->set('orderItem', $this->OrderItem->get($id));
+    $orderItem = $this->OrderItems->findById($id)->contain('Brochures')->first()->toArray();
+    $this->set('orderItem', $orderItem);
   }
 
   public function add($id = null) {
@@ -46,7 +47,10 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
       $this->redirect(array('action' => 'index'));
     }
     if (!empty($this->request->data)) {
-      if ($this->OrderItem->save($this->request->data)) {
+      $orderItem = $this->OrderItems->newEntity($this->request->data);
+      $orderItem->isNew(false);
+      $orderItem->id = $id;
+      if ($this->OrderItems->save($orderItem)) {
         $this->Flash->set(__('The order item has been saved'));
         $this->redirect(array('action' => 'index'));
       } else {
@@ -54,29 +58,47 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
       }
     }
     if (empty($this->request->data)) {
-      $this->request->data = $this->OrderItem->get($id);
+      $this->request->data = $this->OrderItems->get($id)->toArray();
     }
     //   $orders = $this->OrderItem->Orders->find('list');
-    $brochures = $this->OrderItem->Brochures->find('list');
+    $brochures = $this->OrderItems->Brochures->find('list');
     $this->set(compact('brochures'));
   }
 
   public function bulkUpdate() {
     if (!empty($this->request->data)) {
-      if ($this->OrderItem->saveAll($this->request->data[], array('validate' => 'first'))) {
 
-        $orderStatus = "1";
-        $orderId = $this->request->data['Order']['id'];
+      $orderItemsSaved = true;
+      $this->LoadModel('Orders');
+
+      $orderStatus = "1";
+
+      foreach ($this->request->data['OrderItem'] as $id => $item) {
+        $orderItem = $this->OrderItems->newEntity($item);
+
+        $orderItem->id = $id;
+        $orderItem->order_id = $this->request->data['Orders']['id'];
+        $orderItem->isNew(false);
+        $this->OrderItems->save($orderItem);
+
+        if ($item['status'] != '3' && $item['status'] != '4') {
+          $orderStatus = "0";
+        }
+        debug($orderItem);
+      } 
+
+
+
+
+        $orderId = $this->request->data['Orders']['id'];
         foreach ($this->request->data as $item) {
-          if ($item['status'] != '3' && $item['status'] != '4') {
-            $orderStatus = "0";
-          }
+
         }
 
-        $this->OrderItem->Orders->contain('OrderItems.Brochure');
-        $order = $this->OrderItem->Orders->get($orderId);
-        $this->OrderItem->Orders->set('status', $orderStatus);
-        if ($this->OrderItem->Orders->save()) {
+
+        $order = $this->Orders->findById($orderId)->first();
+        $order->status = $orderStatus;
+        if ($this->Orders->save($order)) {
 
           if ($orderStatus == "1") {
       //      $this->_notifyOrderOwner($order);
@@ -84,10 +106,6 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
 
           $this->Flash->set(__('Order items updated'));
           $this->redirect($this->referer());
-        } else {
-          $this->Flash->set(__('Order items could not be updated'));
-          $this->redirect($this->referer());
-        }
       }
     }
   }
@@ -98,13 +116,16 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
     if (!$id) {
       $this->Flash->set(__('Invalid id for order item'));
       $this->redirect(array('action' => 'index'));
+    } else {
+      $orderItem = $this->OrderItems->findById($id)->first();
+      if ($this->OrderItems->delete($orderItem)) {
+        $this->Flash->set(__('Order item deleted'));
+        return $this->redirect(array('action' => 'index'));
+      } else {
+        $this->Flash->set(__('Order item was not deleted'));
+        $this->redirect(array('action' => 'index'));
+      }
     }
-    if ($this->OrderItem->delete($id)) {
-      $this->Flash->set(__('Order item deleted'));
-      $this->redirect(array('action' => 'index'));
-    }
-    $this->Flash->set(__('Order item was not deleted'));
-    $this->redirect(array('action' => 'index'));
   }
   
   public function pack($id = null) {

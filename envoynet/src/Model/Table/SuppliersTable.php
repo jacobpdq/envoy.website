@@ -11,6 +11,7 @@ class SuppliersTable extends Table {
 
         $this->table('suppliers');
         $this->primaryKey('id');
+        $this->displayField('company');
         $this->addBehavior('Timestamp');
 
 

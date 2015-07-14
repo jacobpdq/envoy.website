@@ -53,7 +53,7 @@
 		?>
 		<tr<?php echo $class;?>>
 			
-              <?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.id',array('label'=>false,'value'=>$orderItem['id']));?>
+              <?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.id',array('type'=>'hidden','label'=>false,'value'=>$orderItem['id']));?>
           
 		<td><?php  echo $orderItem['brochure']['name'];?></td>
 			<td><?php echo $orderItem['qty_ordered'];?></td>
