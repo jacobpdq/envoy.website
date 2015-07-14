@@ -23,7 +23,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
     $cart = $this->request->session()->read('ShoppingCart');
     $this->request->data['Cart'] = $cart;
-    $this->set('title_for_layout', __('Your Cart'));
+    $this->set('title_for_layout', __('Your cart'));
     $orderForm = new Form();
     $this->set(compact('orderForm'));
   }
@@ -62,11 +62,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
                       $cart['Items'][$key]['qty_ordered'] = $newQty;
                     } else {
                       $this->Flash->set("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
-                      $this->redirect($this->referer());
+                      return $this->redirect($this->referer());
                     }
                   } else {
                     $this->Flash->set("Max quantity for " . $orderItem['brochure_name'] . " was exceeded");
-                    $this->redirect($this->referer());
+                    return $this->redirect($this->referer());
                   }
                 }
               }
@@ -81,11 +81,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
             $this->Flash->set($orderItem['brochure_name'] . " has been added to your cart");
           } else {
             $this->Flash->set("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
-            $this->redirect($this->referer());
+            return $this->redirect($this->referer());
           }
         } else {
           $this->Flash->set("Maximum quantity for " . $orderItem['brochure_name'] . " was exceeded. Cart has not been updated");
-          $this->redirect($this->referer());
+          return $this->redirect($this->referer());
         }
       } else {
         $this->Flash->set(__("You must input a quantity of at least 1 to add to your cart"));
@@ -140,11 +140,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
                 array_push($cart['Items'], $item);
               } else {
                 $this->Flash->set('Cart could not be updated. Not enough units in stock for ' . $brochure['name']);
-                $this->redirect($this->referer());
+                return $this->redirect($this->referer());
               }
             } else {
               $this->Flash->set('Cart could not be updated. Max order quantity exceeded for ' . $brochure['name']);
-              $this->redirect($this->referer());
+              return $this->redirect($this->referer());
             }
           }
         }
