@@ -153,7 +153,7 @@ class OrdersController extends \App\Controller\OrdersController {
               }
             }
     
-            $this->Orders->OrderItem->save($item);
+            $this->Orders->OrderItems->save($item);
 
             //$this->Orders->OrderItem->save($item);
           }

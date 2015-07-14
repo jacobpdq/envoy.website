@@ -131,59 +131,63 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
   public function pack($id = null) {
    
 
+    $this->paginate = [
+        'limit' => 1,
+        'order' => ['Brochures.sku' => 'DESC'] 
+    ];
+    $orderItems = $this->OrderItems->find('all', array(
+      'conditions' => array('OR' => [
+        'order_id' => $id, 
+        'OrderItems.status IN' => '(0, 6)']
+       ),
+    'contain' => array('Brochures.Images', 'Orders'),
+    'order' => ['Brochures.sku']
+    ));
 
+    $orderItems = $this->paginate($orderItems);
+
+      
     if (!empty($this->request->data))   {
       if ($this->request->data['status']==0) {
         if ($this->request->data['brochure']['sku'] <> $this->request->data['barcodes']) {
 
           $this->Flash->set(__('Invalid barcode'));
-          $this->redirect($this->referer());
+          return $this->redirect($this->referer());
         } else{
 
           $orderItem = $this->OrderItems->get($this->request->data['id']);
 
           $orderItem->status = 6;
-          $orderItem->qty_shippded = $this->request->data['qty_shipped'];
+          $orderItem->qty_shipped = $this->request->data['qty_shipped'];
 
 
           if ($this->OrderItems->save($orderItem)) {
 
 
             //      $this->Flash->set('Barcode Confirmed', 'default', array('class' => 'flash_good'));
-            $this->redirect($this->referer());
+            return $this->redirect($this->referer());
           } 
         
         }
       } else if ($this->request->data['status']==6) {
-        if ($this->OrderItem->save($this->request->data, true, array('qty_shipped'))) {
-          $this->Flash->set('Qty Shipped Updated', 'default', array('class' => 'flash_good'));
-          $this->redirect($this->referer());
+          $orderItem = $this->OrderItems->get($this->request->data['id']);
+
+          $orderItem->status = 6;
+          $orderItem->qty_shipped = $this->request->data['qty_shipped'];
+
+
+          if ($this->OrderItems->save($orderItem)) {
+          $this->Flash->set('Qty Shipped Updated');
+          return $this->redirect($this->referer());
         } 
       } else {
         $this->Flash->set(__('The order item could not be saved. Please, try again.'));
-        $this->redirect($this->referer());
+        return $this->redirect($this->referer());
       }
     } else {
-      $this->paginate = [
-        'limit' => 1,
-        'order' => ['Brochures.sku' => 'DESC'] 
-      ];
-      $orderItems = $this->OrderItems->find('all', array(
-        'conditions' => array(
-          'order_id' => $id, 
-          'OrderItems.status IN' => '(0, 6)'
-         ),
-      'contain' => array('Brochures.Images', 'Orders') 
-      ));
-      $orderItems = $this->paginate($orderItems);
-      if ($orderItems->count() > 0) {
-        $this->request->data = $orderItems->first()->toArray();
-      } else {
-        $this->Flash->set(__('All order items have been shipped.'));
-        $this->redirect(['controller'=>'orders','action'=>'pack']);
-      }
-      //  $this->request->data = $this->OrderItem->get(77614);
+          $this->request->data = $orderItems->first()->toArray();
     }
+
     $this->set(compact('id','barcode'));
   }
 }

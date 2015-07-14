@@ -237,8 +237,8 @@ class AppController extends Controller {
 
     $broker_key = Configure::read('hippo.sso_broker_key');
     $user_email = '';
-
-    if( $user = $this->Auth->user()){
+    $user = $this->Auth->user();
+    if($user && $user['role'] == 'agent'){
         $user_email = $user['email'];
         $agentname = $user['company'];
 
