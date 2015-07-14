@@ -111,8 +111,12 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
     $images = $this->Brochures->Images->find('list', array('fields' => array('id', 'caption')));
     //$images['0'] = "None";
-
-    $suppliers = $this->Brochures->Suppliers->find('list', array('fields' => array('id', 'company'),'order'=>['Suppliers.company']));
+    $this->LoadModel('Suppliers');
+    $suppliers = $this->Suppliers->find('list', 
+      [
+        'fields' => array('company','id'),
+        'order'=>['Suppliers.company']
+      ]);
 
     //$suppliers['0'] = "None";
     $this->set(compact('images', 'suppliers'));
