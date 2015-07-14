@@ -95,6 +95,23 @@ class MainController extends AppController {
 
         $user_parts = explode("|",$user_info);
                         //call out to sso parent to verify login
+
+                        $broker_url = Router::url('/', true);
+
+        if (substr($broker_url,0,7) == 'http://') {
+            $broker_url = substr($broker_url,7);
+        } else if (substr($broker_url,0,8) == 'https://') {
+            $broker_url = substr($broker_url,8);
+        }
+
+        if (substr($broker_url,-1) == '/') {
+            $broker_url = substr($broker_url,0,strlen($broker_url)-1);
+        }
+
+        if (substr($broker_url,0,3) != 'www') {
+          $broker_url = 'www.' . $broker_url;
+        }
+
         $params = [
                 'action'=>'user_profile',
                 'broker_url' => $broker_url,
@@ -107,7 +124,7 @@ class MainController extends AppController {
             $params
 
         );
-        $user_info = $response->body();
+        $user_info = get_object_vars(json_decode($response->body()));
 
         $this->loadModel('SsoSessions');
         
@@ -158,6 +175,21 @@ class MainController extends AppController {
           $user =  $userModel->findByUsername($user_parts[1]);
         }
 
+        $provinceAbbreviations = [
+          'alberta'=>'AB',
+          'british columbia' => 'BC',
+          'manitoba' => 'MB', 
+          'new brunswick' => 'NB',
+          'newfoundland' => 'NL',
+          'north west territories' => 'NT',
+          'nova scotia' => 'NS', 
+          'nunavut' => 'NU', 
+          'ontario' => 'ON', 
+          'prince edward isalnd' => 'PE', 
+          'quebec' => 'QC',
+          'saskatchewan' => 'SK',
+          'yukon territory' => 'YT'
+        ];
         if ($user->count() > 0) {
             
             //user was found
@@ -180,16 +212,22 @@ class MainController extends AppController {
               if ($ssoSession) {
                 $user->password = $ssoSession->password;
               }
+              debug($user_info);
               $user->company = $user_info['company'];
               $user->phonenumber = $user_info['phone_no'];
-              $user->province = $user_info['province'];
+              $user->province = $provinceAbbreviations[strtolower($user_info['province'])];
+              $user->postalcode = $user_info['postal_code'];
+              $user->city = $user_info['city'];
+              $user->address = $user_info['street'] . ' ' . $user_info['streetName'];
+              $user->address2 = $user_info['unitApt'] . ' ' . $user_info['unitType'];
+
             }
 
             
         } else {
 
-            //user not found
-            if ($userType == 'supplier') {
+         //user not found
+          if ($userType == 'supplier') {
               $user = [
                   'username'=>$user_parts[1],
                   'email'=>$user_parts[0],
@@ -217,14 +255,14 @@ class MainController extends AppController {
                   'lastname' => $user_parts[3],
                   'status' => 1,
                   'travelcuts' => 0,
-                  'phonenumber' => '',
-                  'postalcode' => '',
-                  'city' => '',
-                  'province' => '',
-                  'country' => '',
-                  'address' => '',
-                  'address2' => '',
-                  'company' => ''
+                  'phonenumber' => $user_info['phone_no'],
+                  'postalcode' => $user_info['postal_code'],
+                  'city' => $user_info['city'],
+                  'province' => $provinceAbbreviations[strtolower($user_info['province'])],
+                  'country' => 'CA',
+                  'address' => $user_info['street'] . ' ' . $user_info['streetName'],
+                  'address2' => $user_info['unitApt'] . ' ' . $user_info['unitType'],
+                  'company' => $user_info['company']
               ];
             }
 
