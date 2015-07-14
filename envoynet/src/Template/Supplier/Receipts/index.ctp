@@ -21,10 +21,10 @@
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td><?php echo $receipt['Receipt']['date']; ?>&nbsp;</td>
-		<td id="brochure_name"><?php echo $receipt['name']; ?>&nbsp;</td>
-		<td><?php echo $receipt['Receipt']['qty'];?>	&nbsp;	</td>
-        <td><?php echo $receipt['Receipt']['carrier']; ?> </td>
+		<td><?php echo $receipt['date']; ?>&nbsp;</td>
+		<td id="brochure_name"><?php echo $receipt['brochure']['name']; ?>&nbsp;</td>
+		<td><?php echo $receipt['qty'];?>	&nbsp;	</td>
+        <td><?php echo $receipt['carrier']; ?> </td>
       
 	</tr>
 <?php endforeach; ?>
