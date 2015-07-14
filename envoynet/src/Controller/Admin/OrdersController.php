@@ -208,6 +208,8 @@ class OrdersController extends \App\Controller\OrdersController {
     if (!empty($this->request->data)) {
 
       $order = $this->Orders->newEntity($this->request->data);
+      $order->isNew(false);
+      $order->id = $this->request->data['id'];
 
       if ($this->Orders->save($order)) {
         $this->Flash->set(__('The order has been saved'));

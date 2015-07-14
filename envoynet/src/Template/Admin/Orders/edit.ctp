@@ -3,9 +3,9 @@
     <fieldset>
         <legend><?php echo __('Edit Order'); ?></legend>
         <ol>
-            <li><?php echo $this->Form->input('id',array('type'=>'text','label'=>'Order Number','disabled'=>'true')); ?></li>
-            <li><?php echo $this->Form->input('owner_id',array('type'=>'text','label'=>'Owner Id','disabled'=>'true')); ?></li>
-            <li><?php echo $this->Form->input('owner_type', array('options' => $order_owners,'disabled'=>'true')); ?></li>
+            <li><?php echo $this->Form->input('id',array('type'=>'text','label'=>'Order Number','readonly'=>'true')); ?></li>
+            <li><?php echo $this->Form->input('owner_id',array('type'=>'text','label'=>'Owner Id','readonly'=>'true')); ?></li>
+            <li><?php echo $this->Form->input('owner_type', array('options' => $order_owners,'readonly'=>'true')); ?></li>
             <li><?php echo $this->Form->input('shipping_company'); ?></li>
             <li><?php echo $this->Form->input('shipping_firstname'); ?> </li>
             <li><?php echo $this->Form->input('shipping_lastname'); ?></li>
@@ -18,7 +18,7 @@
             <li><?php echo $this->Form->input('shipping_phonenumber'); ?></li>
             <li><?php echo $this->Form->input('order_comments'); ?></li>
             <li><?php echo $this->Form->input('priority', array('options' => $order_priorities)); ?></li>
-            <li><?php echo $this->Form->input('status', array('options' => $order_statuses,'disabled'=>true)); ?></li>         
+            <li><?php echo $this->Form->input('status', array('options' => $order_statuses,'readonly'=>true)); ?></li>         
         </ol>
     </fieldset>
     <fieldset class="submit">

@@ -173,8 +173,6 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
       $processedOrder = $this->Orders->newEntity($this->request->data);
 
-
-
       $order['OrderItems'] = $orderItems;
       
 
@@ -229,6 +227,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
           }
         }
       }
+      
       $processedOrder->order_items = $orderItems;
       if ($last = $this->Orders->save($processedOrder)) {
         $this->Flash->set('Order has been placed');
