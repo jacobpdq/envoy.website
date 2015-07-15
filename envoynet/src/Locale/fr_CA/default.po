@@ -20,10 +20,61 @@ msgstr ""
 
 #: loco:559c9fa014d725e47e8b456a
 msgid "Travel Agent"
-msgstr "Agent de Voyage"
+msgstr "Agent de Voyages"
 
 msgid "Forgot Password"
 msgstr "Mot de Passe Oublie"
+
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+msgid "Password"
+msgstr "Mot de Passe"
+
+msgid "Serving the Travel "
+msgstr "Au service de l'industrie du voyage "
+
+msgid "and Tourism Industry "
+msgstr "et du tourisme "
+
+msgid "for over 15 years."
+msgstr "depuis plus de 15 ans."
+
+msgid "BECOME A PART OF THE NETWORK"
+msgstr "FAITES PARTIE DU RESEAU"
+
+msgid "Envoy is a distribution and fulfillment company that specializes in providing the travel industry with"
+msgstr "Envoy est une entreprise de distribution et de gestion de commandes qui se spécialise en fournissant à l'industrie du voyage des"
+
+msgid "custom marketing solutions"
+msgstr "solutions marketing personnalisées"
+
+msgid "Our business is built on:"
+msgstr "Nos activités reposent sur:"
+
+msgid "Partnerships"
+msgstr "Les partenariats"
+
+msgid "Intelligence"
+msgstr "L'intelligence"
+
+msgid "Reach"
+msgstr "La portée commerciale"
+
+msgid "THE ENVOY OVERVIEW"
+msgstr "VUE D'ENSEMBLE D'ENVOY"
+
+msgid "About ENVOY"
+msgstr "A Propos d'ENVOY"
+
+msgid "Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets."
+msgstr "Envoy se spécialise en fournissant à l'industrie du voyage et du tourisme des programmes personnalisés afin de livrer des campagnes marketing facilitant des transactions réussies. En tirant profit de ses partenariats d'envergure en voyages et tourisme, la portée inégalée auprès des consommateurs et des détaillants s'avère accomplie."
+
+msgid "With significant investments in equipment, vehicles, infrastructure and technology. Envoy represents its modern position by exceeding the requirements of the Travel & Tourism industry."
+msgstr "Avec des investissements importants au niveau de l'équipement, des véhicules, de l'infrastructure et de la technologie, Envoy détermine sa position moderne en dépassant les exigences de l'industrie du voyage et du tourisme."
+
+msgid "Our Partners"
+msgstr "Nos partenaires"
 
 #: loco:559c9fbf14d72523088b456c
 msgid "Supplier"
