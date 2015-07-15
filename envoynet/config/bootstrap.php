@@ -205,12 +205,16 @@ Request::addDetector('tablet', function ($request) {
 //Plugin::load('Migrations');
 Plugin::loadAll(); 
 
+Configure::write('debug', 2); // It was 0
+
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
 if (Configure::read('debug')) {
     //Plugin::load('DebugKit', ['bootstrap' => true]);
     Configure::write('debug', 2); // It was 0
 }
+
+Cache::disable();
 
 /**
  * Connect middleware/dispatcher filters.
