@@ -26,6 +26,11 @@ msgstr "Agent de Voyage"
 msgid "Forgot"
 msgstr "Mot de Passe Oublié"
 
+
+#: loco:559ca12f14d725e47e8b123
+msgid "test"
+msgstr "hauhauhau"
+
 #: loco:559c9fbf14d72523088b456c
 msgid "Supplier"
 msgstr "Fournisseur"

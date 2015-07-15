@@ -151,6 +151,7 @@
 
                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot'); ?></a>
 
+                          <?php echo __('test'); ?>
 
                          <?php echo $this->Form->end(); ?>
 
