@@ -13,35 +13,7 @@
                 <div class="tabs__content">
 
 
-                <form method="post" accept-charset="utf-8" id="agent-login" action="/agent/main/login"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div>      <h1 id="agent-login-text">Travel Agent Login</h1>
-          <div class="form_content_field_left5">
-      
-        <div class="blank_form_holder_bg5">
-          <div class="input text"><input type="text" name="username" class="Form_holder_style5" placeholder="Email" id="username"></div>        </div>
-      </div>
-
-      <div class="form_content_field_left5">
-       
-        <div class="blank_form_holder_bg5">
-          <div class="input password"><input type="password" name="password" class="Form_holder_style5" placeholder="Password" id="password"></div>        </div>
-      </div>
-<!--
-    <ul id="phone-input">
-      <li>
-              </li>
-    </ul>
-      <div id="agent-login-instructions">
- (Enter your phone number)
-  </div>
--->
-
-        <div id="profile_submit_Holder">
-          <button class="button" type="submit">Login</button>
-       <!--    <a href="/agent/agents/register">Register</a> /-->
-        </div>
-
-
-    </form>
+               
 
 
           <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
