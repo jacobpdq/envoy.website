@@ -92,9 +92,6 @@ msgstr "Completer la Commande"
 msgid "View Items in Cart"
 msgstr "Articles du Panier"
 
-
-
-
 #: loco:559ca00f14d725ed7e8b456f
 msgid "Add to Order"
 msgstr "Votre panier"

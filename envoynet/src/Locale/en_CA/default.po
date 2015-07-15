@@ -26,6 +26,10 @@ msgstr "Travel Agent"
 msgid "Supplier"
 msgstr "Supplier"
 
+#: loco:559ca12f14d725e47e8b123
+msgid "Forgot Password"
+msgstr "Forgot Password"
+
 #: loco:559c9fcc14d725107f8b456a
 msgid "Logistics"
 msgstr "Logistics"
