@@ -149,9 +149,7 @@
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
-                       <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot'); ?></a>
-
-                          <?php echo __('test'); ?>
+                       <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
 
                          <?php echo $this->Form->end(); ?>
 
