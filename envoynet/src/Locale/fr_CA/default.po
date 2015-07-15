@@ -22,12 +22,11 @@ msgstr ""
 msgid "Travel Agent"
 msgstr "Agent de Voyage"
 
-#: loco:559ca12f14d725e47e8b123
-msgid "Forgot"
-msgstr "Mot de Passe Oublié"
+msgid "Forgot Password"
+msgstr "Mot de Passe Oublie"
 
 
-#: loco:559ca12f14d725e47e8b123
+#: loco:559ca12f14d725e47e8b34
 msgid "test"
 msgstr "hauhauhau"
 
