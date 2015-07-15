@@ -147,7 +147,7 @@
 
                         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
 
-                        <button class="button" type="submit"><?php echo __('Login1'); ?></button>
+                        <button class="button" type="submit"><?php echo __('Forgot Password'); ?></button>
 
                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
 
