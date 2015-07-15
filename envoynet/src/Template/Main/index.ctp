@@ -18,7 +18,7 @@
 
           <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
 
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Email")) ?>
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
@@ -65,9 +65,9 @@
 
 
       <ul class="desktop">
-        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text">1800 IRONSTONE MANOR, PICKERING, ON L1W 3J9</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
-        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+        <li class="white-text"><u><a href="mailto:MAIL@ENVOYNETWORKS.CA"></u>MAIL@ENVOYNETWORKS.CA</a></li>
       </ul>
     </nav> 
   </header>
@@ -120,7 +120,7 @@
 
           <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
 
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Email")) ?>
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
@@ -161,12 +161,14 @@
 
               <div class="section__content">
                 <h2>
-                  Serving the Travel <br/>and Tourism Industry<br/> for over 15 years.
+                  <?php echo __('Serving the Travel '); ?><br/>
+                  <?php echo __('and Tourism Industry ') ?><br/>
+                  <?php echo __('for over 15 years.') ?>
                 </h2>
                   <br/>
                   <button class=" button button--green">
                   <a href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'register','prefix'=>'agent')); ?>">
-                    <span> BECOME A PART OF THE NETWORK</span>
+                    <span> <?php echo __('BECOME A PART OF THE NETWORK') ?></span>
                   </a>
                 </button>
 
@@ -182,30 +184,30 @@
               
               <div class="section__content ">
                 <p>
-                  Envoy is a distribution and fulfillment company that specializes in providing the travel industry with <a href="#"><br/>custom marketing solutions</a>.
+                  <?php echo __('Envoy is a distribution and fulfillment company that specializes in providing the travel industry with ') ?><a href="#"><br/><?php echo __('custom marketing solutions') ?></a>.
                 </p>
-                <h5>Our business is built on:</h5>
+                <h5><?php echo __('Our business is built on:') ?></h5>
 
                 <ul>
-                  <li>Partnerships</li>
-                  <li>Intelligence</li>
-                  <li>Reach</li></ul>
+                  <li><?php echo __('Partnerships') ?></li>
+                  <li><?php echo __('Intelligence') ?></li>
+                  <li><?php echo __('Reach') ?></li></ul>
           
                 <button class="button button--white button--full-width "> <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview')); ?>">
-                The Envoy Overview</a></button>
+                <?php echo __('The Envoy Overview') ?></a></button>
                 <br style="clear:both" />
               </div>
           </section>
           
           <section id="green-circle" class="section__content">
                       
-                      <p class=" white-text " id="third-section-paragraph">With significant investments in equipment, vehicles, infrastructure and technology. Envoy represents its modern position by exceeding the requirements of the Travel &amp; Tourism industry.</p>
+                      <p class=" white-text " id="third-section-paragraph"><?php echo __('With significant investments in equipment, vehicles, infrastructure and technology. Envoy represents its modern position by exceeding the requirements of the Travel & Tourism industry.') ?></p>
           </section>
 
 
           <section  class="section__content">
-            <h3 class="blue-text about-heading">About ENVOY</h3>
-            <p class="gray-text font-large" class="section__content">Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets.</p>
+            <h3 class="blue-text about-heading"><?php echo __('About ENVOY') ?></h3>
+            <p class="gray-text font-large" class="section__content"><?php echo __('Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it\'s extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets.') ?></p>
 
 
           </section>
@@ -218,7 +220,7 @@
 
  <section class="" id="partners">
 <div class="section__content">
- <h3 class="blue-text">Our Partners</h3>
+ <h3 class="blue-text"><?php echo __('Our Partners') ?></h3>
  </div>
  <div class="section__images section__content">
     <?php echo $this->Html->image('assets/partners/usa.png');?>
