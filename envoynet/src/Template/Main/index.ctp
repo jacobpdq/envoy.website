@@ -50,7 +50,7 @@
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Forgot Password</a>
+          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
 
 
@@ -77,7 +77,7 @@
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
-                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>">Forgot Password</a>
+                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
 
                          <?php echo $this->Form->end(); ?>
 
@@ -152,7 +152,7 @@
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
 
-           <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>">Forgot Password</a>
+           <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
 
           <button class="button" type="submit"><?php echo __('Login'); ?></button>
@@ -177,7 +177,7 @@
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
-                       <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>">Forgot Password</a>
+                       <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
 
 
                          <?php echo $this->Form->end(); ?>

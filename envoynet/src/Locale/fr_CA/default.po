@@ -239,12 +239,9 @@ msgstr "Summaire"
 msgid "Previous"
 msgstr "Précédent"
 
-
 #: loco:559ca12f14d725e47e8b4574
 msgid "View All Orders"
 msgstr "Toutes les Commandes"
-
-
 
 msgid "Orders"
 msgstr "Commandes"
@@ -265,7 +262,6 @@ msgstr "Completer"
 msgid "Next"
 msgstr "Suivant"
 
-
 #: loco:559ca12f14d725e47e8b4574
 msgid "View Order"
 msgstr "Vue la Commande"
@@ -274,4 +270,5 @@ msgstr "Vue la Commande"
 msgid "Tracking num"
 msgstr "Numéro de Repérage"
 
-
+msgid "Forgot Password"
+msgstr "Mot de Passe Oublié"
