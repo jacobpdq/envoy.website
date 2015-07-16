@@ -184,7 +184,7 @@
               
               <div class="section__content ">
                 <p>
-                  <?php echo __('Envoy is a distribution and fulfillment company that specializes in providing the travel industry with ') ?><a href="#"><br/><?php echo __('custom marketing solutions') ?></a>.
+                  <?php echo __('ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with ') ?><a href="#"><br/><?php echo __('custom marketing solutions') ?></a>.
                 </p>
                 <h5><?php echo __('Our business is built on:') ?></h5>
 
@@ -194,7 +194,7 @@
                   <li><?php echo __('Reach') ?></li></ul>
           
                 <button class="button button--white button--full-width "> <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview')); ?>">
-                <?php echo __('The Envoy Overview') ?></a></button>
+                <?php echo __('THE ENVOY OVERVIEW') ?></a></button>
                 <br style="clear:both" />
               </div>
           </section>
