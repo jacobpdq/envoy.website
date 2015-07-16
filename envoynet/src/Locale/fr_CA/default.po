@@ -320,20 +320,20 @@ msgstr "Numéro de Repérage"
 msgid "Full-service asset management and excellent distribution opportunities meet here."
 msgstr "Nous offrons un service complet en gestion de ressources et d'excellentes occasions de distribution."
 
-msgid "Fulfillment"
-msgstr "Gestion de Commandes"
+msgid "FULFILLMENT"
+msgstr "GESTION DE COMMANDES"
 
 msgid "Our full-service custom fulfillment includes: media-generated responses, consumer requests for assets, collateral material management, poster/video/promotional document fulfillment, response card requests, label generation and a host of solutions for all your needs. Barcode technology and customized pick and pack software provide accurate and efficient order processing."
 msgstr "Notre service complet et personnalisé de gestion de commandes inclut : les réponses générées par les médias, les requêtes de ressources des consommateurs, la gestion de matériel de soutien et de commandes de documents promotionnels/vidéos/affiches, les demandes de cartes-réponses, la production d'étiquettes et une gamme de solutions pour tous vos besoins. La technologie de code à barres et le logiciel personnalisé de prélèvement et emballage fournissent un traitement des commandes précis et efficace."
 
-msgid "Delivery"
-msgstr "Livraison"
+msgid "DELIVERY"
+msgstr "LIVRAISON"
 
 msgid "With a fleet of vehicles in Toronto and Vancouver, we provide our customers with timely delivery windows and no consolidation. Our network of industry-specific subcontractors provide service to all other major cities."
 msgstr "Avec une flotte de véhicules à Toronto et Vancouver, nous offrons à nos clients une livraison ponctuelle et sans consolidation. Notre réseau de sous-traitants spécifiques à l'industrie dessert toutes les autres villes importantes."
 
-msgid "Warehousing"
-msgstr "Entreposage"
+msgid "WAREHOUSING"
+msgstr "ENTREPOSAGE"
 
 msgid "We offer secure and insured storage of printed materials and valuable goods utilizing an electronic inventory management system. We have scalable facilities in both Pickering, Ontario and Richmond, British Columbia."
 msgstr "Nous offrons un stockage sécuritaire et protégé de matériel imprimé et de marchandises de
