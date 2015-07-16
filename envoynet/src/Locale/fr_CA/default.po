@@ -336,6 +336,4 @@ msgid "Warehousing"
 msgstr "Entreposage"
 
 msgid "We offer secure and insured storage of printed materials and valuable goods utilizing an electronic inventory management system. We have scalable facilities in both Pickering, Ontario and Richmond, British Columbia."
-msgstr "Nous offrons un stockage sécuritaire et protégé de matériel imprimé et de marchandises de
-valeur en utilisant un système de gestion d'inventaire électronique. Nous disposons
-d'installations variables à Pickering en Ontario et à Richmond en Colombie-Britannique."
+msgstr "Nous offrons un stockage sécuritaire et protégé de matériel imprimé et de marchandises de valeur en utilisant un système de gestion d'inventaire électronique. Nous disposons d'installations variables à Pickering en Ontario et à Richmond en Colombie-Britannique."
