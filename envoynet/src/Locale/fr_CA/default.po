@@ -86,7 +86,7 @@ msgstr "Logistique"
 
 #: loco:559c9fd214d72519058b456d
 msgid "Digital Support"
-msgstr "Soutien Numérique"
+msgstr "Support Numérique"
 
 #: loco:559c9fd914d7254a088b4569
 msgid "Marketing Solutions"
