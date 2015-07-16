@@ -367,3 +367,33 @@ msgstr "Hébergement de Brochures:"
 
 msgid "By hosting your digital brochures with envoynetworks.ca, they can be viewed online or downloaded as a pdf allowing travel agents the flexibility of accessing material immediately."
 msgstr "En hébergeant vos brochures numériques sur envoynetworks.ca, ces dernières peuvent être consultées en ligne ou téléchargées en format PDF, ce qui permet aux agents de voyages une flexibilité et un accès immédiat au matériel."
+
+msgid "Complete and integrated solutions - giving you a powerful edge in today's market."
+msgstr "Des solutions complètes et intégrées vous offrant un avantage concurrentiel sur le marché d'aujourd'hui."
+
+msgid "Marketing Solutions & Services"
+msgstr "Services et Solutions Marketing"
+
+msgid "Mailing house services:"
+msgstr "Services d'Envois Postaux:"
+
+msgid "ENVOY offers customized mailing services based on your specific requirements; from polybagged brochures and boxed materials to postcards and self-mailers."
+msgstr "ENVOY propose des services d'envois postaux personnalisés adaptés à vos exigences spécifiques; des brochures sous enveloppe plastifiée et colis de matériel jusqu'aux cartes postales et prêts-à-poster."
+
+msgid "Marketing support:"
+msgstr "Support Marketing:"
+
+msgid "Your marketing collateral is promoted to travel agents through digital and print copies of Travelweek magazine at no extra charge."
+msgstr "Votre matériel de soutien marketing est promu auprès des agents de voyages grâce aux copies numériques et imprimées du magazine Travelweek, et ce, sans frais."
+
+msgid "Targeted mailing lists:"
+msgstr "Listed d'Envois Ciblés:"
+
+msgid "We create tailored mailing lists based on your specific marketing needs utilizing our extensive database of travel agents. This service is complimentary if used in conjunction with ENVOY's mailing service."
+msgstr "Nous avons créé des listes d'envois sur mesure basées sur vos besoins marketing spécifiques en utilisant notre vaste base de données d'agents de voyages. Ce service est gratuit s'il est effectué conjointement avec les envois postaux d'ENVOY."
+
+msgid "Printing services:"
+msgstr "Services d'Impression:"
+
+msgid "Our on-site web and sheet-fed presses offer all the benefits of a full service printing house to complement to our logistic and digital support."
+msgstr "Notre accès Web sur place et nos presses à feuilles offrent tous les bénéfices d'un centre de service d'impression afin de compléter notre support numérique et logistique."
