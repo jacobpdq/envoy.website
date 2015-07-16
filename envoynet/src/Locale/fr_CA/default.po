@@ -43,8 +43,8 @@ msgstr "depuis plus de 15 ans."
 msgid "BECOME A PART OF THE NETWORK"
 msgstr "FAITES PARTIE DU RESEAU"
 
-msgid "Envoy is a distribution and fulfillment company that specializes in providing the travel industry with"
-msgstr "Envoy est une entreprise de distribution et de gestion de commandes qui se spécialise en fournissant à l'industrie du voyage des"
+msgid "ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with "
+msgstr "ENVOY est une entreprise de distribution et de gestion de commandes qui se spécialise en fournissant à l'industrie du voyage des"
 
 msgid "custom marketing solutions"
 msgstr "solutions marketing personnalisées"
@@ -74,7 +74,7 @@ msgid "With significant investments in equipment, vehicles, infrastructure and t
 msgstr "Avec des investissements importants au niveau de l'équipement, des véhicules, de l'infrastructure et de la technologie, Envoy détermine sa position moderne en dépassant les exigences de l'industrie du voyage et du tourisme."
 
 msgid "Our Partners"
-msgstr "Nos partenaires"
+msgstr "Nos Partenaires"
 
 #: loco:559c9fbf14d72523088b456c
 msgid "Supplier"
@@ -277,10 +277,6 @@ msgstr "Nous Joindre"
 #: loco:559ca12f14d725e47e8b4574
 msgid "Login"
 msgstr "S'Inscrire"
-
-#: loco:559ca12f14d725e47e8b4574
-msgid "Overview"
-msgstr "Summaire"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Overview"
