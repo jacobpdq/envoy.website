@@ -20,7 +20,7 @@
 
           <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
 
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
 
           <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
@@ -43,9 +43,9 @@
 
                         <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
 
-                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>__("Username"))) ?>
 
-                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>__("Password"))) ?>
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
@@ -65,7 +65,7 @@
 
 
       <ul class="desktop">
-        <li class="gray-text">1800 IRONSTONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text">TORONTO    PICKERING    RICHMOND</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
         <li class="white-text"><u><a href="mailto:MAIL@ENVOYNETWORKS.CA"></u>MAIL@ENVOYNETWORKS.CA</a></li>
       </ul>
@@ -120,9 +120,9 @@
 
           <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
 
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Email")) ?>
+          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
 
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
 
            <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
@@ -143,9 +143,9 @@
 
                         <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
 
-                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
+                        <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>__("Username"))) ?>
 
-                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
+                        <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>__("Password"))) ?>
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
