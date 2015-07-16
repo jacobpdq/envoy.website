@@ -397,3 +397,9 @@ msgstr "Services d'Impression:"
 
 msgid "Our on-site web and sheet-fed presses offer all the benefits of a full service printing house to complement to our logistic and digital support."
 msgstr "Notre accès Web sur place et nos presses à feuilles offrent tous les bénéfices d'un centre de service d'impression afin de compléter notre support numérique et logistique."
+
+msgid "ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with custom marketing solutions."
+msgstr "ENVOY est une entreprise de distribution et de gestion de commandes qui se spécialise en fournissant à l'industrie du voyage des solutions marketing personnalisées."
+
+msgid "Established in 1998 under the name Hippo Express, ENVOY was originally set up to handle the fulfillment and distribution of the industry-leading magazine Travelweek. With significant investments in equipment, vehicles and infrastructure, ENVOY now offers a complete range of specialized logistics and warehouse capabilities specific—but not limited to—the travel and tourism industry. Our intrinsic knowledge and connections within this industry give us a unique advantage for our customers. We speak their language and as a result, anticipate their needs."
+msgstr "Fondée en 1998 sous le nom d'Hippo Express, ENVOY a initialement été créée pour s'occuper de la gestion de commandes et de la distribution du magazine Travelweek. Grâce d'importants investissements au niveau de l'équipement, des véhicules et de l'infrastructure, ENVOY offre maintenant un éventail complet de logistiques spécialisées et de capacités d'entreposage (mais sans se limiter) à l'industrie du voyage et du tourisme. Notre connaissance intrinsèque et nos contacts dans cette industrie nous donnent un avantage unique pour nos consommateurs. Nous parlons leur langage et, du fait, nous anticipons leurs besoins."
