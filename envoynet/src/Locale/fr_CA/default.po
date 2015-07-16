@@ -337,3 +337,33 @@ msgstr "Entreposage"
 
 msgid "We offer secure and insured storage of printed materials and valuable goods utilizing an electronic inventory management system. We have scalable facilities in both Pickering, Ontario and Richmond, British Columbia."
 msgstr "Nous offrons un stockage sécuritaire et protégé de matériel imprimé et de marchandises de valeur en utilisant un système de gestion d'inventaire électronique. Nous disposons d'installations variables à Pickering en Ontario et à Richmond en Colombie-Britannique."
+
+msgid "Giving you flexibility with the power of digital distribution, ordering, and pre-ordering."
+msgstr "Nous vous offrons de la flexibilité avec la puissance de la distribution, des commandes et des précommandes numériques."
+
+msgid "Digital support"
+msgstr "Support Numérique"
+
+msgid "Online brochure re-ordering:"
+msgstr "Approvisionnement de Brochures en Ligne:"
+
+msgid "Our comprehensive website is the easiest and most efficient way for travel agents to order brochures. Orders are processed immediately upon reciept and fulfilled in a timely manner. Online supplier access through a secure login allows you to view your order history, track shipments, place new orders and monitor inventory levels."
+msgstr "La manière la plus facile et efficace de commander des brochures pour les agents de voyages demeure notre site Web des plus complet. Les commandes sont traitées dès leur réception et la gestion est effectuée de manière ponctuelle. L'accès au fournisseur en ligne est possible grâce à une ouverture de session sécurisée vous permettant de visualiser l'historique de votre commande, de faire le suivi des envois, d'effectuer de nouvelles commandes et de contrôler les niveaux de votre inventaire."
+
+msgid "Brochure order capturing:"
+msgstr "Saisie de Commande des Brochures:"
+
+msgid "This allows full control over who receives your collateral. Your brochure is hosted at envoynetworks.ca, the agent order is captured and complete order details are emailed directly to you for fulfillment."
+msgstr "Cela vous permet d'avoir tout le droit de regard sur qui reçoit votre matériel de soutien. Votre brochure est hébergée au envoynetworks.ca, la commande de l'agent est saisie et les détails complets vous sont directement envoyés par courriel pour qu'elle soit gérée."
+
+msgid "Brochure pre-order:"
+msgstr "Precommande des Brochures:"
+
+msgid "Exclusive to ENVOY, agents have the capacity to pre-order brochures in advance of their official release. These orders are captured through our website, a weekly email campaign and printed order form included with Travelweek magazine allowing for more targeted initial distribution and savings on printing costs."
+msgstr "Exclusivement avec ENVOY, les agents peuvent précommander leurs brochures avant leur lancement officiel. Ces commandes sont saisies via notre site Web, et une campagne hebdomadaire par courriel ainsi qu'un formulaire de commande imprimé inclus avec le magazine Travelweek permettent une plus grande distribution initiale ciblée et des économies sur les frais d'impression."
+
+msgid "Brochure hosting:"
+msgstr "Hébergement de Brochures:"
+
+msgid "By hosting your digital brochures with envoynetworks.ca, they can be viewed online or downloaded as a pdf allowing travel agents the flexibility of accessing material immediately."
+msgstr "En hébergeant vos brochures numériques sur envoynetworks.ca, ces dernières peuvent être consultées en ligne ou téléchargées en format PDF, ce qui permet aux agents de voyages une flexibilité et un accès immédiat au matériel."
