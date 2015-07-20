@@ -8,7 +8,6 @@
 </script>
 <br /><br />
 <div id="team">
-test 
 <ul>
 <li>  
 <?php echo $this->Html->image('assets/team/glen-harwood.png');?>
