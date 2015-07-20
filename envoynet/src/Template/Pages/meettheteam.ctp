@@ -43,7 +43,7 @@
 </li>
 
 <li>  
-<?php echo $this->Html->image('assets/team/dennis-andres.png');?>
+<?php echo $this->Html->image('assets/team/dennis-andres.jpg');?>
 <h3>Dennis Andres</h3>
 <h5><?php echo __('Warehouse Manager'); ?><br /><small><?php echo __('Western Canada'); ?></small></h5>
 <a tel="6472781020">(647) 278-1020</a>
