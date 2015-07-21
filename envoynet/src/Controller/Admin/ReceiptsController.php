@@ -22,15 +22,19 @@ class ReceiptsController extends \App\Controller\ReceiptsController {
  
   public function add() {
     if (!empty($this->request->data)) {
-      $this->Receipt->create();
-      if ($this->Receipt->save($this->request->data)) {
+      $receipt = $this->Receipts->newEntity($this->request->data);
+      if ($receipt->qty == '') {
+        $error = true;
+        $this->Flash->set(__('Please enter a quantity.'));
+      }
+      if ($this->Receipts->save($receipt) && $error == false) {
         $this->Flash->set(__('The receipt has been saved'));
         $this->redirect(array('action' => 'index'));
       } else {
         $this->Flash->set(__('The receipt could not be saved. Please, try again.'));
       }
     }
-	  $brochures = $this->Receipt->Brochures->find('list', array('order' => ['Brochures.name'], 'conditions' => array('Brochures.status' => 1)));
+	  $brochures = $this->Receipts->Brochures->find('list', array('order' => ['Brochures.name'], 'conditions' => array('Brochures.status' => 1)));
     $this->set(compact('brochures'));
   }
 
