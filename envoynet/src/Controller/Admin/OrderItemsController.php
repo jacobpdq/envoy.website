@@ -27,8 +27,17 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
 
   public function add($id = null) {
     if (!empty($this->request->data)) {
-      $this->OrderItem->create();
-      if ($this->OrderItem->save($this->request->data)) {
+      $orderItem = $this->OrderItems->newEntity($this->request->data);
+      $orderItem['shipped_via'] ='';
+      $orderItem['tracking_number'] ='';
+
+      if ($orderItem['qty_shipped'] == '') {
+        $orderItem['qty_shipped'] = 0;
+      }
+      if ($orderItem['qty_ordered'] == '') {
+        $orderItem['qty_ordered'] = 0;
+      }
+      if ($this->OrderItems->save($orderItem)) {
         $this->Flash->set(__('The order item has been saved'));
         $this->redirect(array('action' => 'index'));
       } else {
@@ -37,7 +46,7 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
     }
  
  
-    $brochures = $this->OrderItem->Brochures->find('list', array('order' => 'Brochures.name', 'conditions' => array('Brochures.status' => 1)));
+    $brochures = $this->OrderItems->Brochures->find('list', array('order' => 'Brochures.name', 'conditions' => array('Brochures.status' => 1)));
     $this->set(compact('brochures', 'id'));
   }
 
@@ -79,8 +88,8 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
         $orderItem->id = $id;
         $orderItem->order_id = $this->request->data['Orders']['id'];
         $orderItem->isNew(false);
-        $this->OrderItems->save($orderItem);
 
+        $this->OrderItems->save($orderItem);
         if ($item['status'] != '3' && $item['status'] != '4') {
           $orderStatus = "0";
         }

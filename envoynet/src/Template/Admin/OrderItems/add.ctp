@@ -12,6 +12,7 @@
     </ol>
   </fieldset>
   <fieldset class="submit">
-    <?php echo $this->Form->end(__('Submit')); ?>
+    <?php echo $this->Form->submit(__('Submit')); ?>
   </fieldset>
+  <?php echo $this->Form->end(); ?>
 </div>
