@@ -240,7 +240,8 @@ class OrdersController extends \App\Controller\OrdersController {
             if (!empty($item['qty_ordered'])) {
               if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
                 if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
-                  $orderItem = $this->OrderItems->newEntity($item);
+                  
+                  $orderItem = $this->Orders->OrderItems->newEntity($item);
                     //create order item
                   $orderItem->brochure_name = $brochure['name'];
                   $orderItem->ontario = $brochure['ontario'];

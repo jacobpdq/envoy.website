@@ -125,7 +125,7 @@
             <span class="data_Headers_Bl_txt">Order Must Arrive by:</span>
           </div>
           <div class="blank_form_holder_bg2">
-            <input type="text" size="6" placeholder="Click to view Calendar" name="data[Order][arrival_due_date]"  class="date Form_holder_style2">
+            <input type="text" size="6" placeholder="Click to view Calendar" name="arrival_due_date"  class="date Form_holder_style2">
           </div>
         </div>
 
@@ -134,7 +134,7 @@
       </div>
 
       <div id="form_content_discription_left">
-        <div class="blank_form_holder_bg9"><input type="textarea" id="Form_holder_style_short" name="data[Order][order_comments]"></div>
+        <div class="blank_form_holder_bg9"><input type="textarea" id="Form_holder_style_short" name="order_comments"></div>
         <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn"><?php echo __('Submit'); ?></button></div>
       </div>
     </div>

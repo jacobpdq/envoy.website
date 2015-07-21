@@ -212,7 +212,6 @@ class MainController extends AppController {
               if ($ssoSession) {
                 $user->password = $ssoSession->password;
               }
-              debug($user_info);
               $user->company = $user_info['company'];
               $user->phonenumber = $user_info['phone_no'];
               $user->province = $provinceAbbreviations[strtolower($user_info['province'])];
@@ -220,14 +219,13 @@ class MainController extends AppController {
               $user->city = $user_info['city'];
               $user->address = $user_info['street'] . ' ' . $user_info['streetName'];
               $user->address2 = $user_info['unitApt'] . ' ' . $user_info['unitType'];
-
             }
 
             
         } else {
 
-         //user not found
-          if ($userType == 'supplier') {
+            //user not found
+            if ($userType == 'supplier') {
               $user = [
                   'username'=>$user_parts[1],
                   'email'=>$user_parts[0],

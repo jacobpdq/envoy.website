@@ -69,7 +69,7 @@
     <span class="data_Headers_Bl_txt"><?php echo __('Order Comments'); ?></span></div>
 
     <div id="form_content_discription_left">
-    <div id="blank_form_holder_bg9"><input type="text" id="Form_holder_style_short" name="data[Order][order_comments]"></div>
+    <div id="blank_form_holder_bg9"><input type="text" id="Form_holder_style_short" name="order_comments"></div>
     <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn"></button></div>
     </div>
     </div>
