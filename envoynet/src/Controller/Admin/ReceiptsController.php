@@ -13,6 +13,7 @@ class ReceiptsController extends \App\Controller\ReceiptsController {
   public function index() {
     $this->paginate = array(
         'order' => ['Receipts.date' => 'DESC'],
+        'contain'=>['Brochures'],
         'limit' => 50
     );
 

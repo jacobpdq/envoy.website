@@ -20,7 +20,7 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $receipt['id']; ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($receipt['brochue']['name'], array('controller' => 'brochures', 'action' => 'view', $receipt['brochure_id'])); ?>
+			<?php echo $this->Html->link($receipt['brochure']['name'], array('controller' => 'brochures', 'action' => 'view', $receipt['brochure_id'])); ?>
 		</td>
 		<td><?php echo $receipt['qty']; ?>&nbsp;</td>
 		<td><?php echo $receipt['date']; ?>&nbsp;</td>
