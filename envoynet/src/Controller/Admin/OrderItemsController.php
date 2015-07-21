@@ -142,26 +142,25 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
 
     $this->paginate = [
         'limit' => 1,
-        'order' => ['Brochures.sku' => 'DESC'] 
+        'order' => ['Brochures.sku' => 'DESC'],
+        'conditions' => array(
+          'order_id' => $id, 
+          'OR' => [['OrderItems.status' => 0], ['OrderItems.status' => 6]]
+         ),
+         'contain' => array('Brochures.Images', 'Orders'),
+         'order' => ['Brochures.sku']
     ];
-    $orderItems = $this->OrderItems->find('all', array(
-      'conditions' => array('OR' => [
-        'order_id' => $id, 
-        'OrderItems.status IN' => '(0, 6)']
-       ),
-    'contain' => array('Brochures.Images', 'Orders'),
-    'order' => ['Brochures.sku']
-    ));
-
-    $orderItems = $this->paginate($orderItems);
-
+    
+    $orderItems = $this->paginate();
+    
+    
       
     if (!empty($this->request->data))   {
       if ($this->request->data['status']==0) {
         if ($this->request->data['brochure']['sku'] <> $this->request->data['barcodes']) {
 
           $this->Flash->set(__('Invalid barcode'));
-          return $this->redirect($this->referer());
+          $this->redirect($this->referer());
         } else{
 
           $orderItem = $this->OrderItems->get($this->request->data['id']);
@@ -173,8 +172,8 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
           if ($this->OrderItems->save($orderItem)) {
 
 
-            //      $this->Flash->set('Barcode Confirmed', 'default', array('class' => 'flash_good'));
-            return $this->redirect($this->referer());
+            $this->Flash->set('Barcode Confirmed');
+            $this->redirect($this->referer());
           } 
         
         }
@@ -187,11 +186,11 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
 
           if ($this->OrderItems->save($orderItem)) {
           $this->Flash->set('Qty Shipped Updated');
-          return $this->redirect($this->referer());
+          $this->redirect($this->referer());
         } 
       } else {
         $this->Flash->set(__('The order item could not be saved. Please, try again.'));
-        return $this->redirect($this->referer());
+        $this->redirect($this->referer());
       }
     } else {
           $this->request->data = $orderItems->first()->toArray();

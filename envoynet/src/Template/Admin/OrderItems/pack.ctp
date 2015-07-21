@@ -1,6 +1,7 @@
 <div class="orderItems form">
 <h2><?php echo __('Package Order');?></h2>
-<?php  $orderItem= $this->request->data  ?>
+
+<?php  $orderItem= $this->request->data; ?>
 <?php  $brochure= $this->request->data['brochure'];  ?>
 <?php  $order= $this->request->data['order'];  ?>
 
