@@ -56,7 +56,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
     if (!empty($this->request->data)) {
 
-      //hacking in a blank default values since there is no inputs for the following
+      //hacking in blank default values since there is no inputs for the following
       $this->request->data['location'] = '';
       $this->request->data['restrict_access'] = 0;
       $this->request->data['max_restricted_qty'] = 0;

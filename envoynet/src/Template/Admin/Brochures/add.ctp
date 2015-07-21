@@ -21,8 +21,8 @@
       <li><?php echo $this->Form->input('BC_inventory'); ?> </li>
       <li><?php echo $this->Form->input('inv_balance'); ?> </li>
       <li><?php echo $this->Form->input('inv_notif_threshold'); ?> </li>
-      <li><?php echo $this->Form->input('display_on_agent_page'); ?> </li>
-      <li><?php echo $this->Form->input('ontario'); ?></li>
+      <li><?php echo $this->Form->input('display_on_agent_page', ['type' => 'checkbox']); ?> </li>
+      <li><?php echo $this->Form->input('ontario', ['type' => 'checkbox']); ?></li>
       <li><?php echo $this->Form->input('poa',array('options'=>$poa_options)); ?></li>
       <li><?php echo $this->Form->input('image',array('type'=>'file')); ?></li>
       <li><?php echo $this->Form->input('status',array('options'=>$brochure_statuses)); ?></li>

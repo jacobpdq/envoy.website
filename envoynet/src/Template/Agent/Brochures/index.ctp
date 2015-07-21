@@ -186,23 +186,27 @@
              <?php echo $this->Form->input('OrderItem.ontario',array('div'=>false,'value'=>$brochure->ontario,'label'=>false,'type'=>'hidden'));?>
              <?php
 		      $qtychoice = null;
-			  if (!empty($brochure['Brochure_order_amts'])) {
+          
+			  if (!empty($brochure['brochure_order_amts'])) {
+          
 			  $qtychoice = array(null);
-			  foreach($brochure['Brochure_order_amts'] as $orderamts):
+			  foreach($brochure['brochure_order_amts'] as $orderamts):
 			  $obj = $orderamts['quantity'];
 			 if ($orderamts['tier'] == $agttier) {
 			 array_push($qtychoice, $obj);
 			 }
 			 endforeach;
-			 $result2 = Hash::sort($qtychoice, '{n}', 'asc');
-			 $result1 = array_combine($result2,$result2);
+			 //$result2 = Hash::sort($qtychoice, '{n}', 'asc');
+       sort($qtychoice);
+			 $result1 = array_combine($qtychoice,$qtychoice);
 			 unset($qtychoice[0]);
 			 }
 			 ?>
              <?php 
 			  if (!empty($qtychoice)) {
+          
 			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','placeholder'=>'# of Brochures','options' => $result1));
-              foreach($result2 as $result2a):
+              foreach($qtychoice as $result2a):
 		      echo $this->Form->input('OrderItem.qty_choice.'.$result2a,array('div'=>false,'value'=>$result2a,'label'=>false,'type'=>'hidden'));
 			  endforeach;
 			  }

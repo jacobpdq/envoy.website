@@ -176,7 +176,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
     }
     
     if (empty($this->request->data)) {
-      $this->request->data = $this->Brochures->findById($id)->contain(['Images'])->first();
+      $this->request->data = $this->Brochures->findById($id)->contain(['Images'])->first()->toArray();
     }
   }
 
