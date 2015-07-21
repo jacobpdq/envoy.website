@@ -57,9 +57,9 @@
           
 		<td><?php  echo $orderItem['brochure']['name'];?></td>
 			<td><?php echo $orderItem['qty_ordered'];?></td>
-			<td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.qty_shipped',array('label'=>false,'value'=>$orderItem['qty_ordered'],'class'=>'smallinput'));?></td>
-            <td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.status',array('options'=>$order_item_statuses,'label'=>false,'selected'=>$orderItem['status']));?></td>
-            <td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.shipped_via',array('options'=>$shipvia,'label'=>false,'selected'=>$orderItem['shipped_via']));?></td>
+			<td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.qty_shipped',array('label'=>false,'value'=>$orderItem['qty_shipped'],'class'=>'smallinput'));?></td>
+            <td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.status',array('options'=>$order_item_statuses,'label'=>false,'default'=>$orderItem['status']));?></td>
+            <td><?php echo $this->Form->input('OrderItem.'.$orderItem['id'].'.shipped_via',array('options'=>$shipvia,'label'=>false,'default'=>$orderItem['shipped_via']));?></td>
             <td> 
            
 			 <?php if ($orderItem['shipped_via'] == 0) { ?>

@@ -84,7 +84,7 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
         if ($item['status'] != '3' && $item['status'] != '4') {
           $orderStatus = "0";
         }
-        debug($orderItem);
+
       } 
 
 
