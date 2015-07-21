@@ -184,7 +184,7 @@
               
               <div class="section__content ">
                 <p>
-                  <?php echo __('ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with ') ?><a href="#"><br/><?php echo __('custom marketing solutions') ?></a>.
+                  <?php echo __('ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with ') ?><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing')); ?>"><br/><?php echo __('custom marketing solutions') ?></a>.
                 </p>
                 <h5><?php echo __('Our business is built on:') ?></h5>
 
