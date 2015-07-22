@@ -2079,6 +2079,9 @@ a.small {
 .index2 td {
   padding:11px !important;
 }
+table.index2 td {
+      max-width: 300px !important;
+}
 
 .fr .tabs__content [type=submit] {
   font-size:0.8rem !important;
