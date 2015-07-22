@@ -521,6 +521,7 @@ class AgentsController extends \App\Controller\AgentsController {
             return $return;
           }
 
+          $unSubBoxesTop = "";
 
           foreach(mysql_fetch_all($results) as $result){ 
  
@@ -541,7 +542,7 @@ class AgentsController extends \App\Controller\AgentsController {
               } else {
                 $addAttr = "";
               }
-              $unSubBoxesTop = "
+              $unSubBoxesTop = $unSubBoxesTop . "
                 <span class='hoverImgHome' id='$subs'>
                   <input name='subscribeBoxes[]' id='sub$subs' type='checkbox' value='$subs' $addAttr/>
                   <strong><label for='sub$subs'><span style='font-size:12px;'>$nonSubName</span> - <span style='font-size:10px;font-family: SourceSansPro-Regular, Helvetica, \"Trebuchet MS\", Arial, sans-serif;'>$description_en</span></label></strong></span>
