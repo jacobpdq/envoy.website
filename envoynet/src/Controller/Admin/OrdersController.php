@@ -12,12 +12,13 @@ class OrdersController extends \App\Controller\OrdersController {
  
   public function index() {
     
-    $this->paginate = array(
+    $this->paginate = [
+      'limit' => 50,
       'order' => ['Orders.created' =>  'DESC'],
-      'limit' => 50
-    );
+      
+  ];
 
-    $this->set('orders', $this->paginate());
+    $this->set('orders', $this->paginate()->toArray());
   }
     
    public function pack() {
@@ -116,7 +117,10 @@ class OrdersController extends \App\Controller\OrdersController {
     }
 
     if (!empty($this->request->data)) {
-      $order = $this->Orders->newEntity($this->request->data);
+
+      $order = $this->Orders->findById($id)->first();
+      
+      $order->tracking_number=$this->request->data['tracking_number'];
       if ($this->Orders->save($order)) {
         $this->LoadModel('Brochures');
         $adminId = $this->Auth->user('id');

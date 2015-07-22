@@ -24,7 +24,8 @@
 	</tr>
 	<?php
 	$i = 0;
-	foreach ($orders as $order):
+	foreach ($orders as $order) {
+  
 		$class = null;
 		if ($i++ % 2 == 0) {
 			$class = ' class="altrow"';
@@ -58,7 +59,7 @@
 			<?php echo $this->Html->link(__('Delete'), array('action' => 'delete', $order['id']), ['confirm' =>sprintf(__('Are you sure you want to delete # %s?'), $order['id'])]); ?>
 		</td>
 	</tr>
-<?php endforeach; ?>
+<?php } ?>
 	</table>
 	
       <div class="paging" id="pagnate_top_Header">

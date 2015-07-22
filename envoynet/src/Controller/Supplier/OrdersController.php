@@ -211,83 +211,84 @@ class OrdersController extends \App\Controller\OrdersController {
   }
 
   public function processOrder() {
-    if (!empty($this->request->data)) {
-      $order = $this->request->data;
-      $this->loadModel('Orders');
+    $this->loadModel('Orders');
+    $this->loadModel('Brochures');
 
-      $processedOrder = $this->Orders->newEntity($this->request->data);
+    if (!empty($this->request->data)) {
+
+      $order = $this->request->data;
+      
+      unset($this->request->data['order_items']);
+      
+
+
+      $orderItems = [];
+      
+
+
+      foreach ($order['order_items'] as $item) {
+
+        if (!empty($item['qty_ordered'])) {
+
+          $brochure = $this->Brochures->findById($item['brochure_id'])->first();
+          
+          if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
+            if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
+              
+              $orderItem = $this->Orders->OrderItems->newEntity($item);
+                //create order item
+              $orderItem->brochure_name = $brochure['name'];
+              $orderItem->ontario = $brochure['ontario'];
+
+            	if ($brochure['poa'] == '1') {  //set item initial status - no need to get poa (supplier order approval from supplier orders)
+                $orderItem->status = '1';
+              } else {
+                $orderItem->status = '0';
+              }
+
+              // to avoid DB changes hard coding default for now
+              $orderItem->shipped_via = '';
+              $orderItem->tracking_number = '';
+
+              array_push($orderItems, $orderItem);
+            } else {
+              $this->Flash->set('Order could not be placed. Not enough units in stock.');
+              return $this->redirect($this->referer());
+            }
+          } else {
+            $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
+            return $this->redirect($this->referer());
+          }
+        }
+      }
+      //$processedOrder->OrderItems = $orderItems;
+
+      $this->request->data['order_items'] = $orderItems;
+      $processedOrder = $this->Orders->newEntity($this->request->data,['associated'=>'order_items']);
 
       $processedOrder->owner_id = $this->Auth->user('id');
       $processedOrder->owner_type = "1";
       $processedOrder->status = "0";
 
-      $brochureIds = "";
-      foreach ($order['order_items'] as $item) {
-        if (!empty($brochureIds)) {
-          $brochureIds .= ',' . $item['brochure_id'];
-        } else {
-          $brochureIds .= $item['brochure_id'];
+      if ($last = $this->Orders->save($processedOrder)) {
+        $this->Flash->set('Order has been placed');
+        $orderId = $last->id;
+        //     $this->_updateInventory($orderId);
+        //     $this->_checkForPoaBrochures($orderId); remove supplier approval requirement on orders received from supplier page
+        if ($processedOrder['priority'] == '1') {
+          $this->_rushOrderNotif($orderId);
+        } else{
+          $this->_supplierOrderNotif($orderId);
         }
-      }
-
-      $this->loadModel('Brochures');
-      $brochures = $this->Brochures->find('all', array('conditions' => array("Brochures.id IN ($brochureIds)")));  //load brochure data for the order items
-
-      $orderItems = [];
-      foreach ($order['order_items'] as $item) {
-        foreach ($brochures as $brochure) {
-          if ($brochure['id'] == $item['brochure_id']) {
-            if (!empty($item['qty_ordered'])) {
-              if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
-                if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
-                  
-                  $orderItem = $this->Orders->OrderItems->newEntity($item);
-                    //create order item
-                  $orderItem->brochure_name = $brochure['name'];
-                  $orderItem->ontario = $brochure['ontario'];
-
-                	if ($brochure['poa'] == '1') {  //set item initial status - no need to get poa (supplier order approval from supplier orders)
-                    $orderItem->status = '1';
-                  } else {
-                    $orderItem->status = '0';
-                  }
-
-                  // to avoid DB changes hard coding default for now
-                  $orderItem->shipped_via = '';
-                  $orderItem->tracking_number = '';
-
-                  array_push($orderItems, $orderItem);
-                } else {
-                  $this->Flash->set('Order could not be placed. Not enough units in stock.');
-                  $this->redirect($this->referer());
-                }
-              } else {
-                $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
-                $this->redirect($this->referer());
-              }
-            }
-          }
-        }
-        $processedOrder->order_items = $orderItems;
-        if ($last = $this->Orders->save($processedOrder,array('validation'=>'first' ))) {
-          $this->Flash->set('Order has been placed');
-          $orderId = $last->id;
-          //     $this->_updateInventory($orderId);
-          //     $this->_checkForPoaBrochures($orderId); remove supplier approval requirement on orders received from supplier page
-          if ($processedOrder['priority'] == '1') {
-            $this->_rushOrderNotif($orderId);
-          } else{
-            $this->_supplierOrderNotif($orderId);
-          }
-          
-          $this->redirect(array('controller' => 'Brochures', 'action' => 'index', 'prefix' => 'supplier'));
-        } else {
-          $this->Flash->set('Order could not be placed');
-          $this->redirect($this->referer());
-        }
+        
+        $this->redirect(array('controller' => 'Brochures', 'action' => 'index', 'prefix' => 'supplier'));
+      } else {
+        $this->Flash->set('Order could not be placed');
+        $this->redirect($this->referer());
       }
     }
   }
+  
   
   
   public function searchAgent() {
