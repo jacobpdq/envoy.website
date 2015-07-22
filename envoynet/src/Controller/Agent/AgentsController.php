@@ -523,10 +523,10 @@ class AgentsController extends \App\Controller\AgentsController {
 
           print_r(mysql_fetch_all($results));
 
-/*
+
          // $subscription_db = sso_tweek_subscription();
          // $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
-                  
+              /*    
           foreach(mysql_fetch_all($results) as $result){ 
             //print_r($result);
             
@@ -554,11 +554,11 @@ class AgentsController extends \App\Controller\AgentsController {
               $unSubNumTop++;
             }
           }
-         
+         */
           echo $unSubBoxesTop;
         }
 
-*/
+
               ?>
           </fieldset>
           
