@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
     $('a').each(function() {
     	if($(this).attr('href') == "/wp-admin/") {
 
-    		$(this).attr('href', 'http://travelweekpro.ca');
+    		$(this).attr('href', 'http://envoynetworks.ca');
     	}
 
    
