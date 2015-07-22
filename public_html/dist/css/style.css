@@ -1485,6 +1485,9 @@ a.small {
 table.index2 td {
   max-width: 300px !important; }
 
+#Profile_inset_orders {
+  height: auto !important; }
+
 .fr .tabs__content [type=submit] {
   font-size: 0.8rem !important; }
 

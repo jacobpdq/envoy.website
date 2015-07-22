@@ -165,12 +165,17 @@
     
 	</table>
 	
+<br style="clear:both" />
 	
 </div>
 
+<br style="clear:both" />
 </div>
 
+<br style="clear:both" />
 </div>
+
+<br style="clear:both" />
   <?php endif;?>
 </div>
 
