@@ -1264,6 +1264,7 @@ table.index {
   background-image: none !important; }
 
 #Brochures_Main_Holder {
+  height: auto !important;
   border-bottom: 1px solid #ccc !important;
   margin-bottom: 20px !important; }
 
@@ -1281,7 +1282,8 @@ table.index {
     margin: 0 !important; }
 
 #Brochures_Main_Holder_agent {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  height: auto !important; }
 
 #Company_Title {
   display: block;
