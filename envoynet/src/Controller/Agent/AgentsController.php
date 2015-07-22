@@ -521,10 +521,7 @@ class AgentsController extends \App\Controller\AgentsController {
             return $return;
           }
 
-          echo "<pre>";
-          var_dump(mysql_fetch_all($results));
-          echo "</pre>";
-          /*
+
           foreach(mysql_fetch_all($results) as $result){ 
  
             
@@ -552,7 +549,7 @@ class AgentsController extends \App\Controller\AgentsController {
               $unSubNumTop++;
             }
           }
-         */
+
           echo $unSubBoxesTop;
         }
 
