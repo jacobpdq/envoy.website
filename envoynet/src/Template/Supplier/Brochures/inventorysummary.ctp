@@ -6,7 +6,7 @@
   </div>
 </div>  
 
-
+<br style="clear:both" />
 <div class="inner-content-wrapper">
   
 	

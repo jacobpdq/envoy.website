@@ -11,7 +11,6 @@ class OrdersController extends \App\Controller\OrdersController {
 
  
   public function index() {
-    $this->Orders->recursive = 0;
     
     $this->paginate = array(
       'order' => ['Orders.created' =>  'DESC'],
@@ -117,7 +116,9 @@ class OrdersController extends \App\Controller\OrdersController {
     }
 
     if (!empty($this->request->data)) {
-
+      $order = $this->Orders->newEntity($this->request->data);
+      if ($this->Orders->save($order)) {
+        $this->LoadModel('Brochures');
         $adminId = $this->Auth->user('id');
 
         $waybill = $this->request->data['tracking_number'];
@@ -126,14 +127,15 @@ class OrdersController extends \App\Controller\OrdersController {
 
         $orderitems = $order['order_items'];
 
-        foreach ($orderitems as $item) {
+        foreach ($order['order_items'] as $item) {
           if ($item['status'] == 6) {
 
+            
             $item['status'] = 3;
             $item['tracking_number'] = $waybill;
-
             $tot_inv_temp = $item['brochure']['inv_balance'] - $item['qty_shipped'];
             $item['brochure']['inv_balance'] = $tot_inv_temp;
+
 
             if ($adminId == 3) {
 
@@ -145,22 +147,21 @@ class OrdersController extends \App\Controller\OrdersController {
               }
             } else {
               
-              $bc_inv_temp = $item['brochure']['bc_inventory'] - $item['qty_shipped'];
+              $bc_inv_temp = $item['brochure']['BC_inventory'] - $item['qty_shipped'];
               $item['brochure']['BC_inventory'] = $bc_inv_temp;
               
               if ($bc_inv_temp <= $item['brochure']['inv_notif_threshold']) {
                 $this->_lowInvNotif($item['brochure']);
               }
             }
-    
+            $this->Brochures->save($item['brochure']);
             $this->Orders->OrderItems->save($item);
-
-            //$this->Orders->OrderItem->save($item);
           }
         }
 
         $this->Flash->set('Order Completed');
         $this->redirect(array('controller' => 'orders', 'action' => 'pack'));
+      }
     } else {
       $this->request->data = $this->Orders->findById($id)->first()->toArray();
     }

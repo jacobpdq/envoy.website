@@ -12,6 +12,7 @@
     <div id="csv-export-btn">Export to Excel</div>
     <?php }?>
   </div>
+  <br style="clear:both" />
 	<table class="index" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id',__('Order Number'));?></th>

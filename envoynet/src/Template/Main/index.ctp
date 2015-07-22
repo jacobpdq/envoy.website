@@ -22,6 +22,8 @@
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
 
+          <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
+
           <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
 
@@ -124,7 +126,11 @@
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
 
+            <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register'); ?></a>
+
+
            <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
+
 
 
           <button class="button" type="submit"><?php echo __('Login'); ?></button>

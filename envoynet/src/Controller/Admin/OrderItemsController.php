@@ -192,7 +192,7 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
         $this->Flash->set(__('The order item could not be saved. Please, try again.'));
         $this->redirect($this->referer());
       }
-    } else {
+    } elseif ($orderItems->count()) {
           $this->request->data = $orderItems->first()->toArray();
     }
 
