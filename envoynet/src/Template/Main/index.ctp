@@ -22,7 +22,7 @@
 
           <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
 
-          <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register'); ?></a>
+          <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
 
           <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 

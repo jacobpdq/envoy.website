@@ -1488,9 +1488,8 @@ a.small {
 .tabs__content a.registerAccount {
   position: absolute;
   /* left: 0; */
-  bottom: 12px;
   font-size: 1rem;
-  right: 90px !important;
+  right: 150px !important;
   color: #657AA8 !important;
   letter-spacing: 1px; }
 
