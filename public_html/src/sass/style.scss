@@ -1960,11 +1960,12 @@ height: auto !important;
 }
 
 #admin tr:hover {
-    color: rgb(34, 34, 34) !important;
+    color: inherit !important;
 }
 
 #admin tr:hover {
-    background-color: transparent !important;
+    color: rgb(34,34,34) !important;
+    background-color: $blue !important;
 }
 .actions {
   background:none !important;

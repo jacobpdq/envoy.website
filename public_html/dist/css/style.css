@@ -1378,10 +1378,11 @@ legend {
   background-color: transparent !important; }
 
 #admin tr:hover {
-  color: #222222 !important; }
+  color: inherit !important; }
 
 #admin tr:hover {
-  background-color: transparent !important; }
+  color: #222222 !important;
+  background-color: #3c5791 !important; }
 
 .actions {
   background: none !important; }
