@@ -525,9 +525,9 @@ class AgentsController extends \App\Controller\AgentsController {
           foreach(mysql_fetch_all($results) as $result){ 
  
             
-            $subs = $result -> subID;
-            $nonSubName = $result->subName;
-            $description_en = stripcslashes(utf8_encode($result->description_en));
+            $subs = $result['subID'];
+            $nonSubName = $result['subName'];
+            $description_en = stripcslashes(utf8_encode($result['description_en']));
             
             //                  $nonShow = array("33333","164735");            
             //                  $diff_subs = array_diff($arrSubs,array("164617","164735"));//"33333",
