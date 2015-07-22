@@ -547,7 +547,7 @@ class AgentsController extends \App\Controller\AgentsController {
                 <span class='hoverImgHome' id='$subs'>
                   <input style='float:left;margin-right:5px;margin-top:4px;' name='subscribeBoxes[]' id='sub$subs' type='checkbox' value='$subs' $addAttr/>
                   <strong><label for='sub$subs'><span style='font-size:12px;'>$nonSubName</span> - <span style='font-size:10px;font-family: SourceSansPro-Regular, Helvetica, \"Trebuchet MS\", Arial, sans-serif;'>$description_en</span></label></strong></span>
-                </span>";
+                </span><br style='clear:both' />";
             }
           }
           if($unSubBoxesTop) {
