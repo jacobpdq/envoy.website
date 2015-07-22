@@ -506,22 +506,28 @@ class AgentsController extends \App\Controller\AgentsController {
           //            print_r($subTypes);//$user_data[ $subType->Field ] = $_POST[ $subType->Field ];
           //          }
           //        }
-            /*
-          function sso_tweek_subscription(){
-          
-          if( SSO_PARENT == $_SERVER['HTTP_HOST'] ){
-            $subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
-            if( $subscription_db ){ return $subscription_db; }
-          }
-          
-            return '';
-          }
-          */
+
+          //$subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
+            
+          mysql_connect(localhost,'tweek_wheelsUp','WuPo_966');
+          @mysql_select_db('tweek_subscription') or die( "Unable to select database");
+
+          $results = mysql_query("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");
         
-          $subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
-          $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
+          function mysql_fetch_all($result) {
+            while($row=mysql_fetch_array($result)) {
+            $return[] = $row;
+          }
+            return $return;
+          }
+
+          print_r($results);
+
+
+         // $subscription_db = sso_tweek_subscription();
+         // $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
                   
-          foreach($results as $result){ 
+          foreach(mysql_fetch_all($results) as $result){ 
             //print_r($result);
             
             $subs = $result -> subID;
