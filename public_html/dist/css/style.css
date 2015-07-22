@@ -1493,3 +1493,6 @@ a.small {
 iframe[name="google_conversion_frame"] {
   height: 0px !important;
   display: none !important; }
+
+.Form_holder_style2 {
+  height: auto !important; }
