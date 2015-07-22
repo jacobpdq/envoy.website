@@ -40,12 +40,24 @@
 	));
 	?>	</p>
 
-	<div class="paging">
-		<?php echo $this->Paginator->prev('<< ' . __('previous'), array(), null, array('class'=>'disabled'));?>
-	 | 	<?php echo $this->Paginator->numbers();?>
- |
-		<?php echo $this->Paginator->next(__('next') . ' >>', array(), null, array('class' => 'disabled'));?>
-	</div>
+
+      <div class="paging" id="pagnate_top_Header">
+         <?php 
+          echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
+            'escape' => false,
+            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
+            ]); 
+          ?>
+              <div id="paging_numbers">
+          <?php echo $this->Paginator->numbers(); ?>
+            </div>
+        <?php 
+          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
+            'escape' => false,
+            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
+          ]); 
+        ?>
+      </div>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
