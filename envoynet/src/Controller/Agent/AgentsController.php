@@ -506,7 +506,7 @@ class AgentsController extends \App\Controller\AgentsController {
           //            print_r($subTypes);//$user_data[ $subType->Field ] = $_POST[ $subType->Field ];
           //          }
           //        }
-
+            /*
           function sso_tweek_subscription(){
           
           if( SSO_PARENT == $_SERVER['HTTP_HOST'] ){
@@ -516,8 +516,9 @@ class AgentsController extends \App\Controller\AgentsController {
           
             return '';
           }
+          */
         
-          $subscription_db = sso_tweek_subscription();
+          $subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
           $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
                   
           foreach($results as $result){ 
