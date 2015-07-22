@@ -131,6 +131,7 @@ h3 {
 
 .tabs {
   position: relative;
+  top: -20px;
   min-height: 300px;
   /* This part sucks */
   clear: both;
@@ -315,6 +316,10 @@ h1, h2, h3 {
   font-weight: 600;
   color: #3c5791;
   letter-spacing: 2.5px; }
+
+h1 {
+  line-height: 100%;
+  margin-bottom: 15px; }
 
 h3 {
   margin: 0 auto 16px auto;
@@ -1475,9 +1480,18 @@ a.small {
   position: absolute;
   /* left: 0; */
   bottom: 12px;
-  font-size: 0.7rem;
+  font-size: 1rem;
   right: 36px;
-  color: #bbb !important;
+  color: #657AA8 !important;
+  letter-spacing: 1px; }
+
+.tabs__content a#agentRegister {
+  position: absolute;
+  /* left: 0; */
+  bottom: 12px;
+  font-size: 1rem;
+  right: 36px;
+  color: #657AA8 !important;
   letter-spacing: 1px; }
 
 .tabs.mobile [type=radio]:checked ~ label {
