@@ -77,6 +77,9 @@ h3 {
   .desktop {
     display: none; } }
 
+button:hover {
+  cursor: pointer; }
+
 .button {
   text-transform: uppercase;
   border-radius: 3px;
@@ -85,6 +88,8 @@ h3 {
   letter-spacing: 2px;
   height: auto;
   font-size: 1.5rem; }
+  .button:hover {
+    cursor: pointer; }
   .button a {
     display: block; }
   .button--green {
@@ -1189,6 +1194,8 @@ table.index2 {
   #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
     color: white !important;
     text-decoration: none; }
+  #Submit_btn:hover, .ui-button:hover, #place_order_btn:hover, #Edit_Product_btn:hover, #paginate_btn:hover, #Prev_btn:hover, #Next_btn:hover, #paging_numbers:hover, #Add_to_Order_btn:hover, #Process_order_btn:hover, #update_order_btn:hover, #continue_viewing_btn:hover, .button.dark:hover, .actions ul li a:hover, #logout_admin_btn:hover, #Main_Navbar_Interface_admin div[id$='_btn']:hover, #Profile_inset_orders input[type="submit"]:hover, #View_orders_btn:hover {
+    cursor: pointer; }
 
 .inner-content-wrapper > h1 {
   max-width: 270px;
