@@ -22,6 +22,7 @@ class ReceiptsController extends \App\Controller\ReceiptsController {
 
  
   public function add() {
+    $error = false;
     if (!empty($this->request->data)) {
       $receipt = $this->Receipts->newEntity($this->request->data);
       if ($receipt->qty == '') {
