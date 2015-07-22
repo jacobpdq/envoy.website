@@ -522,6 +522,7 @@ class AgentsController extends \App\Controller\AgentsController {
           }
 
           $unSubBoxesTop = "";
+          $UnSubNumTop = 0;
 
           foreach(mysql_fetch_all($results) as $result){ 
  
