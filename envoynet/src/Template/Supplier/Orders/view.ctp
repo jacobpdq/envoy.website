@@ -151,7 +151,7 @@
     <tr>
     <?php echo $this->Form->create('',array('url'=>array('controller'=>'OrderItems','action'=>'add','prefix' => 'supplier'))); ?>
     <td class='addbrochure'> <?php echo $this->Form->input('brochure_id',array('label'=>false, 'style'=>'width:230px'));?>	</td>
-    <td class='addbrochure'> <?php echo $this->Form->input('qty_ordered',array('escape'=>false, 'style'=>'width:50px', 'placeholder' => 'Qty'));?>	</td>
+    <td class='addbrochure'> <?php echo $this->Form->input('qty_ordered',array('escape'=>false, 'style'=>'width:50px', 'placeholder' => 'Qty', 'label'=>''));?>	</td>
     <?php echo $this->Form->input('status',array('type'=>'hidden', 'value'=>'0'));?>
     <?php echo $this->Form->input('shipped_via',array('type'=>'hidden', 'value'=>'N/A'));?>
     <?php echo $this->Form->input('tracking_number',array('type'=>'hidden', 'value'=>'N/A'));?>
@@ -164,7 +164,7 @@
    <?php endif;?>
     
 	</table>
-	
+	<br style="clear:both" />
 <br style="clear:both" />
 	
 </div>
@@ -180,3 +180,5 @@
 </div>
 
 <br style="clear:both" />
+<br style="clear:both" />
+
