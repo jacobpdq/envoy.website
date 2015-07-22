@@ -521,14 +521,12 @@ class AgentsController extends \App\Controller\AgentsController {
             return $return;
           }
 
-          print_r(mysql_fetch_all($results));
-
-
-         // $subscription_db = sso_tweek_subscription();
-         // $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
-              /*    
+          echo "<pre>";
+          var_dump(mysql_fetch_all($results));
+          echo "</pre>";
+          /*
           foreach(mysql_fetch_all($results) as $result){ 
-            //print_r($result);
+ 
             
             $subs = $result -> subID;
             $nonSubName = $result->subName;
