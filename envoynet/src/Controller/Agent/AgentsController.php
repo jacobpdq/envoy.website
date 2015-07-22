@@ -506,18 +506,32 @@ class AgentsController extends \App\Controller\AgentsController {
           //            print_r($subTypes);//$user_data[ $subType->Field ] = $_POST[ $subType->Field ];
           //          }
           //        }
+
+          //$subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
+            
+          mysql_connect('localhost','tweek_wheelsUp','WuPo_966');
+          @mysql_select_db('tweek_subscription') or die( "Unable to select database");
+
+          $results = mysql_query("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");
         
-          $subscription_db = sso_tweek_subscription();
-          $results = $subscription_db->get_results("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");    //  
-                  
-          foreach($results as $result){ 
-            //print_r($result);
+          function mysql_fetch_all($result) {
+            while($row=mysql_fetch_array($result)) {
+            $return[] = $row;
+          }
+            return $return;
+          }
+
+          $unSubBoxesTop = "";
+          $UnSubNumTop = 0;
+
+          foreach(mysql_fetch_all($results) as $result){ 
+ 
             
-            $subs = $result -> subID;
-            $nonSubName = $result->subName;
-            $description_en = stripcslashes(utf8_encode($result->description_en));
+            $subs = $result['subID'];
+            $nonSubName = $result['subName'];
+            $description_en = stripcslashes(utf8_encode($result['description_en']));
             
-            //                  $nonShow = array("33333","164735");            
+            $nonShow = array("33333","164735");            
             //                  $diff_subs = array_diff($arrSubs,array("164617","164735"));//"33333",
                         
             if(in_array($subs,$nonShow))  {
@@ -531,15 +545,18 @@ class AgentsController extends \App\Controller\AgentsController {
               }
               $unSubBoxesTop = $unSubBoxesTop . "
                 <span class='hoverImgHome' id='$subs'>
-                  <input name='subscribeBoxes[]' id='sub$subs' type='checkbox' value='$subs' $addAttr/>
+                  <input style='float:left;margin-right:5px;margin-top:4px;' name='subscribeBoxes[]' id='sub$subs' type='checkbox' value='$subs' $addAttr/>
                   <strong><label for='sub$subs'><span style='font-size:12px;'>$nonSubName</span> - <span style='font-size:10px;font-family: SourceSansPro-Regular, Helvetica, \"Trebuchet MS\", Arial, sans-serif;'>$description_en</span></label></strong></span>
-                </span>";
-              $unSubNumTop++;
+                </span><br style='clear:both' />";
             }
           }
-         
+          if($unSubBoxesTop) {
           echo $unSubBoxesTop;
         }
+
+        }
+
+
               ?>
           </fieldset>
           

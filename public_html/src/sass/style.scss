@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing:border-box;
   font-family: "Open Sans" !important;
 }
 
@@ -17,7 +18,6 @@ p {
 th.actions {
   background:#eee !important;
 }
-
 
 // Color pallet
 $blue: rgb(60,87,145);
@@ -113,7 +113,9 @@ h3 {
 
 }
 
-
+button:hover {
+  cursor:pointer;
+}
 // component: buttons 
 .button {
   text-transform:uppercase;
@@ -122,7 +124,9 @@ h3 {
   padding:20px 40px !important;
   letter-spacing:2px;
   height:auto;
-
+  &:hover {
+    cursor:pointer;
+  }
   font-size:1.5rem;
   & a {
     display:block;
@@ -192,7 +196,8 @@ h3 {
 
 
 .tabs {
-  position: relative;   
+  position: relative;  
+  top:-20px; 
   min-height: 300px; /* This part sucks */
   clear: both;
   margin: 0px 0px 0px 0px;
@@ -246,7 +251,7 @@ h3 {
           padding: 10px;
           // border: 1px solid #ccc;
           width: 100%;
-          height: 127px;
+          height: 147px;
           margin-left: 5px;
           padding-top:30px;
           & input[type="text"] {
@@ -472,6 +477,10 @@ h1, h2, h3 {
   font-weight:600;
   color:$blue;
   letter-spacing:2.5px
+}
+h1 {
+  line-height:100%;
+  margin-bottom:15px;
 }
 h3 {
     margin: 0 auto 16px auto;
@@ -1715,7 +1724,7 @@ margin-top:40px !important;
   border-right:0px !important;
 }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
     margin-bottom: 1rem !important;
     border: 0px !important;
     font-size: 1.5rem !important;
@@ -1737,6 +1746,9 @@ margin-top:40px !important;
       color:white !important;
       text-decoration:none;
     }
+    &:hover {
+      cursor:pointer;
+    }
   }
   .inner-content-wrapper > h1 {
     max-width: 270px;
@@ -1748,7 +1760,7 @@ margin-top:40px !important;
       font-size: 1rem !important;
 }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   float:left;
 }
 #profile_info {
@@ -1757,7 +1769,7 @@ margin-top:40px !important;
 #paging_numbers:empty {
     display: none !important;
 }
-  #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers  {
+  #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a  {
     background:#efefef !important;
     color:$blue !important;
     font-size:0.75em !important;
@@ -1765,7 +1777,7 @@ margin-top:40px !important;
     margin-left:5px !important;
     margin-right:5px !important;
   }
-  #paging_numbers li {
+  #paging_numbers li, .paging li {
     margin:0 2px !important;
     color:$blue !important;
   }
@@ -1814,6 +1826,7 @@ margin-top:40px !important;
   background-image:none !important;
 }
 #Brochures_Main_Holder {
+  height:auto !important;
   border-bottom:1px solid #ccc !important;
   margin-bottom:20px !important;
 }
@@ -1838,6 +1851,7 @@ margin-top:40px !important;
 
 #Brochures_Main_Holder_agent {
   margin-bottom:30px;
+  height:auto !important;
 }
 #Company_Title {
   display:block;
@@ -1863,7 +1877,7 @@ margin-top:40px !important;
     float: left;
     margin-top: 20px;
     margin-bottom: 0px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -1965,8 +1979,11 @@ height: auto !important;
 }
 
 #admin tr:hover {
-    color: #ffffff !important;
-    background-color: $blue !important;
+    color: rgb(34,34,34) !important;
+    background-color: rgb(140,154,187) !important;
+    & a {
+      color: rgb(34,34,34) !important;
+    }
 }
 .actions {
   background:none !important;
@@ -2062,17 +2079,30 @@ a.small {
 .index2 td {
   padding:11px !important;
 }
-
+table.index2 td {
+      max-width: 300px !important;
+}
+#Profile_inset_orders {
+  height: auto !important;
+}
 .fr .tabs__content [type=submit] {
   font-size:0.8rem !important;
 }
 .tabs__content a {
   position: absolute;
     /* left: 0; */
-    bottom: 12px;
-    font-size: 0.7rem;
+    bottom: 18px;
+    font-size: 1rem;
     right: 36px;
-    color: #bbb !important;
+    color: #657AA8 !important;
+    letter-spacing: 1px;
+}
+.tabs__content a.registerAccount {
+  position: absolute;
+    /* left: 0; */
+    font-size: 1rem;
+    right: 150px !important;
+    color: #657AA8 !important;
     letter-spacing: 1px;
 }
 .tabs.mobile [type=radio]:checked ~ label {
@@ -2094,5 +2124,9 @@ a.small {
 iframe[name="google_conversion_frame"] {
   height:0px !important;
   display:none !important;
+}
+
+.Form_holder_style2 {
+  height:auto !important;
 }
 

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   font-family: "Open Sans" !important; }
 
 p {
@@ -76,6 +77,9 @@ h3 {
   .desktop {
     display: none; } }
 
+button:hover {
+  cursor: pointer; }
+
 .button {
   text-transform: uppercase;
   border-radius: 3px;
@@ -84,6 +88,8 @@ h3 {
   letter-spacing: 2px;
   height: auto;
   font-size: 1.5rem; }
+  .button:hover {
+    cursor: pointer; }
   .button a {
     display: block; }
   .button--green {
@@ -130,6 +136,7 @@ h3 {
 
 .tabs {
   position: relative;
+  top: -20px;
   min-height: 300px;
   /* This part sucks */
   clear: both;
@@ -172,7 +179,7 @@ h3 {
     bottom: 0;
     padding: 10px;
     width: 100%;
-    height: 127px;
+    height: 147px;
     margin-left: 5px;
     padding-top: 30px; }
     .tabs__content input[type="text"] {
@@ -314,6 +321,10 @@ h1, h2, h3 {
   font-weight: 600;
   color: #3c5791;
   letter-spacing: 2.5px; }
+
+h1 {
+  line-height: 100%;
+  margin-bottom: 15px; }
 
 h3 {
   margin: 0 auto 16px auto;
@@ -1162,7 +1173,7 @@ table.index2 {
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1180,9 +1191,11 @@ table.index2 {
   text-indent: 0em !important;
   text-align: center !important;
   width: auto !important; }
-  #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
+  #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, .paging a a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
     color: white !important;
     text-decoration: none; }
+  #Submit_btn:hover, .ui-button:hover, #place_order_btn:hover, #Edit_Product_btn:hover, #paginate_btn:hover, #Prev_btn:hover, #Next_btn:hover, #paging_numbers:hover, .paging a:hover, #Add_to_Order_btn:hover, #Process_order_btn:hover, #update_order_btn:hover, #continue_viewing_btn:hover, .button.dark:hover, .actions ul li a:hover, #logout_admin_btn:hover, #Main_Navbar_Interface_admin div[id$='_btn']:hover, #Profile_inset_orders input[type="submit"]:hover, #View_orders_btn:hover {
+    cursor: pointer; }
 
 .inner-content-wrapper > h1 {
   max-width: 270px;
@@ -1191,7 +1204,7 @@ table.index2 {
 .fr #Submit_btn, .fr .ui-button, .fr #place_order_btn, .fr #Edit_Product_btn, .fr #paginate_btn, .fr #Prev_btn, .fr #Next_btn, .fr #paging_numbers, .fr #Add_to_Order_btn, .fr #Process_order_btn, .fr #update_order_btn, .fr #continue_viewing_btn, .fr .button.dark, .fr .actions ul li a, .fr #logout_admin_btn, .fr #Main_Navbar_Interface_admin div[id$='_btn'], .fr #Profile_inset_orders input[type="submit"], .fr #View_orders_btn {
   font-size: 1rem !important; }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   float: left; }
 
 #profile_info {
@@ -1200,7 +1213,7 @@ table.index2 {
 #paging_numbers:empty {
   display: none !important; }
 
-#paginate_btn, #Prev_btn, #Next_btn, #paging_numbers {
+#paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a {
   background: #efefef !important;
   color: #3c5791 !important;
   font-size: 0.75em !important;
@@ -1208,7 +1221,7 @@ table.index2 {
   margin-left: 5px !important;
   margin-right: 5px !important; }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   margin: 0 2px !important;
   color: #3c5791 !important; }
 
@@ -1251,6 +1264,7 @@ table.index {
   background-image: none !important; }
 
 #Brochures_Main_Holder {
+  height: auto !important;
   border-bottom: 1px solid #ccc !important;
   margin-bottom: 20px !important; }
 
@@ -1268,7 +1282,8 @@ table.index {
     margin: 0 !important; }
 
 #Brochures_Main_Holder_agent {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  height: auto !important; }
 
 #Company_Title {
   display: block;
@@ -1290,7 +1305,7 @@ table.index {
   float: left;
   margin-top: 20px;
   margin-bottom: 0px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #ccc; }
 
 #Company_Title {
@@ -1381,8 +1396,10 @@ legend {
   color: inherit !important; }
 
 #admin tr:hover {
-  color: #ffffff !important;
-  background-color: #3c5791 !important; }
+  color: #222222 !important;
+  background-color: #8c9abb !important; }
+  #admin tr:hover a {
+    color: #222222 !important; }
 
 .actions {
   background: none !important; }
@@ -1465,16 +1482,30 @@ a.small {
 .index2 td {
   padding: 11px !important; }
 
+table.index2 td {
+  max-width: 300px !important; }
+
+#Profile_inset_orders {
+  height: auto !important; }
+
 .fr .tabs__content [type=submit] {
   font-size: 0.8rem !important; }
 
 .tabs__content a {
   position: absolute;
   /* left: 0; */
-  bottom: 12px;
-  font-size: 0.7rem;
+  bottom: 18px;
+  font-size: 1rem;
   right: 36px;
-  color: #bbb !important;
+  color: #657AA8 !important;
+  letter-spacing: 1px; }
+
+.tabs__content a.registerAccount {
+  position: absolute;
+  /* left: 0; */
+  font-size: 1rem;
+  right: 150px !important;
+  color: #657AA8 !important;
   letter-spacing: 1px; }
 
 .tabs.mobile [type=radio]:checked ~ label {
@@ -1493,3 +1524,6 @@ a.small {
 iframe[name="google_conversion_frame"] {
   height: 0px !important;
   display: none !important; }
+
+.Form_holder_style2 {
+  height: auto !important; }
