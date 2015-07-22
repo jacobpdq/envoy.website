@@ -5,7 +5,7 @@
 jQuery(document).ready(function($){
 
     $('a').each(function() {
-    	if($(this).attr('href') == "http://travelweekpro.ca/wp-admin/") {
+    	if($(this).attr('href') == "/wp-admin/") {
 
     		$(this).attr('href', 'http://travelweekpro.ca');
     	}
