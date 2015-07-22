@@ -1382,7 +1382,7 @@ legend {
 
 #admin tr:hover {
   color: #222222 !important;
-  background-color: #3c5791 !important; }
+  background-color: transparent !important; }
   #admin tr:hover a {
     color: #222222 !important; }
 
