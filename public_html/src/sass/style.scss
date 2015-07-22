@@ -1724,7 +1724,7 @@ margin-top:40px !important;
   border-right:0px !important;
 }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
     margin-bottom: 1rem !important;
     border: 0px !important;
     font-size: 1.5rem !important;
@@ -1760,7 +1760,7 @@ margin-top:40px !important;
       font-size: 1rem !important;
 }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   float:left;
 }
 #profile_info {
@@ -1769,7 +1769,7 @@ margin-top:40px !important;
 #paging_numbers:empty {
     display: none !important;
 }
-  #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers  {
+  #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a  {
     background:#efefef !important;
     color:$blue !important;
     font-size:0.75em !important;
@@ -1777,7 +1777,7 @@ margin-top:40px !important;
     margin-left:5px !important;
     margin-right:5px !important;
   }
-  #paging_numbers li {
+  #paging_numbers li, .paging li {
     margin:0 2px !important;
     color:$blue !important;
   }

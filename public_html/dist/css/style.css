@@ -1173,7 +1173,7 @@ table.index2 {
 #profile_info2 {
   border-right: 0px !important; }
 
-#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
+#Submit_btn, .ui-button, #place_order_btn, #Edit_Product_btn, #paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a, #Add_to_Order_btn, #Process_order_btn, #update_order_btn, #continue_viewing_btn, .button.dark, .actions ul li a, #logout_admin_btn, #Main_Navbar_Interface_admin div[id$='_btn'], #Profile_inset_orders input[type="submit"], #View_orders_btn {
   margin-bottom: 1rem !important;
   border: 0px !important;
   font-size: 1.5rem !important;
@@ -1191,10 +1191,10 @@ table.index2 {
   text-indent: 0em !important;
   text-align: center !important;
   width: auto !important; }
-  #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
+  #Submit_btn a, .ui-button a, #place_order_btn a, #Edit_Product_btn a, #paginate_btn a, #Prev_btn a, #Next_btn a, #paging_numbers a, .paging a a, #Add_to_Order_btn a, #Process_order_btn a, #update_order_btn a, #continue_viewing_btn a, .button.dark a, .actions ul li a a, #logout_admin_btn a, #Main_Navbar_Interface_admin div[id$='_btn'] a, #Profile_inset_orders input[type="submit"] a, #View_orders_btn a {
     color: white !important;
     text-decoration: none; }
-  #Submit_btn:hover, .ui-button:hover, #place_order_btn:hover, #Edit_Product_btn:hover, #paginate_btn:hover, #Prev_btn:hover, #Next_btn:hover, #paging_numbers:hover, #Add_to_Order_btn:hover, #Process_order_btn:hover, #update_order_btn:hover, #continue_viewing_btn:hover, .button.dark:hover, .actions ul li a:hover, #logout_admin_btn:hover, #Main_Navbar_Interface_admin div[id$='_btn']:hover, #Profile_inset_orders input[type="submit"]:hover, #View_orders_btn:hover {
+  #Submit_btn:hover, .ui-button:hover, #place_order_btn:hover, #Edit_Product_btn:hover, #paginate_btn:hover, #Prev_btn:hover, #Next_btn:hover, #paging_numbers:hover, .paging a:hover, #Add_to_Order_btn:hover, #Process_order_btn:hover, #update_order_btn:hover, #continue_viewing_btn:hover, .button.dark:hover, .actions ul li a:hover, #logout_admin_btn:hover, #Main_Navbar_Interface_admin div[id$='_btn']:hover, #Profile_inset_orders input[type="submit"]:hover, #View_orders_btn:hover {
     cursor: pointer; }
 
 .inner-content-wrapper > h1 {
@@ -1204,7 +1204,7 @@ table.index2 {
 .fr #Submit_btn, .fr .ui-button, .fr #place_order_btn, .fr #Edit_Product_btn, .fr #paginate_btn, .fr #Prev_btn, .fr #Next_btn, .fr #paging_numbers, .fr #Add_to_Order_btn, .fr #Process_order_btn, .fr #update_order_btn, .fr #continue_viewing_btn, .fr .button.dark, .fr .actions ul li a, .fr #logout_admin_btn, .fr #Main_Navbar_Interface_admin div[id$='_btn'], .fr #Profile_inset_orders input[type="submit"], .fr #View_orders_btn {
   font-size: 1rem !important; }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   float: left; }
 
 #profile_info {
@@ -1213,7 +1213,7 @@ table.index2 {
 #paging_numbers:empty {
   display: none !important; }
 
-#paginate_btn, #Prev_btn, #Next_btn, #paging_numbers {
+#paginate_btn, #Prev_btn, #Next_btn, #paging_numbers, .paging a {
   background: #efefef !important;
   color: #3c5791 !important;
   font-size: 0.75em !important;
@@ -1221,7 +1221,7 @@ table.index2 {
   margin-left: 5px !important;
   margin-right: 5px !important; }
 
-#paging_numbers li {
+#paging_numbers li, .paging li {
   margin: 0 2px !important;
   color: #3c5791 !important; }
 
