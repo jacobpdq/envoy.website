@@ -94,7 +94,7 @@ class ShoppingCartController extends AppController {
         <head>
         </head>
         <body>
-        <p>Brochure " . $brochure['name'] . "inventory balance: " . $brochure['inv_balance'] . " is below min inventory threshold value " . $brochure['inv_notif_threshold'] . "</p>
+        <p>Brochure " . $brochure['name'] . " inventory balance: " . $brochure['inv_balance'] . " is below min inventory threshold value " . $brochure['inv_notif_threshold'] . "</p>
         </body>
         </html>";
 
@@ -134,7 +134,7 @@ class ShoppingCartController extends AppController {
         <h3>The following order has been received and requires approval:</h3>
         <b>Date:</b> " . $order['created'] . " <br>
         <b>Company:</b> " . $order['shipping_company'] . " <br>
-        <b><?php echo __('First Name'); ?>:</b> " . $order['shipping_firstname'] . " <br>
+        <b>" . __('First Name') . ":</b> " . $order['shipping_firstname'] . " <br>
         <b>Last Name:</b> " . $order['shipping_lastname'] . " <br>
         <b>Address1:</b> " . $order['shipping_address1'] . " <br>
         <b>Address2:</b> " . $order['shipping_address2'] . " <br>
@@ -207,7 +207,7 @@ To approve or change this order, please go to http://envoynetworks.ca/supplier a
         <h3>The following order has been received and is being forwarded to you for fulfillment:</h3>
         <b>Date:</b> " . $order['created'] . " <br>
         <b>Company:</b> " . $order['shipping_company'] . " <br>
-        <b><?php echo __('First Name'); ?>:</b> " . $order['shipping_firstname'] . " <br>
+        <b> " . __('First Name') . " :</b> " . $order['shipping_firstname'] . " <br>
         <b>Last Name:</b> " . $order['shipping_lastname'] . " <br>
         <b>Address1:</b> " . $order['shipping_address1'] . " <br>
         <b>Address2:</b> " . $order['shipping_address2'] . " <br>
@@ -279,7 +279,7 @@ Thank you for your business.
         <h3>The following order has been received by ENVOY:</h3>
         <b>Date:</b> " . $order['created'] . " <br>
         <b>Company:</b> " . $order['shipping_company'] . " <br>
-        <b><?php echo __('First Name'); ?>:</b> " . $order['shipping_firstname'] . " <br>
+        <b>" . __('First Name') . ":</b> " . $order['shipping_firstname'] . " <br>
         <b>Last Name:</b> " . $order['shipping_lastname'] . " <br>
         <b>Address1:</b> " . $order['shipping_address1'] . " <br>
         <b>Address2:</b> " . $order['shipping_address2'] . " <br>

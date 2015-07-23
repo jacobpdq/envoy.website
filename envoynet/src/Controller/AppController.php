@@ -126,7 +126,6 @@ class AppController extends Controller {
           'unauthorizedRedirect' => $this->request->referer()
         ]);
         $this->layout = 'admin';
-
         $this->_setAdminUIVariables();
       } else if ($this->request['prefix'] == 'agent') {
 
@@ -335,9 +334,10 @@ class AppController extends Controller {
     $mail->Subject = $subject;
     $mail->MsgHTML($message);
 
-    $this->request->session()->write('TestResults.Email.To.' . $to, "sent");
-    $this->request->session()->write('TestResults.Email.To.' . $to.'Msg', $message);
-    $this->request->session()->write('TestResults.Email.To.' . $to.'Sender', $from);
+    $this->log('TestResults.Email.To.' . $to .  " sent");
+    $this->log('TestResults.Email.To.' . $to.'Msg ' .  $message);
+    $this->log('TestResults.Email.To.' . $to.'Sender ' .  $from);
+    $this->log('TestResults.Email.To.' . $to.'Sender ' . $to);
     if ($mail->Send()) {
       
     }

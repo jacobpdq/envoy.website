@@ -82,7 +82,12 @@ class OrdersController extends \App\Controller\OrdersController {
       $this->Flash->set(__('Delivery Mode Confirmed'));
        $this->redirect($this->referer());
     } else {
-      $this->request->data = $this->Orders->findById($id)->contain('OrderItems.Brochures')->first()->toArray();
+      if ($this->Orders->findById($id)->contain('OrderItems.Brochures')->count()) {
+        $this->request->data = $this->Orders->findById($id)->contain('OrderItems.Brochures')->first()->toArray();
+      } else {
+        $this->Flash->error(__('Invalid order!'));
+        return $this->redirect($this->referer());
+      }
 
     }
     $this->set('order', $this->Orders->get($id));

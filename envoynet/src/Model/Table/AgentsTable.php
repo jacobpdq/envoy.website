@@ -14,6 +14,7 @@ class AgentsTable extends Table {
         $this->table('agents');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
+        $this->displayField('company');
 
         $this -> hasMany('AgentTiers');
 

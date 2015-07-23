@@ -3,7 +3,7 @@
   <fieldset>
     <legend><?php echo __('Create new order'); ?></legend>
     <ol>
-      <li><?php echo $this->Form->input('owner_id'); ?></li>
+      <li><?php echo $this->Form->input('owner_id',['options'=>$agents]); ?></li>
       <li><?php echo $this->Form->input('owner_type', array('options' => $order_owners)); ?></li>
       <li><?php echo $this->Form->input('shipping_company'); ?></li>
       <li><?php echo $this->Form->input('shipping_firstname'); ?> </li>
