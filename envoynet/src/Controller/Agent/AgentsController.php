@@ -174,7 +174,7 @@ class AgentsController extends \App\Controller\AgentsController {
       'lc_role_agency' => '',
       'contact_sml' => '',
       'contact_lrg' => true,
-      'company_job' => '',
+      'company_job' => true,
       'pro_information' => true,
       'tw_verfiy_request' => '',
       'tw_magazine' => '',
@@ -242,8 +242,8 @@ class AgentsController extends \App\Controller\AgentsController {
       'lc_role_agency' => '',
       'contact_sml' => '',
       'contact_lrg' => true,
-      'company_job' => '',
-      'pro_information' => '',
+      'company_job' => true,
+      'pro_information' => true,
       'tw_verfiy_request' => '',
       'tw_magazine' => '',
       'register_fallback' => ''
@@ -497,7 +497,8 @@ class AgentsController extends \App\Controller\AgentsController {
 
       <?php $this->sso_form_specific( array(), 'register', $attr ); ?>
           <?php $serverAddress = $_SERVER['REMOTE_ADDR'];
-        if(($serverAddress == '99.232.36.54' || $serverAddress == '216.191.207.70' || $serverAddress == '66.249.83.179' || $serverAddress == '104.251.98.226')){   /*($serverAddress == '99.232.36.54' || $serverAddress == '216.191.207.70' || $serverAddress == '66.249.83.179')*/?>
+/*	  
+        if(($serverAddress == '99.232.36.54' || $serverAddress == '216.191.207.70' || $serverAddress == '66.249.83.179' || $serverAddress == '104.251.98.226')){   //($serverAddress == '99.232.36.54' || $serverAddress == '216.191.207.70' || $serverAddress == '66.249.83.179')?>
       <fieldset>
         <legend>Stay In the Know > Subscribe to our Digital Products</legend>
         
@@ -566,8 +567,8 @@ class AgentsController extends \App\Controller\AgentsController {
           </fieldset>
           
     <?php
-
-    $sso_policy_page = '';
+*/
+    $sso_policy_page = Router::url(['controller'=>'Pages','action'=>'privacy','prefix' => false]);
     if( $sso_policy_page ){
       $sso_policy_page = '<a href="'.$sso_policy_page.'" target="_blank">Privacy Policy</a>';
     }else{
