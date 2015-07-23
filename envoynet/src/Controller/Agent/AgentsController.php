@@ -524,22 +524,12 @@ class AgentsController extends \App\Controller\AgentsController {
 
           //$subscription_db = new wpdb( 'tweek_wheelsUp', 'WuPo_966', 'tweek_subscription', 'localhost' );
             
-          mysql_connect('localhost','tweek_wheelsUp','WuPo_966');
-          @mysql_select_db('tweek_subscription') or die( "Unable to select database");
-
-          $results = mysql_query("SELECT * from subTypes WHERE subID NOT LIKE '165436' AND display LIKE '1'");
-        
-          function mysql_fetch_all($result) {
-            while($row=mysql_fetch_array($result)) {
-            $return[] = $row;
-          }
-            return $return;
-          }
+          $results = [];
 
           $unSubBoxesTop = "";
           $UnSubNumTop = 0;
 
-          foreach(mysql_fetch_all($results) as $result){ 
+          foreach($results as $result){ 
  
             
             $subs = $result['subID'];
