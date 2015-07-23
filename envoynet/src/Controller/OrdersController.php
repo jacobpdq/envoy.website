@@ -104,12 +104,16 @@ class OrdersController extends AppController {
 
   function _rushOrderNotif($orderId=null) {
 
-    $this->Orders->contain('OrderItem.Brochure');
-    $order = $this->Orders->get($orderId);
+    
+    $order = $this->Orders->findById($orderId)->contain('OrderItems.Brochures')->first()->toArray();
 
     $orderDetails = "<ul>";
 
-    foreach ($order['Order'] as $key => $value) {
+
+    $orderItems = $order['order_items'];
+    unset($order['order_items']);
+
+    foreach ($order as $key => $value) {
       $orderDetails .="<li>" . $key . ":  " . $value . "</li>";
     }
     $orderDetails .="</ul>";
@@ -128,23 +132,22 @@ class OrdersController extends AppController {
 
     $message = $messageBegin;
 
-    foreach ($order['OrderItem'] as $item) {
-      $message .= "<li>" . $item['qty_ordered'] . " x " . $item['Brochure']['name'] . "</li>";
+    foreach ($orderItems as $item) {
+      $message .= "<li>" . $item['qty_ordered'] . " x " . $item['brochure']['name'] . "</li>";
     }
 
     $message .= $messageEnd;
 
-     $from = Configure::read('hippo.system_email');
+    $from = Configure::read('hippo.system_email');
     $subject = "Rush order";
     $this->_sendEmail(Configure::read('hippo.warehouse_email'), $from, $subject, $message);
   }
   
   function _supplierOrderNotif($orderId=null) {
-    $this->loadModel('Orders');
-    $order = $this->Orders->findById($orderId,[
-      'contain'=>'OrderItems.Brochures'
-      ]
-    );
+
+    $order = $this->Orders->findById($orderId)->contain('OrderItems.Brochures')->first()->toArray();
+    $orderItems = $order['order_items'];
+    unset($order['order_items']);
 
     $orderDetails = "<ul>";
 
@@ -167,12 +170,11 @@ class OrdersController extends AppController {
 
     $message = $messageBegin;
 
-    foreach ($order as $item) {
-      $message .= "<li>" . $item['qty_ordered'] . " x " . $item['Brochure']['name'] . "</li>";
+    foreach ($orderItems as $item) {
+      $message .= "<li>" . $item['qty_ordered'] . " x " . $item['brochure']['name'] . "</li>";
     }
 
     $message .= $messageEnd;
-
     $from = Configure::read('hippo.system_email');
     $subject = "Supplier order";
     $this->_sendEmail(Configure::read('hippo.warehouse_email'), $from, $subject, $message);
@@ -191,7 +193,7 @@ class OrdersController extends AppController {
         <head>
         </head>
         <body>
-        <p>Brochure " . $brochure['name'] . "inventory balance: " . $brochure['inv_balance'] . " is below min inventory threshold value " . $brochure['inv_notif_threshold'] . "</p>
+        <p>Brochure " . $brochure['name'] . " inventory balance: " . $brochure['inv_balance'] . " is below min inventory threshold value " . $brochure['inv_notif_threshold'] . "</p>
         </body>
         </html>";
 $this->_sendEmail($recipient, $from, $subject, $message);
