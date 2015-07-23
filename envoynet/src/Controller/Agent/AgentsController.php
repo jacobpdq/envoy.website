@@ -172,8 +172,8 @@ class AgentsController extends \App\Controller\AgentsController {
 
     $attr = [
       'lc_role_agency' => '',
-      'contact_sml' => true,
-      'contact_lrg' => '',
+      'contact_sml' => '',
+      'contact_lrg' => true,
       'company_job' => '',
       'pro_information' => true,
       'tw_verfiy_request' => '',
@@ -240,8 +240,8 @@ class AgentsController extends \App\Controller\AgentsController {
 
     $attr = [
       'lc_role_agency' => '',
-      'contact_sml' => true,
-      'contact_lrg' => '',
+      'contact_sml' => '',
+      'contact_lrg' => true,
       'company_job' => '',
       'pro_information' => '',
       'tw_verfiy_request' => '',
