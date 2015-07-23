@@ -190,6 +190,22 @@ class MainController extends AppController {
           'saskatchewan' => 'SK',
           'yukon territory' => 'YT'
         ];
+
+        //provide empty string for required values missing from passport profile
+
+        if (!isset($user_info['city'])) {
+          $user_info['city'] = '';
+        }
+        if (!isset($user_info['company'])) {
+          $user_info['company'] = '';
+        }
+        if (!isset($user_info['postal_code'])) {
+          $user_info['postal_code'] = '';
+        }
+        if (!isset($user_info['phone_no'])) {
+          $user_info['phone_no'] = '';
+        }
+
         if ($user->count() > 0) {
             
             //user was found
