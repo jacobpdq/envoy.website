@@ -69,7 +69,21 @@ class AgentsController extends \App\Controller\AgentsController {
       $ssoUser = false;
       $passwordChanged = false;
 
-      $broker_url = trim(str_replace(array('http://','https://'),'',Router::url('/', true)),'/');
+      $broker_url = Router::url('/', true);
+
+      if (substr($broker_url,0,7) == 'http://') {
+          $broker_url = substr($broker_url,7);
+      } else if (substr($broker_url,0,8) == 'https://') {
+          $broker_url = substr($broker_url,8);
+      }
+
+      if (substr($broker_url,-1) == '/') {
+          $broker_url = substr($broker_url,0,strlen($broker_url)-1);
+      }
+
+      if (substr($broker_url,0,3) != 'www') {
+        $broker_url = 'www.' . $broker_url;
+      }
 
       //check if this is an sso user
       $response = $http->post(

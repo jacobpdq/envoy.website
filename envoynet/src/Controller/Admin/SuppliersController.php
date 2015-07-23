@@ -113,47 +113,6 @@ class SuppliersController extends \App\Controller\SuppliersController {
 
       $oldSupplier = $this->Suppliers->get($this->request->data['id']);
 
-      $ssoUser = false;
-      $passwordChanged = false;
-
-      $broker_url = trim(str_replace(array('http://','https://'),'',Router::url('/', true)),'/');
-
-      //check if this is an sso user
-      $response = $http->post(
-          'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-          [
-              'action'=>'user_profile',
-              'broker_url' => $broker_url,
-              'broker_key' => Configure::read('hippo.sso_broker_key'),
-              'email' => $oldSupplier['email'],
-          ]
-      );
-
-      
-      
-
-      if ($response->statusCode() == 200 && $response->body() != '') {
-        $ssoUser = json_decode($response->body());
-          $ssoUser = get_object_vars ($ssoUser);
-
-      } else {
-        //check if this is a correction to email
-        $response = $http->post(
-            'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-            [
-                'action'=>'user_profile',
-                'broker_url' => $broker_url,
-                'broker_key' => Configure::read('hippo.sso_broker_key'),
-                'email' => $this->request->data['email'],
-            ]
-        );
-
-        if ($response->statusCode() == 200 && $response->body() != '') {
-          $ssoUser = json_decode($response->body());
-          $ssoUser = get_object_vars ($ssoUser);
-        }
-      } 
-
 
       if ($this->request->data['password'] == $oldSupplier['password']) {
         $this->request->data['password'] = $oldSupplier['decrypted_password'];
@@ -161,66 +120,13 @@ class SuppliersController extends \App\Controller\SuppliersController {
         $passwordChanged = true;
       }
 
-      if ($ssoUser) {
-        $errorMessage = '';
-        if ($this->request->data['email'] != $ssoUser['email']){
-          $errorMessage .= (($errorMessage != '') ? ',':'') . 'email';
-          $this->request->data['email'] = $ssoUser['email'];
-        }
-        if ($this->request->data['username'] != $ssoUser['username']){
-          $errorMessage .= (($errorMessage != '') ? ',':'') . 'username';  
-          $this->request->data['username'] = $ssoUser['username'];
-        }
-        if ($this->request->data['contact_firstname'] != $ssoUser['first_name']){
-          $errorMessage .= (($errorMessage != '') ? ',':'') . 'username';  
-          $this->request->data['contact_firstname'] = $ssoUser['first_name'];
-        }
-        if ($this->request->data['contact_lastname'] != $ssoUser['last_name']){
-          $errorMessage .= (($errorMessage != '') ? ',':'') . 'lastname';  
-          $this->request->data['contact_lastname'] = $ssoUser['last_name'];
-        }
-      }
 
 
       $supplier = $this->Suppliers->newEntity($this->request->data,['accessibleFields'=>['id'=>true]]);
 
       if ($this->Suppliers->save($supplier)) {
-
-        if ($passwordChanged) {
-
-
-          if ($ssoUser) {
-            $response = $http->post(
-                'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-                [
-                    'action'=>'user_pwd',
-                    'session'=> MD5($this->request->data['password']),
-                    'broker_url' => $broker_url,
-                    'broker_key' => Configure::read('hippo.sso_broker_key'),
-                    'email' => $this->request->data['email'],
-                ]
-            );
-
-            if ($response->statusCode() == 200) {
-              $this->Flash->set(__('The supplier has been saved', true));
-              $this->redirect(array('action' => 'index'));
-            } else {
-              $this->Flash->set(__('The supplier has been saved locally but the SSO password was not accepted.', true));
-              $this->redirect(array('action' => 'index'));
-            }
-
-
-          }
-        } else {
-            $this->Flash->set(__('The supplier has been saved', true));
-            $this->redirect(array('action' => 'index'));
-
-            if ($errorMessage != '') {
-              $this->Flash->error($this->request->data['company'] . 
-                ' is a supplier with SSO login. The following fields have been changed to maintain synchronization: ' .
-                $errorMessage);
-            }
-        }
+        $this->Flash->set(__('The supplier has been saved', true));
+        $this->redirect(array('action' => 'index'));       
       } else {
         $this->Flash->error(__('The supplier could not be saved. Please, try again.', true));
       }

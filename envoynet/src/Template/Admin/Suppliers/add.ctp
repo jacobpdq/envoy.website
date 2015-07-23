@@ -9,7 +9,7 @@
       <li><?php echo $this->Form->input('address1'); ?></li>
       <li><?php echo $this->Form->input('address2'); ?></li>
       <li><?php echo $this->Form->input('city'); ?></li>
-      <li><?php echo $this->Form->input('province'); ?></li>
+      <li><?php echo $this->Form->input('province',['maxlength'=>'2']); ?></li>
       <li><?php echo $this->Form->input('postal'); ?></li>
       <li><?php echo $this->Form->input('country'); ?></li>
       <li><?php echo $this->Form->input('email'); ?></li>
@@ -17,13 +17,13 @@
       <li><?php echo $this->Form->input('contact_firstname'); ?></li>
       <li><?php echo $this->Form->input('contact_lastname'); ?></li>
       <li><?php echo $this->Form->input('status', array('options' => $user_statuses)); ?></li>
-      <li><?php echo $this->Form->input('allow_modify_orders'); ?></li>
-      <li><?php echo $this->Form->input('allow_modify_brochures'); ?></li>
-      <li><?php echo $this->Form->input('display_on_agent_site'); ?></li>
+      <li><?php echo $this->Form->input('allow_modify_orders',['type'=>'checkbox']); ?></li>
+      <li><?php echo $this->Form->input('allow_modify_brochures',['type'=>'checkbox']); ?></li>
+      <li><?php echo $this->Form->input('display_on_agent_site',['type'=>'checkbox']); ?></li>
       <li><?php echo $this->Form->input('master_supplier'); ?></li>
-      <li><?php echo $this->Form->input('restrict_brochure_access'); ?></li>
-      <li><?php echo $this->Form->input('restrict_order_access'); ?></li>
-      <li><?php echo $this->Form->input('restrict_report_access'); ?></li>
+      <li><?php echo $this->Form->input('restrict_brochure_access',['type'=>'checkbox',]); ?></li>
+      <li><?php echo $this->Form->input('restrict_order_access',['type'=>'checkbox']); ?></li>
+      <li><?php echo $this->Form->input('restrict_report_access',['type'=>'checkbox']); ?></li>
     </ol>
   </fieldset>
   <fieldset class="submit">

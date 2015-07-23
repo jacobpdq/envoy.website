@@ -106,7 +106,7 @@
       <div id="Profile_form_holder" class="Base_red_form_txt">
       <span class="data_Headers_Bl_txt">Order Delivery Type</span></div>
       <ul class="form_radio_btns">
-      <?php echo $this->Form->input('Order.priority',array(
+      <?php echo $this->Form->input('priority',array(
                       'type'=>'radio',
                       'options'=>array('0'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;"Normal"</span>','1'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;"Rush"</span>'),
                       'legend'=>false,
