@@ -312,6 +312,12 @@
 
     }
 
+   .smartmodal {top: 194px !important;
+    display: block;
+    width: 984px !important;
+    left: 50% !important;
+  }
+
 </style>
 
 <script type="text/javascript" language="javascript">
