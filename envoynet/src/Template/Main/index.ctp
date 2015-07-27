@@ -279,7 +279,7 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     width: 50%;
     text-align: center;
     line-height: 3rem;
-    font-size: 101%;
+    font-size: 90%;
     color: #333;
     border-top: 1px solid #ddd;
     padding-top: 20px;
@@ -300,7 +300,7 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
   position: absolute;
     right: 20px;
     width: 320px;
-    font-size: 83%;
+    font-size: 120%;
     top: 235px;
     text-align: center;
     padding: 39px;
