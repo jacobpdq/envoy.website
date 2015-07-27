@@ -249,6 +249,71 @@
   </div>
   </section>
 
+<?php 
+    echo $this->Html->css('jquery.smartModal');
+    echo $this->Html->script('jquery.smartModal.min');
+ ?>
+
+<div class="smartmodal smartmodal-modal" id="triggerID" style="position: fixed;
+    z-index: 999999;
+    padding: 1em;
+    border-radius: 0;
+    background: top right no-repeat url(../img/overlay.jpg);
+    color: #000;
+    width: 984px;
+    margin-left: -33px;
+    top: 220px !important;
+    height: 418px;
+    padding: 47px;"><h2 style="
+    width: 49%;
+    text-align: center;
+">We've recently updated our login procedure and website.</h2>
+
+<p style="
+    width: 50%;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 101%;
+    color: #333;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
+
+<p style="
+    font-style: italic;
+    font-size: 90%;
+    width: 50%;
+    text-align: center;
+">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
+
+<p style="
+    position: absolute;
+    right: 0px;
+    width: 440px;
+    font-size: 110%;
+    top: 260px;
+    text-align: center;
+    background: #8ac34a;
+    padding: 39px;
+    /* border-radius: 20px; */
+    color: white;
+    /* font-style: italic; */
+    /* font-weight: bold; */
+">Please click on Register if you have never logged into any of these sites.</p>
+</div>
+
+<style type="text/css">
+  
+    .smartmodal-overlay {
+
+  background:rgba(255,255,255,0.3) !important;
+  border-radius:0 !important;
+
+    }
+
+</style>
 
 <script type="text/javascript" language="javascript">
         $(".iframe-link").fancybox({
