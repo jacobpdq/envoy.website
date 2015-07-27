@@ -280,7 +280,7 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     box-sizing:border-box;
     text-align: center;
     line-height: 3rem;
-    font-size: 75%;
+    font-size: 80%;
     color: #333;
     border-top: 1px solid #ddd;
     padding-top: 20px;
@@ -295,9 +295,8 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     font-size: 70%;
     width: 50%;
     text-align: center;
-    
     font-weight: bold;
-    font-size: 144%;">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
+    font-size: 100%;">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
 
 <p style="
   position: absolute;
