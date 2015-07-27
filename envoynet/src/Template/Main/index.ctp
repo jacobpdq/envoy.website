@@ -254,16 +254,17 @@
     echo $this->Html->script('jquery.smartModal.min');
  ?>
 
-<div class="smartmodal smartmodal-modal" id="triggerID" style="position: fixed;
+<div class="smartmodal auto" style="position: static !important;
     z-index: 999999;
     padding: 1em;
     border-radius: 0;
     background: top right no-repeat url(../img/overlay.jpg);
     color: #000;
-    width: 984px;
-    margin-left: -33px;
+    width: 984px !important;
+    margin:0 auto;
+    left:0px !important;
     top: 220px !important;
-    height: 418px;
+    height: 418px !important;
     padding: 47px;"><h2 style="
     width: 49%;
     text-align: center;
@@ -330,7 +331,7 @@
 $(document).ready(function() {
 
     $.smartModal();
-  
+
 	$('#LoginDataDigits1, #LoginDataDigits2, #LoginDataDigits3').autotab_magic().autotab_filter('numeric');
 })
 
