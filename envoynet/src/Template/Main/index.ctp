@@ -257,18 +257,16 @@
 <div class="smartmodal auto" style="    z-index: 999999;
     border-radius: 0px;
     color: rgb(0, 0, 0);
-    margin: 0 auto !important;
     padding: 47px;
     position: absolute;
+    top: 191px !important;
+    display: block;
+    margin: 0px auto 0px;
     width: 984px !important;
     left: 50% !important;
-    top: 192px;
     height: 418px !important;
-    display: block;
-    background: url(../img/overlay.jpg) 100% 0% no-repeat;
-    margin-left: -486px !important;"><h2 style="
-    width: 49%;
-    text-align: center;
+    background: url(http://travelweekpro.ca/img/overlay.jpg) 100% 0% no-repeat;
+    margin-left: -483px !important;
 ">We've recently updated our login procedure and website.</h2>
 
 <p style="
@@ -288,7 +286,7 @@
     font-size: 90%;
     width: 50%;
     text-align: center;
-">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
+">Please click on Register if you have never logged into any of these sites.</p>
 
 <p style="
     position: absolute;
@@ -297,13 +295,12 @@
     font-size: 110%;
     top: 260px;
     text-align: center;
-    background: #8ac34a;
     padding: 39px;
     /* border-radius: 20px; */
     color: white;
     /* font-style: italic; */
     /* font-weight: bold; */
-">Please click on Register if you have never logged into any of these sites.</p>
+">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
 </div>
 
 <style type="text/css">
