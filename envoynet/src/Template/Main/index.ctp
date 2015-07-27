@@ -252,9 +252,10 @@
 <?php 
     echo $this->Html->css('jquery.smartModal');
     echo $this->Html->script('jquery.smartModal.min');
+      echo $this->Html->script('jquery.cookie');
  ?>
 
-<div class="smartmodal auto" style="    z-index: 999999;
+<div class="smartmodal auto once" style="    z-index: 999999;
     border-radius: 0px;
     color: rgb(0, 0, 0);
     padding: 47px;
@@ -268,7 +269,11 @@
     background: url(http://travelweekpro.ca/img/overlay.jpg) 100% 0% no-repeat;
     margin-left: -483px !important;
     cursor:pointer;
-"><h2 style="width:50%;text-align:center;">We've recently updated our login procedure and website.</h2>
+">
+<a href="#" style="display:block;width:100%;position:fixed;
+left:0:top:0;height:100%;z-index:10000;" class="close"></a>
+
+<h2 style="width:50%;text-align:center;">We've recently updated our login procedure and website.</h2>
 
 <p style="
     width: 50%;
@@ -321,6 +326,13 @@
     width: 984px !important;
     left: 50% !important;
   }
+
+
+  @media screen and (max-width: 959px){
+    .smartmodal, .smartmodal-overlay {
+      display:none !important;
+    }
+}
 
 </style>
 
