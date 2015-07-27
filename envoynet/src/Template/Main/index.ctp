@@ -271,7 +271,7 @@
     cursor:pointer;
 ">
 <a href="#" style="display:block;width:100%;position:fixed;
-left:0:top:0;height:100%;z-index:10000;" class="close"></a>
+left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
 
 <h2 style="width:50%;text-align:center;">We've recently updated our login procedure and website.</h2>
 
