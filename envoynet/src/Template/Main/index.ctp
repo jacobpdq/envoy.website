@@ -255,7 +255,7 @@
       echo $this->Html->script('jquery.cookie');
  ?>
 
-<div class="smartmodal auto once" style="    z-index: 999999;
+<div class="smartmodal auto" style="    z-index: 999999;
     border-radius: 0px;
     color: rgb(0, 0, 0);
     padding: 47px;
@@ -285,15 +285,16 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     padding-top: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
+     color: #3C5991;
+">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
 
 <p style="font-style: italic;
     font-size: 90%;
     width: 50%;
     text-align: center;
-    color: rgb(119,177,54);
+    
     font-weight: bold;
-    font-size: 144%;">Please click on Register if you have never logged into any of these sites.</p>
+    font-size: 144%;">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
 
 <p style="
   position: absolute;
@@ -303,13 +304,14 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     top: 235px;
     text-align: center;
     padding: 39px;
+    color: rgb(119,177,54);
     /* border-radius: 20px; */
-    color: #3C5991;
+   
     /* font-style: italic; */
     /* font-weight: bold; */
     line-height: 180%;
     /* font-weight: bold; */
-">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
+">Please click on Register if you have never logged into any of these sites.</p>
 </div>
 
 <style type="text/css">
