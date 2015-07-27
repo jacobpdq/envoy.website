@@ -267,7 +267,8 @@
     height: 418px !important;
     background: url(http://travelweekpro.ca/img/overlay.jpg) 100% 0% no-repeat;
     margin-left: -483px !important;
-"><h2>We've recently updated our login procedure and website.</h2>
+    cursor:pointer;
+"><h2 style="width:50%;text-align:center;">We've recently updated our login procedure and website.</h2>
 
 <p style="
     width: 50%;
@@ -281,24 +282,27 @@
     padding-bottom: 20px;
 ">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
 
-<p style="
-    font-style: italic;
+<p style="font-style: italic;
     font-size: 90%;
     width: 50%;
     text-align: center;
-">Please click on Register if you have never logged into any of these sites.</p>
+    color: rgb(119,177,54);
+    font-weight: bold;
+    font-size: 144%;">Please click on Register if you have never logged into any of these sites.</p>
 
 <p style="
-    position: absolute;
-    right: 0px;
-    width: 440px;
-    font-size: 110%;
-    top: 260px;
+  position: absolute;
+    right: 20px;
+    width: 320px;
+    font-size: 83%;
+    top: 235px;
     text-align: center;
     padding: 39px;
     /* border-radius: 20px; */
-    color: white;
+    color: #3C5991;
     /* font-style: italic; */
+    /* font-weight: bold; */
+    line-height: 180%;
     /* font-weight: bold; */
 ">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
 </div>
