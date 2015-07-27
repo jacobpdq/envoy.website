@@ -254,18 +254,19 @@
     echo $this->Html->script('jquery.smartModal.min');
  ?>
 
-<div class="smartmodal auto" style="position: static !important;
-    z-index: 999999;
-    padding: 1em;
-    border-radius: 0;
-    background: top right no-repeat url(../img/overlay.jpg);
-    color: #000;
+<div class="smartmodal auto" style="    z-index: 999999;
+    border-radius: 0px;
+    color: rgb(0, 0, 0);
+    margin: 0 auto !important;
+    padding: 47px;
+    position: absolute;
     width: 984px !important;
-    margin:0 auto;
-    left:0px !important;
-    top: 220px !important;
+    left: 50% !important;
+    top: 192px;
     height: 418px !important;
-    padding: 47px;"><h2 style="
+    display: block;
+    background: url(../img/overlay.jpg) 100% 0% no-repeat;
+    margin-left: -486px !important;"><h2 style="
     width: 49%;
     text-align: center;
 ">We've recently updated our login procedure and website.</h2>
