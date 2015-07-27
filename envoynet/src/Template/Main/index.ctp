@@ -277,14 +277,17 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
 
 <p style="
     width: 50%;
+    box-sizing:border-box;
     text-align: center;
     line-height: 3rem;
-    font-size: 85%;
+    font-size: 75%;
     color: #333;
     border-top: 1px solid #ddd;
     padding-top: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+    padding-left:10px;
+    padding-right:10px;
      color: #3C5991;
 ">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
 
