@@ -338,7 +338,9 @@
 <script type="text/javascript" >
 $(document).ready(function() {
 
-    $.smartModal();
+    $.smartModal({
+      clickClose:true
+    });
 
 	$('#LoginDataDigits1, #LoginDataDigits2, #LoginDataDigits3').autotab_magic().autotab_filter('numeric');
 })
