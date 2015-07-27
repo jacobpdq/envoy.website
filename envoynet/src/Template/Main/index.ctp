@@ -267,7 +267,7 @@
     height: 418px !important;
     background: url(http://travelweekpro.ca/img/overlay.jpg) 100% 0% no-repeat;
     margin-left: -483px !important;
-">We've recently updated our login procedure and website.</h2>
+"><h2>We've recently updated our login procedure and website.</h2>
 
 <p style="
     width: 50%;
