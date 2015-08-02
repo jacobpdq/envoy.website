@@ -15,14 +15,10 @@
 
     "sass": "node-sass -rwq src/sass/style.scss dist/css/style.css",
     
-    "prejs": "make clean...js",
-    "js": "cp src/js/main.js dist/js/main.js",
 
     "predev": "make clean && make scaffold",
-  	"dev": "npm run sass & npm run js",
+  	"dev": "npm run sass",
     "postdev": "npm run watch:js",
-
-    "watch:js": "watch 'npm run js' src/js",
     "watch:css": "watch 'npm run css' dist/css"
   }
 }

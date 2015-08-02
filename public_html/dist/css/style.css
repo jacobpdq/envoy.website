@@ -134,6 +134,9 @@ button:hover {
   #footer p {
     opacity: 0.5; }
 
+#top-header .tabs {
+  top: 0px !important; }
+
 .tabs {
   position: relative;
   top: -20px;
