@@ -90,3 +90,38 @@
 [23-Jun-2015 20:51:40 America/New_York] PHP Fatal error:  Call to undefined function App\Controller\Agent\sso_form_profile() in /home/twtestsite/envoynet/src/Controller/Agent/AgentsController.php on line 176
 [23-Jun-2015 21:01:32 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/twtestsite/envoynet/src/Controller/Agent/AgentsController.php on line 184
 [23-Jun-2015 21:01:55 America/New_York] PHP Fatal error:  Cannot pass parameter 4 by reference in /home/twtestsite/envoynet/src/Controller/Agent/AgentsController.php on line 184
+[28-Jul-2015 11:00:19 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:00:19 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:00:19 America/New_York] PHP Warning:  include(): Failed opening 'Cake/bootstrap.php' for inclusion (include_path='/home/lib:.:/usr/lib/php:/usr/local/lib/php') in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:00:19 America/New_York] PHP Fatal error:  CakePHP core could not be found. Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/test.php. It should point to the directory containing your /cake core directory and your /vendors root directory. in /home/envoynet/public_html/test.php on line 99
+[28-Jul-2015 11:17:46 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:17:46 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:17:46 America/New_York] PHP Warning:  include(): Failed opening 'Cake/bootstrap.php' for inclusion (include_path='/home/lib:.:/usr/lib/php:/usr/local/lib/php') in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:17:46 America/New_York] PHP Fatal error:  CakePHP core could not be found. Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/test.php. It should point to the directory containing your /cake core directory and your /vendors root directory. in /home/envoynet/public_html/test.php on line 99
+[28-Jul-2015 11:21:37 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:21:37 America/New_York] PHP Warning:  include(Cake/bootstrap.php): failed to open stream: No such file or directory in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:21:37 America/New_York] PHP Warning:  include(): Failed opening 'Cake/bootstrap.php' for inclusion (include_path='/home/lib:.:/usr/lib/php:/usr/local/lib/php') in /home/envoynet/public_html/test.php on line 90
+[28-Jul-2015 11:21:37 America/New_York] PHP Fatal error:  CakePHP core could not be found. Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/test.php. It should point to the directory containing your /cake core directory and your /vendors root directory. in /home/envoynet/public_html/test.php on line 99
+[30-Jul-2015 17:02:56 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 00:45:42 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 06:42:48 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 11:20:22 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 11:46:58 America/New_York] PHP Parse error:  syntax error, unexpected ';' in /home/envoynet/envoynet/src/Controller/Agent/MainController.php on line 127
+[31-Jul-2015 12:57:07 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 14:16:48 America/New_York] PHP Parse error:  syntax error, unexpected 'company' (T_STRING) in /home/envoynet/envoynet/src/Controller/Agent/AgentsController.php on line 183
+[31-Jul-2015 14:16:57 America/New_York] PHP Parse error:  syntax error, unexpected 'company' (T_STRING) in /home/envoynet/envoynet/src/Controller/Agent/AgentsController.php on line 183
+[31-Jul-2015 18:10:46 America/New_York] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/envoynet/envoynet/src/Controller/Agent/AgentsController.php on line 225
+[31-Jul-2015 19:30:03 America/New_York] PHP Parse error:  syntax error, unexpected ''Northwest_Territories'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/envoynet/envoynet/src/Controller/MainController.php on line 192
+[31-Jul-2015 19:30:14 America/New_York] PHP Parse error:  syntax error, unexpected '=', expecting ']' in /home/envoynet/envoynet/src/Controller/MainController.php on line 192
+[31-Jul-2015 20:20:57 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[31-Jul-2015 20:34:39 America/New_York] PHP Fatal error:  Call to undefined method App\Model\Entity\Agent::count() in /home/envoynet/envoynet/src/Controller/MainController.php on line 221
+[31-Jul-2015 20:51:40 America/New_York] PHP Fatal error:  Call to a member function findByEmail() on a non-object in /home/envoynet/envoynet/src/Controller/Agent/PasswordController.php on line 96
+[31-Jul-2015 20:53:33 America/New_York] PHP Fatal error:  Call to a member function count() on a non-object in /home/envoynet/envoynet/src/Controller/Agent/PasswordController.php on line 99
+[31-Jul-2015 21:15:45 America/New_York] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/envoynet/envoynet/src/Controller/AppController.php on line 228
+[31-Jul-2015 21:15:47 America/New_York] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/envoynet/envoynet/src/Controller/AppController.php on line 228
+[01-Aug-2015 00:37:25 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[01-Aug-2015 06:25:52 America/New_York] PHP Fatal error:  Call to a member function get() on a non-object in /home/envoynet/envoynet/src/Controller/Agent/MainController.php on line 97
+[01-Aug-2015 06:28:30 America/New_York] PHP Fatal error:  Call to a member function get() on a non-object in /home/envoynet/envoynet/src/Controller/Agent/MainController.php on line 97
+[01-Aug-2015 10:03:59 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[01-Aug-2015 20:50:05 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26
+[01-Aug-2015 23:14:33 America/New_York] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/envoynet/envoynet/src/Controller/Supplier/PasswordController.php on line 26

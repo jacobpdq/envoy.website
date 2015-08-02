@@ -8,8 +8,8 @@ return array (
     'base' => false,
     'dir' => 'src',
     'webroot' => 'public_html',
-    'wwwRoot' => '/home/twtestsite/public_html/',
-    'fullBaseUrl' => 'http://en.dev',
+    'wwwRoot' => '/home/envoynet/public_html/',
+    'fullBaseUrl' => 'http://envoynetworks.ca',
     'imageBaseUrl' => 'img/',
     'cssBaseUrl' => 'css/',
     'jsBaseUrl' => 'js/',
@@ -17,15 +17,15 @@ return array (
     array (
       'plugins' => 
       array (
-        0 => '/home/twtestsite/envoynet/plugins/',
+        0 => '/home/envoynet/envoynet/plugins/',
       ),
       'templates' => 
       array (
-        0 => '/home/twtestsite/envoynet/src/Template/',
+        0 => '/home/envoynet/envoynet/src/Template/',
       ),
       'locales' => 
       array (
-        0 => '/home/twtestsite/envoynet/src/Locale/',
+        0 => '/home/envoynet/envoynet/src/Locale/',
       ),
     ),
   ),
@@ -55,8 +55,8 @@ return array (
   ),
   'plugins' => 
   array (
-    'Bake' => '/home/twtestsite/envoynet/vendor/cakephp/bake/',
-    'DebugKit' => '/home/twtestsite/envoynet/vendor/cakephp/debug_kit/',
-    'Migrations' => '/home/twtestsite/envoynet/vendor/cakephp/migrations/',
+    'Bake' => '/home/envoynet/envoynet/vendor/cakephp/bake/',
+    'DebugKit' => '/home/envoynet/envoynet/vendor/cakephp/debug_kit/',
+    'Migrations' => '/home/envoynet/envoynet/vendor/cakephp/migrations/',
   ),
 );

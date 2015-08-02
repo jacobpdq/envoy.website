@@ -91,8 +91,19 @@ class PasswordController extends AppController
 
 		              $from = Configure::read('hippo.system_email');
 		              $subject = "Passport Password Reset";
-		              $this->log("password reset to " . $randomString . ' for ' . $this->request->data['email']);
+		              
 		              $this->_sendEmail($this->request->data['email'], $from, $subject, $message);      
+
+$this->loadModel('Agents');
+		              $user = $this->Agents->findByEmail($this->request->data['email']);
+
+		              if ($user->count()) {
+   			      $user = $user->first();
+		              	$user->password = MD5($randomString);
+
+		              	$this->Agents->save($user);
+		              }
+
 		            }
 		        }
 

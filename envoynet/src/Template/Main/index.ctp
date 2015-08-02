@@ -266,7 +266,7 @@
     width: 984px !important;
     left: 50% !important;
     height: 418px !important;
-    background: url(http://travelweekpro.ca/img/overlay.jpg) 100% 0% no-repeat;
+    background: url(http://envoynetworks.ca/img/overlay.jpg) 100% 0% no-repeat;
     margin-left: -483px !important;
     cursor:pointer;
 ">

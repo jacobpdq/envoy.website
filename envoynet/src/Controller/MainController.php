@@ -172,7 +172,7 @@ class MainController extends AppController {
         if ($user_id) {
           $user =  $userModel->findById($user_id);
         } else {
-          $user =  $userModel->findByUsername($user_parts[1]);
+          $user =  $userModel->findByEmail($user_parts[0]);
         }
 
         $provinceAbbreviations = [
@@ -188,7 +188,8 @@ class MainController extends AppController {
           'prince edward isalnd' => 'PE', 
           'quebec' => 'QC',
           'saskatchewan' => 'SK',
-          'yukon territory' => 'YT'
+          'yukon territory' => 'YT',
+          'northwest_territories' => 'NW'
         ];
 
         //provide empty string for required values missing from passport profile
@@ -204,6 +205,16 @@ class MainController extends AppController {
         }
         if (!isset($user_info['phone_no'])) {
           $user_info['phone_no'] = '';
+        }
+
+
+        if (!isset($user_info['province'])) {
+          $user_info['province'] = '';
+          $user_prov = '';
+        } elseif (strlen($user_info['province']) > 4) {
+          $user_prov = $provinceAbbreviations[strtolower($user_info['province'])];
+        } else {
+          $user_prov = $user_info['province'];
         }
 
         if ($user->count() > 0) {
@@ -230,7 +241,7 @@ class MainController extends AppController {
               }
               $user->company = $user_info['company'];
               $user->phonenumber = $user_info['phone_no'];
-              $user->province = $provinceAbbreviations[strtolower($user_info['province'])];
+              $user->province = $user_prov;
               $user->postalcode = $user_info['postal_code'];
               $user->city = $user_info['city'];
               $user->address = $user_info['street'] . ' ' . $user_info['streetName'];
@@ -272,7 +283,7 @@ class MainController extends AppController {
                   'phonenumber' => $user_info['phone_no'],
                   'postalcode' => $user_info['postal_code'],
                   'city' => $user_info['city'],
-                  'province' => $provinceAbbreviations[strtolower($user_info['province'])],
+                  'province' => $user_prov,
                   'country' => 'CA',
                   'address' => $user_info['street'] . ' ' . $user_info['streetName'],
                   'address2' => $user_info['unitApt'] . ' ' . $user_info['unitType'],
@@ -282,6 +293,8 @@ class MainController extends AppController {
 
             if ($ssoSession) {
               $user['password'] = $ssoSession->password;
+              $this->request->data['username'] = $ssoSession->email;
+              $this->request->data['password'] = $ssoSession->password;
             }
 
             //create user
@@ -311,6 +324,10 @@ class MainController extends AppController {
         //set flag to indicate that this is a certain type of user
         $user['role'] = $userType;
 
+
+
+        $this->Auth->identify();
+
         //store user profile in session
         $this->Auth->setUser($user);
         
@@ -330,7 +347,7 @@ class MainController extends AppController {
           $ssoSession = $this->SsoSessions->save($ssoSession);
         }
 
-        return $this->redirect($this->Auth->redirectUrl());
+        $this->redirect($this->Auth->redirectUrl());
     }
   }
 
