@@ -25,7 +25,7 @@ class MainController extends \App\Controller\MainController {
 
     parent::beforeFilter($event);
     $this->Auth->deny('index');
-    $this->Auth->allowedActions = array('forgot', 'send', 'login','register');
+    $this->Auth->allowedActions = array('forgot', 'send', 'login','register','sso_login');
   
   }
 
@@ -75,7 +75,6 @@ class MainController extends \App\Controller\MainController {
     
       $login_key = hash('ripemd160', $username . date("YmdHis") );
       $referer = Router::url('/', true) . $this->request->url;
-
       //store sso info  for later verification
       $ssoSession->login_key = $login_key;
       $ssoSession->u = $username;
@@ -94,6 +93,9 @@ class MainController extends \App\Controller\MainController {
       }
 
       //'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . $broker_key . '/?referer=' . $referer 
+      $http = new Client();
+      $response = $http->get( 'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . Configure::read('hippo.sso_broker_key') . '/?referer=' . $referer );
+
       $this->redirect( 'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . Configure::read('hippo.sso_broker_key') . '/?referer=' . $referer );
     } else if (!empty($this->request->data['digits1'])) {
 

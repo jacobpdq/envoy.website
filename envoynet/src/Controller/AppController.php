@@ -233,6 +233,36 @@ class AppController extends Controller {
     $this->_setUIVariables();
 
     //add check for prefix and redirect if type of user in incorrect
+/*
+    $broker_key = Configure::read('hippo.sso_broker_key');
+    $user_email = '';
+    $user = $this->Auth->user();
+    if($user && $user['role'] == 'agent'){
+        $user_email = $user['email'];
+        $agentname = $user['company'];
+
+        if ($agentname == '') {
+          $agentname = $user['firstname'] . ' ' . $user['lastname'];
+        }
+        $this->set('agentname',$agentname);
+    }
+
+    if( $broker_key && $this->request->params['action'] != 'sso-login' && $this->request->params['action'] != 'sso_profile'){
+        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key . '">';
+
+        if ($user_email != '' ) {$sso_session_check .= '/' . $user_email;}
+        $sso_session_check .= '</script>';
+    } else {
+      $sso_session_check = '';
+    }
+
+    $this->set('sso_session_check', $sso_session_check);
+*/
+  }
+
+  public function beforeRender(Event $event) {
+    
+    //add check for prefix and redirect if type of user in incorrect
 
     $broker_key = Configure::read('hippo.sso_broker_key');
     $user_email = '';
@@ -247,8 +277,11 @@ class AppController extends Controller {
         $this->set('agentname',$agentname);
     }
 
-    if( $broker_key && $this->request->params['action'] != 'sso-login'){
-        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key . '/' . $user_email . '/?ver=4.2.2"></script>';
+    if( $broker_key  && $this->request->params['action'] != 'sso_profile'){
+        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key;
+
+        if ($user_email != '' ) {$sso_session_check .= '/' . $user_email;}
+        $sso_session_check .= '"></script>';
     } else {
       $sso_session_check = '';
     }
@@ -334,10 +367,6 @@ class AppController extends Controller {
     $mail->Subject = $subject;
     $mail->MsgHTML($message);
 
-    $this->log('TestResults.Email.To.' . $to .  " sent");
-    $this->log('TestResults.Email.To.' . $to.'Msg ' .  $message);
-    $this->log('TestResults.Email.To.' . $to.'Sender ' .  $from);
-    $this->log('TestResults.Email.To.' . $to.'Sender ' . $to);
     if ($mail->Send()) {
       
     }

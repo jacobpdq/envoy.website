@@ -135,7 +135,7 @@ class AgentsController extends \App\Controller\AgentsController {
     if (substr($broker_url,0,3) != 'www') {
       $broker_url = 'www.' . $broker_url;
     }
-
+    $user_email = '';
     if( isset( $this->request->query['sid'] )){
       //check if this if any errors or messages are present from previous submssions.
       $response = $http->post(
@@ -157,6 +157,112 @@ class AgentsController extends \App\Controller\AgentsController {
           $this->Flash->set($content['_saved']);
         }
       }
+      $response = $http->post(
+          'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
+          [
+              'action'=>'user_session',
+              'session'=>$this->request->query['sid'],
+          ]
+      );
+
+    
+
+      if( $response->body() ){ 
+        $user = $this->Agents->findById($this->Auth->user('id'))->first();
+
+        $user_parts = explode("|",$response->body());
+        $user_email = $user_parts[0];
+        $provinceAbbreviations = [
+          'alberta'=>'AB',
+          'british columbia' => 'BC',
+          'manitoba' => 'MB', 
+          'new brunswick' => 'NB',
+          'newfoundland' => 'NL',
+          'north west territories' => 'NT',
+          'nova scotia' => 'NS', 
+          'nunavut' => 'NU', 
+          'ontario' => 'ON', 
+          'prince edward isalnd' => 'PE', 
+          'quebec' => 'QC',
+          'saskatchewan' => 'SK',
+          'yukon territory' => 'YT'
+        ];
+        if (substr($broker_url,0,7) == 'http://') {
+            $broker_url = substr($broker_url,7);
+        } else if (substr($broker_url,0,8) == 'https://') {
+            $broker_url = substr($broker_url,8);
+        }
+
+        if (substr($broker_url,-1) == '/') {
+            $broker_url = substr($broker_url,0,strlen($broker_url)-1);
+        }
+
+        if (substr($broker_url,0,3) != 'www') {
+          $broker_url = 'www.' . $broker_url;
+        }
+
+        $params = [
+                'action'=>'user_profile',
+                'broker_url' => $broker_url,
+                'broker_key' => Configure::read('hippo.sso_broker_key'),
+                'email' => $user_parts[0]
+            
+            ] ;
+        $response = $http->post(
+            'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
+            $params
+
+        );
+        $user_info = get_object_vars(json_decode($response->body()));
+
+        if (!isset($user_info['city'])) {
+          $user_info['city'] = '';
+        }
+        if (!isset($user_info['company'])) {
+          $user_info['company'] = '';
+        }
+        if (!isset($user_info['postal_code'])) {
+          $user_info['postal_code'] = '';
+        }
+        if (!isset($user_info['phone_no'])) {
+          $user_info['phone_no'] = '';
+        }
+
+
+        if (!isset($user_info['province'])) {
+          $user_info['province'] = '';
+          $user_prov = '';
+        } elseif (strlen($user_info['province']) > 4) {
+          $user_prov = $provinceAbbreviations[strtolower($user_info['province'])];
+        } else {
+          $user_prov = $user_info['province'];
+        }
+
+              $user->username = $user_parts[1];
+              $user->email = $user_parts[0];
+              $user->firstname = $user_parts[2];
+              $user->lastname = $user_parts[3];
+              if ($ssoSession) {
+                $user->password = $ssoSession->password;
+              }
+              $user->company = $user_info['company'];
+              $user->phonenumber = $user_info['phone_no'];
+              $user->province = $user_prov;
+              $user->postalcode = $user_info['postal_code'];
+              $user->city = $user_info['city'];
+              $user->address = $user_info['street'] . ' ' . $user_info['streetName'];
+              $user->address2 = $user_info['unitApt'] . ' ' . $user_info['unitType'];
+$user=$this->Agents->save($user)->toArray();
+$sessionUser = $this->Auth->user();
+foreach(array_keys($user) as $key) {
+$sessionUser[$key] = $user[$key];
+}
+$this->Auth->setUser($sessionUser);
+      }
+
+    } else {
+      $user_email = $this->Auth->user('email');
+
     }
 
     /*
@@ -187,7 +293,7 @@ class AgentsController extends \App\Controller\AgentsController {
       'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
       [
         'action'=> 'user_profile',
-        'email' => $this->Auth->user('email'),
+        'email' => $user_email,
         'broker_key' => $broker_key,
         'broker_url' => $broker_url
       ]

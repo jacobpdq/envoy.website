@@ -2,6 +2,8 @@
 .bash_profile
 .bashrc
 bin/*
+_backup/*
+img/*
 .contactemail
 .cpanel/
 cpbackup-exclude.conf

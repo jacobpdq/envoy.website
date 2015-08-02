@@ -76,7 +76,7 @@
       
       <header id="main-header" class="section__content " >
       
-      <a href="<?php echo $this->Url->build(array('controller' => 'Main', 'action' => 'index')); ?>">
+      <a href="/">
       <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
       </a>
           
