@@ -953,7 +953,7 @@ SECOND SECTION
              padding: 0;
              margin: 0;
              height:100%;
-             position:fixed;
+             position:fixed !important;
           }
           .menu a {
              display: block;
