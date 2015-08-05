@@ -612,13 +612,16 @@ SECOND SECTION
     -moz-transition: transform 0.4s;
     -ms-transition: transform 0.4s; }
   input[type=checkbox]:checked ~ .content {
-    transform: translate3d(-250px, 0, 0); }
+    transform: translate3d(-250px, 0, 0);
+    -webkit-transform: translate3d(-250px, 0, 0); }
   input[type=checkbox]:checked ~ .slide-menu {
-    transform: translate3d(0, 0, 0); }
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0); }
   input[type=checkbox]:checked ~ .slide-menu .menu li {
     width: 100%; }
   #main-header .menu {
     transform: translate3d(250px, 0, 0);
+    -webkit-transform: translate3d(250px, 0, 0);
     position: absolute;
     width: 250px;
     padding-top: 62px;

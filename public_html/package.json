@@ -1,23 +1,20 @@
 {
   "name": "base",
   "devDependencies": {
-    "node-sass": "latest",
-    "jshint": "latest",
-    "uglify": "latest",
+    "autoprefixer": "^5.2.0",
     "imagemin-newer": "latest",
+    "jshint": "latest",
+    "node-sass": "latest",
+    "uglify": "latest",
     "watch": "latest"
   },
   "scripts": {
-
     "preimg": "make clean...img",
     "img": "npm run img:minify",
     "img:minify": "imagemin-newer src/images dist/img",
-
     "sass": "node-sass -rwq src/sass/style.scss dist/css/style.css",
-    
-
     "predev": "make clean && make scaffold",
-  	"dev": "npm run sass",
+    "dev": "npm run sass",
     "postdev": "npm run watch:js",
     "watch:css": "watch 'npm run css' dist/css"
   }
