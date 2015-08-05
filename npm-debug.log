@@ -1,18 +1,17 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'dev' ]
-2 info using npm@2.7.4
-3 info using node@v0.12.2
-4 verbose stack Error: ENOENT, open '/Users/jacob/Work/GRO001 - GrowthEngineMedia/ENV001 - EnvoyNetworks.ca/website/deploy/package.json'
-4 verbose stack     at Error (native)
-5 verbose cwd /Users/jacob/Work/GRO001 - GrowthEngineMedia/ENV001 - EnvoyNetworks.ca/website/deploy
-6 error Darwin 14.1.1
-7 error argv "node" "/usr/local/bin/npm" "run" "dev"
-8 error node v0.12.2
-9 error npm  v2.7.4
-10 error path /Users/jacob/Work/GRO001 - GrowthEngineMedia/ENV001 - EnvoyNetworks.ca/website/deploy/package.json
+1 verbose cli [ 'node', '/Users/jacob/.npm-packages/bin/npm', 'run', 'dev' ]
+2 info using npm@2.13.2
+3 info using node@v0.10.33
+4 verbose stack Error: ENOENT, open '/Users/jacob/Work/ENV001/website/package.json'
+5 verbose cwd /Users/jacob/Work/ENV001/website
+6 error Darwin 12.2.0
+7 error argv "node" "/Users/jacob/.npm-packages/bin/npm" "run" "dev"
+8 error node v0.10.33
+9 error npm  v2.13.2
+10 error path /Users/jacob/Work/ENV001/website/package.json
 11 error code ENOENT
-12 error errno -2
-13 error enoent ENOENT, open '/Users/jacob/Work/GRO001 - GrowthEngineMedia/ENV001 - EnvoyNetworks.ca/website/deploy/package.json'
+12 error errno 34
+13 error enoent ENOENT, open '/Users/jacob/Work/ENV001/website/package.json'
 13 error enoent This is most likely not a problem with npm itself
 13 error enoent and is related to npm not being able to find a file.
-14 verbose exit [ -2, true ]
+14 verbose exit [ 34, true ]

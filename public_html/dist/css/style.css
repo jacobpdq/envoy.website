@@ -643,7 +643,9 @@ SECOND SECTION
   .menu {
     list-style: none;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    height: 100%;
+    position: fixed; }
   .menu a {
     display: block;
     text-decoration: none;
