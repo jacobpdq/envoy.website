@@ -51,8 +51,6 @@
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
-                        <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
-
                          <?php echo $this->Form->end(); ?>
 
                        </div> 
@@ -155,8 +153,6 @@
 
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
 
-                       <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'supplier')); ?>"><?php echo __('Forgot Password'); ?></a>
-
                          <?php echo $this->Form->end(); ?>
 
                        </div> 
@@ -226,7 +222,7 @@
 
  <section class="" id="partners">
 <div class="section__content">
- <h3 class="blue-text"><?php echo __('Our Partners') ?></h3>
+ <h3 class="blue-text"><?php echo __('Some of Our Partners') ?></h3>
  </div>
  <div class="section__images section__content">
     <?php echo $this->Html->image('assets/partners/usa.png');?>

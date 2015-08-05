@@ -2112,6 +2112,12 @@ table.index2 td {
     color: #657AA8 !important;
     letter-spacing: 1px;
 }
+
+body.fr .tabs__content a.registerAccount {
+    right: 180px !important;
+}
+
+
 .tabs.mobile [type=radio]:checked ~ label {
     text-decoration:none !important;
 }
@@ -2135,5 +2141,8 @@ iframe[name="google_conversion_frame"] {
 
 .Form_holder_style2 {
   height:auto !important;
+}
+#fancybox-title {
+  margin-left: 20px;
 }
 
