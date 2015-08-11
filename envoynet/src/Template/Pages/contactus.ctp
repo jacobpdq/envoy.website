@@ -20,9 +20,6 @@ M5A 2Y8<br />
 </div>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.7205602074096!2d-79.36391830000001!3d43.653981900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb392e27233b%3A0xcb61a4ce9579adc1!2s122+Parliament+St%2C+Toronto%2C+ON+M5A+2Y9!5e0!3m2!1sen!2sca!4v1436212551786" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2879.0472074104932!2d-79.116093!3d43.8133802!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1439320849632" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
 <div class="address">
 <h3>Eastern Canada Warehouse</h3>
 <h5>
@@ -35,7 +32,7 @@ L1W 3J9<br />
 <a href="mailto:eastwarehouse@envoynetworks.ca">eastwarehouse@envoynetworks.ca</a>
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2879.0472074104932!2d-79.116093!3d43.8133802!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1439320849632" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11516.224022480941!2d-79.1163951!3d43.8131977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb36149d8bcea3c7a!2s1800+Ironstone+Manor!5e0!3m2!1sen!2sca!4v1439322106252" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="address">
 <h3>Western Canada Warehouse</h3>
