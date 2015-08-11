@@ -32,7 +32,7 @@ L1W 3J9<br />
 <a href="mailto:eastwarehouse@envoynetworks.ca">eastwarehouse@envoynetworks.ca</a>
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11516.224022480941!2d-79.1163951!3d43.8131977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb36149d8bcea3c7a!2s1800+Ironstone+Manor!5e0!3m2!1sen!2sca!4v1439322106252" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.0472074104932!2d-79.11609299999996!3d43.8133802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d94e1d58758f%3A0xb36149d8bcea3c7a!2s1800+Ironstone+Manor%2C+Pickering%2C+ON+L1W+3W9%2C+Canada!5e0!3m2!1sen!2sca!4v1439322228285" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="address">
 <h3>Western Canada Warehouse</h3>
