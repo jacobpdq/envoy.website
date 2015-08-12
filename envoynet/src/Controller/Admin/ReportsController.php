@@ -165,7 +165,7 @@ class ReportsController extends \App\Controller\ReportsController {
       );
 
       // Add headers to start of data array
-      array_unshift($data, $headers);
+  //    array_unshift($data, $headers);
   	    $obj['id'] = 'Web'.'-'.$rawData['id'];
           $obj['shipping_firstname'] = $rawData['shipping_firstname'].' '.$rawData['shipping_lastname'];
           $obj['shipping_company'] = $rawData['shipping_company'];
