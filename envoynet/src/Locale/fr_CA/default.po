@@ -436,3 +436,6 @@ msgstr "Est du Canada Entrepôt"
 
 msgid "Western Canada Warehouse"
 msgstr "Ouest du Canada Entrepôt"
+
+msgid "Register"
+msgstr "Inscription"
