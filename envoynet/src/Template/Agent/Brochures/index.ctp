@@ -149,7 +149,7 @@
   <div id="product_date_holder1">
          <?php if(!empty($brochure->ebrochure)):   ?>
  
-           <?php echo $this->Form->create('Ebrochureorder', array('url'=>array('controller'=>'Ebrochureorders','action'=>'index','prefix' => 'agent'),'id'=>'EbrochureorderAgentIndexForm'));?>
+           <?php echo $this->Form->create('Ebrochureorder', array('target'=>'_blank','url'=>array('controller'=>'Ebrochureorders','action'=>'index','prefix' => 'agent'),'id'=>'EbrochureorderAgentIndexForm'));?>
           <?php echo $this->Form->input('brochure_id',array('div'=>false,'value'=>$brochure->id,'label'=>false,'type'=>'hidden'));?> 
     <?php echo $this->Form->input('supplierid',array('div'=>false,'value'=>$brochure->supplier_id,'label'=>false,'type'=>'hidden'));?>
     <?php echo $this->Form->input('brochname',array('div'=>false,'value'=>$brochure->name,'label'=>false,'type'=>'hidden'));?>
