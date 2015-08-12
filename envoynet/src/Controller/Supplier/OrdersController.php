@@ -232,7 +232,7 @@ class OrdersController extends \App\Controller\OrdersController {
 
           $brochure = $this->Brochures->findById($item['brochure_id'])->first();
           
-          if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
+   //       if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
             if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
               
               $orderItem = $this->Orders->OrderItems->newEntity($item);
@@ -255,10 +255,10 @@ class OrdersController extends \App\Controller\OrdersController {
               $this->Flash->set('Order could not be placed. Not enough units in stock.');
               return $this->redirect($this->referer());
             }
-          } else {
-            $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
-            return $this->redirect($this->referer());
-          }
+     //     } else {
+      //      $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
+       //     return $this->redirect($this->referer());
+       //   }
         }
       }
       //$processedOrder->OrderItems = $orderItems;
