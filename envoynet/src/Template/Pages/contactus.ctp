@@ -6,10 +6,10 @@
 	})
 </script>
 
-<h1>Contact Us</h1>
+<h1><?php echo __('Contact Us'); ?></h1>
 
 <div class="address">
-<h3>Corporate Office</h3>
+<h3><?php echo __('Corporate Office'); ?></h3>
 <h5>
 122 Parliament Street <br />
 Toronto, Ontario <br />
@@ -21,7 +21,7 @@ M5A 2Y8<br />
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.7205602074096!2d-79.36391830000001!3d43.653981900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb392e27233b%3A0xcb61a4ce9579adc1!2s122+Parliament+St%2C+Toronto%2C+ON+M5A+2Y9!5e0!3m2!1sen!2sca!4v1436212551786" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="address">
-<h3>Eastern Canada Warehouse</h3>
+<h3><?php echo __('Eastern Canada Warehouse'); ?></h3>
 <h5>
 1800 Ironstone Manor <br />
 Loading Dock 7 <br />
@@ -35,7 +35,7 @@ L1W 3J9<br />
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.0472074104932!2d-79.11609299999996!3d43.8133802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d94e1d58758f%3A0xb36149d8bcea3c7a!2s1800+Ironstone+Manor%2C+Pickering%2C+ON+L1W+3W9%2C+Canada!5e0!3m2!1sen!2sca!4v1439322228285" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="address">
-<h3>Western Canada Warehouse</h3>
+<h3><?php echo __('Western Canada Warehouse'); ?></h3>
 <h5>
 155 – 6260 Graybar Rd <br />
 Richmond, BC <br />

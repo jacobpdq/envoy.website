@@ -424,3 +424,15 @@ msgstr "Est du Canada"
 
 msgid "Western Canada"
 msgstr "Ouest du Canada"
+
+msgid "Corporate Office"
+msgstr "Siège social"
+
+msgid "CONTACT US"
+msgstr "NOUS JOINDRE"
+
+msgid "Eastern Canada Warehouse"
+msgstr "Est du Canada Entrepôt"
+
+msgid "Western Canada Warehouse"
+msgstr "Ouest du Canada Entrepôt"
