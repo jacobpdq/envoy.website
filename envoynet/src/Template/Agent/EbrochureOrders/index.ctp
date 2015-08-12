@@ -35,7 +35,7 @@
             <div class="User_Name_Form_Holder" class="Base_txt">E-mail: </div>
             <?php echo $this->Form->input('email', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
-        <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn"></button></div>
+        <div id="profile_submit_Holder"><button ref="submit" type="submit" id="Submit_btn">Submit</button></div>
       <?php echo $this->Form->end(); ?>    
   </div> 
 
