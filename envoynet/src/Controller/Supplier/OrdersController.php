@@ -240,10 +240,10 @@ class OrdersController extends \App\Controller\OrdersController {
               $orderItem->brochure_name = $brochure['name'];
               $orderItem->ontario = $brochure['ontario'];
 
-            	if ($brochure['poa'] == '1') {  //set item initial status - no need to get poa (supplier order approval from supplier orders)
+            	if ($brochure['poa'] == '1') {  //set item initial status to 1 - no need to get poa (supplier order approval from supplier orders)
                 $orderItem->status = '1';
               } else {
-                $orderItem->status = '0';
+                $orderItem->status = '1';
               }
 
               // to avoid DB changes hard coding default for now
