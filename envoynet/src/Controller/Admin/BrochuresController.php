@@ -31,10 +31,10 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
 
   public function view2($id = null) {
-    //   if (!$id) {
-    //    $this->Flash->set(__('Invalid brochure'));
-    //     $this->redirect(array('action' => 'index'));
-    //    }
+       if (!$id) {
+        $this->Flash->set(__('Invalid brochure'));
+         $this->redirect(array('action' => 'index'));
+        }
 
     $skufind = $this->Brochures->find('all', array(
       'conditions' => array(
