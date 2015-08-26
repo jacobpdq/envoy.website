@@ -265,6 +265,7 @@
     background: url(http://envoynetworks.ca/img/overlay.jpg) 100% 0% no-repeat;
     margin-left: -483px !important;
     cursor:pointer;
+    border: medium solid black;
 ">
 <a href="#" style="display:block;width:100%;position:fixed;
 left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
