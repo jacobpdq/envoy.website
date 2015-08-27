@@ -153,20 +153,21 @@ button:hover {
     text-align: center;
     font-size: 1.7rem; }
     .tabs__tabItem label {
-      letter-spacing: 1px;
-      font-weight: bolder;
-      background: #e8e9e7;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-top-right-radius: 3px;
-      border-top-left-radius: 3px;
-      margin-left: -1px;
-      position: relative;
-      left: 1px;
-      left: 6px;
-      text-transform: uppercase;
-      color: #3c5791;
-      z-index: 3; }
+	letter-spacing: 1px;
+	font-weight: normal;
+	background: #e8e9e7;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	margin-left: -1px;
+	position: relative;
+	left: 1px;
+	left: 6px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	z-index: 3;
+}
       .tabs__tabItem label:hover {
         cursor: pointer; }
     .tabs__tabItem [type=radio] {
@@ -233,7 +234,9 @@ button:hover {
     display: block; }
   .tabs [type=radio]:checked ~ label {
     background: #f5f6f6;
-    z-index: 2; }
+    z-index: 2;
+	font-weight: bolder;
+	color: rgb(60, 87, 145); }
   .tabs [type=radio]:checked ~ label ~ .content {
     z-index: 1; }
 
