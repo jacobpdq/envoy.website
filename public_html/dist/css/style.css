@@ -154,7 +154,7 @@ button:hover {
     font-size: 1.7rem; }
     .tabs__tabItem label {
 	letter-spacing: 1px;
-	font-weight: normal;
+	font-weight: bolder;
 	background: #e8e9e7;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -169,7 +169,8 @@ button:hover {
 	z-index: 3;
 }
       .tabs__tabItem label:hover {
-        cursor: pointer; }
+        cursor: pointer;
+		color: #3C5791; }
     .tabs__tabItem [type=radio] {
       display: none; }
   .tabs [type=radio]:checked ~ label {
