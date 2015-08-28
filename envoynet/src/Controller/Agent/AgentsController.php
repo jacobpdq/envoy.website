@@ -884,7 +884,7 @@ $this->Auth->setUser($sessionUser);
 'Washington'=>'Washington',
 'West Virginia'=>'West Virginia',
 'Wisconsin'=>'Wisconsin',
-'Wyoming'=>'Wyoming'.
+'Wyoming'=>'Wyoming'
     );
   
     // Antonio  
