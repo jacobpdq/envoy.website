@@ -764,6 +764,7 @@ $this->Auth->setUser($sessionUser);
       'Advantage_Travel_TCOMM'=>'Advantage Travel TCOMM',
       'Algonquin_Travel'=>'Algonquin Travel (or Algonquin/Voyages Funtastique)',
       'American_Express'=>'American Express',
+	  'Atrium_Group'=>'Atrium Group',
       'BTI_Travel'=>'BTI Travel',
       'CAA'=>'CAA',
       'Carlson_Wagonlit'=>'Carlson Wagonlit',
