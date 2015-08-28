@@ -834,7 +834,7 @@ $this->Auth->setUser($sessionUser);
     'Prince Edward Island'=>'Prince Edward Island',
     'Quebec'=>'Quebec',
     'Saskatchewan'=>'Saskatchewan',
-    'Yukon Territory'=>'Yukon Territory'.
+    'Yukon Territory'=>'Yukon Territory',
 	'Alabama'=>'Alabama',
 'Alaska'=>'Alaska',
 'Arizona'=>'Arizona',
@@ -884,7 +884,7 @@ $this->Auth->setUser($sessionUser);
 'Washington'=>'Washington',
 'West Virginia'=>'West Virginia',
 'Wisconsin'=>'Wisconsin',
-'Wyoming'=>'Wyoming'
+'Wyoming'=>'Wyoming'.
     );
   
     // Antonio  
