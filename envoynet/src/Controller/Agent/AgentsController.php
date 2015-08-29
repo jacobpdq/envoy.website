@@ -215,7 +215,6 @@ class AgentsController extends \App\Controller\AgentsController {
 		  'montana'=>'MT',
 		  'nebraska'=>'NE',
 		  'nevada'=>'NV'
-
         ];
         if (substr($broker_url,0,7) == 'http://') {
             $broker_url = substr($broker_url,7);
