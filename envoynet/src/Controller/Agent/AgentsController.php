@@ -185,8 +185,7 @@ class AgentsController extends \App\Controller\AgentsController {
           'prince edward isalnd' => 'PE', 
           'quebec' => 'QC',
           'saskatchewan' => 'SK',
-          'yukon territory' => 'YT',
-		  'alabama'=>'AL'
+          'yukon territory' => 'YT'
         ];
         if (substr($broker_url,0,7) == 'http://') {
             $broker_url = substr($broker_url,7);
