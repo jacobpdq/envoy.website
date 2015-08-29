@@ -187,7 +187,13 @@ class AgentsController extends \App\Controller\AgentsController {
           'saskatchewan' => 'SK',
           'yukon territory' => 'YT',
 		  'alabama' => 'AL',
-		  'alaska' => 'AK'
+		  'alaska' => 'AK',
+		  'arizona'=>'AZ',
+		  'arkansas'=>'AR',
+		  'california'=>'CA',
+		  'colorado'=>'CO',
+		  'connecticut'=>'CT',
+		  'delaware'=>'DE'
 
         ];
         if (substr($broker_url,0,7) == 'http://') {
