@@ -214,7 +214,28 @@ class AgentsController extends \App\Controller\AgentsController {
 		  'missouri'=>'MO',
 		  'montana'=>'MT',
 		  'nebraska'=>'NE',
-		  'nevada'=>'NV'
+		  'nevada'=>'NV',
+		  'new hampshire'=>'NH',
+		  'new jersey'=>'NJ',
+		  'new mexico'=>'NM',
+		  'new york'=>'NY',
+		  'north carolina'=>'NC',
+		  'north dakota'=>'ND',
+		  'ohio'=>'OH',
+		  'oklahoma'=>'OK',
+		  'oregon'=>'OR',
+		  'pennsylvania'=>'PA',
+		  'rhode island'=>'RI','south carolina'=>'SC',
+		  'south dakota'=>'SD',
+		  'tennessee'=>'TN',
+		  'texas'=>'TX',
+		  'utah'=>'UT',
+		  'vermont'=>'VT',
+		  'virginia'=>'VA',
+		  'washington'=>'WA',
+		  'west virginia'=>'WV',
+		  'wisconsin'=>'WI',
+		  'wyoming'=>'WY'
         ];
         if (substr($broker_url,0,7) == 'http://') {
             $broker_url = substr($broker_url,7);
