@@ -193,7 +193,28 @@ class AgentsController extends \App\Controller\AgentsController {
 		  'california'=>'CA',
 		  'colorado'=>'CO',
 		  'connecticut'=>'CT',
-		  'delaware'=>'DE'
+		  'delaware'=>'DE',
+		  'district of columbia'=>'DC',
+		  'florida'=>'FL',
+		  'georgia'=>'GA',
+		  'hawaii'=>'HI',
+		  'idaho'=>'ID',
+		  'illinois'=>'IL',
+		  'indiana'=>'IN',
+		  'iowa'=>'IA',
+		  'kansas'=>'KS',
+		  'kentucky'=>'KY',
+		  'louisiana'=>'LA',
+		  'maine'=>'ME',
+		  'maryland'=>'MD',
+		  'massachusetts'=>'MA',
+		  'michigan'=>'MI',
+		  'minnesota'=>'MN',
+		  'mississippi'=>'MS',
+		  'missouri'=>'MO',
+		  'montana'=>'MT',
+		  'nebraska'=>'NE',
+		  'nevada'=>'NV'
 
         ];
         if (substr($broker_url,0,7) == 'http://') {
@@ -852,6 +873,7 @@ $this->Auth->setUser($sessionUser);
 'Colorado'=>'Colorado',
 'Connecticut'=>'Connecticut',
 'Delaware'=>'Delaware',
+'District of Columbia'=>'District of Columbia',
 'Florida'=>'Florida',
 'Georgia'=>'Georgia',
 'Hawaii'=>'Hawaii',
