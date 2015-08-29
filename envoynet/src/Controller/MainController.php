@@ -189,7 +189,8 @@ class MainController extends AppController {
           'quebec' => 'QC',
           'saskatchewan' => 'SK',
           'yukon territory' => 'YT',
-          'northwest_territories' => 'NW'
+          'northwest_territories' => 'NW',
+		  'alabama' => 'AL'
         ];
 
         //provide empty string for required values missing from passport profile
