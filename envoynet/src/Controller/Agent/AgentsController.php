@@ -194,7 +194,7 @@ class AgentsController extends \App\Controller\AgentsController {
 'colorado'=>'CO',
 'connecticut'=>'CT',
 'delaware'=>'DE',
-'district of columbia'=>'DC',
+'district of Columbia'=>'DC',
 'florida'=>'FL',
 'georgia'=>'GA',
 'hawaii'=>'HI',
