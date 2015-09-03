@@ -531,3 +531,81 @@ msgstr "(dans le champ ci-dessous)"
 
 msgid "I agree to the terms as detailed in the privacy policy "
 msgstr "J'accepte les conditions telles que détaillées dans la politique de confidentialité"
+
+msgid "Preferred email"
+msgstr "Courriel privilégié"
+
+msgid "Confirm email"
+msgstr "Confirmer le courriel"
+
+msgid "Preferred username & password"
+msgstr "Nom d'utilisateur et mot de passe privilégiés"
+
+msgid "Username can only consist of letters, numbers, spaces, hyphens and underscores."
+msgstr "Le nom d'utilisateur ne peut être composé que de lettres, chiffres, espaces, traits d'union et traits de soulignement."
+
+msgid "Confirm password"
+msgstr "Confirmer le mot de passe"
+
+msgid "Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like"
+msgstr "Astuce: le mot de passe devrait contenir au moins huit (8) caractères. Pour le renforcer, utilisez des lettres majuscules et minuscules, des chiffres et des symboles, tels que"
+	
+msgid "Professional Information"
+msgstr "Information professionnelle"
+
+msgid "Job function"
+msgstr "Fonction"
+
+msgid "Travel Group"
+msgstr "Groupe de voyage"
+
+msgid "owner"
+msgstr "propriétaire"
+
+msgid "manager"
+msgstr "directeur (directrice)"
+
+msgid "leisure consultant"
+msgstr "consultant en loisirs"
+
+msgid "corporate consultant"
+msgstr "conseiller en entreprise"
+
+msgid "administration"
+msgstr "administration"
+
+msgid "other"
+msgstr "autre"
+
+msgid "Travel Group"
+msgstr "Groupe de voyage"
+
+msgid "Business Type"
+msgstr "Type d'entreprise"
+
+msgid "association, federation, club, society , group tour organizer"	
+msgstr "association, fédération, club, société, organisateur de voyages de groupes"
+
+msgid "Travel Agent"
+msgstr "Agent de voyages"
+
+msgid "Tour Operator"
+msgstr "Voyagiste"
+
+msgid "Tourist board or office , Chamber of commerce, embassy"
+msgstr "Bureau ou office de tourisme, Chambre de commerce, ambassade"
+
+msgid "Travel department in commercial firm"
+msgstr "Département de voyages dans une firme commerciale"
+
+msgid "Library, Newspaper, public relations firm"
+msgstr "Bibliothèque, journal, firme de relations publiques"
+
+msgid "Student travel counselor"
+msgstr "Étudiant (étudiante) en conseils de voyages"
+
+msgid "Hotel, Resort"
+msgstr "Hôtel, complexe touristique"
+
+msgid "Carrier/Transportation"
+msgstr "Transporteur/entreprise de transport"
