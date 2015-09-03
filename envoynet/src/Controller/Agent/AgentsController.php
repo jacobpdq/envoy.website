@@ -477,14 +477,14 @@ $this->Auth->setUser($sessionUser);
         <?php } ?>
         
         <fieldset>
-          <legend>Personal Information</legend>
+          <legend><?php echo __('Personal Information') ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for="">First Name <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('First Name') ?><span class="sso_required_icon">*</span></label>
               <input type="text" name="first_name" value="<?php echo $data['first_name']; ?>" id="first_name">
             </div>
             <div class="fieldHalf">
-              <label for="">Last Name <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Last Name') ?><span class="sso_required_icon">*</span></label>
               <input type="text" name="last_name" value="<?php echo $data['last_name']; ?>" id="last_name">
             </div>
             <div style="clear:both;"></div>
@@ -494,25 +494,25 @@ $this->Auth->setUser($sessionUser);
         <fieldset>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for="">Username <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
               <input type="text" name="username" value="<?php echo $data['username']; ?>" id="username">
             </div>
             <div class="fieldHalf">
-            <div class="disclaimer"><br>Username can only consist of letters, numbers, spaces, hyphens and underscores.</div></div>
+            <div class="disclaimer"><br><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.') ?></div></div>
             <div style="clear:both;"></div>
           </div>
           
         </fieldset>
         
         <fieldset>
-          <legend>Preferred Email</legend>
+          <legend><?php echo __('Preferred Email') ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for="">Email <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Email') ?> <span class="sso_required_icon">*</span></label>
               <input type="email" name="email" value="<?php echo $data['email']; ?>" id="email">
             </div>
             <div class="fieldHalf">
-              <label for="">Confirm Email <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Confirm Email') ?> <span class="sso_required_icon">*</span></label>
               <input type="email" name="email_confirm" value="<?php echo $data['email']; ?>" id="email_confirm">
             </div>
             <div style="clear:both;"></div>
@@ -520,18 +520,18 @@ $this->Auth->setUser($sessionUser);
         </fieldset>
         
         <fieldset>
-          <legend>Password</legend>
+          <legend><?php echo __('Password') ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for="">Password</label>
+              <label for=""><?php echo __('Password') ?></label>
               <input autocomplete="off" type="password" name="password" value="" id="password">
             </div>
             <div class="fieldHalf">
-              <label for="">Confirm Password</label>
+              <label for=""><?php echo __('Confirm Password') ?></label>
               <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
             </div>
             <div style="clear:both;"></div>
-            <div class="disclaimer">Leave these fields blank if you do not wish to change your password.<br/>Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ & ).</div>
+            <div class="disclaimer"><?php echo __('Leave these fields blank if you do not wish to change your password.<br/>Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>
           </div>
         </fieldset>
         
@@ -886,7 +886,7 @@ $this->Auth->setUser($sessionUser);
     'Saskatchewan'=>'Saskatchewan',
     'Yukon Territory'=>'Yukon Territory',
 	'Alabama'=>'Alabama',
-'Alaska'=>'Alaska',
+	'Alaska'=>'Alaska',
 'Arizona'=>'Arizona',
 'Arkansas'=>'Arkansas',
 'California'=>'California',
