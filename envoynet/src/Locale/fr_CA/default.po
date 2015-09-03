@@ -514,8 +514,8 @@ msgstr "Province/État"
 msgid "Phone"
 msgstr "Téléphone"
 
-msgid "Webiste ( www.domain.com )"
-msgstr "Site Web ( www.domain.com )"
+msgid "Webiste (www.domain.com)"
+msgstr "Site Web (www.domain.com)"
 	
 msgid "Verify human, agree to terms of use and submit registration form"
 msgstr "Test de reconnaissance humaine; j'accepte les conditions d'utilisation et je soumets le formulaire d'inscription"
@@ -553,7 +553,7 @@ msgstr "Astuce: le mot de passe devrait contenir au moins huit (8) caractères. 
 msgid "Professional Information"
 msgstr "Information professionnelle"
 
-msgid "Job function"
+msgid "Job Function"
 msgstr "Fonction"
 
 msgid "Travel Group"
