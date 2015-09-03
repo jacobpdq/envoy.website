@@ -34,7 +34,7 @@
             <strong class="base_txt_14"><?php echo __('Use of Personal Information'); ?></strong> <br>
           </span>
           <span class="base_txt"><?php echo __('Envoy Network Inc may use the personal information collected in the following ways:'); ?><br></span>
-          <<span class="base_txt"><?php echo __('• To process and store the information provided so that we are able to better understand your needs and how we can improve our services;'); ?><br></span>
+          <span class="base_txt"><?php echo __('• To process and store the information provided so that we are able to better understand your needs and how we can improve our services;'); ?><br></span>
           <span class="base_txt"><?php echo __('• To contact you.'); ?><br>
             <br>
             </span>
@@ -42,28 +42,16 @@
             <span class="base_txt"><?php echo __('Unless you have indicated that you do not  wish to receive e-mails, if you have provided us with your e-mail address, from time to time Envoy Network Inc may send you e-mail with information that we  believe would be of interest to you. If you do not wish to receive any e-mails you can notify Envoy Network Inc at any time of your preference.'); ?><br>
             <br>
           </span>
-          <span class="base_txt"> Envoy Network Inc may use a reputable third  party to deliver e-mail. Such third party is under a contractual requirement to  keep all personal information confidential and to only use any personal  information for the sole purpose of sending you e-mail on behalf of Envoy Network Inc and to return any personal information once their services are  completed.<br>
+          <span class="base_txt"><?php echo __('Envoy Network Inc may use a reputable third  party to deliver e-mail. Such third party is under a contractual requirement to  keep all personal information confidential and to only use any personal  information for the sole purpose of sending you e-mail on behalf of Envoy Network Inc and to return any personal information once their services are  completed.'); ?><br>
             <br></span>
-            <strong class="base_txt_14">Cookies</strong> <br>
-            We will be using a feature on your Internet  browser called "cookies",
-            which are files that your Internet browser  puts on your hard drive. We
-            will use cookies to help us provide you  with a better experience when
-            you visit this web site. It will let us know that  you are a prior
-            visitor and it will help us retrieve information that you may  have
-            previously provided to us. Your Internet browser should allow you to
-            erase cookies from your hard drive, block all cookies or receive a
-            warning  before a cookie is stored.<br>
+            <strong class="base_txt_14"><?php echo __('Cookies'); ?></strong> <br>
+            <?php echo __('We will be using a feature on your Internet  browser called "cookies", which are files that your Internet browser  puts on your hard drive. We will use cookies to help us provide you  with a better experience when you visit this web site. It will let us know that  you are a prior visitor and it will help us retrieve information that you may  have previously provided to us. Your Internet browser should allow you to erase cookies from your hard drive, block all cookies or receive a warning  before a cookie is stored.'); ?><br>
             <br>
-            <strong class="base_txt_14">Your Consent</strong> <br>
-            Your use of this web site constitutes your  consent to the collection by </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> of your information as described  in this Privacy Policy.<br>
+            <strong class="base_txt_14"><?php echo __('Your Consent'); ?></strong> <br>
+            <?php echo __('Your use of this web site constitutes your consent to the collection by Envoy Network Inc of your information as described in this Privacy Policy.'); ?><br>
             <br>
-          </span><strong class="privacy_text_headers">Contact</strong><span class="base_txt_11"><strong class="privacy_text_headers"><br>
-            </strong>If you wish to find out  what information we have about you,
-            ask a question about the information in  your file or request a change
-            to the information in your file, please write to: </span><span class="base_txt">Envoy Network Inc,
-            122 Parliament St
-            Toronto, ON  M5A 2Y8
-            Canada</span></span>'); ?>
+          </span><strong class="privacy_text_headers"><?php echo __('Contact'); ?></strong><br>
+            </strong><?php echo __('If you wish to find out  what information we have about you, ask a question about the information in  your file or request a change to the information in your file, please write to: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada'); ?>
 </p>
 </section>
 

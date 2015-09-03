@@ -659,17 +659,20 @@ msgstr "• Pour vous contacter. "
 msgid "Unless you have indicated that you do not  wish to receive e-mails, if you have provided us with your e-mail address, from time to time Envoy Network Inc may send you e-mail with information that we  believe would be of interest to you. If you do not wish to receive any e-mails you can notify Envoy Network Inc at any time of your preference."
 msgstr "À moins d'avoir indiqué que vous ne désirez pas recevoir de courriels, Envoy Network Inc peut vous envoyer, de temps à autre, à l'adresse électronique fournie, de l'information susceptible de vous intéresser. Si vous ne voulez plus de courriels, vous pouvez en aviser Envoy Network Inc  au moment qui vous conviendra. "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "Envoy Network Inc may use a reputable third  party to deliver e-mail. Such third party is under a contractual requirement to  keep all personal information confidential and to only use any personal  information for the sole purpose of sending you e-mail on behalf of Envoy Network Inc and to return any personal information once their services are  completed."
+msgstr "Envoy Network Inc peut recourir à un tiers renommé pour l'envoi de courriels. Ce tiers est soumis à une exigence contractuelle afin de garder toute l'information personnelle confidentielle, de ne l'utiliser que dans le seul but d'envoyer des courriels au nom d'Envoy Network Inc, et de retourner toute l'information personnelle une fois leurs services complétés.  "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "Cookies"
+msgstr "Les fichiers témoins (cookies)  "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "We will be using a feature on your Internet  browser called "cookies", which are files that your Internet browser  puts on your hard drive. We will use cookies to help us provide you  with a better experience when you visit this web site. It will let us know that  you are a prior visitor and it will help us retrieve information that you may  have previously provided to us. Your Internet browser should allow you to erase cookies from your hard drive, block all cookies or receive a warning  before a cookie is stored."
+msgstr "Nous utiliserons une caractéristique appelée « fichier témoin » (ou « cookies ») qui s'avère les dossiers mis sur votre lecteur de disque dur par votre logiciel de navigation Internet. Nous utiliserons ces fichiers témoins afin de vous offrir une meilleure expérience lorsque vous consulterez ce site Web. Cela nous fera savoir si vous en êtes à votre première visite ainsi qu’à récupérer l'information que vous nous aurez déjà fournie. Votre logiciel de navigation Internet devrait vous donner la possibilité d'effacer les fichiers témoins de votre disque dur, de tous les bloquer ou de recevoir un avertissement avant qu'ils ne soient stockés.  "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "Your Consent"
+msgstr "Votre consentement   "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "Your use of this web site constitutes your consent to the collection by Envoy Network Inc of your information as described in this Privacy Policy."
+msgstr "La consultation de ce site Web constitue votre consentement à la cueillette de vos renseignements par  Envoy Network Inc, tel que décrit dans la Politique de confidentialité.    "
+
+msgid "If you wish to find out  what information we have about you, ask a question about the information in  your file or request a change to the information in your file, please write to: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada"
+msgstr "Si vous voulez en savoir plus sur l'information que nous détenons sur vous, poser une question sur les renseignements que nous détenons dans votre dossier ou apporter une modification à ceux-ci, veuillez écrire: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada "
