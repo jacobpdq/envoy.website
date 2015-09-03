@@ -10,11 +10,7 @@
 
 <h2 class="tagline"><?php echo __('Privacy Policy'); ?>
 </h2>
-<p><?php echo __('This Privacy Policy outlines the information</span> <span class="base_txt">envoynetworks.ca </span><span class="base_txt_11">will
-            collect on this web site and how it will use that information. It will
-            also tell you who to contact about the personal information  which is
-            collected and what to do if you do not want your personal information
-            collected.<br>
+<p><span class="base_txt"><?php echo __('This Privacy Policy outlines the information Envoy Network Inc will collect on this web site and how it will use that information. It will also tell you who to contact about the personal information  which is collected and what to do if you do not want your personal information collected.'); ?><br>
             <br>
           </span><span class="base_txt">This web site is owned and operated by Envoy Network Inc.</span><span class="base_txt_11"><br>
             <br>
