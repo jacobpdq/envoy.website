@@ -628,7 +628,7 @@ $this->Auth->setUser($sessionUser);
       </fieldset>
       
       <fieldset>
-        <legend><?php echo __('Preferred Username') ?> &amp; <?php echo __('Password') ?></legend>
+        <legend><?php echo __('Preferred Username and Password') ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
             <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
@@ -752,7 +752,7 @@ $this->Auth->setUser($sessionUser);
       
     </fieldset>
     
-    <p><input type="submit" class="button dark" value="Register &rarr;"></p>
+    <p><input type="submit" class="button dark" value="<?php echo __('Register') ?>"></p>
     
     </form>
   
@@ -1060,7 +1060,7 @@ $this->Auth->setUser($sessionUser);
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="unitApt"><?php echo __('Unit/Apt/Suite/#') ?></label>
+          <label for="unitApt"><?php echo __('Unit/Apt/Suite') ?></label>
           <input type="text" name="unitApt" value="<?php sso_form_post('unitApt'); ?>" id="unitApt">
         </div>
         <div class="fieldHalf">

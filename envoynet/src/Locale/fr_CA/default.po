@@ -503,7 +503,7 @@ msgstr "Coordonnées de résidence"
 msgid "Street"
 msgstr "Rue"
 
-msgid "Unit/Apt/Suite#"
+msgid "Unit/Apt/Suite"
 msgstr "Numéro de bureau/appartement/suite"
 
 msgid "City"
@@ -542,7 +542,7 @@ msgstr "Courriel privilégié"
 msgid "Confirm Email"
 msgstr "Confirmer le courriel"
 
-msgid "Preferred username & password"
+msgid "Preferred Username and Password"
 msgstr "Nom d'utilisateur et mot de passe privilégiés"
 
 msgid "Username can only consist of letters, numbers, spaces, hyphens and underscores."
