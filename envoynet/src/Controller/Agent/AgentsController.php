@@ -572,6 +572,7 @@ $this->Auth->setUser($sessionUser);
       <?php if( $attr['tw_magazine'] ){  $travelweek_sub_type = sso_form_post('travelweek_sub_type'); ?>  
       <input type="hidden" name="subscription_dt" value="<?php echo date("Y-m-d H:i:s"); ?>" id="subscription_dt">
       <input type="hidden" name="renewal_dt" value="<?php echo date("Y-m-d H:i:s",strtotime("+ 2 years")); ?>" id="renewal_dt">
+      <br />
       <fieldset>
         <legend>Travelweek Subscription Type</legend>
         <div class="formGroup">
@@ -596,14 +597,14 @@ $this->Auth->setUser($sessionUser);
       <?php } ?>
       
       <fieldset>
-        <legend>Personal Information</legend>
+        <legend><?php echo __('Personal Information') ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for="">First Name <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('First Name') ?> <span class="sso_required_icon">*</span></label>
             <input type="text" name="first_name" value="<?php $this->request->data['first_name']; ?>" id="first_name">
           </div>
           <div class="fieldHalf">
-            <label for="">Last Name <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Last Name') ?> <span class="sso_required_icon">*</span></label>
             <input type="text" name="last_name" value="<?php $this->request->data['last_name']; ?>" id="last_name">
           </div>
           <div style="clear:both;"></div>
@@ -611,14 +612,14 @@ $this->Auth->setUser($sessionUser);
       </fieldset>
       
       <fieldset>
-        <legend>Preferred Email</legend>
+        <legend><?php echo __('Preferred Email') ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for="">Email <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Email') ?> <span class="sso_required_icon">*</span></label>
             <input type="email" name="email" value="<?php $this->request->data['email']; ?>" id="email">
           </div>
           <div class="fieldHalf">
-            <label for="">Confirm Email <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Confirm Email') ?> <span class="sso_required_icon">*</span></label>
             <input type="email" name="email_confirm" value="<?php $this->request->data['email_confirm']; ?>" id="email_confirm">
           </div>
           <div style="clear:both;"></div>
@@ -626,28 +627,28 @@ $this->Auth->setUser($sessionUser);
       </fieldset>
       
       <fieldset>
-        <legend>Preferred Username &amp; Password</legend>
+        <legend><?php echo __('Preferred Username') ?> &amp; <?php echo __('Password') ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for="">Username <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
             
             <input type="text" name="username" value="<?php $this->request->data['username']; ?>" id="username">
           </div>
-          <div class="fieldHalf disclaimer"><br/>Username can only consist of letters, numbers, spaces, hyphens and underscores.</div>
+          <div class="fieldHalf disclaimer"><br/><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.') ?></div>
           <div style="clear:both;"></div>
           
         </div>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for="">Password <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Password') ?> <span class="sso_required_icon">*</span></label>
             <input autocomplete="off" type="password" name="password" value="" id="password">
           </div>
           <div class="fieldHalf">
-            <label for="">Confirm Password <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Confirm Password') ?> <span class="sso_required_icon">*</span></label>
             <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
           </div>
           <div style="clear:both;"></div>
-          <div class="disclaimer">Hint: The password should be at least eight(8) characters long. To make it stronger, use upper and lower case letters, numbers and symbols like ! " ? $ % ^ & ).</div>  
+          <div class="disclaimer"><?php echo __('Hint: The password should be at least eight(8) characters long. To make it stronger, use upper and lower case letters, numbers and symbols like') ?> &nbsp; ! " ? $ % ^ & ).</div>  
         </div>
       </fieldset>
 
@@ -733,17 +734,17 @@ $this->Auth->setUser($sessionUser);
 
     ?>
     <fieldset>
-      <legend>Verify Human, agree to Terms of Use, and Submit Registration Form</legend>
+      <legend><?php echo __('Verify Human, agree to Terms of Use, and Submit Registration Form') ?></legend>
       <?php $number1 = rand(1,10); $number2 = rand(1,10); $answer = MD5($number1+$number2); ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="registration_question">Confirm that you are human</label>
-          <div class="disclaimer">Please enter the sum of <?php echo $number1 ?> + <?php echo $number2; ?> in the field below.</div>
+          <label for="registration_question"><?php echo __('Confirm that you are human') ?></label>
+          <div class="disclaimer"><?php echo __('Please enter the sum of') ?> <?php echo $number1 ?> + <?php echo $number2; ?> <?php echo __('in the field below.') ?></div>
           <input type="hidden" name="reg_nonce" value="<?php echo $answer; ?>" id="reg_nonce">
           <input type="text" name="registration_question" value="" id="registration_question">
         </div>
         <div class="fieldHalf">
-          <label><input type="checkbox" value="true" id="terms_agree" name="terms_agree" style="display:inline-block;width:auto;"> I agree to the terms as detailed in the <?php echo $sso_policy_page; ?></label>
+          <label><input type="checkbox" value="true" id="terms_agree" name="terms_agree" style="display:inline-block;width:auto;"> <?php echo __('I agree to the terms as detailed in the') ?> <?php echo $sso_policy_page; ?></label>
         </div>
         <div style="clear:both;"></div>
       </div>

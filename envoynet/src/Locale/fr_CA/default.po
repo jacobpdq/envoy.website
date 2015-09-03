@@ -612,3 +612,6 @@ msgstr "Transporteur/entreprise de transport"
 
 msgid "Update Profile"
 msgstr "Mettre à jour le profil"
+
+msgid "Agent Registration"
+msgstr "Inscription de l'agent"
