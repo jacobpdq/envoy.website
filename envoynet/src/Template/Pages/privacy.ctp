@@ -12,33 +12,29 @@
 </h2>
 <p><span class="base_txt"><?php echo __('This Privacy Policy outlines the information Envoy Network Inc will collect on this web site and how it will use that information. It will also tell you who to contact about the personal information  which is collected and what to do if you do not want your personal information collected.'); ?><br>
             <br>
-          </span><span class="base_txt">This web site is owned and operated by Envoy Network Inc.</span><span class="base_txt_11"><br>
+          </span>
+          <span class="base_txt"><?php echo __('This web site is owned and operated by Envoy Network Inc.'); ?></span><span class="base_txt_11"><br>
             <br>
-          </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">
-            agrees to respect and  observe the provisions set forth in Personal
-            Information Protection and  Electronic Documents Act (the "Act") and any
-            other relevant  legislation. To the extent there is additional
-            protection afforded to you  pursuant to the Act, and same is not set
-            forth herein,</span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> agrees  to take such measures to give full effect to such additional protection.<br>
+          </span>
+          <span class="base_txt"> <?php echo __('Envoy Network Inc agrees to respect and  observe the provisions set forth in Personal Information Protection and  Electronic Documents Act (the "Act") and any other relevant legislation. To the extent there is additional protection afforded to you  pursuant to the Act, and same is not set forth herein, Envoy Network Inc agrees to take such measures to give full effect to such additional protection.'); ?><br>
             <br>
-            <strong class="base_txt_14">Privacy</strong> <br>
-          </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">&nbsp; respects the privacy  of each individual with which it comes into contact, either as a client of</span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> or as a visitor to this web site.</span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">
-            will not  give, rent or sell any customer information or any
-            information about any  visitor to this web site to any organization or
-            individual.<br>
+            </span>
+            <strong class="base_txt_14"><?php echo __('Privacy'); ?></strong> <br>
+          </span>
+          <span class="base_txt"> <?php echo __('Envoy Network Inc respects the privacy  of each individual with which it comes into contact, either as a client of Envoy Network Inc or as a visitor to this web site.  Envoy Network Inc will not  give, rent or sell any customer information or any information about any visitor to this web site to any organization or individual.'); ?><br>
             <br>
-            <strong class="base_txt_14">Personal Information Collected</strong> <br>
-          </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">
-            will not collect any  personally identifiable information about you,
-            such as your name, address, telephone number or e-mail address, unless
-            you provide it to us.<br>
+            </span>
+            <strong class="base_txt_14"><?php echo __('Personal Information Collected'); ?></strong> <br>
+          </span><span class="base_txt"><?php echo __('Envoy Network Inc will not collect any personally identifiable information about you, such as your name, address, telephone number or e-mail address, unless you provide it to us.'); ?> <br>
             <br>
-            If you do not want your personal information  collected, do not provide
+            </span>
+            <span class="base_txt"><?php echo __('If you do not want your personal information  collected, do not provide
             it to us. If you have already submitted the  information and would like
             us to remove it from our records, or if you would  like to know what
             information is held in our records, please see the Contact section
-            below.<br>
+            below.'); ?>
             <br>
+            <br></span>
             <strong class="base_txt_14">Use of Personal Information</strong> <br>
           </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> may use the personal information collected in the following ways:<br>
             • To process and store the information provided so that we are able to

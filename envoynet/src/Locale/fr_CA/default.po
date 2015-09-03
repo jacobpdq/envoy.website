@@ -621,4 +621,47 @@ msgid "Agent Registration"
 msgstr "Inscription de l'agent"
 
 msgid "This Privacy Policy outlines the information Envoy Network Inc will collect on this web site and how it will use that information. It will also tell you who to contact about the personal information  which is collected and what to do if you do not want your personal information collected."
-msgstr "Cette Politique de confidentialité présente l'information qu/’Envoy Network Inc recueillera sur ce site Web et comment celle-ci sera utilisée. Elle vous indiquera aussi qui contacter au sujet des renseignements personnels obtenus et quoi faire si vous ne voulez pas qu'ils soient recueillis."
+msgstr "Cette Politique de confidentialité présente l'information qu’Envoy Network Inc recueillera sur ce site Web et comment celle-ci sera utilisée. Elle vous indiquera aussi qui contacter au sujet des renseignements personnels obtenus et quoi faire si vous ne voulez pas qu'ils soient recueillis."
+
+msgid "This web site is owned and operated by Envoy Network Inc."
+msgstr "Ce site Web appartient et est exploité par Envoy Network Inc.  "
+
+msgid "Envoy Network Inc agrees to respect and  observe the provisions set forth in Personal Information Protection and  Electronic Documents Act (the "Act") and any other relevant legislation. To the extent there is additional protection afforded to you  pursuant to the Act, and same is not set forth herein, Envoy Network Inc agrees to take such measures to give full effect to such additional protection."
+msgstr "Envoy Network Inc s'engage à respecter et à se conformer aux dispositions, telles qu'établies selon la Loi sur la protection des renseignements personnels et des documents électroniques (la « Loi »), et de toute autre législation applicable. Du moment où une protection supplémentaire vous est fournie en vertu de la Loi, et même celles non énoncées dans la présente, Envoy Network Inc s'engage à prendre les mesures nécessaires pour appliquer intégralement cette protection supplémentaire. "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Envoy Network Inc respects the privacy  of each individual with which it comes into contact, either as a client of Envoy Network Inc or as a visitor to this web site.  Envoy Network Inc will not  give, rent or sell any customer information or any information about any visitor to this web site to any organization or individual."
+msgstr "Envoy Network Inc  respecte la vie privée de chaque individu avec lequel il entre en contact, que ce soit en tant que client d'Envoy Network Inc, ou à titre de visiteur sur ce site Web. Envoy Network Inc ne donnera, louera ou vendra aucun renseignement de clients, ou toute autre information le concernant, à toute organisation ou individus. "
+
+msgid "Personal Information Collected"
+msgstr "L'information personnelle recueillie  "
+
+msgid "Envoy Network Inc will not collect any personally identifiable information about you, such as your name, address, telephone number or e-mail address, unless you provide it to us."
+msgstr "Envoy Network Inc ne recueillera aucune information permettant de vous identifier personnellement, comme votre nom, adresse, numéro de téléphone ou adresse courriel, à moins que vous ne nous la fournissiez.  "
+
+msgid "If you do not want your personal information  collected, do not provide
+            it to us. If you have already submitted the  information and would like
+            us to remove it from our records, or if you would  like to know what
+            information is held in our records, please see the Contact section
+            below."
+msgstr "Si vous ne voulez pas que votre information personnelle soit recueillie, simplement ne pas nous la transmettre. Si vous l'avez déjà soumise et aimeriez que nous la retirions de nos registres, ou encore si vous désireriez savoir quelle information est retenue dans nos bases de données, veuillez consulter la section Contact ci-dessous. "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Privacy"
+msgstr "Vie privée  "
+
+msgid "Privacy"
+msgstr "Vie privée  "
