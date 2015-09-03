@@ -1042,8 +1042,8 @@ $this->Auth->setUser($sessionUser);
           <label for="contact_info_type"><?php echo __('This is my') ?></label>
           <?php $contact_info_type = sso_form_post('contact_info_type','',false); ?>
           <select name="contact_info_type" id="contact_info_type">
-                <option value="business" <?php if ( $contact_info_type == 'business') echo 'selected="selected"'; ?> ><?php echo __('Business Contact Information' ?></option> 
-                <option value="residence" <?php if ( $contact_info_type == 'residence') echo 'selected="selected"'; ?> ><?php echo __('Residence Contact Information' ?></option>
+                <option value="business" <?php if ( $contact_info_type == 'business') echo 'selected="selected"'; ?> >Business Contact Information</option> 
+                <option value="residence" <?php if ( $contact_info_type == 'residence') echo 'selected="selected"'; ?> >Residence Contact Information</option>
             </select>
         </div>
         <div style="clear:both;"></div>
