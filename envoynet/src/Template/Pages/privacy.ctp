@@ -28,32 +28,22 @@
           </span><span class="base_txt"><?php echo __('Envoy Network Inc will not collect any personally identifiable information about you, such as your name, address, telephone number or e-mail address, unless you provide it to us.'); ?> <br>
             <br>
             </span>
-            <span class="base_txt"><?php echo __('If you do not want your personal information  collected, do not provide
-            it to us. If you have already submitted the  information and would like
-            us to remove it from our records, or if you would  like to know what
-            information is held in our records, please see the Contact section
-            below.'); ?>
+            <span class="base_txt"><?php echo __('If you do not want your personal information  collected, do not provide it to us. If you have already submitted the information and would like us to remove it from our records, or if you would  like to know what information is held in our records, please see the Contact section below.'); ?>
             <br>
             <br></span>
-            <strong class="base_txt_14">Use of Personal Information</strong> <br>
-          </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> may use the personal information collected in the following ways:<br>
-            • To process and store the information provided so that we are able to
-            better  understand your needs and how we can improve our services;<br>
-            • To contact you.<br>
+            <strong class="base_txt_14"><?php echo __('Use of Personal Information'); ?></strong> <br>
+          </span>
+          <span class="base_txt"><?php echo __('Envoy Network Inc may use the personal information collected in the following ways:'); ?><br></span>
+          <<span class="base_txt"><?php echo __('• To process and store the information provided so that we are able to better understand your needs and how we can improve our services;'); ?><br></span>
+          <span class="base_txt"><?php echo __('• To contact you.'); ?><br>
             <br>
-            <strong class="base_txt_14">E-mail</strong> <br>
-            Unless you have indicated that you do not  wish to receive e-mails, if
-            you have provided us with your e-mail address, from  time to time</span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">
-            may send you e-mail with information that we  believe would be of
-            interest to you. If you do not wish to receive any e-mails  you can
-            notify <span class="base_txt">Envoy Network Inc</span> at any time of your preference.<br>
+            </span>
+            <strong class="base_txt_14"><?php echo __('Email'); ?></strong> <br>
+            <span class="base_txt"><?php echo __('Unless you have indicated that you do not  wish to receive e-mails, if you have provided us with your e-mail address, from time to time Envoy Network Inc may send you e-mail with information that we  believe would be of interest to you. If you do not wish to receive any e-mails you can notify Envoy Network Inc at any time of your preference.'); ?><br>
             <br>
-          </span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11">
-            may use a reputable third  party to deliver e-mail. Such third party is
-            under a contractual requirement to  keep all personal information
-            confidential and to only use any personal  information for the sole
-            purpose of sending you e-mail on behalf of</span><span class="base_txt"> Envoy Network Inc</span><span class="base_txt_11"> and to return any personal information once their services are  completed.<br>
-            <br>
+          </span>
+          <span class="base_txt"> Envoy Network Inc may use a reputable third  party to deliver e-mail. Such third party is under a contractual requirement to  keep all personal information confidential and to only use any personal  information for the sole purpose of sending you e-mail on behalf of Envoy Network Inc and to return any personal information once their services are  completed.<br>
+            <br></span>
             <strong class="base_txt_14">Cookies</strong> <br>
             We will be using a feature on your Internet  browser called "cookies",
             which are files that your Internet browser  puts on your hard drive. We

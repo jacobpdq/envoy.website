@@ -641,15 +641,23 @@ msgstr "L'information personnelle recueillie  "
 msgid "Envoy Network Inc will not collect any personally identifiable information about you, such as your name, address, telephone number or e-mail address, unless you provide it to us."
 msgstr "Envoy Network Inc ne recueillera aucune information permettant de vous identifier personnellement, comme votre nom, adresse, numéro de téléphone ou adresse courriel, à moins que vous ne nous la fournissiez.  "
 
-msgid "If you do not want your personal information  collected, do not provide
-            it to us. If you have already submitted the  information and would like
-            us to remove it from our records, or if you would  like to know what
-            information is held in our records, please see the Contact section
-            below."
+msgid "If you do not want your personal information  collected, do not provide it to us. If you have already submitted the information and would like us to remove it from our records, or if you would  like to know what information is held in our records, please see the Contact section below."
 msgstr "Si vous ne voulez pas que votre information personnelle soit recueillie, simplement ne pas nous la transmettre. Si vous l'avez déjà soumise et aimeriez que nous la retirions de nos registres, ou encore si vous désireriez savoir quelle information est retenue dans nos bases de données, veuillez consulter la section Contact ci-dessous. "
 
-msgid "Privacy"
-msgstr "Vie privée  "
+msgid "Use of Personal Information"
+msgstr "L'utilisation de l'information personnelle  "
+
+msgid "Envoy Network Inc may use the personal information collected in the following ways:"
+msgstr "Envoy Network Inc peut utiliser l'information personnelle recueillie pour les raisons suivantes:  "
+
+msgid "• To process and store the information provided so that we are able to better understand your needs and how we can improve our services;"
+msgstr "• Pour traiter et stocker l'information transmise afin que nous soyons en mesure de mieux comprendre vos besoins et améliorer nos services; "
+
+msgid "• To contact you."
+msgstr "• Pour vous contacter. "
+
+msgid "Unless you have indicated that you do not  wish to receive e-mails, if you have provided us with your e-mail address, from time to time Envoy Network Inc may send you e-mail with information that we  believe would be of interest to you. If you do not wish to receive any e-mails you can notify Envoy Network Inc at any time of your preference."
+msgstr "À moins d'avoir indiqué que vous ne désirez pas recevoir de courriels, Envoy Network Inc peut vous envoyer, de temps à autre, à l'adresse électronique fournie, de l'information susceptible de vous intéresser. Si vous ne voulez plus de courriels, vous pouvez en aviser Envoy Network Inc  au moment qui vous conviendra. "
 
 msgid "Privacy"
 msgstr "Vie privée  "
