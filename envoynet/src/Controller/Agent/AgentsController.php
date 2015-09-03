@@ -595,7 +595,8 @@ $this->Auth->setUser($sessionUser);
         </div>
       </fieldset>
       <?php } ?>
-      
+      <br />
+      <br />
       <fieldset>
         <legend><?php echo __('Personal Information') ?></legend>
         <div class="formGroup">
@@ -648,7 +649,7 @@ $this->Auth->setUser($sessionUser);
             <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
           </div>
           <div style="clear:both;"></div>
-          <div class="disclaimer"><?php echo __('Hint: The password should be at least eight(8) characters long. To make it stronger, use upper and lower case letters, numbers and symbols like') ?> &nbsp; ! " ? $ % ^ & ).</div>  
+          <div class="disclaimer"><?php echo __('Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>  
         </div>
       </fieldset>
 

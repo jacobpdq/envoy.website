@@ -488,7 +488,7 @@ msgstr "Hôtel, complexe touristique"
 msgid "Carrier/Transportation"
 msgstr "Transporteur/entreprise de transport"
 	
-msgid "Contact information"
+msgid "Contact Information"
 msgstr "Coordonnées"
 
 msgid "This is my"
@@ -502,7 +502,8 @@ msgstr "Coordonnées de résidence"
 	
 msgid "Street"
 msgstr "Rue"
-msgid "Unit/Apt.Suite#"
+
+msgid "Unit/Apt/Suite#"
 msgstr "Numéro de bureau/appartement/suite"
 
 msgid "City"
@@ -517,7 +518,7 @@ msgstr "Téléphone"
 msgid "Website (www.domain.com)"
 msgstr "Site Web (www.domain.com)"
 	
-msgid "Verify human, agree to terms of use and submit registration form"
+msgid "Verify Human, agree to Terms of Use, and Submit Registration Form"
 msgstr "Test de reconnaissance humaine; j'accepte les conditions d'utilisation et je soumets le formulaire d'inscription"
 	
 msgid "Confirm that you are human"
@@ -529,13 +530,16 @@ msgstr "Veuillez entrer la somme de"
 msgid "(in the field below)"
 msgstr "(dans le champ ci-dessous)"
 
-msgid "I agree to the terms as detailed in the privacy policy "
-msgstr "J'accepte les conditions telles que détaillées dans la politique de confidentialité"
+msgid "I agree to the terms as detailed in the"
+msgstr "J'accepte les conditions telles que détaillées dans la"
+
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
 
 msgid "Preferred Email"
 msgstr "Courriel privilégié"
 
-msgid "Confirm email"
+msgid "Confirm Email"
 msgstr "Confirmer le courriel"
 
 msgid "Preferred username & password"
