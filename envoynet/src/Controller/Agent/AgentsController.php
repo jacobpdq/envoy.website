@@ -537,7 +537,7 @@ $this->Auth->setUser($sessionUser);
         
         <?php $this->sso_form_specific( $data, 'profile', $attr ); ?>
 
-        <p><input type="submit" class="button dark" value="Update Profile &rarr;"></p>
+        <p><input type="submit" class="button dark" value="<?php echo __('Update Profile') ?> &rarr;"></p>
         
       </form>
   

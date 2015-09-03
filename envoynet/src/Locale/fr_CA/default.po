@@ -609,3 +609,6 @@ msgstr "Hôtel, complexe touristique"
 
 msgid "Carrier/Transportation"
 msgstr "Transporteur/entreprise de transport"
+
+msgid "Update Profile"
+msgstr "Mettre à jour le profil"
