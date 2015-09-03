@@ -532,7 +532,7 @@ msgstr "(dans le champ ci-dessous)"
 msgid "I agree to the terms as detailed in the privacy policy "
 msgstr "J'accepte les conditions telles que détaillées dans la politique de confidentialité"
 
-msgid "Preferred email"
+msgid "Preferred Email"
 msgstr "Courriel privilégié"
 
 msgid "Confirm email"
@@ -544,7 +544,7 @@ msgstr "Nom d'utilisateur et mot de passe privilégiés"
 msgid "Username can only consist of letters, numbers, spaces, hyphens and underscores."
 msgstr "Le nom d'utilisateur ne peut être composé que de lettres, chiffres, espaces, traits d'union et traits de soulignement."
 
-msgid "Confirm password"
+msgid "Confirm Password"
 msgstr "Confirmer le mot de passe"
 
 msgid "Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like"

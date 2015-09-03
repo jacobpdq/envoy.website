@@ -531,7 +531,7 @@ $this->Auth->setUser($sessionUser);
               <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
             </div>
             <div style="clear:both;"></div>
-            <div class="disclaimer"><?php echo __('Leave these fields blank if you do not wish to change your password.<br/>Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>
+            <div class="disclaimer"><?php echo __('Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>
           </div>
         </fieldset>
         
@@ -956,10 +956,10 @@ $this->Auth->setUser($sessionUser);
     
     <?php if( $attr['lc_role_agency'] ){ ?>
     <fieldset>
-      <legend>Professional Information</legend>
+      <legend><?php echo __('Professional Information') ?></legend>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="phone_no">Role</label>
+          <label for="phone_no"><?php echo __('Role') ?></label>
           <select name="job_function" id="job_function">
                     <option value="" disabled="disabled"> -- Select -- </option>
             <?php $lc_role = sso_form_post('lc_role','',false); ?>
@@ -985,15 +985,15 @@ $this->Auth->setUser($sessionUser);
     
     <?php if( $attr['company_job'] || $attr['pro_information'] ){ ?>
     <fieldset>
-      <legend>Professional Information</legend>
+      <legend><?php echo __('Professional Information') ?></legend>
       <?php if( $attr['company_job'] || $attr['pro_information'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="company">Company</label>
+          <label for="company"><?php echo __('Company') ?></label>
           <input type="text" name="company" value="<?php sso_form_post('company'); ?>" id="company">
         </div>
         <div class="fieldHalf">
-          <label for="job_function">Job Function</label>
+          <label for="job_function"><?php echo __('Job Function') ?></label>
           <select name="job_function" id="job_function">
                     <option value="" disabled="disabled"> -- Select -- </option>
             <?php $job_function = sso_form_post('job_function','',false); ?>
@@ -1008,7 +1008,7 @@ $this->Auth->setUser($sessionUser);
       <?php if( $attr['pro_information'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="travel_group">Travelgroup</label>
+          <label for="travel_group"><?php echo __('Travel Group') ?></label>
           <select name="travel_group" id="travel_group">
             <option value="" disabled="disabled"> -- Select -- </option>
             <?php $travel_group = sso_form_post('travel_group','',false); ?>
@@ -1018,7 +1018,7 @@ $this->Auth->setUser($sessionUser);
           </select>
         </div>
         <div class="fieldHalf">
-          <label for="business_type">Business Type</label>
+          <label for="business_type"><?php echo __('Business Type')?></label>
           <select name="business_type" id="business_type">
             <option value="" disabled="disabled"> -- Select -- </option>
             <?php $business_type = sso_form_post('business_type','',false); ?>
@@ -1035,22 +1035,22 @@ $this->Auth->setUser($sessionUser);
     
     <?php if( $attr['contact_lrg'] || $attr['contact_sml'] ){ ?>
     <fieldset>
-      <legend>Contact Information</legend>
+      <legend><?php echo __('Contact Information') ?></legend>
       <?php if( $attr['contact_lrg'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="contact_info_type">This is my</label>
+          <label for="contact_info_type"><?php echo __('This is my') ?></label>
           <?php $contact_info_type = sso_form_post('contact_info_type','',false); ?>
           <select name="contact_info_type" id="contact_info_type">
-                <option value="business" <?php if ( $contact_info_type == 'business') echo 'selected="selected"'; ?> >Business Contact Information</option> 
-                <option value="residence" <?php if ( $contact_info_type == 'residence') echo 'selected="selected"'; ?> >Residence Contact Information</option>
+                <option value="business" <?php if ( $contact_info_type == 'business') echo 'selected="selected"'; ?> ><?php echo __('Business Contact Information' ?></option> 
+                <option value="residence" <?php if ( $contact_info_type == 'residence') echo 'selected="selected"'; ?> ><?php echo __('Residence Contact Information' ?></option>
             </select>
         </div>
         <div style="clear:both;"></div>
       </div>
       <div class="formGroup">
         <div class="fieldSingle">
-          <label for="street">Street</label>
+          <label for="street"><?php echo __('Street') ?></label>
           <input type="text" style="width:12%;display:inline-block;" name="street" value="<?php sso_form_post('street'); ?>" id="street">
           <input type="text" style="width:83%;margin-left:2%;display:inline-block;" name="streetName" value="<?php sso_form_post('streetName'); ?>" id="streetName">
         </div>
@@ -1058,18 +1058,18 @@ $this->Auth->setUser($sessionUser);
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="unitApt">Unit/Apt/Suite/#</label>
+          <label for="unitApt"><?php echo __('Unit/Apt/Suite/#') ?></label>
           <input type="text" name="unitApt" value="<?php sso_form_post('unitApt'); ?>" id="unitApt">
         </div>
         <div class="fieldHalf">
-          <label for="city">City</label>
+          <label for="city"><?php echo __('City') ?></label>
           <input type="text" name="city" value="<?php sso_form_post('city'); ?>" id="city">
         </div>
         <div style="clear:both;"></div>
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="province">Province/State</label>
+          <label for="province"><?php echo __('Province/State') ?></label>
           <select name="province" id="province">
                     <?php $province = sso_form_post('province','Ontario',false); ?>
             <?php foreach( $province_values as $key => $value  ){ if( $key == $province ){ $selected = ' selected="selected" '; }else{ $selected = ''; } ?>
@@ -1078,14 +1078,14 @@ $this->Auth->setUser($sessionUser);
           </select>
         </div>
         <div class="fieldHalf">
-          <label for="postal_code">Postal Code</label>
+          <label for="postal_code"><?php echo __('Postal Code') ?></label>
           <input type="text" name="postal_code" value="<?php sso_form_post('postal_code'); ?>" id="postal_code">
         </div>
         <div style="clear:both;"></div>
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="phone_no">Phone</label>
+          <label for="phone_no"><?php echo __('Phone') ?></label>
           <input type="text" name="phone_no" value="<?php sso_form_post('phone_no'); ?>" id="phone_no">
         </div>
         <div class="fieldHalf">
@@ -1096,7 +1096,7 @@ $this->Auth->setUser($sessionUser);
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="website">Website (www.domain.com)</label>
+          <label for="website"><?php echo __('Website (www.domain.com)') ?></label>
           <input type="text" name="website" value="<?php sso_form_post('website'); ?>" id="website">
         </div>
         <div style="clear:both;"></div>
