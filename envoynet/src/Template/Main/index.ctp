@@ -270,7 +270,7 @@
 <a href="#" style="display:block;width:100%;position:fixed;
 left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
 
-<h2 style="width:50%;text-align:center;">We've recently updated our login procedure and website.</h2>
+<h2 style="width:50%;text-align:center;"><?php echo __('We\'ve recently updated our login procedure and website.') ?></h2>
 
 <p style="
     width: 50%;
@@ -286,14 +286,14 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     padding-left:10px;
     padding-right:10px;
      color: #3C5991;
-">If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.</p>
+"><?php echo __('If you are registered with Travelweek, Travelweek\'s Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY.') ?></p>
 
 <p style="font-style: italic;
     font-size: 70%;
     width: 50%;
     text-align: center;
     font-weight: bold;
-    font-size: 100%;">If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.</p>
+    font-size: 100%;"><?php echo __('If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email.') ?></p>
 
 <p style="
   position: absolute;
@@ -310,7 +310,7 @@ left:0;top:0;cursor:pointer;height:100%;z-index:10000;" class="close"></a>
     /* font-weight: bold; */
     line-height: 180%;
     /* font-weight: bold; */
-">Please click on Register if you have never logged into any of these sites.</p>
+"><?php echo __('Please click on Register if you have never logged into any of these sites.') ?></p>
 </div>
 
 <style type="text/css">
