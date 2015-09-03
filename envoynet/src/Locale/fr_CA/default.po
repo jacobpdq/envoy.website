@@ -451,3 +451,83 @@ msgstr "Si vous avez déjà passé une commande avec ENVOY, cliquez sur « Mot d
 
 msgid "Please click on Register if you have never logged into any of these sites."
 msgstr "Veuillez cliquer sur Inscription si vous n'avez jamais ouvert de session sur l'un de ces sites."
+
+msgid "Personal Information"
+msgstr "Information personnelle"
+
+msgid "Personal Information"
+msgstr "Information personnelle"
+
+msgid "Business Type"
+msgstr "Type d'entreprise"
+
+msgid "association, federation, club, society , group tour organizer"
+msgstr "association, fédération, club, société, organisateur de voyages de groupes"
+
+msgid "Travel Agent"
+msgstr "Agent de voyages"
+
+msgid "Tour Operator"
+msgstr "Voyagiste"
+
+msgid "Tourist board or office , Chamber of commerce, embassy"
+msgstr "Bureau ou office de tourisme, Chambre de commerce, ambassade"
+
+msgid "Travel department in commercial firm"
+msgstr "Département de voyages dans une firme commerciale"
+
+msgid "Library, Newspaper, public relations firm"
+msgstr "Bibliothèque, journal, firme de relations publiques"
+
+msgid "Student travel counselor"
+msgstr "Étudiant (étudiante) en conseils de voyages"
+
+msgid "Hotel, Resort"
+msgstr "Hôtel, complexe touristique"
+
+msgid "Carrier/Transportation"
+msgstr "Transporteur/entreprise de transport"
+	
+msgid "Contact information"
+msgstr "Coordonnées"
+
+msgid "This is my"
+msgstr "Ce sont mes"
+
+msgid "Business contact information"
+msgstr "Coordonnées d'entreprise"
+
+msgid "Residence contact information"
+msgstr "Coordonnées de résidence"
+	
+msgid "Street"
+msgstr "Rue"
+msgid "Unit/Apt.Suite#"
+msgstr "Numéro de bureau/appartement/suite"
+
+msgid "City"
+msgstr "Ville"
+
+msgid "Province/State"
+msgstr "Province/État"
+
+msgid "Phone"
+msgstr "Téléphone"
+
+msgid "Webiste ( www.domain.com )"
+msgstr "Site Web ( www.domain.com )"
+	
+msgid "Verify human, agree to terms of use and submit registration form"
+msgstr "Test de reconnaissance humaine; j'accepte les conditions d'utilisation et je soumets le formulaire d'inscription"
+	
+msgid "Confirm that you are human"
+msgstr "Confirmez votre test de reconnaissance humaine"
+
+msgid "Please enter the sum of"
+msgstr "Veuillez entrer la somme de"
+
+msgid "(in the field below)"
+msgstr "(dans le champ ci-dessous)"
+
+msgid "I agree to the terms as detailed in the privacy policy "
+msgstr "J'accepte les conditions telles que détaillées dans la politique de confidentialité"
