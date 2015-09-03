@@ -547,7 +547,7 @@ msgstr "Le nom d'utilisateur ne peut être composé que de lettres, chiffres, es
 msgid "Confirm Password"
 msgstr "Confirmer le mot de passe"
 
-msgid "Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like"
+msgid "Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like"
 msgstr "Astuce: le mot de passe devrait contenir au moins huit (8) caractères. Pour le renforcer, utilisez des lettres majuscules et minuscules, des chiffres et des symboles, tels que"
 	
 msgid "Professional Information"
