@@ -439,3 +439,15 @@ msgstr "Ouest du Canada Entrepôt"
 
 msgid "Register"
 msgstr "Inscription"
+
+msgid "We've recently updated our login procedure and website."
+msgstr "Nous avons récemment mis à jour notre procédure d'ouverture de session et notre site Web."
+
+msgid "If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY."
+msgstr "Si vous êtes inscrit à Travelweek, au Centre d'apprentissage de Travelweek ou à Wheels Up, vous pouvez utiliser le même courriel et mot de passe pour ouvrir une session avec ENVOY."
+
+msgid "If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email."
+msgstr "Si vous avez déjà passé une commande avec ENVOY, cliquez sur « Mot de passe oublié » et vous recevrez votre mot de passe par courriel."
+
+msgid "Please click on Register if you have never logged into any of these sites."
+msgstr "Veuillez cliquer sur Inscription si vous n'avez jamais ouvert de session sur l'un de ces sites."
