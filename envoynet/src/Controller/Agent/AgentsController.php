@@ -182,7 +182,7 @@ class AgentsController extends \App\Controller\AgentsController {
           'nova scotia' => 'NS', 
           'nunavut' => 'NU', 
           'ontario' => 'ON', 
-          'prince edward isalnd' => 'PE', 
+          'prince edward island' => 'PE', 
           'quebec' => 'QC',
           'saskatchewan' => 'SK',
           'yukon territory' => 'YT',
