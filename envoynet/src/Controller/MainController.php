@@ -185,7 +185,7 @@ class MainController extends AppController {
           'nova scotia' => 'NS', 
           'nunavut' => 'NU', 
           'ontario' => 'ON', 
-          'prince edward isalnd' => 'PE', 
+          'prince edward island' => 'PE', 
           'quebec' => 'QC',
           'saskatchewan' => 'SK',
           'yukon territory' => 'YT',
