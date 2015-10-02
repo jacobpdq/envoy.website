@@ -676,3 +676,6 @@ msgstr "La consultation de ce site Web constitue votre consentement à la cueill
 
 msgid "If you wish to find out  what information we have about you, ask a question about the information in  your file or request a change to the information in your file, please write to: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada"
 msgstr "Si vous voulez en savoir plus sur l'information que nous détenons sur vous, poser une question sur les renseignements que nous détenons dans votre dossier ou apporter une modification à ceux-ci, veuillez écrire: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada "
+
+msgid "Your email or password was incorrect."<br><br>"If you have forgotten your password, please "<a href="/agent/password/forgot">click here</a>" to reset."<br><br>"If you are having multiple issues accessing the website then "<a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>"."
+msgstr "Votre courriel ou mot de passe est incorrecte."<br><br>"Si vous avez oublié votre mot de passe , s'il vous plaît "<a href="/agent/password/forgot">cliqer ici</a>" pour réinitialiser."<br><br>"Si vous rencontrez des problèmes multiples qui accèdent au site puis "<a href="mailto:mail@envoynetworks.ca">cliquez ici pour soumettre une demande de support</a>"."
