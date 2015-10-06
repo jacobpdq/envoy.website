@@ -75,22 +75,23 @@ class PasswordController extends AppController
 		                  <head>
 		                  </head>
 		                  <body>
-		                    <h1>" . __('Your Passport Profile Password Has Been Reset') . "</h1>
+		                    <h1>" . __('Your ENVOY Password Has Been Reset') . "</h1>
 		                    <p>
 		                        " . __('Hello') . ', <br><br>' . __(' 
 
-		                        The password for your passport account associated with this address has been reset to the following') . ":<br />" . 
+		                        The password associated with this email address has been reset to the following') . ":<br />" . 
 		                    $randomString . 
 		                  "</p><br>
 		                      <p>
-		                        " . __('Please be sure to change this the next time you log in!') . "
+		                        " . __('For accuracy, it is recommended that you copy and paste the password information into the login are of the website.') .
+								'<br><br>' . __('You can change your password in the My Profile section of the site once you have logged in.') . "
 		                      </p>
 		                    </body>
 		                  </html>";
 
 
 		              $from = Configure::read('hippo.system_email');
-		              $subject = "Passport Password Reset";
+		              $subject = "ENVOY Password Reset";
 		              
 		              $this->_sendEmail($this->request->data['email'], $from, $subject, $message);      
 
