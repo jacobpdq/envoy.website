@@ -681,4 +681,7 @@ msgid "Your email or password was incorrect."
 msgstr "Votre courriel ou mot de passe est incorrecte."
 
 msgid "Your ENVOY Password Has Been Reset"
-msgstr "Votre ENVOY Mot de passe a été réinitialisé"  
+msgstr "Votre ENVOY Mot de passe a été réinitialisé"
+
+msgid "Password Retrieval"
+msgstr "Récupération du mot de passe" 

@@ -108,7 +108,9 @@
 
       <div class="section__content" style="padding-top:0;">
 
-      <h1>Password Retrieval</h1>
+      <h1>
+      <?php echo __('Password Retrieval'); ?>
+      </h1>
       <?php 
       if (isset($success)) { 
 	     if ($success) { 
