@@ -83,7 +83,7 @@ class PasswordController extends AppController
 		                    $randomString . 
 		                  "</p><br>
 		                      <p>
-		                        " . __('For accuracy, it is recommended that you copy and paste the password information into the login are of the website.') .
+		                        " . __('For accuracy, it is recommended that you copy and paste the password information into the travel agent login area of the website.') .
 								'<br><br>' . __('You can change your password in the My Profile section of the site once you have logged in.') . "
 		                      </p>
 		                    </body>
