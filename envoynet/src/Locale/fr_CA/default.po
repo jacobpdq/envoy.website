@@ -684,4 +684,28 @@ msgid "Your ENVOY Password Has Been Reset"
 msgstr "Votre ENVOY Mot de passe a été réinitialisé"
 
 msgid "Password Retrieval"
-msgstr "Récupération du mot de passe" 
+msgstr "Récupération du mot de passe"
+
+msgid "Email Address"
+msgstr "Courriel"
+
+msgid "Send Password"
+msgstr "Envoyer Mot de passe"
+
+msgid "Your password has been sent. Please check your email."
+msgstr "Votre mot de passe a été envoyé. Merci de consulter vos emails."
+
+msgid "We couldn't find your email address. Please try entering again or Regsiter as a new user."
+msgstr "Nous ne pouvions trouver votre courriel. S'il vous plaît essayez d'entrer à nouveau ou s'inscrire comme un nouvel utilisateur."
+
+msgid "The password associated with this email address has been reset to the following"
+msgstr "Le mot de passe associé à cette courriel a été réinitialisé à la suivante"
+
+msgid "For accuracy, it is recommended that you copy and paste the password information into the travel agent login area of the website."
+msgstr "Pour plus de précision, il est recommandé que vous copiez et collez les informations de mot de passe dans la zone de connexion de l'agent de voyage du site."
+
+msgid "You can change your password in the My Profile section of the site once you have logged in."
+msgstr "Vous pouvez changer votre mot de passe dans la section Mon profil du site une fois que vous avez connecté."
+
+msgid "ENVOY Password Reset"
+msgstr "ENVOY Nouveau mot de passe"

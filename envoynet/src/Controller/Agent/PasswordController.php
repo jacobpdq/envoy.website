@@ -77,9 +77,7 @@ parent::initialize();
 		                  <body>
 		                    <h1>" . __('Your ENVOY Password Has Been Reset') . "</h1>
 		                    <p>
-		                        " . __('Hello') . ', <br><br>' . __(' 
-
-		                        The password associated with this email address has been reset to the following') . ":<br />" . 
+		                        " . __('Hello') . ', <br><br>' . __('The password associated with this email address has been reset to the following') . ":<br />" . 
 		                    $randomString . 
 		                  "</p><br>
 		                      <p>
@@ -91,7 +89,7 @@ parent::initialize();
 
 
 		              $from = Configure::read('hippo.system_email');
-		              $subject = "ENVOY Password Reset";
+		              $subject = __('ENVOY Password Reset');
 		              
 		              $this->_sendEmail($this->request->data['email'], $from, $subject, $message);      
 

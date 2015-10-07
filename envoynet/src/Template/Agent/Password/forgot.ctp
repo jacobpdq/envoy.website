@@ -62,7 +62,7 @@
 
 
       <ul class="desktop">
-        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text">1800 IRONSTONE MANOR, PICKERING, ON L1W 3J9</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
         <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
       </ul>
@@ -115,11 +115,14 @@
       if (isset($success)) { 
 	     if ($success) { 
       ?>
-      <p>Your password has been sent; please check your email.</p>
+      <p>
+      <?php echo __('Your password has been sent. Please check your email.'); ?>
+      </p>
       <?php
        	} else { 
       ?>
-      <p>We couldn't find your e-mail address; did you enter it correctly?</p>
+      <p>
+      <?php echo __('We couldn\'t find your email address. Please try entering again or Regsiter as a new user.'); ?></p>
       <?php
        	}
       }?>
@@ -153,7 +156,7 @@
     
       <div id="Travelweek_Holder">
    <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
-    <p>© Copyright Envoy Networks Inc. 2015</p>
+    <p>© Copyright Envoy Network Inc. 2015</p>
 </a>
   </div>
   </section>
