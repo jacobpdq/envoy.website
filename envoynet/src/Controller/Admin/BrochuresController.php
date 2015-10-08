@@ -30,7 +30,8 @@ class BrochuresController extends \App\Controller\BrochuresController {
   }
 
 
-  public function view2($id = null) {
+//  public function view2($id = null) {
+   public function view2() {
   //     if (!$id) {
    //     $this->Flash->set(__('Invalid brochure'));
      //    $this->redirect(array('action' => 'index'));
