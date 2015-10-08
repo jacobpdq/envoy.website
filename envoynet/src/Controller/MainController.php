@@ -70,7 +70,8 @@ class MainController extends AppController {
             if( $this->request->query['error'] == '201' || $this->request->query['error'] == '999' ){      
 
               if( $this->request->query['error'] == '201' ) { 
-                $this->Flash->error(__('Your email or password was incorrect.' . '<br/><br/>' . 'If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>.'));
+                $this->Flash->error(__('Your email or password was incorrect.'));
+				echo(( . '<br/><br/>' . 'If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>.'));
               } elseif ($this->request->query['error'] == '999' ) {
                 $this->Flash->error(__('Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.<br/><br/><a href="http://' . SSO_PARENT . '/sso-support/">Click here to submit a support request.</a>'));
               }
