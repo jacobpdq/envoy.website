@@ -42,10 +42,10 @@ class BrochuresController extends \App\Controller\BrochuresController {
       )
     ));
 
-    $this->set(compact('skufind'));
+//    $this->set(compact('skufind'));
 	echo $skufind;
 //	$id = 1550;
-    $id=$skufind->first()->id;
+//    $id=$skufind->first()->id;
 //    $this->set(compact('id'));
 	echo $id;
    
