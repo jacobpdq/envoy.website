@@ -36,11 +36,11 @@ class BrochuresController extends \App\Controller\BrochuresController {
          $this->redirect(array('action' => 'index'));
         }
 
-//    $skufind = $this->Brochures->find('all', array(
-//      'conditions' => array(
-//        'Brochures.sku' => $this->request->data['barcodes']
-//      )
-//    ));
+    $skufind = $this->Brochures->find('all', array(
+	      'conditions' => array(
+        'Brochures.sku' => $this->request->data['barcodes']
+      )
+    ));
 
 //    $this->set(compact('skufind'));
 //    $id=$skufind->first()->id;
