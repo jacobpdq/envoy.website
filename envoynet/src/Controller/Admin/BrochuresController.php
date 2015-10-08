@@ -55,6 +55,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
    
  //   $this->set('brochure', $this->Brochures->get($id));
  $this->set('brochure');
+ print_r($brochure);
   
   }
 
