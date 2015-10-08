@@ -38,7 +38,8 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
     $skufind = $this->Brochures->find('all', array(
 	      'conditions' => array(
-        'Brochures.sku' => $this->request->data['barcodes']
+//        'Brochures.sku' => $this->request->data['barcodes']
+		'Brochures.sku' => '105951S16'
       )
     ));
 
