@@ -31,26 +31,27 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
 
   public function view2($id = null) {
-       if (!$id) {
-        $this->Flash->set(__('Invalid brochure'));
-         $this->redirect(array('action' => 'index'));
-        }
+  //     if (!$id) {
+   //     $this->Flash->set(__('Invalid brochure'));
+     //    $this->redirect(array('action' => 'index'));
+       // }
 
-    $skufind = $this->Brochures->find('all', array(
+    $brochure = $this->Brochures->find('first', array(
 	      'conditions' => array(
 //        'Brochures.sku' => $this->request->data['barcodes']
 		'Brochures.sku' => '105951S16'
       )
     ));
-echo $skufind;
-    $this->set(compact('skufind'));
-	echo $skufind;
+// echo $skufind;
+//    $this->set(compact('skufind'));
+//	echo $skufind;
 //	$id = 1550;
 //    $id=$skufind->first()->id;
 //    $this->set(compact('id'));
 	echo $id;
    
-    $this->set('brochure', $this->Brochures->get($id));
+ //   $this->set('brochure', $this->Brochures->get($id));
+ $this->set('brochure');
   
   }
 
