@@ -45,6 +45,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
 //    ));
 	
 	$articles = $this->Brochures->find()->all();
+	$this->set('articles');
 	echo $articles;
 	
 // $this->set('skufind');
