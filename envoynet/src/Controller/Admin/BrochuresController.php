@@ -53,8 +53,8 @@ class BrochuresController extends \App\Controller\BrochuresController {
 //    $this->set(compact('id'));
 	echo $id;
    
- //   $this->set('brochure', $this->Brochures->get($id));
-$this->set('brochure',1510);
+    $this->set('brochure', $this->Brochures->get($id));
+
  
   
   }
