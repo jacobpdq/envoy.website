@@ -44,7 +44,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
       )
     ));
 	
-	
+	$this->set(compact('skufind'));
  echo $skufind;
  debug ($skufind);
 //    $this->set(compact('skufind'));
