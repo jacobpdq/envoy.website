@@ -37,7 +37,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
      //    $this->redirect(array('action' => 'index'));
        // }
 
-    $skufind = $this->Brochures->find('all', array(
+//    $skufind = $this->Brochures->find('all', array(
 	      'conditions' => array(
 //        'Brochures.sku' => $this->request->data['barcodes']
 	//	'Brochures.id' => '1511'
@@ -47,9 +47,9 @@ class BrochuresController extends \App\Controller\BrochuresController {
 	$articles = $this->Brochures->find()->all();
 	echo $articles;
 	
- $this->set('skufind');
- echo $skufind;
- debug ($skufind->toArray());
+// $this->set('skufind');
+// echo $skufind;
+// debug ($skufind->toArray());
 
 //    $this->set(compact('skufind'));
 //	echo $skufind;
