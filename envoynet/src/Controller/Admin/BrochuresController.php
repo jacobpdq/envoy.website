@@ -38,11 +38,11 @@ class BrochuresController extends \App\Controller\BrochuresController {
        // }
 
 //    $skufind = $this->Brochures->find('all', array(
-	      'conditions' => array(
+//	      'conditions' => array(
 //        'Brochures.sku' => $this->request->data['barcodes']
 	//	'Brochures.id' => '1511'
-      )
-    ));
+//      )
+//    ));
 	
 	$articles = $this->Brochures->find()->all();
 	echo $articles;
