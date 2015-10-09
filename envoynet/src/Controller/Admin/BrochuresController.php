@@ -44,9 +44,12 @@ class BrochuresController extends \App\Controller\BrochuresController {
       )
     ));
 	
- // $this->set(compact('skufind'));
+	$articles = $this->Brochures->find()->all();
+	echo $articles;
+	
+ $this->set('skufind');
  echo $skufind;
- debug($skufind->toArray());
+ debug ($skufind->toArray());
 
 //    $this->set(compact('skufind'));
 //	echo $skufind;
