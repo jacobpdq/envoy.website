@@ -115,28 +115,24 @@
         
        <ul class="form_radio_btns">   
      
-          <?php echo $this->Form->input('shipped_via',array(
-                      'type'=>'radio',
-                      'options'=>array(
-                        '0'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;Canpar</span>',
-                        '1'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;UPS</span>',
-                        '2'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;Purolator</span>',
-                        '3'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;Canada Post</span>',
-                        '4'=>'<span class="Base_red_txt" &quot;="">&nbsp;&nbsp;Envoy</span>'
-                      ),
-                      'default'=>'0',
-					             'before' => '<br><li class="deliverymode">',
-                      'between' => '',
-                      'separator' => '</li><li class="deliverymode">',
-                      'escape' => false
-                  )
-              );?>
+          <?php echo $this->Form->radio(
+    'shipped_via',
+    [
+        ['value' => '0', 'text' => 'Canpar', 'style' => 'font-size:13px;'],
+        ['value' => '1', 'text' => 'UPS', 'style' => 'font-size:13px;'],
+        ['value' => '2', 'text' => 'Purolator', 'style' => 'font-size:13px;'],
+        ['value' => '3', 'text' => 'Canada Post', 'style' => 'font-size:13px;'],
+        ['value' => '4', 'text' => 'Envoy', 'style' => 'font-size:13px;'],
+    ]
+);?>
           </ul>
             </fieldset>  
           <?php echo $this->Form->submit(__('Select Delivery Mode'));  ?>
           <?php echo $this->Form->end();  ?>
 
 </div>
+
+
 
 
 <?php echo $this->Html->link(

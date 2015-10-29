@@ -529,6 +529,11 @@ ul.form_radio_btns {
   float:left;
 }
 
+ul.form_radio_btns label {
+  width: 9em;
+  margin-right: 1em;
+}
+
 ul.form_radio_btns li{
   display:block;
   margin-bottom: 10px;
