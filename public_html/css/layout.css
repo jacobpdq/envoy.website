@@ -534,6 +534,11 @@ ul.form_radio_btns label {
   margin-right: 1em;
 }
 
+ul.form_radio_btns input {
+    padding: 3px;
+    width: 2em;
+}
+
 ul.form_radio_btns li{
   display:block;
   margin-bottom: 10px;
