@@ -1,20 +1,20 @@
 <div class="brochures view">
 <h2><?php echo __('Brochure');?></h2>
 
-
-
-
 <?php echo $this->Form->create('Brochures'); ?>
 
-    <ol>
+    <ol list-style="none">
      
      
-       <li><div id="Confirm_order_inset_Holder"><?php echo $this->Form->input('barcodes', array('value' =>'', 'label' => 'Scan barcode', 'name' => 'data[barcodes]','autofocus' => 'autofocus')); ?></div><br><br /><br></li>
+       <li><div id="Confirm_order_inset_Holder"><?php echo $this->Form->input('barcodes', array('value' =>'', 'label' => 'Scan barcode', 'name' => 'data[barcodes]','autofocus' => 'autofocus')); ?></div><br></li>
   
     </ol>
   
   <fieldset class="submit">
-     <?php echo $this->Form->end(__('Enter barcode')); ?>
+     <?php 
+     echo $this->Form->submit(__('Enter barcode')); 
+     echo $this->Form->end();
+     ?>
   </fieldset>
 
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
@@ -25,7 +25,7 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Supplier'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($brochure['company'], array('controller' => 'suppliers', 'action' => 'view', $brochure['supplier']['id'])); ?>
+			<?php echo $this->Html->link($brochure['supplier']['company'], array('controller' => 'suppliers', 'action' => 'view', $brochure['supplier']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Sku'); ?></dt>
@@ -45,7 +45,7 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Image'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-                <?php echo $this->ImageResize->resize('brochures/' . $brochure['Image']['filename'], 187, 260, false);?>
+                <?php echo $this->ImageResize->resize('brochures/' . $brochure['image']['filename'], 187, 260, false);?>
  
 			&nbsp;
 		</dd>

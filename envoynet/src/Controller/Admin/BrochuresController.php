@@ -32,37 +32,27 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
   public function view2($id = null) {
 
-  //     if (!$id) {
-   //     $this->Flash->set(__('Invalid brochure'));
-     //    $this->redirect(array('action' => 'index'));
-       // }
+   if (!empty($this->request->data)) { 
+    $skufind = $this->request->data; 
+    $skufind1 = $this->Brochures->findBySku($skufind['data']['barcodes']);
+   }
+   else {
+    $skufind = '1001100GE';
+    $skufind1 = $this->Brochures->findBySku($skufind);
+   }
 
-//    $skufind = $this->Brochures->find('all', array(
-//	      'conditions' => array(
-//        'Brochures.sku' => $this->request->data['barcodes']
-	//	'Brochures.id' => '1511'
-//      )
-//    ));
-	
-	$articles = $this->Brochures->find()->all();
-	$this->set('articles');
-	echo $articles;
-	
-// $this->set('skufind');
-// echo $skufind;
-// debug ($skufind->toArray());
-
-//    $this->set(compact('skufind'));
-//	echo $skufind;
-//	$id = 1550;
-//    $id=$skufind->first()->id;
-//    $this->set(compact('id'));
-	echo $id;
+   $skufind2 = $skufind1->all();
    
-    $this->set('brochure', $this->Brochures->get($id));
-
- 
-  
+   if ($skufind1->isEmpty()) {
+    $this->Flash->set(__('Invalid brochure'));
+    $id=300;
+   }
+   else { 
+   $id=$skufind2->first()->id;
+   $this->set('brochure', $this->Brochures->get($id, [
+    'contain' => ['Suppliers','Images']
+    ]));
+   }
   }
 
   public function add() {
