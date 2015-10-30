@@ -129,17 +129,13 @@
             </fieldset>  
           <?php echo $this->Form->submit(__('Select Delivery Mode'));  ?>
           <?php echo $this->Form->end();  ?>
-
-</div>
-
-
-
-
-<?php echo $this->Html->link(
+     <br> </br>    
+          
+          <?php echo $this->Html->link(
     'Print Packing Slip',
      array(
     'controller' => 'orders', 'action' => 'printpack', $order['id']),
-    array('class' => 'button', 'target' => '_blank'));  ?>
+    array('class' => 'btn', 'target' => '_blank'));  ?>
     
      <br>
 	<br />
@@ -148,7 +144,7 @@
     'Back',
      array(
     'controller' => 'order_items', 'action' => 'pack', $order['id']),
-    array('class' => 'button')); ?>
+    array('class' => 'btn')); ?>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	
@@ -156,4 +152,10 @@
     'Next',
      array(
     'controller' => 'orders', 'action' => 'ship2', $order['id']),
-    array('class' => 'button'));  ?>
+    array('class' => 'btn'));  ?>
+
+</div>
+
+
+
+

@@ -110,19 +110,7 @@
 </div>
 
 
-<?php echo $this->Html->link(
-    'Print Packing Slip',
-     array(
-    'controller' => 'orders', 'action' => 'printpack', $order['id']),
-    array('class' => 'button', 'target' => '_blank'));  ?>
-    
-    <br>
-	<br />
-<?php echo $this->Html->link(
-    'Back',
-     array(
-    'controller' => 'orders', 'action' => 'ship', $order['id']),
-    array('class' => 'button'));  ?>
+
 	
 
 
@@ -141,4 +129,16 @@
   <?php echo $this->Form->submit(__('Submit'),array('onClick'=>'return confirm("Are you sure you want to complete the order");')); ?>
  <?php echo $this->Form->end();  ?>
 
-
+<?php echo $this->Html->link(
+    'Print Packing Slip',
+     array(
+    'controller' => 'orders', 'action' => 'printpack', $order['id']),
+    array('class' => 'btn', 'target' => '_blank'));  ?>
+    
+    <br>
+	<br />
+<?php echo $this->Html->link(
+    'Back',
+     array(
+    'controller' => 'orders', 'action' => 'ship', $order['id']),
+    array('class' => 'btn'));  ?>
