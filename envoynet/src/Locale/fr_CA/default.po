@@ -709,3 +709,12 @@ msgstr "Vous pouvez changer votre mot de passe dans la section Mon profil du sit
 
 msgid "ENVOY Password Reset"
 msgstr "ENVOY Nouveau mot de passe"
+
+msgid "Hello"
+msgstr "Bonjour"
+
+msgid "Thank you for your order with ENVOY"
+msgstr "Merci pour votre commande avec ENVOY"
+
+msgid "Order Items"
+msgstr "Articles du Panier"

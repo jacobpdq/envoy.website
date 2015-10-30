@@ -17,9 +17,10 @@ class ShoppingCartController extends AppController {
 
     
   }
+  
   function _notifyAgent($order=null) {
     $from = Configure::read('hippo.system_email');
-    $subject = "Thank you for your order with Envoy";
+    $subject = __('Thank you for your order with ENVOY');
     //$message = Configure::read('hippo.msg_agent_reg');
     
     $agent = $this->Auth->user();
@@ -34,19 +35,19 @@ class ShoppingCartController extends AppController {
         </head>
          <h3>Shipping Address:</h3>
         <b>Date:</b> " . $order['created'] . " <br>
-        <b>Company:</b> " . $order['shipping_company'] . " <br>
-        <b>First Name:</b> " . $order['shipping_firstname'] . " <br>
-        <b>Last Name:</b> " . $order['shipping_lastname'] . " <br>
-        <b>Address1:</b> " . $order['shipping_address1'] . " <br>
-        <b>Address2:</b> " . $order['shipping_address2'] . " <br>
-        <b>City:</b> " . $order['shipping_city'] . " <br>
+        <b>" . __('Company') . ":</b> " . $order['shipping_company'] . " <br>
+        <b>" . __('First Name') . ":</b> " . $order['shipping_firstname'] . " <br>
+        <b>" . __('Last Name') . ":</b> " . $order['shipping_lastname'] . " <br>
+        <b>" . __('Address1') . ":</b> " . $order['shipping_address1'] . " <br>
+        <b>" . __('Address2') . ":</b> " . $order['shipping_address2'] . " <br>
+        <b>" . __('City') . ":</b> " . $order['shipping_city'] . " <br>
         <b>Province:</b> " . $order['shipping_province'] . " <br>
-        <b>Postal Code:</b> " . $order['shipping_postalcode'] . " <br>
-        <b>Phone:</b> " . $order['shipping_phonenumber'] . " <br>
-        <b>Email:</b> " . $order['shipping_email'] . " <br>
-        <b>Comments:</b> " . $order['order_comments'] . " <br>
+        <b>" . __('Postal Code') . ":</b> " . $order['shipping_postalcode'] . " <br>
+        <b>" . __('Tel') . ":</b> " . $order['shipping_phonenumber'] . " <br>
+        <b>" . __('Email') . ":</b> " . $order['shipping_email'] . " <br>
+        <b>" . __('Order Comments') . ":</b> " . $order['order_comments'] . " <br>
         <br>
-        <b>Order Items:</b>
+        <b>" . __('Order Items') . ":</b> 
         <ol>";
         $messageEnd = "</ol>
         </body>
@@ -63,7 +64,7 @@ class ShoppingCartController extends AppController {
       }
     }
   }
-
+  
   function _updateInventory($order=null) {
 
     $brochuresToUpdate = array();
