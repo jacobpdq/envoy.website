@@ -265,6 +265,7 @@
 	color: #333;
 	background: #fff;
 	position: relative;
+	width: auto !important;
 }
 
 .fancybox-title-outside {
