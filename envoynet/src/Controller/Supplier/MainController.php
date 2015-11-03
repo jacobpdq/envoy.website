@@ -87,7 +87,7 @@ class MainController extends \App\Controller\MainController {
 
       } else {
         $this->Cookie->write('sso_login_key',$ssoSession->login_key);
-        $ssoSession = $this->SsoSessions->save($ssoSession);
+ //       $ssoSession = $this->SsoSessions->save($ssoSession);
       }
 
       //'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . $broker_key . '/?referer=' . $referer 
