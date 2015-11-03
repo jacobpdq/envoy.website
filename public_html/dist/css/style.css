@@ -375,7 +375,8 @@ section#masthead {
 
 div.message {
   padding: 2vh 4% !important;
-  font-size: 1.5rem; }
+  font-size: 18px;
+  font-weight: bold; }
 
 div.message.error:before {
   padding: 11px 16px 14px 7px;
@@ -385,8 +386,7 @@ div.message.error:before {
 div.message:before {
   line-height: 0px;
   font-size: 20px;
-  height: 0px !important;
-  width: 2px !important;
+  width: 10px !important;
   border-radius: 15px;
   text-align: center;
   vertical-align: middle;
@@ -395,7 +395,7 @@ div.message:before {
   left: -11px;
   background-color: #FFF;
   padding: 12px 14px 12px 10px;
-  content: "i";
+  content: url(../../img/bg_images/checkmark.png);
   color: #DCE47E; }
 
 section.alltext.contact {
