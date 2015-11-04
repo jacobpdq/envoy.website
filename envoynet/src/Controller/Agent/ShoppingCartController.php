@@ -61,11 +61,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
                     if ($newQty <= $brochure['inv_balance']) {
                       $cart['Items'][$key]['qty_ordered'] = $newQty;
                     } else {
-                      $this->Flash->set("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
+                      $this->Flash->error("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
                       return $this->redirect($this->referer());
                     }
                   } else {
-                    $this->Flash->set("Max quantity for " . $orderItem['brochure_name'] . " was exceeded");
+                    $this->Flash->error("Max quantity for " . $orderItem['brochure_name'] . " was exceeded");
                     return $this->redirect($this->referer());
                   }
                 }
@@ -80,15 +80,15 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
             $this->Flash->set($orderItem['brochure_name'] . " has been added to your cart");
           } else {
-            $this->Flash->set("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
+            $this->Flash->error("Not enough units of " . $orderItem['brochure_name'] . "  in stock.");
             return $this->redirect($this->referer());
           }
         } else {
-          $this->Flash->set("Maximum quantity for " . $orderItem['brochure_name'] . " was exceeded. Cart has not been updated");
+          $this->Flash->error("Maximum quantity for " . $orderItem['brochure_name'] . " was exceeded");
           return $this->redirect($this->referer());
         }
       } else {
-        $this->Flash->set(__("You must input a quantity of at least 1 to add to your cart"));
+        $this->Flash->error(__("You must input a quantity of at least 1 to add to your cart"));
       }
 
       $this->redirect($this->referer());
@@ -139,11 +139,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
               if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
                 array_push($cart['Items'], $item);
               } else {
-                $this->Flash->set('Cart could not be updated. Not enough units in stock for ' . $brochure['name']);
+                $this->Flash->error('Cart could not be updated. Not enough units in stock for ' . $brochure['name']);
                 return $this->redirect($this->referer());
               }
             } else {
-              $this->Flash->set('Cart could not be updated. Max order quantity exceeded for ' . $brochure['name']);
+              $this->Flash->error('Cart could not be updated. Max order quantity exceeded for ' . $brochure['name']);
               return $this->redirect($this->referer());
             }
           }
@@ -155,7 +155,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
       $this->Flash->set("Cart updated");
       $this->redirect($this->referer());
     } else {
-      $this->Flash->set("Cart is empty");
+      $this->Flash->error("Cart is empty");
       $this->redirect($this->referer());
     }
   }
@@ -217,11 +217,11 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
 
                 array_push($orderItems, $orderItem);
               } else {
-                $this->Flash->set('Order could not be placed. Not enough units in stock.');
+                $this->Flash->error('Order could not be placed. Not enough units in stock.');
                 $this->redirect($this->referer());
               }
             } else {
-              $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
+              $this->Flash->error('Order could not be placed. Max order quantity exceeded.');
               $this->redirect($this->referer());
             }
           }
@@ -258,7 +258,7 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
       $cart = $this->request->data['Cart'];
       $this->request->session()->write('ShoppingCart.Items', $cart['Items']);
     } else {
-      $this->Flash->set("Cart is empty");
+      $this->Flash->error("Cart is empty");
       $this->redirect($this->referer());
     }
 
