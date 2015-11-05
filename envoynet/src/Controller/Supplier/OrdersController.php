@@ -262,7 +262,7 @@ class OrdersController extends \App\Controller\OrdersController {
         }
       }
       //$processedOrder->OrderItems = $orderItems;
-
+if (!empty ($orderItems)) {
       $this->request->data['order_items'] = $orderItems;
       $processedOrder = $this->Orders->newEntity($this->request->data,['associated'=>'order_items']);
 
@@ -280,11 +280,16 @@ class OrdersController extends \App\Controller\OrdersController {
         } else{
           $this->_supplierOrderNotif($orderId);
         }
-        
-        $this->redirect(array('controller' => 'Brochures', 'action' => 'index', 'prefix' => 'supplier'));
+        $this->redirect($this->referer());
+
       } else {
         $this->Flash->set('Order could not be placed');
         $this->redirect($this->referer());
+      }
+      }
+      else {
+      $this->Flash->error('Cart is empty. Please enter a quantity for at least one of the brochures.');
+      $this->redirect($this->referer());
       }
     }
   }
