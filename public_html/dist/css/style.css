@@ -1138,7 +1138,8 @@ a.Cart_items:link {
 
 div.paging {
   margin: 0px !important;
-  width: auto !important; }
+  width: auto !important;
+  float: right; }
 
 table.index2 {
   margin: 20px 0 !important; }
@@ -1227,6 +1228,14 @@ table.index2 {
 
 .fr #Submit_btn, .fr .ui-button, .fr #place_order_btn, .fr #Edit_Product_btn, .fr #paginate_btn, .fr #Prev_btn, .fr #Next_btn, .fr #paging_numbers, .fr #Add_to_Order_btn, .fr #Process_order_btn, .fr #update_order_btn, .fr #continue_viewing_btn, .fr .button.dark, .fr .actions ul li a, .fr #logout_admin_btn, .fr #Main_Navbar_Interface_admin div[id$='_btn'], .fr #Profile_inset_orders input[type="submit"], .fr #View_orders_btn {
   font-size: 1rem !important; }
+  
+  div#paging_numbers{
+  float: left;
+  }
+  
+  div#paging_numbers:empty{
+  display:none;
+  }
 
 #paging_numbers li, .paging li {
   float: left; }
@@ -1251,9 +1260,9 @@ table.index2 {
 
 #paging_numbers {
   margin-bottom: 0 !important;
-  min-height: 37px !important; }
+  min-height: 17px !important; }
 
-#paging_numbers:blank {
+#paging_numbers:empty {
   display: none; }
 
 #paging_numbers li a {

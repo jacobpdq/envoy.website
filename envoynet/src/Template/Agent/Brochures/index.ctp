@@ -103,16 +103,15 @@
        <span class="Base_red_txt_nl"> *Click on thumbnail to view larger image</span></div>
 
 
-      <div class="paging" id="pagnate_top_Header">
+      <div class="paging" id="paginate_top_Header">
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
             'escape' => false,
             'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
-              <div id="paging_numbers">
-          <?php echo $this->Paginator->numbers(); ?>
-            </div>
+
+<div id="paging_numbers" ><?php echo $this->Paginator->numbers();?></div>
         <?php 
           echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
@@ -243,9 +242,7 @@
             'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
             ]); 
           ?>
-              <div id="paging_numbers">
-          <?php echo $this->Paginator->numbers(); ?>
-            </div>
+              <div id="paging_numbers"><?php echo $this->Paginator->numbers();?></div>
         <?php 
           echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
             'escape' => false,
