@@ -40,7 +40,7 @@
         <!--Start Product/-->
         <div id="product_holder">
           <div id="product_image_holder">
-            <a class="suppiler_product single_image"title="<?php echo $brochure['name'];?>" href="<?php echo $this->Url->build("/img/brochures/".$brochure['Image']['filename']);?>">
+            <a class="suppiler_product single_image"title="<?php echo $brochure['name'];?>" href="<?php echo $this->Url->build("/img/brochures/".$brochure['image']['filename']);?>">
                   <?php echo $this->ImageResize->resize('brochures' . DS . $brochure['image']['filename'], 69, 95, false)?>
             </a>
           </div>
