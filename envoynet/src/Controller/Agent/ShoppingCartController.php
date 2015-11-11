@@ -174,27 +174,29 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
       $processedOrder = $this->Orders->newEntity($this->request->data);
 
       $order['OrderItems'] = $orderItems;
-      
-
 
       $brochureIds = "";
       foreach ($order['OrderItems'] as $item) {
         if (!empty($brochureIds)) {
           $brochureIds .= ',' . $item['brochure_id'];
+       
         } else {
           $brochureIds .= $item['brochure_id'];
+         
         }
       }
       $this->loadModel('OrderItems');
       $this->loadModel('Brochures');
       $brochures = $this->Brochures->find('all', array('conditions' => array("Brochures.id IN ($brochureIds)")));  //load brochure data for the order items
-
       $orderItems = [];
 
       foreach ($order['OrderItems'] as $item) {
+     
         foreach ($brochures as $brochure) {
+
           if ($brochure['id'] == $item['brochure_id']) {
-            if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
+
+      
               if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
 
                 $orderItem = $this->OrderItems->newEntity($item);
@@ -216,14 +218,12 @@ class ShoppingCartController extends \App\Controller\ShoppingCartController {
                 $orderItem->tracking_number = '';
 
                 array_push($orderItems, $orderItem);
+              
               } else {
                 $this->Flash->error('Order could not be placed. Not enough units in stock.');
                 $this->redirect($this->referer());
               }
-            } else {
-              $this->Flash->error('Order could not be placed. Max order quantity exceeded.');
-              $this->redirect($this->referer());
-            }
+            
           }
         }
       }
