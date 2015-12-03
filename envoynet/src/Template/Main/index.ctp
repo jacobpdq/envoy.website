@@ -65,7 +65,7 @@
 
 
       <ul class="desktop">
-        <li class="gray-text">TORONTO    PICKERING    RICHMOND</li>
+        <li class="gray-text">TORONTO    ETOBICOKE    RICHMOND</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
         <li class="white-text"><u><a href="mailto:MAIL@ENVOYNETWORKS.CA"></u>MAIL@ENVOYNETWORKS.CA</a></li>
       </ul>
