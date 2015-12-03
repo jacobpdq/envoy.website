@@ -114,7 +114,7 @@
       </ul>
       
       <ul class="desktop">
-        <li class="gray-text">1800 IRON STONE MANOR, PICKERING, ON L1W 3J9</li>
+        <li class="gray-text">TORONTO    ETOBICOKE    RICHMOND</li>
         <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
         <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
       </ul>
