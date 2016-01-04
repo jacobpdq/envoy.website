@@ -278,9 +278,8 @@ class AppController extends Controller {
     }
 
     if( $broker_key  && $this->request->params['action'] != 'sso_profile'){
-        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key;
-
-        if ($user_email != '' ) {$sso_session_check .= '/' . $user_email;}
+        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/sso-session/' . $broker_key . '/';
+        if ($user_email != '' ) { $sso_session_check .= $user_email . '/';}
         $sso_session_check .= '"></script>';
     } else {
       $sso_session_check = '';

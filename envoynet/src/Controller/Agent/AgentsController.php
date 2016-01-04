@@ -136,13 +136,13 @@ class AgentsController extends \App\Controller\AgentsController {
       $broker_url = 'www.' . $broker_url;
     }
     $user_email = '';
-    if( isset( $this->request->query['sid'] )){
+    if( isset( $this->request->query['sso_session_check'] )){
       //check if this if any errors or messages are present from previous submssions.
       $response = $http->post(
           'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
           [
               'action'=>'sso_form_session',
-              'session'=>$this->request->query['sid'],
+              'session'=>$this->request->query['sso_session_check'],
           ]
       );
 
@@ -161,7 +161,7 @@ class AgentsController extends \App\Controller\AgentsController {
           'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
           [
               'action'=>'user_session',
-              'session'=>$this->request->query['sid'],
+              'session'=>$this->request->query['sso_session_check'],
           ]
       );
 
@@ -360,13 +360,13 @@ $this->Auth->setUser($sessionUser);
     $http = new Client();
     $broker_url = trim(str_replace(array('http://','https://'),'',Router::url('/', true)),'/');
 
-    if( isset( $this->request->query['sid'] )){
+    if( isset( $this->request->query['sso_session_check'] )){
       //check if this if any errors or messages are present from previous submssions.
       $response = $http->post(
           'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
           [
               'action'=>'sso_form_session',
-              'session'=>$this->request->query['sid'],
+              'session'=>$this->request->query['sso_session_check'],
           ]
       );
 

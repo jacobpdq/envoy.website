@@ -62,7 +62,7 @@ parent::initialize();
 		            $user_info = $response->body();
 
 		            if ($user_info) {
-		                $params['action'] = 'user_pwd';
+		                $params['action'] = 'broker_pwd';
 		                $params['session'] = MD5($randomString);
 		                $http->post(
 		                'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',

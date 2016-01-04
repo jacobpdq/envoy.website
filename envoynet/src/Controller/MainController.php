@@ -415,7 +415,6 @@ class MainController extends AppController {
 
   public function logout() {
     //call out to passport server to verify login
-       
 
     $this->_sso_logout();
     $this->Cookie->delete('CAKEPHP');

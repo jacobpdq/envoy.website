@@ -159,7 +159,7 @@ class AgentsController extends \App\Controller\AgentsController {
             $response = $http->post(
                 'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
                 [
-                    'action'=>'user_pwd',
+                    'action'=>'broker_pwd',
                     'session'=> MD5($this->request->data['password']),
                     'broker_url' => $broker_url,
                     'broker_key' => Configure::read('hippo.sso_broker_key'),

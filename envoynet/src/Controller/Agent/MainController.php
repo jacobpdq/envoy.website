@@ -97,7 +97,8 @@ class MainController extends \App\Controller\MainController {
       $response = $http->get( 'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . Configure::read('hippo.sso_broker_key') . '/?referer=' . $referer );
 
       $this->redirect( 'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . Configure::read('hippo.sso_broker_key') . '/?referer=' . $referer );
-    } else if (!empty($this->request->data['digits1'])) {
+    
+	} else if (!empty($this->request->data['digits1'])) {
 
       $phonenumber = $this->request->data['digits1'] . "-" . $this->request->data['digits2'] . "-" . $this->request->data['digits3'];
 
