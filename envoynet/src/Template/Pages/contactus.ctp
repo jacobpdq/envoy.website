@@ -19,7 +19,7 @@ M5V 3J3<br />
 </h5>
 <a href="mailto:mail@envoynetworks.ca">mail@envoynetworks.ca</a>
 </div>
-<iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.451850804893!2d-79.39198404892439!3d43.63876657901926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35285ecfbd71%3A0xc4abc66ee742282c!2s370+Queens+Quay+W%2C+Toronto%2C+ON+M5V+3A2%2C+Canada!5e0!3m2!1sen!2sus!4v1452134295348" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.451850804893!2d-79.39198404892439!3d43.63876657901926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35285ecfbd71%3A0xc4abc66ee742282c!2s370+Queens+Quay+W%2C+Toronto%2C+ON+M5V+3A2%2C+Canada!5e0!3m2!1sen!2sus!4v1452134295348" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <div class="address">
 <h3><?php echo __('Eastern Canada Warehouse'); ?></h3>
