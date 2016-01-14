@@ -26,77 +26,27 @@ class MainController extends \App\Controller\MainController {
     $this->Auth->deny('index');
   }
 
-  public function login() {
+	public function login() {
 
-    $this->set('title_for_layout', __('Supplier login'));
+		$this->set('title_for_layout', __('Supplier login'));
 
-    $this->loadModel('SsoSessions');
-    $this->loadModel('Suppliers');
+		$this->loadModel('Suppliers');
 
-    if (!empty($this->request->data['username']) && !empty($this->request->data['password'])) {
+		if (!empty($this->request->data)) {
 
+			$user = $this->Auth->identify();
 
-      $ssoSupplier = false;
-      //attempt to log user in
-      if ($user = $this->Auth->user()) {
-        //user exists 
-        //initialize ssoSession to attempt sso login
-        $ssoSupplier = $this->Suppliers->findById($user['id'])->contain(['SsoSessions'])->first();
-      } elseif ($user = $this->Auth->identify()) {
-        $user['role'] = 'supplier';
-        $this->Auth->setUser($user);
+			if ($user) {
+				$user['role'] = 'supplier';
+				$this->Auth->setUser($user);
+				return $this->redirect($this->Auth->redirectUrl());
+			} else {
+				$this->Flash->error('Invalid username or password. Please try again.');
+				$this->redirect(array('controller'=>'main','action'=>'login', 'prefix' => 'supplier'));
+			}
 
-        //initialize ssoSession to attempt sso login
-        $ssoSupplier = $this->Suppliers->findById($user['id'])->contain(['SsoSessions'])->first();
-      }
-
-
-      if ($ssoSupplier) {
-        if (is_null($ssoSupplier->sso_session)) {
-          $ssoSession = $this->SsoSessions->newEntity();
-          $ssoSession->user_type = 'supplier';  
-        } else {
-          $ssoSession = $ssoSupplier->sso_session;
-        }
-      } else {
-        //user does not exist
-        //either first log on or change of password
-        //create sso session for reference later
-        $ssoSession= $this->SsoSessions->newEntity();
-        $ssoSession->user_type = 'supplier';
-      }
-
-
-      $username = $this->request->data['username'];
-      $password = $this->request->data['password'];
-    
-      $login_key = hash('ripemd160', $username . date("YmdHis") );
-      $referer = Router::url('/', true) . $this->request->url;
-
-      //store sso info  for later verification
-      $ssoSession->login_key = $login_key;
-      $ssoSession->u = $username;
-      $ssoSession->p = MD5( $password );
-      $ssoSession->r = $referer;
-      $ssoSession->password = $password;
-
-
-      if ($ssoSupplier) {
-        $ssoSupplier->sso_session = $ssoSession;
-        $ssoSupplier = $this->Suppliers->save($ssoSupplier);
-
-      } else {
-        $this->Cookie->write('sso_login_key',$ssoSession->login_key);
- //       $ssoSession = $this->SsoSessions->save($ssoSession);
-      }
-
-      //'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . $broker_key . '/?referer=' . $referer 
-      $this->redirect( 'http://' . SSO_PARENT . '/sso/' . $login_key . '/' . Configure::read('hippo.sso_broker_key') . '/?referer=' . $referer );
-    } else {
-      
-      $this->sso_login();
-    } 
-  }
+		}
+	}
 
   public function index() {
     
