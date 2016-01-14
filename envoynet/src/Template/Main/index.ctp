@@ -19,18 +19,19 @@
 $number1 = rand(1,10); 
 $number2 = rand(1,10); 
 $answer = MD5($number1+$number2);
-	
+
+
 ?>
-<form method="post" action="http://ssoparent.troth.co/wp-login.php" id="loginform_mobile" name="loginform_mobile" target="_parent">
+<form target="_parent"  name="loginform" id="loginform" action="http://www.travelweek.ca/wp-login.php" method="post">
 	<input type="hidden" name="support_nonce" value="<?php echo $answer; ?>" id="support_nonce">
 	<input type="hidden" name="support_question" value="<?php echo ($number1+$number2); ?>" id="support_question">
-	<input type="hidden" value="http://ssoenvoy.troth.co/" name="redirect_to">
-	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://ssoenvoy.troth.co/">
+	<input type="hidden" value="http://envoynetworks.ca/" name="redirect_to">
+	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://envoynetworks.ca/">
     <?php echo $this->Form->input('log',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
     <?php echo $this->Form->input('pwd',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
     <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
 	<a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
-	<button class="button" type="submit"><?php echo __('Login'); ?></button>
+	<input class="button" type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Login" />
 </form>
 		
 <?php /*
@@ -184,16 +185,16 @@ $answer = MD5($number1+$number2);
                        
                 <div class="tabs__content">
 
-<form method="post" action="http://ssoparent.troth.co/wp-login.php" id="loginform" name="loginform" target="_parent">
+<form target="_parent"  name="loginform" id="loginform" action="http://www.travelweek.ca/wp-login.php" method="post">
 	<input type="hidden" name="support_nonce" value="<?php echo $answer; ?>" id="support_nonce">
 	<input type="hidden" name="support_question" value="<?php echo ($number1+$number2); ?>" id="support_question">
-	<input type="hidden" value="http://ssoenvoy.troth.co/" name="redirect_to">
-	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://ssoenvoy.troth.co/">
+	<input type="hidden" value="http://envoynetworks.ca/" name="redirect_to">
+	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://envoynetworks.ca/">
     <?php echo $this->Form->input('log',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
     <?php echo $this->Form->input('pwd',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
     <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
 	<a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
-	<button class="button" type="submit"><?php echo __('Login'); ?></button>
+	<input class="button" type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Login" />	
 </form>
 
 <?php /*
