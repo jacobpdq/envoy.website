@@ -45,7 +45,7 @@ class MainController extends AppController {
         ]
     );
     $user_info = $response->body();
-
+	
     if($response->statusCode() != 200 || !$user_info ){ 
         if ($this->Auth->user()) {
           //user was successfully logged in without passport
@@ -65,19 +65,38 @@ class MainController extends AppController {
           return $this->redirect($this->Auth->redirectUrl());
         } else {
           // couldn't log user in via normal means or SSO
-
-          if( isset( $this->request->query['error'] ) ){
-            if( $this->request->query['error'] == '201' || $this->request->query['error'] == '999' ){      
-
-              if( $this->request->query['error'] == '201' ) { 
-                $this->Flash->error(__('Your email or password was incorrect. </br></br>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>.'));
-              } elseif ($this->request->query['error'] == '999' ) {
-                $this->Flash->error(__('Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.<br/><br/><a href="http://' . SSO_PARENT . '/sso-support/">Click here to submit a support request.</a>'));
-              }
-
-              return $this->redirect(array('controller'=>'main','action'=>'index', 'prefix' => false));
-            }
-          } 
+		  
+		  
+		  
+		if( isset( $this->request->query['sso_failed'] ) ){
+			
+			if( $this->request->query['sso_failed'] == 'sso701' ){
+				
+				$error_string = 'Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/><br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/><br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>.';
+			
+			}elseif( $this->request->query['sso_failed'] == 'sso702' ){
+				
+				$error_string = 'Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.<br/><br/><a href="http://' . SSO_PARENT . '/sso-support/">Click here to submit a support request.</a>';
+			
+			}elseif( $this->request->query['sso_failed'] == 'sso703' ){
+				
+				$error_string = 'Please make sure you enter a valid username/email and a valid password.';
+			
+			}elseif( $this->request->query['sso_failed'] == 'sso704' ){
+				
+				$error_string = 'Please confim that you are human by entering the correct value in the field below.';
+		
+			}else{
+				
+				$error_string = 'An unknown error occured.';
+				
+			}
+			
+			$this->Flash->error( __( $error_string ) );
+			
+			return $this->redirect(array('controller'=>'main','action'=>'index', 'prefix' => false));
+		
+		} 
 
           $this->layout = 'default';
 

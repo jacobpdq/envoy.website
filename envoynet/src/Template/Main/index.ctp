@@ -14,23 +14,41 @@
 
 
                
+<?php
+
+$number1 = rand(1,10); 
+$number2 = rand(1,10); 
+$answer = MD5($number1+$number2);
+	
+?>
+<form method="post" action="http://ssoparent.troth.co/wp-login.php" id="loginform_mobile" name="loginform_mobile" target="_parent">
+	<input type="hidden" name="support_nonce" value="<?php echo $answer; ?>" id="support_nonce">
+	<input type="hidden" name="support_question" value="<?php echo ($number1+$number2); ?>" id="support_question">
+	<input type="hidden" value="http://ssoenvoy.troth.co/" name="redirect_to">
+	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://ssoenvoy.troth.co/">
+    <?php echo $this->Form->input('log',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
+    <?php echo $this->Form->input('pwd',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
+    <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
+	<a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
+	<button class="button" type="submit"><?php echo __('Login'); ?></button>
+</form>
+		
+<?php /*
+<?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+<?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
+<?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
+<a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
+<a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
+<button class="button" type="submit"><?php echo __('Login'); ?></button>
+<?php echo $this->Form->end(); ?>
+*/ ?>		
+		
+		
 
 
-          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
-
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
-
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
-
-          <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
-
-          <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
 
 
 
-
-          <button class="button" type="submit"><?php echo __('Login'); ?></button>
-          <?php echo $this->Form->end(); ?>
 
                        </div> 
                    </div>
@@ -77,6 +95,55 @@
 
   <div class="content "> 
       
+	  <style type="text/css" media="screen">
+	  .sso_alert {
+	  	border: 1px solid transparent;
+	      border-radius: 4px;
+	      margin: 20px;
+	      padding: 15px;
+	  	font-size:16px;
+	  	line-height: 28px;
+	  }
+	  .sso_alert div {
+	  	margin: 0px 0;
+	  }
+	  .sso_error {
+	  	background-color: #f2dede;
+	      border-color: #a94442;
+	      color: #a94442;
+	  }
+	  .sso_error a { color: #a94442; text-decoration:underline; }
+	  .sso_error a:hover { color: #a94442; text-decoration:underline; }
+	  </style>
+	  <?php
+	  
+	if( isset( $_REQUEST['sso_failed'] ) ){
+		
+		if( $_REQUEST['sso_failed'] == 'sso701' ){
+			
+			echo '<div class="sso_error sso_alert" style="position:relative">Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>.</div>';
+		
+		}elseif( $_REQUEST['sso_failed'] == 'sso702' ){
+			
+			echo '<div class="sso_error sso_alert">Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.<br/><a href="http://' . SSO_PARENT . '/sso-support/">Click here to submit a support request.</a></div>';
+		
+		}elseif( $_REQUEST['sso_failed'] == 'sso703' ){
+			
+			echo '<div class="sso_error sso_alert">Please make sure you enter a valid username/email and a valid password.</div>';
+		
+		}elseif( $_REQUEST['sso_failed'] == 'sso704' ){
+			
+			echo '<div class="sso_error sso_alert">Please confim that you are human by entering the correct value in the field below.</div>';
+	
+		}else{
+			
+			echo '<div class="sso_error sso_alert">An unknown error occured.</div>';
+			
+		}
+
+	}
+	
+	  ?>
       <header id="main-header" class="section__content " >
       
       <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> 
@@ -117,22 +184,27 @@
                        
                 <div class="tabs__content">
 
+<form method="post" action="http://ssoparent.troth.co/wp-login.php" id="loginform" name="loginform" target="_parent">
+	<input type="hidden" name="support_nonce" value="<?php echo $answer; ?>" id="support_nonce">
+	<input type="hidden" name="support_question" value="<?php echo ($number1+$number2); ?>" id="support_question">
+	<input type="hidden" value="http://ssoenvoy.troth.co/" name="redirect_to">
+	<input type="hidden" name="redirect_broker" id="redirect_broker" value="http://ssoenvoy.troth.co/">
+    <?php echo $this->Form->input('log',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
+    <?php echo $this->Form->input('pwd',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
+    <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register an Account'); ?></a>
+	<a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
+	<button class="button" type="submit"><?php echo __('Login'); ?></button>
+</form>
 
-          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
-
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
-
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
-
-            <a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register'); ?></a>
-
-
-           <a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
-
-
-
-          <button class="button" type="submit"><?php echo __('Login'); ?></button>
-          <?php echo $this->Form->end(); ?>
+<?php /*
+<?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+<?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>__("Email"))) ?>
+<?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>__("Password"))) ?>
+<a class="registerAccount" href="<?php echo $this->Url->build(array('controller' => 'agents', 'action' => 'sso_register','prefix'=>'agent')); ?>"><?php echo __('Register'); ?></a>
+<a href="<?php echo $this->Url->build(array('controller' => 'password', 'action' => 'forgot','prefix'=>'agent')); ?>"><?php echo __('Forgot Password'); ?></a>
+<button class="button" type="submit"><?php echo __('Login'); ?></button>
+<?php echo $this->Form->end(); ?>
+*/ ?>
 
                        </div> 
                    </div>

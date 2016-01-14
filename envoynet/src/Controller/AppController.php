@@ -267,25 +267,51 @@ class AppController extends Controller {
     $broker_key = Configure::read('hippo.sso_broker_key');
     $user_email = '';
     $user = $this->Auth->user();
-    if($user && $user['role'] == 'agent'){
+    
+	if($user && $user['role'] == 'agent'){
         $user_email = $user['email'];
         $agentname = $user['company'];
-
-        if ($agentname == '') {
-          $agentname = $user['firstname'] . ' ' . $user['lastname'];
-        }
+        if ($agentname == '') { $agentname = $user['firstname'] . ' ' . $user['lastname']; }
+		$broker_key = $broker_key . '/' . $user_email;
         $this->set('agentname',$agentname);
     }
 
-    if( $broker_key  && $this->request->params['action'] != 'sso_profile'){
-        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/user/' . $broker_key;
-
-        if ($user_email != '' ) {$sso_session_check .= '/' . $user_email;}
+    if( $broker_key  && $this->request->params['action'] != 'sso_profile' ){
+        $sso_session_check =  '<script type="text/javascript" src="http://' . SSO_PARENT . '/sso-session/' . $broker_key . '/';
         $sso_session_check .= '"></script>';
     } else {
       $sso_session_check = '';
     }
-
+	
+	//if( !stristr( $_SERVER['REQUEST_URI'], "/main" ) ){
+	    $sso_session_check .= '<script type="text/javascript">';
+		$sso_session_check .= 'jQuery( document ).ready(function() {';
+		
+		$sso_session_check .= 'if( typeof sso_action !== "undefined" ){';
+		$sso_session_check .= 'jQuery("body").prepend(\'';
+		$sso_session_check .= '<div id="sso_loader" style="display:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;background-color:#eee;color:#000;z-index:9999999;">';
+		$sso_session_check .= '<div id="sso_loader_login" style="display:none;padding-top:100px;text-align:center;">Passport Automatic User Login. Please wait...</div>';
+		$sso_session_check .= '<div id="sso_loader_logout" style="display:none;padding-top:100px;text-align:center;">Passport Automatic User Logout. Please wait...</div>';
+		$sso_session_check .= '</div>\');';
+		
+		$this->user = $this->Auth->user();
+		
+		if ( $user_email ){ $sso_session_check .= 'if( sso_action == "logout" ){ jQuery("#sso_loader,#sso_loader_logout").show(); location.href="/agent/main/logout"; }'; }
+		if ( !$user_email ){
+			$sso_session_check .= 'if( sso_action && sso_action != "logout" ){ ' . "\n";
+			//$sso_session_check .= 'var login_url = "/sso-login/"+sso_action+"/?redirect='.urlencode($_SERVER['REQUEST_URI']).'"' . "\n";
+			$sso_session_check .= 'var login_url = "/sso-login/"+sso_action+""' . "\n";
+			$sso_session_check .= 'jQuery("#sso_loader,#sso_loader_login").show(); ' . "\n";
+			$sso_session_check .= '//console.log(login_url); ' . "\n";
+			$sso_session_check .= 'location.href=login_url; ' . "\n";
+			$sso_session_check .= '}' . "\n";
+		}
+		
+		$sso_session_check .= '}';
+		$sso_session_check .= '});';
+		$sso_session_check .= '</script>';
+	//}
+	
     $this->set('sso_session_check', $sso_session_check);
 
   }

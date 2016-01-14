@@ -12,58 +12,48 @@ use Cake\Routing\Router;
 
 class AgentsController extends \App\Controller\AgentsController {
 
-  public function beforeFilter(Event $event) {
-    parent::beforeFilter($event);
-    $this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'login'));
-    $this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'register','sso_register'));
+	public function beforeFilter( Event $event ) {
+		parent::beforeFilter($event);
+		$this->Auth->allow(array('contact', 'index','login','logout', 'forgot', 'login'));
+		$this->Auth->allowedActions = (array('contact', 'index','login','logout', 'forgot', 'register','sso_register'));
 	}
 
-  public function profile() {
+	public function profile() {
+		$this->set('title_for_layout', __('My Profile'));
+		$id = $this->Auth->user('id');
+		if (!$id && empty($this->request->data)) {
+			$this->Flash->set(__('Invalid agent'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->request->session()->write('UserId', $id);
 
-    $this->set('title_for_layout', __('My Profile'));
-
-    $id = $this->Auth->user('id');
-    if (!$id && empty($this->request->data)) {
-      $this->Flash->set(__('Invalid agent'));
-      $this->redirect(array('action' => 'index'));
-    }
-	  $this->request->session()->write('UserId', $id);
-	
-    if (!empty($this->request->data)) {
-
-      $phonenumber = $this->request->data['digits1'] . "-" . $this->request->data['digits2'] . "-" . $this->request->data['digits3'];
-
-      $this->request->data['phonenumber'] = $phonenumber;
-
-      $agentProfile = $this->Agents->newEntity($this->request->data);
-      $agentProfile->id = $id;
-
-      if ($this->Agents->save($agentProfile)) {
-        $this->Flash->set(__('Profile data has been saved'));
-        $this->redirect($this->referer());
-      } else {
-        $this->Flash->set(__('Profile data could not be saved. Please, try again.'));
-      }
-    } else {
-      $this->request->data = $this->Agents->findById($id)->first()->toArray();
-      $ph = explode('-', $this->request->data['phonenumber']);
-      $this->request->data['digits1'] = $ph[0];
-      $this->request->data['digits2'] = $ph[1];
-      $this->request->data['digits3'] = $ph[2];
-    }
-
-
-
-    $provinces = array('AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT','------', 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY');
-    $provinces = array_combine($provinces,$provinces);
-    $this->set(compact('provinces'));
-
-  }
+		if (!empty($this->request->data)) {
+			$phonenumber = $this->request->data['digits1'] . "-" . $this->request->data['digits2'] . "-" . $this->request->data['digits3'];
+			$this->request->data['phonenumber'] = $phonenumber;
+			$agentProfile = $this->Agents->newEntity($this->request->data);
+			$agentProfile->id = $id;
+			if ($this->Agents->save($agentProfile)) {
+				$this->Flash->set(__('Profile data has been saved'));
+				$this->redirect($this->referer());
+			} else {
+				$this->Flash->set(__('Profile data could not be saved. Please, try again.'));
+			}
+		} else {
+			$this->request->data = $this->Agents->findById($id)->first()->toArray();
+			$ph = explode('-', $this->request->data['phonenumber']);
+			$this->request->data['digits1'] = $ph[0];
+			$this->request->data['digits2'] = $ph[1];
+			$this->request->data['digits3'] = $ph[2];
+		}
+		$provinces = array('AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT','------', 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY');
+		$provinces = array_combine($provinces,$provinces);
+		$this->set(compact('provinces'));
+	}
 
   public function register() {
 
     $this->set('title_for_layout', __('Agent Registration'));
-
+	
     if (!empty($this->request->data)) {
 
       $phonenumber = $this->request->data['digits1'] . "-" . $this->request->data['digits2'] . "-" . $this->request->data['digits3'];
@@ -115,274 +105,216 @@ class AgentsController extends \App\Controller\AgentsController {
   }
 
   public function sso_profile() {
-    
 
     $this->set('title_for_layout', __('My Profile'));
     $http = new Client();
-    
-    $broker_url = Router::url('/', true);
 
-    if (substr($broker_url,0,7) == 'http://') {
-        $broker_url = substr($broker_url,7);
-    } else if (substr($broker_url,0,8) == 'https://') {
-        $broker_url = substr($broker_url,8);
-    }
+  	$_reg_error = '';
+	$_reg_saved = false;
+	
+	$broker_url =  Router::url('/', true);
+	$broker_url =  str_replace("http://","",$broker_url);
+	$broker_url =  str_replace("https://","",$broker_url);
+	$broker_url =  str_replace("/","",$broker_url);
+	
+	// update profile form
+	if( isset( $_REQUEST['sso_session_check'] ) && $_REQUEST['sso_session_check'] ){
 
-    if (substr($broker_url,-1) == '/') {
-        $broker_url = substr($broker_url,0,strlen($broker_url)-1);
-    }
+		$http = new Client();
+		
+		$params = [
+			'action'=>'sso_form_session',
+			'broker_url' => $broker_url,
+			'session' => $_REQUEST['sso_session_check']
+		] ;
+		
+		$response = $http->post( 'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php', $params );
 
-    if (substr($broker_url,0,3) != 'www') {
-      $broker_url = 'www.' . $broker_url;
-    }
-    $user_email = '';
-    if( isset( $this->request->query['sid'] )){
-      //check if this if any errors or messages are present from previous submssions.
-      $response = $http->post(
-          'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-          [
-              'action'=>'sso_form_session',
-              'session'=>$this->request->query['sid'],
-          ]
-      );
+		$items = get_object_vars( json_decode( $response->body() ) );
+		
+		if( isset( $items['_error'] ) && !is_array($items['_error']) && $items['_error'] ){
+			$_reg_error = $items['_error'];
+		}elseif( isset( $items['_error'][0] ) && $items['_error'][0] ){
+			$_reg_error = $items['_error'][0];
+		}
 
-    
+		if( isset( $items['_post'] ) ){
 
-      if( $response->body() ){
-        $content = (array) json_decode( $response->body() );
-        if( isset( $content['_error'] ) ){
-          $this->Flash->error($content['_error']);
-        }
-        if( isset( $content['_saved'] ) ){
-          $this->Flash->set($content['_saved']);
-        }
-      }
-      $response = $http->post(
-          'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-          [
-              'action'=>'user_session',
-              'session'=>$this->request->query['sid'],
-          ]
-      );
+			foreach( $items['_post'] as $key => $value ){
+				if( !is_array( $value ) ){
+					$value = str_replace("\\\'","'",$value);
+					$value = str_replace("\\","",$value);
+					$this->request->data[ $key ] = $value;
+				}
+			}
 
-    
+		}
 
-      if( $response->body() ){ 
-        $user = $this->Agents->findById($this->Auth->user('id'))->first();
+		if( isset( $items['_saved'] ) ){ $_reg_saved = true; }
 
-        $user_parts = explode("|",$response->body());
-        $user_email = $user_parts[0];
-        $provinceAbbreviations = [
-          'alberta'=>'AB',
-          'british columbia' => 'BC',
-          'manitoba' => 'MB', 
-          'new brunswick' => 'NB',
-          'newfoundland' => 'NL',
-          'north west territories' => 'NT',
-          'nova scotia' => 'NS', 
-          'nunavut' => 'NU', 
-          'ontario' => 'ON', 
-          'prince edward island' => 'PE', 
-          'quebec' => 'QC',
-          'saskatchewan' => 'SK',
-          'yukon territory' => 'YT',
-		  'alabama' => 'AL',
-		  'alaska' => 'AK',
-		  'arizona'=>'AZ',
-		  'arkansas'=>'AR',
-		  'california'=>'CA',
-		  'colorado'=>'CO',
-		  'connecticut'=>'CT',
-		  'delaware'=>'DE',
-		  'district of columbia'=>'DC',
-		  'florida'=>'FL',
-		  'georgia'=>'GA',
-		  'hawaii'=>'HI',
-		  'idaho'=>'ID',
-		  'illinois'=>'IL',
-		  'indiana'=>'IN',
-		  'iowa'=>'IA',
-		  'kansas'=>'KS',
-		  'kentucky'=>'KY',
-		  'louisiana'=>'LA',
-		  'maine'=>'ME',
-		  'maryland'=>'MD',
-		  'massachusetts'=>'MA',
-		  'michigan'=>'MI',
-		  'minnesota'=>'MN',
-		  'mississippi'=>'MS',
-		  'missouri'=>'MO',
-		  'montana'=>'MT',
-		  'nebraska'=>'NE',
-		  'nevada'=>'NV',
-		  'new hampshire'=>'NH',
-		  'new jersey'=>'NJ',
-		  'new mexico'=>'NM',
-		  'new york'=>'NY',
-		  'north carolina'=>'NC',
-		  'north dakota'=>'ND',
-		  'ohio'=>'OH',
-		  'oklahoma'=>'OK',
-		  'oregon'=>'OR',
-		  'pennsylvania'=>'PA',
-		  'rhode island'=>'RI','south carolina'=>'SC',
-		  'south dakota'=>'SD',
-		  'tennessee'=>'TN',
-		  'texas'=>'TX',
-		  'utah'=>'UT',
-		  'vermont'=>'VT',
-		  'virginia'=>'VA',
-		  'washington'=>'WA',
-		  'west virginia'=>'WV',
-		  'wisconsin'=>'WI',
-		  'wyoming'=>'WY'
-        ];
-        if (substr($broker_url,0,7) == 'http://') {
-            $broker_url = substr($broker_url,7);
-        } else if (substr($broker_url,0,8) == 'https://') {
-            $broker_url = substr($broker_url,8);
-        }
+	}
+	
+	$user = $this->Agents->findById( $this->Auth->user('id') )->first();
 
-        if (substr($broker_url,-1) == '/') {
-            $broker_url = substr($broker_url,0,strlen($broker_url)-1);
-        }
+	$user_email = $user['email'];
 
-        if (substr($broker_url,0,3) != 'www') {
-          $broker_url = 'www.' . $broker_url;
-        }
+    $params = [
+            'action'=>'user_profile',
+            'broker_url' => $broker_url,
+            'broker_key' => Configure::read('hippo.sso_broker_key'),
+            'email' => $user_email
+        ] ;
+    $response = $http->post('http://' . SSO_PARENT . '/wp-admin/admin-ajax.php', $params );
+    $user_info = get_object_vars(json_decode($response->body()));
+	
+	$provinceAbbreviations = [
+		'alberta'=>'AB',
+		'british columbia' => 'BC',
+		'manitoba' => 'MB',
+		'new brunswick' => 'NB',
+		'newfoundland' => 'NL',
+		'north west territories' => 'NT',
+		'nova scotia' => 'NS',
+		'nunavut' => 'NU',
+		'ontario' => 'ON',
+		'prince edward island' => 'PE',
+		'quebec' => 'QC',
+		'saskatchewan' => 'SK',
+		'yukon territory' => 'YT',
+		'alabama' => 'AL',
+		'alaska' => 'AK',
+		'arizona'=>'AZ',
+		'arkansas'=>'AR',
+		'california'=>'CA',
+		'colorado'=>'CO',
+		'connecticut'=>'CT',
+		'delaware'=>'DE',
+		'district of columbia'=>'DC',
+		'florida'=>'FL',
+		'georgia'=>'GA',
+		'hawaii'=>'HI',
+		'idaho'=>'ID',
+		'illinois'=>'IL',
+		'indiana'=>'IN',
+		'iowa'=>'IA',
+		'kansas'=>'KS',
+		'kentucky'=>'KY',
+		'louisiana'=>'LA',
+		'maine'=>'ME',
+		'maryland'=>'MD',
+		'massachusetts'=>'MA',
+		'michigan'=>'MI',
+		'minnesota'=>'MN',
+		'mississippi'=>'MS',
+		'missouri'=>'MO',
+		'montana'=>'MT',
+		'nebraska'=>'NE',
+		'nevada'=>'NV',
+		'new hampshire'=>'NH',
+		'new jersey'=>'NJ',
+		'new mexico'=>'NM',
+		'new york'=>'NY',
+		'north carolina'=>'NC',
+		'north dakota'=>'ND',
+		'ohio'=>'OH',
+		'oklahoma'=>'OK',
+		'oregon'=>'OR',
+		'pennsylvania'=>'PA',
+		'rhode island'=>'RI','south carolina'=>'SC',
+		'south dakota'=>'SD',
+		'tennessee'=>'TN',
+		'texas'=>'TX',
+		'utah'=>'UT',
+		'vermont'=>'VT',
+		'virginia'=>'VA',
+		'washington'=>'WA',
+		'west virginia'=>'WV',
+		'wisconsin'=>'WI',
+		'wyoming'=>'WY'
+	];
+	
+	foreach( $user_info as $key => $value ){
+		$value = str_replace("\\\'","'",$value);
+		$value = str_replace("\\","",$value);
+		$user_info[$key] = $value;
+	}
 
-        $params = [
-                'action'=>'user_profile',
-                'broker_url' => $broker_url,
-                'broker_key' => Configure::read('hippo.sso_broker_key'),
-                'email' => $user_parts[0]
-            
-            ] ;
-        $response = $http->post(
-            'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-            $params
+	
+	if( $_reg_saved ){
+		
+		if (!isset($user_info['city'])) { $user_info['city'] = ''; }
+		if (!isset($user_info['company'])) { $user_info['company'] = ''; }
+		if (!isset($user_info['postal_code'])) { $user_info['postal_code'] = ''; }
+		if (!isset($user_info['phone_no'])) { $user_info['phone_no'] = ''; }
+		if (!isset($user_info['province'])) {
+			$user_info['province'] = '';
+			$user_prov = '';
+		} elseif (strlen($user_info['province']) > 4) {
+			$user_prov = $provinceAbbreviations[strtolower($user_info['province'])];
+		} else {
+			$user_prov = $user_info['province'];
+		}
 
-        );
-        $user_info = get_object_vars(json_decode($response->body()));
+		$user->username = $user_info['username'];
+		$user->email = $user_info['email'];
+		$user->firstname = $user_info['first_name'];
+		$user->lastname = $user_info['last_name'];
+		
+		if ($ssoSession) { $user->password = $ssoSession->password; }
+		$user->company = $user_info['company'];
+		$user->phonenumber = $user_info['phone_no'];
+		$user->province = $user_prov;
+		$user->postalcode = $user_info['postal_code'];
+		$user->city = $user_info['city'];
+		$user->address = $user_info['street'] . ' ' . $user_info['streetName'];
+		$user->address2 = $user_info['unitApt'] . ' ' . $user_info['unitType'];
+		$user=$this->Agents->save($user)->toArray();
+		$sessionUser = $this->Auth->user();
+		foreach(array_keys($user) as $key) {
+			$sessionUser[$key] = $user[$key];
+		}
+		$this->Auth->setUser($sessionUser);
+				
+	}
 
-        if (!isset($user_info['city'])) {
-          $user_info['city'] = '';
-        }
-        if (!isset($user_info['company'])) {
-          $user_info['company'] = '';
-        }
-        if (!isset($user_info['postal_code'])) {
-          $user_info['postal_code'] = '';
-        }
-        if (!isset($user_info['phone_no'])) {
-          $user_info['phone_no'] = '';
-        }
-
-
-        if (!isset($user_info['province'])) {
-          $user_info['province'] = '';
-          $user_prov = '';
-        } elseif (strlen($user_info['province']) > 4) {
-          $user_prov = $provinceAbbreviations[strtolower($user_info['province'])];
-        } else {
-          $user_prov = $user_info['province'];
-        }
-
-              $user->username = $user_parts[1];
-              $user->email = $user_parts[0];
-              $user->firstname = $user_parts[2];
-              $user->lastname = $user_parts[3];
-              if ($ssoSession) {
-                $user->password = $ssoSession->password;
-              }
-              $user->company = $user_info['company'];
-              $user->phonenumber = $user_info['phone_no'];
-              $user->province = $user_prov;
-              $user->postalcode = $user_info['postal_code'];
-              $user->city = $user_info['city'];
-              $user->address = $user_info['street'] . ' ' . $user_info['streetName'];
-              $user->address2 = $user_info['unitApt'] . ' ' . $user_info['unitType'];
-$user=$this->Agents->save($user)->toArray();
-$sessionUser = $this->Auth->user();
-foreach(array_keys($user) as $key) {
-$sessionUser[$key] = $user[$key];
-}
-$this->Auth->setUser($sessionUser);
-      }
-
-    } else {
-      $user_email = $this->Auth->user('email');
-
-    }
-
-    /*
-    lc_role_agency < LC only shows role and agency
-    contact_sml < shows province, phone, website
-    contact_lrg < shows all contact info
-    company_job < shows company and job_function
-    pro_information < shows all profession info
-    tw_verfiy_request < shows ca_verify
-    tw_magazine << subscribe info
-    register_fallback < only when used with profile. Falls back to reg form if logged out.
-    */
-
-    $attr = [
-      'lc_role_agency' => '',
-      'contact_sml' => '',
-      'contact_lrg' => true,
-      'company_job' => true,
-      'pro_information' => true,
-      'tw_verfiy_request' => '',
-      'tw_magazine' => '',
-      'register_fallback' => ''
-    ];
+	$attr = [
+		'lc_role_agency' => '',
+		'contact_sml' => '',
+		'contact_lrg' => true,
+		'company_job' => true,
+		'pro_information' => true,
+		'tw_verfiy_request' => '',
+		'tw_magazine' => '',
+		'register_fallback' => '',
+		'_error' => $_reg_error,
+		'_saved' => $_reg_saved
+	];
 
     $broker_key = Configure::read('hippo.sso_broker_key');
-    
-    $response = $http->post(
-      'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-      [
-        'action'=> 'user_profile',
-        'email' => $user_email,
-        'broker_key' => $broker_key,
-        'broker_url' => $broker_url
-      ]
-    );
-    
-    $form = $this->sso_form_profile( json_decode($response->body()), $attr );
-    
-    $this->set('form', $form);
-  }
+
+	$param = [
+		'action'=> 'user_profile',
+		'email' => $user_email,
+		'broker_key' => $broker_key,
+		'broker_url' => $broker_url
+	];
+	
+	$response = $http->post( 'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php', $param );
+
+	$form = $this->sso_form_profile( json_decode($response->body()), $attr );
+
+	$this->set('form', $form);
+	
+}
+  
+  
+  
   public function sso_register() {
-    
 
     $this->set('title_for_layout', __('Agent Registration'));
     $http = new Client();
     $broker_url = trim(str_replace(array('http://','https://'),'',Router::url('/', true)),'/');
 
-    if( isset( $this->request->query['sid'] )){
-      //check if this if any errors or messages are present from previous submssions.
-      $response = $http->post(
-          'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-          [
-              'action'=>'sso_form_session',
-              'session'=>$this->request->query['sid'],
-          ]
-      );
-
-    
-
-      if( $response->body() ){
-        $content = (array) json_decode( $response->body() );
-        if( isset( $content['_error'] ) ){
-          $this->Flash->error($content['_error']);
-        }
-        if( isset( $content['_saved'] ) ){
-          $this->Flash->set($content['_saved']);
-        }
-      }
-    }
-
     /*
     lc_role_agency < LC only shows role and agency
     contact_sml < shows province, phone, website
@@ -406,16 +338,6 @@ $this->Auth->setUser($sessionUser);
     ];
 
     $broker_key = Configure::read('hippo.sso_broker_key');
-    
-    $response = $http->post(
-      'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
-      [
-        'action'=> 'user_profile',
-        'email' => $this->Auth->user('email'),
-        'broker_key' => $broker_key,
-        'broker_url' => $broker_url
-      ]
-    );
     
     $form = $this->sso_form_register( $attr );
     
@@ -429,12 +351,53 @@ $this->Auth->setUser($sessionUser);
     ob_start();
     $userinfo = $data;
 
+	
     $data  = (array) $data;
 
+	
+	foreach( $data as $key => $value ){
+		$value = str_replace("\\\'","'",$value);
+		$value = str_replace("\\","",$value);
+		$data[$key] = $value;
+	}
+	
     //below is the same form code as in the wp-sso plugin.
     //as long as the form action along with the sso_redirect and sso_redirect hiddens are stay the same everything else can be change. 
+
+	if( $attr['_error'] ){ ?><div class="sso_alert sso_error"><?php echo $attr['_error']; ?></div><?php }
+	
+	if( $attr['_saved'] ){ ?><div class="sso_alert sso_success"><strong>Your profile has been updated.</div><?php }
+		
     ?>
-    
+	<style type="text/css" media="screen">
+	.sso_alert {
+		border: 1px solid transparent;
+	    border-radius: 4px;
+	    margin-top: 20px;
+	    padding: 15px;
+		font-size:16px;
+		line-height: 28px;
+	}
+	.sso_alert div {
+		margin: 0px 0;
+	}
+	.sso_error {
+		background-color: #f2dede;
+	    border-color: #a94442;
+	    color: #a94442;
+	}
+	.sso_error a { color: #a94442; text-decoration:underline; }
+	.sso_error a:hover { color: #a94442; text-decoration:underline; }
+	.sso_success {
+		background-color: #dff0d8;
+	    border-color: #3c763d;
+	    color: #3c763d;
+	}
+	.sso_success a { color: #3c763d; }
+	.sso_success a:hover { color: #3c763d; }
+	</style>
+	
+	
       <form class="ssoForm" action="<?php echo $formAction; ?>" method="post" accept-charset="utf-8">
         
 
@@ -548,8 +511,56 @@ $this->Auth->setUser($sessionUser);
     
     return $content; 
   }
-  protected function sso_form_register( $attr ) {
 
+
+  protected function sso_form_register( $attr ) {
+	  
+  	$_reg_error = '';
+	$_reg_saved = false;
+	
+	$broker_url =  Router::url('/', true);
+	$broker_url =  str_replace("http://","",$site_url);
+	$broker_url =  str_replace("https://","",$site_url);
+	$broker_url =  str_replace("/","",$site_url);
+	
+  	if( isset( $_REQUEST['sso_session_check'] ) && $_REQUEST['sso_session_check'] ){
+		
+  		$http = new Client();
+  		        $params = [
+  		                'action'=>'sso_form_session',
+  		                'broker_url' => $broker_url,
+  		                'session' => $_REQUEST['sso_session_check']
+  		            ] ;
+  		        $response = $http->post(
+  		            'http://' . SSO_PARENT . '/wp-admin/admin-ajax.php',
+  		            $params
+  		        );
+		
+  		$items = get_object_vars( json_decode( $response->body() ) );
+		
+		if( isset( $items['_error'] ) && !is_array($items['_error']) && $items['_error'] ){ 
+			$_reg_error = $items['_error']; 
+		}elseif( isset( $items['_error'][0] ) && $items['_error'][0] ){ 
+			$_reg_error = $items['_error'][0]; 
+		}
+
+  		if( isset( $items['_post'] ) ){
+
+  				foreach( $items['_post'] as $key => $value ){
+  					if( !is_array( $value ) ){
+						$this->request->data[ $key ] = $value;
+  					}
+					
+  				}
+			
+			
+  		}
+		
+		if( isset( $items['_saved'] ) ){
+			$_reg_saved = true;
+		}
+  	}
+	
     $broker_key = Configure::read('hippo.sso_broker_key'); 
     $redirect = Router::url('/', true) . $this->request->url;
     $formAction = 'http://' . SSO_PARENT;
@@ -559,13 +570,47 @@ $this->Auth->setUser($sessionUser);
     //as long as the form action along with the sso_redirect and sso_redirect hiddens are stay the same everything else can be change. 
     ?>
 
+		<style type="text/css" media="screen">
+		.sso_alert {
+			border: 1px solid transparent;
+		    border-radius: 4px;
+		    margin-top: 20px;
+		    padding: 15px;
+			font-size:16px;
+			line-height: 28px;
+		}
+		.sso_alert div {
+			margin: 0px 0;
+		}
+		.sso_error {
+			background-color: #f2dede;
+		    border-color: #a94442;
+		    color: #a94442;
+		}
+		.sso_error a { color: #a94442; text-decoration:underline; }
+		.sso_error a:hover { color: #a94442; text-decoration:underline; }
+		.sso_success {
+			background-color: #dff0d8;
+		    border-color: #3c763d;
+		    color: #3c763d;
+		}
+		.sso_success a { color: #3c763d; }
+		.sso_success a:hover { color: #3c763d; }
+		</style>
+		
+	<?php if( $_reg_error ){ ?>
+		<div class="sso_alert sso_error"><?php echo $_reg_error; ?></div>
+
+	<?php } ?>
+
+	<?php if( $_reg_saved ){ ?>
+	<div class="sso_alert sso_success"><strong>Thank you for registering.</strong><br>Your account has been created and you can now log in.<br><a href="<?php echo Router::url('/', true); ?>">Login to your account</a></div>
+	<?php }else{ ?>
+		
     <form class="ssoForm" action="<?php echo $formAction; ?>" method="post" accept-charset="utf-8">
       
-      
-
-      <input type="hidden" name="sso_redirect" value="<?php echo $redirect ?>" id="sso_redirect">
+      <input type="hidden" name="sso_redirect" value="<?php echo $redirect; ?>" id="sso_redirect">
       <input type="hidden" name="sso_key" value="<?php echo $broker_key; ?>" id="sso_key">
-      
       <input type="hidden" name="sso_action" value="register" id="sso_action">
       <input type="hidden" name="sso_source" value="<?php echo $redirect; ?>" id="sso_source">
       
@@ -602,11 +647,11 @@ $this->Auth->setUser($sessionUser);
         <div class="formGroup">
           <div class="fieldHalf">
             <label for=""><?php echo __('First Name') ?> <span class="sso_required_icon">*</span></label>
-            <input type="text" name="first_name" value="<?php $this->request->data['first_name']; ?>" id="first_name">
+            <input type="text" name="first_name" value="<?php echo $this->request->data['first_name']; ?>" id="first_name">
           </div>
           <div class="fieldHalf">
             <label for=""><?php echo __('Last Name') ?> <span class="sso_required_icon">*</span></label>
-            <input type="text" name="last_name" value="<?php $this->request->data['last_name']; ?>" id="last_name">
+            <input type="text" name="last_name" value="<?php echo $this->request->data['last_name']; ?>" id="last_name">
           </div>
           <div style="clear:both;"></div>
         </div>
@@ -617,11 +662,11 @@ $this->Auth->setUser($sessionUser);
         <div class="formGroup">
           <div class="fieldHalf">
             <label for=""><?php echo __('Email') ?> <span class="sso_required_icon">*</span></label>
-            <input type="email" name="email" value="<?php $this->request->data['email']; ?>" id="email">
+            <input type="email" name="email" value="<?php echo $this->request->data['email']; ?>" id="email">
           </div>
           <div class="fieldHalf">
             <label for=""><?php echo __('Confirm Email') ?> <span class="sso_required_icon">*</span></label>
-            <input type="email" name="email_confirm" value="<?php $this->request->data['email_confirm']; ?>" id="email_confirm">
+            <input type="email" name="email_confirm" value="<?php echo $this->request->data['email_confirm']; ?>" id="email_confirm">
           </div>
           <div style="clear:both;"></div>
         </div>
@@ -633,7 +678,7 @@ $this->Auth->setUser($sessionUser);
           <div class="fieldHalf">
             <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
             
-            <input type="text" name="username" value="<?php $this->request->data['username']; ?>" id="username">
+            <input type="text" name="username" value="<?php echo $this->request->data['username']; ?>" id="username">
           </div>
           <div class="fieldHalf disclaimer"><br/><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.') ?></div>
           <div style="clear:both;"></div>
@@ -755,7 +800,9 @@ $this->Auth->setUser($sessionUser);
     <p><input type="submit" class="button dark" value="<?php echo __('Register') ?>"></p>
     
     </form>
-  
+  	
+	<?php } ?>
+	
     <?php
     
     $content = ob_get_contents();

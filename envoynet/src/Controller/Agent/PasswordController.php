@@ -42,8 +42,14 @@ parent::initialize();
 		            if (substr($broker_url,0,3) != 'www') {
 		            	$broker_url = 'www.' . $broker_url;
 		            }
+					
+					$broker_url =  Router::url('/', true);
+					$broker_url =  str_replace("http://","",$broker_url);
+					$broker_url =  str_replace("https://","",$broker_url);
+					$broker_url =  str_replace("/","",$broker_url);
+					
 		            $length = 13;
-
+					
 		            $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
 
 		            //call out to sso parent to verify login
