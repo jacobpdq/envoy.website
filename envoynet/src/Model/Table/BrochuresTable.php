@@ -23,7 +23,6 @@ class BrochuresTable extends Table {
 
     	$this -> hasMany('Receipts');
     	$this -> hasMany('OrderItems');
-		$this -> hasMany('Racks');
 
         $this -> belongsToMany('Orders', [
                 'foreignKey' => 'order_id',

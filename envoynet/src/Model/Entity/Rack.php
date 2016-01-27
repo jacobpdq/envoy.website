@@ -4,7 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Receipt Entity.
+ * Rack Entity.
  */
 class Rack extends Entity
 {
@@ -15,8 +15,6 @@ class Rack extends Entity
      * @var array
      */
     protected $_accessible = [
-        'brochure_id' => true,
         'rack_number' => true,
-        
     ];
 }
