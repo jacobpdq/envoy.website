@@ -1,5 +1,22 @@
 <div class="brochures view">
 <h2><?php echo __('Brochure');?></h2>
+
+<?php echo $this->Form->create('Brochures'); ?>
+
+    <ol list-style="none">
+     
+     
+       <li><div id="Confirm_order_inset_Holder"><?php echo $this->Form->input('barcodes', array('value' =>'', 'label' => 'Scan barcode', 'name' => 'data[barcodes]','autofocus' => 'autofocus')); ?></div><br></li>
+  
+    </ol>
+  
+  <fieldset class="submit">
+     <?php 
+     echo $this->Form->submit(__('Enter barcode')); 
+     echo $this->Form->end();
+     ?>
+  </fieldset>
+
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Id'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
@@ -8,7 +25,7 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Supplier'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($brochure['Supplier']['id'], array('controller' => 'suppliers', 'action' => 'view', $brochure['Supplier']['id'])); ?>
+			<?php echo $this->Html->link($brochure['supplier']['company'], array('controller' => 'suppliers', 'action' => 'view', $brochure['supplier']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Sku'); ?></dt>
@@ -28,9 +45,17 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Image'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($brochure['Image']['id'], array('controller' => 'images', 'action' => 'view', $brochure['Image']['id'])); ?>
+                <?php echo $this->ImageResize->resize('brochures/' . $brochure['image']['filename'], 187, 260, false);?>
+ 
 			&nbsp;
 		</dd>
+        
+     <dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Location'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $brochure['location']; ?>
+			&nbsp;
+		</dd>
+        
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Qty Skid'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $brochure['qty_skid']; ?>
@@ -46,6 +71,16 @@
 			<?php echo $brochure['weight']; ?>
 			&nbsp;
 		</dd>
+        <dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Ontario Inventory'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $brochure['Ontario_inventory']; ?>
+			&nbsp;
+		</dd>
+        <dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('BC Inventory'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $brochure['BC_inventory']; ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Inv Balance'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $brochure['inv_balance']; ?>
@@ -54,6 +89,21 @@
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Display On Agent Page'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $brochure['display_on_agent_page']; ?>
+			&nbsp;
+		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Status'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $brochure_statuses[$brochure['status']]; ?>
+			&nbsp;
+		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Category'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $brochure_categorys[$brochure['category']]; ?>
+			&nbsp;
+		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('POA'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $poa_options[$brochure['poa']]; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Created'); ?></dt>
@@ -72,7 +122,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Brochure'), array('action' => 'edit', $brochure['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Delete Brochure'), array('action' => 'delete', $brochure['id']), ['confirm'=>sprintf(__('Are you sure you want to delete # %s?'), $brochure['id'])]); ?> </li>
+		<li><?php echo $this->Html->link(__('Delete Brochure'), array('action' => 'delete', $brochure['id']), ['confim'=>sprintf(__('Are you sure you want to delete # %s?'), $brochure['id'])]); ?> </li>
 		<li><?php echo $this->Html->link(__('List Brochures'), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Brochure'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Images'), array('controller' => 'images', 'action' => 'index')); ?> </li>

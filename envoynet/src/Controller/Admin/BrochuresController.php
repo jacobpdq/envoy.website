@@ -21,17 +21,6 @@ class BrochuresController extends \App\Controller\BrochuresController {
   }
 
   public function view($id = null) {
-    if (!$id) {
-      $this->Flash->set(__('Invalid brochure'));
-      $this->redirect(array('action' => 'index'));
-    }
-
-    $this->set('brochure', $this->Brochures->get($id));
-  }
-
-
-  public function view2($id = null) {
-
    if (!empty($this->request->data)) { 
     $skufind = $this->request->data; 
     $skufind1 = $this->Brochures->findBySku($skufind['data']['barcodes']);
