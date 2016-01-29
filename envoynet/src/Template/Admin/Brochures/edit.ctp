@@ -188,11 +188,21 @@
       <li><?php echo $this->Form->input('inv_notif_threshold'); ?> </li>
       <li><?php echo $this->Form->input('display_on_agent_page'); ?> </li>
       <li><?php echo $this->Form->input('poa',array('options'=>$poa_options)); ?></li>
-       <li><?php echo $this->Form->input('status',array('options'=>$brochure_statuses)); ?></li>
-       <li><?php echo $this->Form->input('location'); ?> </li>
- <li><?php echo $this->Form->input('ebrochure'); ?></li>
- <!--   <li>  <?php echo $this->Html->link(__('view ebrochure'), $brochurelinks, array('target'=>'_blank')); ?></li> -->
- <li>  <?php echo $this->Html->link(__('view ebrochure'), 'www.travelweek.ca', array('target'=>'_blank')); ?></li>
+      <li><?php echo $this->Form->input('status',array('options'=>$brochure_statuses)); ?></li>
+      <li><?php echo $this->Form->input('ebrochure'); ?></li>
+        
+     <li> <div class="input text">
+     <label>Location</label>
+       <?php
+       $racklocation=$this->request->data['racks'];
+
+       foreach ($sortedracks as $racklocations) { 
+       echo $this->Html->link(__($racklocations['rack_number'].'  '), array('controller' => 'racks','action' => 'edit', $racklocations['id']));  
+         
+        } ?>
+        </div>
+        </li>
+
     </ol>
   </fieldset>
   <fieldset class="submit">

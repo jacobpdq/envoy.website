@@ -131,7 +131,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
   public function edit($id = null) {
 
     $broch=$this->request->data;
-    
+  
     if (!$id && empty($this->request->data)) {
       $this->Flash->set(__('Invalid brochure'));
       $this->redirect(array('action' => 'index'));
@@ -151,6 +151,8 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
       $brochure = $this->Brochures->newEntity($this->request->data);
       $brochure->brochure_order_amts = $brochureOrderAmts;
+      
+     
 
       if ($this->Brochures->save($brochure)) {
         $this->Flash->set(__('The brochure has been saved'));
@@ -164,7 +166,11 @@ class BrochuresController extends \App\Controller\BrochuresController {
 
 
     if (empty($this->request->data)) {
-      $this->request->data = $this->Brochures->findById($id)->contain(['BrochureOrderAmts'])->first()->toArray();    
+      $this->request->data = $this->Brochures->findById($id)->contain(['BrochureOrderAmts','Racks'])->first()->toArray(); 
+      
+      $broch1=$this->request->data; 
+      $sortedracks = Hash::sort($broch1['racks'], '{n}.rack_number', 'asc');
+      $this->set(compact('sortedracks'));
 
     }
 
