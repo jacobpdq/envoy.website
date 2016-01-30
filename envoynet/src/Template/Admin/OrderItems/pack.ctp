@@ -66,7 +66,16 @@
 	  else {
 	   echo $this->Form->input('qty_shipped', array('label'=>'Qty shipped','value'=>$orderItem['qty_shipped'])); }
        ?></div><br><br/></li>
-        <li> <div id="Confirm_order_inset_Holder"><?php  echo $this->Form->input('brochure.location', array('label'=>'Location', 'value'=>$brochure['location'], 'readonly'=>'readonly'));?></div><br><br /></li>
+        <li> <div id="Confirm_order_inset_Holder">
+        <label>Location</label>
+        <?php
+	$sortedracks = $brochure['racks'];		
+       foreach ($sortedracks as $racklocations) { 
+       echo $this->Html->link(__($racklocations['rack_number'].'  '), array('controller' => 'racks','action' => 'edit', $racklocations['id']));  
+         
+        } ?>
+        
+        </div><br><br /></li>
      
       <li><div id="Confirm_order_inset_Holder"><?php if ($orderItem['status'] == 6) {
 	  echo $this->Form->input('statusfordisplay',array('label'=>'Status','value'=>$order_item_statuses[$orderItem['status']], 'class'=>'green', 'readonly'=>'readonly')); }
@@ -142,4 +151,3 @@
 });
 
 </script>
-

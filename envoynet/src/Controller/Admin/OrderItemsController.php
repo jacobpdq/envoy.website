@@ -147,7 +147,7 @@ class OrderItemsController extends \App\Controller\OrderItemsController {
           'order_id' => $id, 
           'OR' => [['OrderItems.status' => 0], ['OrderItems.status' => 6]]
          ),
-         'contain' => array('Brochures.Images', 'Orders'),
+         'contain' => array('Brochures.Images', 'Orders','Brochures.Racks'),
          'order' => ['Brochures.sku']
     ];
     
