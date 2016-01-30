@@ -52,7 +52,16 @@
         
      <dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Location'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $brochure['location']; ?>
+			
+			
+			<?php
+			
+       foreach ($sortedracks as $racklocations) { 
+       echo $this->Html->link(__($racklocations['rack_number'].'  '), array('controller' => 'racks','action' => 'edit', $racklocations['id']));  
+         
+        } ?>
+			
+			
 			&nbsp;
 		</dd>
         

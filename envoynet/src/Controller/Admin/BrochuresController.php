@@ -21,17 +21,16 @@ class BrochuresController extends \App\Controller\BrochuresController {
   }
 
   public function view($id = null) {
-   if (!empty($this->request->data)) { 
+       if (!empty($this->request->data)) { 
     $skufind = $this->request->data; 
     $skufind1 = $this->Brochures->findBySku($skufind['data']['barcodes']);
    }
    else {
-    $skufind = '1001100GE';
-    $skufind1 = $this->Brochures->findBySku($skufind);
+    $skufind1 = $this->Brochures->findById($id);
    }
 
    $skufind2 = $skufind1->all();
-   
+    
    if ($skufind1->isEmpty()) {
     $this->Flash->set(__('Invalid brochure'));
     $id=300;
@@ -39,9 +38,14 @@ class BrochuresController extends \App\Controller\BrochuresController {
    else { 
    $id=$skufind2->first()->id;
    $this->set('brochure', $this->Brochures->get($id, [
-    'contain' => ['Suppliers','Images']
+    'contain' => ['Suppliers','Images','Racks']
     ]));
-   }
+    $broch1=$this->Brochures->get($id, [
+    'contain' => ['Racks']])->toArray();
+
+     $sortedracks = Hash::sort($broch1['racks'], '{n}.rack_number', 'asc');
+      $this->set(compact('sortedracks'));
+       }
   }
 
   public function add() {
