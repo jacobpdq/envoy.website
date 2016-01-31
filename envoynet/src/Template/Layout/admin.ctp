@@ -83,12 +83,9 @@
           -->
         <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>"><div id="admin_btn">Shipping</div>
         </a>
-         <a class="small" href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>">
-         
-      Receipts
+         <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>"><div id="admin_btn">Receipts</div>
         </a>
-        <a class="small"href="<?php echo $this->Url->build(array('controller'=>'sso','action'=>'settings','prefix' => 'admin'));?>">
-          SSO Settings
+        <a href="<?php echo $this->Url->build(array('controller'=>'racks','action'=>'index','prefix' => 'admin'));?>"><div id="admin_btn">Racks</div>
         </a>
       
 
