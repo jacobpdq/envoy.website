@@ -3,7 +3,8 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('brochure_id');?></th>
+			<th><?php echo $this->Paginator->sort('Brochures.name');?></th>
+			<th><?php echo $this->Paginator->sort('Brochures.sku');?></th>
 			<th><?php echo $this->Paginator->sort('rack_number');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
@@ -20,6 +21,7 @@
 		<td>
 			<?php echo $this->Html->link($rack['brochure']['name'], array('controller' => 'brochures', 'action' => 'view', $rack['brochure_id'])); ?>
 		</td>
+		<td><?php echo $rack['brochure']['sku']; ?>&nbsp;</td>
 		<td><?php echo $rack['rack_number']; ?>&nbsp;</td>
 		
 		<td class="actions">
