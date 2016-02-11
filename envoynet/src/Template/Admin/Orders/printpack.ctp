@@ -125,7 +125,7 @@ echo $this->Html->image("assets/site_logos/ENVOY_return_address.jpg");
 <script type="text/javascript" >
 function printpackslip() {
     window.print();
-	//window.close();
+	window.close();
 }
 printpackslip();
 </script>
