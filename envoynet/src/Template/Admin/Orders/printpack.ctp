@@ -5,8 +5,8 @@
 if ($order['owner_type'] == 1) {
 if ($adminId == 3) {
 echo ("<b>".$order['Supplier']['company']."</b></br>");
-echo ("c/o 1800 Ironstone Manor</br>");
-echo ("Pickering, ON  L1W 3J9</br>");
+echo ("c/o 425 Attwell Dr</br>");
+echo ("Etobicoke, ON  M9W 5C4</br>");
 echo ("Ph: 905-831-0006");
 }
 else {
