@@ -63,7 +63,7 @@ class RacksController extends \App\Controller\RacksController {
     }
 
 	  $brochures = $this->Racks->Brochures->find('list', array('order' => 'Brochures.name', 'conditions' => array('Brochures.status' => 1)));
-    $this->set(compact('brochures'));
+    $this->set(compact('brochures','id'));
   }
 
   public function delete($id = null) {
