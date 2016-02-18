@@ -14,7 +14,7 @@ class RacksController extends \App\Controller\RacksController {
     $this->paginate = array(
         'contain'=>['Brochures'],
         'limit' => 50,
-        'sortWhitelist'=>['Brochures.name','Brochures.sku']
+        'sortWhitelist'=>['Brochures.name','Brochures.sku','Racks.id','Racks.rack_number']
     );
 
     $this->set('racks', $this->paginate($this->Racks->find('all')));

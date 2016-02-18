@@ -2,10 +2,10 @@
 	<h2><?php echo __('Racks');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('Brochures.name');?></th>
-			<th><?php echo $this->Paginator->sort('Brochures.sku');?></th>
-			<th><?php echo $this->Paginator->sort('rack_number');?></th>
+			<th><?php echo $this->Paginator->sort('Racks.id','ID');?></th>
+			<th><?php echo $this->Paginator->sort('Brochures.name','Brochure');?></th>
+			<th><?php echo $this->Paginator->sort('Brochures.sku','SKU');?></th>
+			<th><?php echo $this->Paginator->sort('Racks.rack_number','Rack Number');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
