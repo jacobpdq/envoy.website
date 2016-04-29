@@ -23,20 +23,23 @@ class OrdersController extends \App\Controller\OrdersController {
   }
 
   function index() {
+  
+   $agentId = $this->Auth->user('id');
+    if (!empty($agentId)) {
 
     $this->set('title_for_layout', __('Orders'));
 
-    $agentId = $this->Auth->user('id');
-    if (!empty($agentId)) {
+   
 
       $this->paginate ['conditions'] = [
         'Orders.owner_id' => $agentId, 
         'Orders.owner_type' => 'agent'
       ];
-    }
+    
 
 
     $this->set('orders', $this->paginate());
+	}
   }
 
   public function view($id = null) {
