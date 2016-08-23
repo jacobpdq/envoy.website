@@ -56,15 +56,23 @@
 
                 </section>
 
-      <ul class="language">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Language: <span class="english">EN</span><span class="french">FR</span></a></li>
+      <ul class="language desktop">
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">
+          <span class="english fontsize14 bold">
+            <button class="lang--button button--white">English</button>
+          </span>
+          <span class="french fontsize14 bold">
+            <button class="lang--button button--white">Français</button>
+          </span>
+        </a>
       </ul>
-
-
-      <ul class="desktop">
-        <li class="gray-text">1800 IRONSTONE MANOR, PICKERING, ON L1W 3J9</li>
-        <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
-        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+      <ul class="topnav">
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('About Us'); ?></a></li>
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a></li>
+      </ul>
+      <ul class="desktop" style="margin-top:-7px !important;">
+        <li class="gray-text">TORONTO    ETOBICOKE    RICHMOND<br /><a href="tel:+19058310006">(905)831-0006</a> &nbsp; <a href="mailto:mail@envoynetworks.ca">mail@envoynetworks.ca</a></li>
       </ul>
     </nav> 
   </header>

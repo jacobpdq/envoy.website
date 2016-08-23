@@ -10,7 +10,7 @@
    </div>
         
         
-   <div id="Profile_form_holder1" class="Base_red_form_txt"> <BR><BR>&nbsp;&nbsp;&nbsp;<span class="data_Headers_Bl_txt">Please complete the following:</span></div>
+   <div id="Profile_form_holder1" class="Base_red_form_txt"> <BR><BR>&nbsp;&nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Please complete the following'); ?>:</span></div>
   
   <?php echo $this->Form->create('Ebrochureorder',array('url'=>array('controller'=>'Ebrochureorders','action'=>'agent_placeOrder','prefix' => 'agent'))); ?> 
    

@@ -71,7 +71,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
         'conditions' => array('OR' => array('Brochures.supplier_id' => $supplierId, 'Suppliers.master_supplier' => $supplierId), 'Brochures.status' => '1'),
         'limit' => 100,
         'order' => ['Brochures.name'],
-        'fields' => array('id','supplier_id','sku','name','qty_skid','qty_box','weight','inv_balance','inv_notif_threshold','created','status','category'),
+        'fields' => array('id','supplier_id','sku','name','is_french','qty_skid','qty_box','weight','inv_balance','inv_notif_threshold','created','status','category'),
         'contain' => array('Receipts','Suppliers','OrderItems'=> array('Orders'=> array('fields' => array('id','created'), 'conditions' => array('created >=' => $this->request->query['filter_start_date'], 'created <=' => $endDateRoundup )),'fields' => array('id','order_id','qty_shipped','brochure_id')))
 
 
@@ -101,6 +101,7 @@ class BrochuresController extends \App\Controller\BrochuresController {
             'supplier_id',
             'sku',
             'name',
+            'is_french',
             'qty_skid',
             'qty_box',
             'weight',

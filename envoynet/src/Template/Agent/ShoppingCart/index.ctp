@@ -11,9 +11,8 @@
     <table class="index">
         <tbody>
             <tr>
-                <th width="400px"><?php echo __("Brochure");?></th>
-                <th width="300px"><?php echo __("Quantity");?></th>
-                <th width="100px"></th>
+                <th width="75%"><?php echo __("Brochure");?></th>
+                <th width="25%"><?php echo __("Quantity");?></th>
             </tr>
   
         <?php if(!empty($this->request->data['Cart']['Items'])):?>
@@ -39,12 +38,14 @@
 			
 			?>
                     </div>
-                    <div class="cart_max_order"><?php echo "Max order: ".$item['max_order'];?></div>
+                    <div class="cart_max_order">
+                      <?php echo __("Max order") . ':' . $item['max_order'];?>
+                    </div>
+                    <div class="order-item-remove">
+                      <?php echo $this->Html->link( __("Remove Item"),array('controller'=>'ShoppingCart','action'=>'removeItem',$id,'prefix' => 'agent'),
+                  array('class'=>'order-item-delete'));?>
+                  </div>
                 </td>
-               
-                <td>    <div class="order-item-remove"><?php echo $this->Html->link("Remove Item",array('controller'=>'ShoppingCart','action'=>'removeItem',$id,'prefix' => 'agent'),
-                  array('class'=>'order-item-delete'));?>   </div> </td>
-            
             </tr>
             <?php endforeach;?>
         <?php endif;?>

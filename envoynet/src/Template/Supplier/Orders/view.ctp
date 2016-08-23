@@ -28,11 +28,11 @@
     <br>         
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Tel'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_phonenumber']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Email'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_email']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Order Source: </span><span class="data_Headers_Bl_txt"><?php echo $order_owners[$order['owner_type']]; ?></span><br></div> 
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Order Source'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order_owners[$order['owner_type']]; ?></span><br></div> 
   <?php if($order['priority']=='1'):?>              
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Delivery Type: </span><span class="data_Headers_Bl_txt">Rush</span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Delivery Type'); ?>: </span><span class="data_Headers_Bl_txt">Rush</span><br></div>
    <?php elseif($order['priority']=='0'):?> 
-         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> Delivery Type: </span><span class="data_Headers_Bl_txt">Normal</span><br></div>
+         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Delivery Type'); ?>: </span><span class="data_Headers_Bl_txt">Normal</span><br></div>
   <?php endif;?>      
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Order Comments'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['order_comments']; ?></span><br></div>
     </div>
@@ -181,4 +181,3 @@
 
 <br style="clear:both" />
 <br style="clear:both" />
-

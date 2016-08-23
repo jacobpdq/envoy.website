@@ -20,22 +20,25 @@ msgstr ""
 
 #: loco:559c9fa014d725e47e8b456a
 msgid "Travel Agent"
-msgstr "Agent de Voyages"
+msgstr "Agent de voyages"
+
+msgid "Register an Account"
+msgstr "Créer un compte"
 
 msgid "Forgot Password"
-msgstr "Mot de Passe Oublie"
+msgstr "Mot de passe oublié&nbsp;?"
 
 msgid "Username"
-msgstr "Nom d'utilisateur"
+msgstr "ID"
 
 msgid "Password"
-msgstr "Mot de Passe"
+msgstr "Mot de passe"
 
-msgid "Serving the Travel "
-msgstr "Au service de l'industrie du voyage "
+msgid "Serving the Travel"
+msgstr "Au service de l'industrie du voyage"
 
-msgid "and Tourism Industry "
-msgstr "et du tourisme "
+msgid "and Tourism Industry"
+msgstr "et du tourisme"
 
 msgid "for over 15 years."
 msgstr "depuis plus de 15 ans."
@@ -65,7 +68,7 @@ msgid "THE ENVOY OVERVIEW"
 msgstr "VUE D'ENSEMBLE D'ENVOY"
 
 msgid "About ENVOY"
-msgstr "A Propos d'ENVOY"
+msgstr "A propos d'ENVOY"
 
 msgid "Envoy specializes in providing the Travel & Tourism industry with custom programs to deliver marketing campaigns that facilitate successful transactions. By leveraging it's extensive partnerships in Travel & Tourism, unparalleled reach is achieved to consumer & retail outlets."
 msgstr "Envoy se spécialise en fournissant à l'industrie du voyage et du tourisme des programmes personnalisés afin de livrer des campagnes marketing facilitant des transactions réussies. En tirant profit de ses partenariats d'envergure en voyages et tourisme, la portée inégalée auprès des consommateurs et des détaillants s'avère accomplie."
@@ -74,7 +77,7 @@ msgid "With significant investments in equipment, vehicles, infrastructure and t
 msgstr "Avec des investissements importants au niveau de l'équipement, des véhicules, de l'infrastructure et de la technologie, Envoy détermine sa position moderne en dépassant les exigences de l'industrie du voyage et du tourisme."
 
 msgid "Some of Our Partners"
-msgstr "Nos Partenaires"
+msgstr "Nos partenaires"
 
 #: loco:559c9fbf14d72523088b456c
 msgid "Supplier"
@@ -86,11 +89,11 @@ msgstr "Logistiques"
 
 #: loco:559c9fd214d72519058b456d
 msgid "Digital Support"
-msgstr "Support Numérique"
+msgstr "Support numérique"
 
 #: loco:559c9fd914d7254a088b4569
 msgid "Marketing Solutions"
-msgstr "Solutions Marketing"
+msgstr "Solutions marketing"
 
 #: loco:559c9fdf14d725f97e8b4580
 msgid "Meet the Team"
@@ -104,13 +107,40 @@ msgstr "Bienvenue"
 msgid "Brochures"
 msgstr "Brochures"
 
+msgid "Click on thumbnail to view larger image"
+msgstr "Cliquez sur l'image pour l'agrandir"
+
 #: loco:559c9fed14d725867f8b456a
 msgid "New Arrivals"
-msgstr "Nouvelles Arrivées"
+msgstr "Nouvelles arrivées"
+
+msgid "FrenchBrochures"
+msgstr "Brochures en français"
+
+msgid "FrenchBrochure"
+msgstr "Version française"
+
+msgid "EnglishBrochure"
+msgstr "Version anglaise"
+
+msgid "French"
+msgstr "Français"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "brochures per order"
+msgstr "brochures par commande"
+
+msgid "#brochures"
+msgstr "# de brochures"
+
+msgid "Brochure Language"
+msgstr "En Français?"
 
 #: loco:559c9ff314d725e47e8b456c
 msgid "My Profile"
-msgstr "Profil"
+msgstr "Mon profil"
 
 #: loco:559c9ff814d725f97e8b4582
 msgid "My Orders"
@@ -118,7 +148,7 @@ msgstr "Commandes"
 
 #: loco:559c9ff814d725f97e8b4582
 msgid "Order Details"
-msgstr "Détails du Commande"
+msgstr "Détails de la commande"
 
 
 #: loco:559c9ff814d725f97e8b45234
@@ -127,7 +157,7 @@ msgstr "Détails"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "View All Orders"
-msgstr "Toutes les Commandes"
+msgstr "Toutes les commandes"
 
 
 #: loco:559c9ffd14d72523088b456e
@@ -136,15 +166,15 @@ msgstr "Déconnecter"
 
 #: loco:559ca00214d7254a088b456d
 msgid "Checkout"
-msgstr "Completer la Commande"
+msgstr "Compléter la commande"
 
 #: loco:559ca00a14d725cd048b456a
 msgid "View Items in Cart"
-msgstr "Articles du Panier"
+msgstr "Article(s) dans le panier"
 
 #: loco:559ca00f14d725ed7e8b456f
 msgid "Add to Order"
-msgstr "Votre panier"
+msgstr "Commander"
 
 #: loco:559ca01714d725867f8b456d
 msgid "Quantity"
@@ -152,15 +182,15 @@ msgstr "Quantité"
 
 #: loco:559ca01d14d72523088b4570
 msgid "Update Order"
-msgstr "Recalculer Commande"
+msgstr "Recalculer commande"
 
 #: loco:559ca02214d725e47e8b456e
 msgid "Continue Viewing"
-msgstr "Continuer vos Achats"
+msgstr "Continuer vos achats"
 
 #: loco:559ca02914d7254a088b4570
 msgid "Process Order"
-msgstr "Completer la Commande"
+msgstr "Completer la commande"
 
 #: loco:559ca02e14d725f97e8b4584
 msgid "Shopping Cart"
@@ -184,11 +214,11 @@ msgstr "Nom"
 
 #: loco:559ca04114d7254a088b4572
 msgid "Address1"
-msgstr "Addresse1"
+msgstr "Adresse 1"
 
 #: loco:559ca04514d725a77e8b456d
 msgid "Address"
-msgstr "Addresse"
+msgstr "Adresse"
 
 #: loco:559ca05414d72519058b456f
 msgid "City"
@@ -216,7 +246,7 @@ msgstr "Pays"
 
 #: loco:559ca07514d7254a088b4574
 msgid "Order Number"
-msgstr "Numéro de Commande"
+msgstr "Numéro de commande"
 
 #: loco:559ca0fb14d72523088b4574
 msgid "Date"
@@ -224,7 +254,7 @@ msgstr "Date"
 
 #: loco:559ca10114d725e47e8b4572
 msgid "View Order"
-msgstr "Voir Commande"
+msgstr "Voir commande"
 
 #: loco:559ca11214d725867f8b4571
 msgid "Order Comments"
@@ -232,27 +262,27 @@ msgstr "Commentaires"
 
 #: loco:559ca11714d725cd048b456e
 msgid "Order Id"
-msgstr "Numéro de Commande"
+msgstr "Numéro de commande"
 
 #: loco:559ca11b14d72519058b4573
 msgid "Brochure Name"
-msgstr "Nom du Brochure"
+msgstr "Nom de la brochure"
 
 #: loco:559ca12014d725ed7e8b4573
 msgid "Qty Ordered"
-msgstr "Quantité Commandé"
+msgstr "Quantité commandée"
 
 #: loco:559ca12314d725107f8b456f
 msgid "Qty Shipped"
-msgstr "Quantité Envoyé"
+msgstr "Quantité envoyée"
 
 #: loco:559ca00a14d725cd048b456a
 msgid "Delivery Address"
-msgstr "Addresse D'Envoyé"
+msgstr "Adresse de livraison"
 
 #: loco:559ca12614d725867f8b4573
 msgid "Status"
-msgstr "Status"
+msgstr "Statut"
 
 #: loco:559ca12b14d72523088b4576
 msgid "Shipped Via"
@@ -260,7 +290,7 @@ msgstr "Envoyé par"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Tracking Num"
-msgstr "Numéro de Repérage"
+msgstr "Numéro de repérage"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Services"
@@ -268,19 +298,19 @@ msgstr "Services"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "About Us"
-msgstr "À Propos de Nous"
+msgstr "À propos de nous"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Contact Us"
-msgstr "Nous Joindre"
+msgstr "Nous joindre"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Login"
-msgstr "S'Inscrire"
+msgstr "Connexion"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Overview"
-msgstr "Summaire"
+msgstr "Sommaire"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Previous"
@@ -288,14 +318,77 @@ msgstr "Précédent"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "View All Orders"
-msgstr "Toutes les Commandes"
+msgstr "Toutes les commandes"
 
 msgid "Orders"
 msgstr "Commandes"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "My Receipts"
-msgstr "Reçus"
+msgstr "Mes reçus"
+
+msgid "Receipts"
+msgstr "Mes reçus"
+
+msgid "Qty Ordered"
+msgstr "Quantité commandée"
+
+msgid "Order source"
+msgstr "Provenance"
+
+msgid "View Order"
+msgstr "Voir commande"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Qty per skid"
+msgstr "Qté par palette"
+
+msgid "Qty per box"
+msgstr "Qté par boîte"
+
+msgid "Weight"
+msgstr "Poids"
+
+msgid "BC inventory"
+msgstr "Inventaire C.-B."
+
+msgid "ON inventory"
+msgstr "Inventaire Ontario"
+
+msgid "E-mail"
+msgstr "Courriel"
+
+msgid "Your Cart"
+msgstr "Votre panier"
+
+msgid "Remove Item"
+msgstr "Retirer la brochure du panier"
+
+msgid "Max order"
+msgstr "Commande max"
+
+msgid "Place Order"
+msgstr "Commander"
+
+msgid "Filter by date"
+msgstr "Filtrer par date"
+
+msgid "Export to Excel"
+msgstr "Export vers Excel"
+
+msgid "Ontario <br>BC<br>Total"
+msgstr "Total<br>Ontario<br>BC"
+
+msgid "Inventory Balance"
+msgstr "Balance d'inventaire"
+
+msgid "Summary Report"
+msgstr "Sommaire"
+
+msgid "Click on thumbnail to view larger image"
+msgstr "Cliquez sur l'image pour l'agrandir"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Street"
@@ -303,7 +396,7 @@ msgstr "Rue"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Submit"
-msgstr "Completer"
+msgstr "Envoyer"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Next"
@@ -311,17 +404,17 @@ msgstr "Suivant"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "View Order"
-msgstr "Vue la Commande"
+msgstr "Voir la commande"
 
 #: loco:559ca12f14d725e47e8b4574
 msgid "Tracking num"
-msgstr "Numéro de Repérage"
+msgstr "Numéro de repérage"
 
 msgid "Full-service asset management and excellent distribution opportunities meet here."
 msgstr "Nous offrons un service complet en gestion de ressources et d'excellentes occasions de distribution."
 
 msgid "Fulfillment"
-msgstr "Gestion de Commandes"
+msgstr "Gestion de commandes"
 
 msgid "Our full-service custom fulfillment includes: media-generated responses, consumer requests for assets, collateral material management, poster/video/promotional document fulfillment, response card requests, label generation and a host of solutions for all your needs. Barcode technology and customized pick and pack software provide accurate and efficient order processing."
 msgstr "Notre service complet et personnalisé de gestion de commandes inclut : les réponses générées par les médias, les requêtes de ressources des consommateurs, la gestion de matériel de soutien et de commandes de documents promotionnels/vidéos/affiches, les demandes de cartes-réponses, la production d'étiquettes et une gamme de solutions pour tous vos besoins. La technologie de code à barres et le logiciel personnalisé de prélèvement et emballage fournissent un traitement des commandes précis et efficace."
@@ -342,28 +435,28 @@ msgid "Giving you flexibility with the power of digital distribution, ordering, 
 msgstr "Nous vous offrons de la flexibilité avec la puissance de la distribution, des commandes et des précommandes numériques."
 
 msgid "Digital support"
-msgstr "Support Numérique"
+msgstr "Support numérique"
 
 msgid "Online brochure re-ordering:"
-msgstr "Approvisionnement de Brochures en Ligne:"
+msgstr "Approvisionnement de brochures en ligne:"
 
 msgid "Our comprehensive website is the easiest and most efficient way for travel agents to order brochures. Orders are processed immediately upon reciept and fulfilled in a timely manner. Online supplier access through a secure login allows you to view your order history, track shipments, place new orders and monitor inventory levels."
 msgstr "La manière la plus facile et efficace de commander des brochures pour les agents de voyages demeure notre site Web des plus complet. Les commandes sont traitées dès leur réception et la gestion est effectuée de manière ponctuelle. L'accès au fournisseur en ligne est possible grâce à une ouverture de session sécurisée vous permettant de visualiser l'historique de votre commande, de faire le suivi des envois, d'effectuer de nouvelles commandes et de contrôler les niveaux de votre inventaire."
 
 msgid "Brochure order capturing:"
-msgstr "Saisie de Commande des Brochures:"
+msgstr "Saisie de commande des Brochures:"
 
 msgid "This allows full control over who receives your collateral. Your brochure is hosted at envoynetworks.ca, the agent order is captured and complete order details are emailed directly to you for fulfillment."
 msgstr "Cela vous permet d'avoir tout le droit de regard sur qui reçoit votre matériel de soutien. Votre brochure est hébergée au envoynetworks.ca, la commande de l'agent est saisie et les détails complets vous sont directement envoyés par courriel pour qu'elle soit gérée."
 
 msgid "Brochure pre-order:"
-msgstr "Precommande des Brochures:"
+msgstr "Precommande des brochures:"
 
 msgid "Exclusive to ENVOY, agents have the capacity to pre-order brochures in advance of their official release. These orders are captured through our website, a weekly email campaign and printed order form included with Travelweek magazine allowing for more targeted initial distribution and savings on printing costs."
 msgstr "Exclusivement avec ENVOY, les agents peuvent précommander leurs brochures avant leur lancement officiel. Ces commandes sont saisies via notre site Web, et une campagne hebdomadaire par courriel ainsi qu'un formulaire de commande imprimé inclus avec le magazine Travelweek permettent une plus grande distribution initiale ciblée et des économies sur les frais d'impression."
 
 msgid "Brochure hosting:"
-msgstr "Hébergement de Brochures:"
+msgstr "Hébergement de brochures:"
 
 msgid "By hosting your digital brochures with envoynetworks.ca, they can be viewed online or downloaded as a pdf allowing travel agents the flexibility of accessing material immediately."
 msgstr "En hébergeant vos brochures numériques sur envoynetworks.ca, ces dernières peuvent être consultées en ligne ou téléchargées en format PDF, ce qui permet aux agents de voyages une flexibilité et un accès immédiat au matériel."
@@ -372,31 +465,31 @@ msgid "Complete and integrated solutions - giving you a powerful edge in today's
 msgstr "Des solutions complètes et intégrées vous offrant un avantage concurrentiel sur le marché d'aujourd'hui."
 
 msgid "Marketing Solutions & Services"
-msgstr "Services et Solutions Marketing"
+msgstr "Services et solutions marketing"
 
 msgid "Mailing house services:"
-msgstr "Services d'Envois Postaux:"
+msgstr "Services d'envois postaux:"
 
 msgid "ENVOY offers customized mailing services based on your specific requirements; from polybagged brochures and boxed materials to postcards and self-mailers."
 msgstr "ENVOY propose des services d'envois postaux personnalisés adaptés à vos exigences spécifiques; des brochures sous enveloppe plastifiée et colis de matériel jusqu'aux cartes postales et prêts-à-poster."
 
 msgid "Marketing support:"
-msgstr "Support Marketing:"
+msgstr "Support marketing:"
 
 msgid "Your marketing collateral is promoted to travel agents through digital and print copies of Travelweek magazine at no extra charge."
 msgstr "Votre matériel de soutien marketing est promu auprès des agents de voyages grâce aux copies numériques et imprimées du magazine Travelweek, et ce, sans frais."
 
 msgid "Targeted mailing lists:"
-msgstr "Listed d'Envois Ciblés:"
+msgstr "Listed d'envois ciblées:"
 
 msgid "We create tailored mailing lists based on your specific marketing needs utilizing our extensive database of travel agents. This service is complimentary if used in conjunction with ENVOY's mailing service."
 msgstr "Nous avons créé des listes d'envois sur mesure basées sur vos besoins marketing spécifiques en utilisant notre vaste base de données d'agents de voyages. Ce service est gratuit s'il est effectué conjointement avec les envois postaux d'ENVOY."
 
 msgid "Printing services:"
-msgstr "Services d'Impression:"
+msgstr "Services d'impression:"
 
 msgid "Our on-site web and sheet-fed presses offer all the benefits of a full service printing house to complement to our logistic and digital support."
-msgstr "Notre accès Web sur place et nos presses à feuilles offrent tous les bénéfices d'un centre de service d'impression afin de compléter notre support numérique et logistique."
+msgstr "Notre accès web sur place et nos presses à feuilles offrent tous les bénéfices d'un centre de service d'impression afin de compléter notre support numérique et logistique."
 
 msgid "ENVOY is a distribution and fulfillment company that specializes in providing the travel industry with custom marketing solutions."
 msgstr "ENVOY est une entreprise de distribution et de gestion de commandes qui se spécialise en fournissant à l'industrie du voyage des solutions marketing personnalisées."
@@ -432,31 +525,31 @@ msgid "CONTACT US"
 msgstr "NOUS JOINDRE"
 
 msgid "Eastern Canada Warehouse"
-msgstr "Est du Canada Entrepôt"
+msgstr "Entrepôt - Est du Canada"
 
 msgid "Western Canada Warehouse"
-msgstr "Ouest du Canada Entrepôt"
+msgstr "Entrepôt - Ouest du Canada"
 
 msgid "Register"
 msgstr "Inscription"
 
-msgid "We've recently updated our login procedure and website."
-msgstr "Nous avons récemment mis à jour notre procédure d'ouverture de session et notre site Web."
+msgid "HomePopupLeftCol1"
+msgstr "Bienvenue dans l'Outil de commande de brochures<br />d'ENVOY Canada!"
 
-msgid "If you are registered with Travelweek, Travelweek's Learning Centre or Wheels Up, you can use the same email and password to login to ENVOY."
-msgstr "Si vous êtes inscrit à Travelweek, au Centre d'apprentissage de Travelweek ou à Wheels Up, vous pouvez utiliser le même courriel et mot de passe pour ouvrir une session avec ENVOY."
+msgid "HomePopupLeftCol2"
+msgstr "Commandez vos brochures en français ici >"
 
-msgid "If you have ordered from ENVOY in the past, click on "forgot password" and you will receive your password via email."
-msgstr "Si vous avez déjà passé une commande avec ENVOY, cliquez sur « Mot de passe oublié » et vous recevrez votre mot de passe par courriel."
+msgid "HomePopupLeftCol3"
+msgstr "Retrouvez un mot de passe perdu d’ENVOY, Travelweek, Centre d'apprentissage ou Wheels Up, ou créez un compte!"
 
-msgid "Please click on Register if you have never logged into any of these sites."
-msgstr "Veuillez cliquer sur Inscription si vous n'avez jamais ouvert de session sur l'un de ces sites."
-
-msgid "Personal Information"
-msgstr "Information personnelle"
+msgid "HomePopupRightCol1"
+msgstr "NOUVEAU! <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">Commander des brochures en français</a> est plus facile que jamais!"
 
 msgid "Personal Information"
-msgstr "Information personnelle"
+msgstr "Informations personnelles"
+
+msgid "Personal Information"
+msgstr "Informations personnelles"
 
 msgid "Business Type"
 msgstr "Type d'entreprise"
@@ -537,13 +630,13 @@ msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
 msgid "Preferred Email"
-msgstr "Courriel privilégié"
+msgstr "Courriel principal"
 
 msgid "Confirm Email"
 msgstr "Confirmer le courriel"
 
 msgid "Preferred Username and Password"
-msgstr "Nom d'utilisateur et mot de passe privilégiés"
+msgstr "Nom d'utilisateur et mot de passe principal"
 
 msgid "Username can only consist of letters, numbers, spaces, hyphens and underscores."
 msgstr "Le nom d'utilisateur ne peut être composé que de lettres, chiffres, espaces, traits d'union et traits de soulignement."
@@ -624,58 +717,90 @@ msgid "This Privacy Policy outlines the information Envoy Network Inc will colle
 msgstr "Cette Politique de confidentialité présente l'information qu’Envoy Network Inc recueillera sur ce site Web et comment celle-ci sera utilisée. Elle vous indiquera aussi qui contacter au sujet des renseignements personnels obtenus et quoi faire si vous ne voulez pas qu'ils soient recueillis."
 
 msgid "This web site is owned and operated by Envoy Network Inc."
-msgstr "Ce site Web appartient et est exploité par Envoy Network Inc.  "
+msgstr "Ce site Web appartient et est exploité par Envoy Network Inc.
+
+"
 
 msgid "Envoy Network Inc agrees to respect and  observe the provisions set forth in Personal Information Protection and  Electronic Documents Act (the "Act") and any other relevant legislation. To the extent there is additional protection afforded to you  pursuant to the Act, and same is not set forth herein, Envoy Network Inc agrees to take such measures to give full effect to such additional protection."
-msgstr "Envoy Network Inc s'engage à respecter et à se conformer aux dispositions, telles qu'établies selon la Loi sur la protection des renseignements personnels et des documents électroniques (la « Loi »), et de toute autre législation applicable. Du moment où une protection supplémentaire vous est fournie en vertu de la Loi, et même celles non énoncées dans la présente, Envoy Network Inc s'engage à prendre les mesures nécessaires pour appliquer intégralement cette protection supplémentaire. "
+msgstr "Envoy Network Inc s'engage à respecter et à se conformer aux dispositions, telles qu'établies selon la Loi sur la protection des renseignements personnels et des documents électroniques (la « Loi »), et de toute autre législation applicable. Du moment où une protection supplémentaire vous est fournie en vertu de la Loi, et même celles non énoncées dans la présente, Envoy Network Inc s'engage à prendre les mesures nécessaires pour appliquer intégralement cette protection supplémentaire.
+"
 
 msgid "Privacy"
-msgstr "Vie privée  "
+msgstr "Vie privée
+
+"
 
 msgid "Envoy Network Inc respects the privacy  of each individual with which it comes into contact, either as a client of Envoy Network Inc or as a visitor to this web site.  Envoy Network Inc will not  give, rent or sell any customer information or any information about any visitor to this web site to any organization or individual."
-msgstr "Envoy Network Inc  respecte la vie privée de chaque individu avec lequel il entre en contact, que ce soit en tant que client d'Envoy Network Inc, ou à titre de visiteur sur ce site Web. Envoy Network Inc ne donnera, louera ou vendra aucun renseignement de clients, ou toute autre information le concernant, à toute organisation ou individus. "
+msgstr "Envoy Network Inc  respecte la vie privée de chaque individu avec lequel il entre en contact, que ce soit en tant que client d'Envoy Network Inc, ou à titre de visiteur sur ce site Web. Envoy Network Inc ne donnera, louera ou vendra aucun renseignement de clients, ou toute autre information le concernant, à toute organisation ou individus.
+"
 
 msgid "Personal Information Collected"
-msgstr "L'information personnelle recueillie  "
+msgstr "L'information personnelle recueillie
+
+"
 
 msgid "Envoy Network Inc will not collect any personally identifiable information about you, such as your name, address, telephone number or e-mail address, unless you provide it to us."
-msgstr "Envoy Network Inc ne recueillera aucune information permettant de vous identifier personnellement, comme votre nom, adresse, numéro de téléphone ou adresse courriel, à moins que vous ne nous la fournissiez.  "
+msgstr "Envoy Network Inc ne recueillera aucune information permettant de vous identifier personnellement, comme votre nom, adresse, numéro de téléphone ou adresse courriel, à moins que vous ne nous la fournissiez.
+
+"
 
 msgid "If you do not want your personal information  collected, do not provide it to us. If you have already submitted the information and would like us to remove it from our records, or if you would  like to know what information is held in our records, please see the Contact section below."
-msgstr "Si vous ne voulez pas que votre information personnelle soit recueillie, simplement ne pas nous la transmettre. Si vous l'avez déjà soumise et aimeriez que nous la retirions de nos registres, ou encore si vous désireriez savoir quelle information est retenue dans nos bases de données, veuillez consulter la section Contact ci-dessous. "
+msgstr "Si vous ne voulez pas que votre information personnelle soit recueillie, simplement ne pas nous la transmettre.
+Si vous l'avez déjà soumise et aimeriez que nous la retirions de nos registres, ou encore si vous désireriez savoir quelle information est retenue dans nos bases de données, veuillez consulter la section Contact ci-dessous.
+"
 
 msgid "Use of Personal Information"
-msgstr "L'utilisation de l'information personnelle  "
+msgstr "L'utilisation de l'information personnelle
+
+"
 
 msgid "Envoy Network Inc may use the personal information collected in the following ways:"
-msgstr "Envoy Network Inc peut utiliser l'information personnelle recueillie pour les raisons suivantes:  "
+msgstr "Envoy Network Inc peut utiliser l'information personnelle recueillie pour les raisons suivantes:
+
+"
 
 msgid "• To process and store the information provided so that we are able to better understand your needs and how we can improve our services;"
-msgstr "• Pour traiter et stocker l'information transmise afin que nous soyons en mesure de mieux comprendre vos besoins et améliorer nos services; "
+msgstr "• Pour traiter et stocker l'information transmise afin que nous soyons en mesure de mieux comprendre vos besoins et améliorer nos services;
+"
 
 msgid "• To contact you."
-msgstr "• Pour vous contacter. "
+msgstr "• Pour vous contacter.
+"
 
 msgid "Unless you have indicated that you do not  wish to receive e-mails, if you have provided us with your e-mail address, from time to time Envoy Network Inc may send you e-mail with information that we  believe would be of interest to you. If you do not wish to receive any e-mails you can notify Envoy Network Inc at any time of your preference."
-msgstr "À moins d'avoir indiqué que vous ne désirez pas recevoir de courriels, Envoy Network Inc peut vous envoyer, de temps à autre, à l'adresse électronique fournie, de l'information susceptible de vous intéresser. Si vous ne voulez plus de courriels, vous pouvez en aviser Envoy Network Inc  au moment qui vous conviendra. "
+msgstr "À moins d'avoir indiqué que vous ne désirez pas recevoir de courriels, Envoy Network Inc peut vous envoyer, de temps à autre, à l'adresse électronique fournie, de l'information susceptible de vous intéresser. Si vous ne voulez plus de courriels, vous pouvez en aviser Envoy Network Inc  au moment qui vous conviendra.
+"
 
 msgid "Envoy Network Inc may use a reputable third  party to deliver e-mail. Such third party is under a contractual requirement to  keep all personal information confidential and to only use any personal  information for the sole purpose of sending you e-mail on behalf of Envoy Network Inc and to return any personal information once their services are  completed."
-msgstr "Envoy Network Inc peut recourir à un tiers renommé pour l'envoi de courriels. Ce tiers est soumis à une exigence contractuelle afin de garder toute l'information personnelle confidentielle, de ne l'utiliser que dans le seul but d'envoyer des courriels au nom d'Envoy Network Inc, et de retourner toute l'information personnelle une fois leurs services complétés.  "
+msgstr "Envoy Network Inc peut recourir à un tiers renommé pour l'envoi de courriels. Ce tiers est soumis à une exigence contractuelle afin de garder toute l'information personnelle confidentielle, de ne l'utiliser que dans le seul but d'envoyer des courriels au nom d'Envoy Network Inc, et de retourner toute l'information personnelle une fois leurs services complétés.
+
+"
 
 msgid "Cookies"
-msgstr "Les fichiers témoins (cookies)  "
+msgstr "Les fichiers témoins (cookies)
+
+"
 
 msgid "We will be using a feature on your Internet  browser called "cookies", which are files that your Internet browser  puts on your hard drive. We will use cookies to help us provide you  with a better experience when you visit this web site. It will let us know that  you are a prior visitor and it will help us retrieve information that you may  have previously provided to us. Your Internet browser should allow you to erase cookies from your hard drive, block all cookies or receive a warning  before a cookie is stored."
-msgstr "Nous utiliserons une caractéristique appelée « fichier témoin » (ou « cookies ») qui s'avère les dossiers mis sur votre lecteur de disque dur par votre logiciel de navigation Internet. Nous utiliserons ces fichiers témoins afin de vous offrir une meilleure expérience lorsque vous consulterez ce site Web. Cela nous fera savoir si vous en êtes à votre première visite ainsi qu’à récupérer l'information que vous nous aurez déjà fournie. Votre logiciel de navigation Internet devrait vous donner la possibilité d'effacer les fichiers témoins de votre disque dur, de tous les bloquer ou de recevoir un avertissement avant qu'ils ne soient stockés.  "
+msgstr "Nous utiliserons une caractéristique appelée « fichier témoin » (ou « cookies ») qui s'avère les dossiers mis sur votre lecteur de disque dur par votre logiciel de navigation Internet. Nous utiliserons ces fichiers témoins afin de vous offrir une meilleure expérience lorsque vous consulterez ce site Web. Cela nous fera savoir si vous en êtes à votre première visite ainsi qu’à récupérer l'information que vous nous aurez déjà fournie. Votre logiciel de navigation Internet devrait vous donner la possibilité d'effacer les fichiers témoins de votre disque dur, de tous les bloquer ou de recevoir un avertissement avant qu'ils ne soient stockés.
+
+"
 
 msgid "Your Consent"
-msgstr "Votre consentement   "
+msgstr "Votre consentement 
+
+"
 
 msgid "Your use of this web site constitutes your consent to the collection by Envoy Network Inc of your information as described in this Privacy Policy."
-msgstr "La consultation de ce site Web constitue votre consentement à la cueillette de vos renseignements par  Envoy Network Inc, tel que décrit dans la Politique de confidentialité.    "
+msgstr "La consultation de ce site Web constitue votre consentement à la cueillette de vos renseignements par  Envoy Network Inc, tel que décrit dans la Politique de confidentialité.
+
+
+
+"
 
 msgid "If you wish to find out  what information we have about you, ask a question about the information in  your file or request a change to the information in your file, please write to: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada"
-msgstr "Si vous voulez en savoir plus sur l'information que nous détenons sur vous, poser une question sur les renseignements que nous détenons dans votre dossier ou apporter une modification à ceux-ci, veuillez écrire: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada "
+msgstr "Si vous voulez en savoir plus sur l'information que nous détenons sur vous, poser une question sur les renseignements que nous détenons dans votre dossier ou apporter une modification à ceux-ci, veuillez écrire: Envoy Network Inc, 122 Parliament St, Toronto, ON  M5A 2Y8  Canada
+"
 
 msgid "Your email or password was incorrect."
 msgstr "Votre courriel ou mot de passe est incorrecte."
@@ -690,12 +815,12 @@ msgid "Email Address"
 msgstr "Courriel"
 
 msgid "Send Password"
-msgstr "Envoyer Mot de passe"
+msgstr "Envoyer le mot de passe"
 
 msgid "Your password has been sent. Please check your email."
 msgstr "Votre mot de passe a été envoyé. Merci de consulter vos emails."
 
-msgid "We couldn't find your email address. Please try entering again or Regsiter as a new user."
+msgid "We couldn't find your email address. Please try entering again or Register as a new user."
 msgstr "Nous ne pouvions trouver votre courriel. S'il vous plaît essayez d'entrer à nouveau ou s'inscrire comme un nouvel utilisateur."
 
 msgid "The password associated with this email address has been reset to the following"
@@ -714,7 +839,244 @@ msgid "Hello"
 msgstr "Bonjour"
 
 msgid "Thank you for your order with ENVOY"
-msgstr "Merci pour votre commande avec ENVOY"
+msgstr "Merci de commander avec ENVOY"
 
 msgid "Order Items"
 msgstr "Articles du Panier"
+
+msgid "of"
+msgstr "de"
+
+msgid "Current Orders Overview"
+msgstr "Aperçu des commandes en cours"
+
+msgid "Order Status"
+msgstr "Statut"
+
+msgid "Qty Ordered"
+msgstr "Quantité"
+
+msgid "Order Source"
+msgstr "Provenance"
+
+msgid "Company Information"
+msgstr "Nom du fournisseur"
+
+msgid "Order Received Date"
+msgstr "Date de la commande"
+
+msgid "View"
+msgstr "Détail"
+
+msgid "Overview"
+msgstr "Aperçu"
+
+msgid "Brochure SKU"
+msgstr "# SKU"
+
+msgid "Brochure name"
+msgstr "Nom de la brochure"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Ontario Inventory"
+msgstr "Inventaire en Ontario"
+
+msgid "BC Inventory"
+msgstr "Inventaire en Colombie-Britannique"
+
+msgid "Total Inventory"
+msgstr "Inventaire total"
+
+msgid "Personal Information"
+msgstr "Informations personnelles"
+
+msgid "Mailing Information"
+msgstr "Adresse de livraison"
+
+msgid "Contact Information"
+msgstr "Adresse de contact"
+
+msgid "Main Travel Agency Phone Number"
+msgstr "Téléphone principal de l'agence de voyage"
+
+msgid "Address2"
+msgstr "Adresse 2"
+
+msgid "qty"
+msgstr "Quantité"
+
+msgid "Select Date Range"
+msgstr "Choisir la période"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Brochure Description"
+msgstr "Description de la brochure"
+
+msgid "Notify me when my inventory reaches"
+msgstr "M'avertir lorsque mon inventaire atteint"
+
+msgid "Max order"
+msgstr "Maximum par commande"
+
+msgid "Brochures per box"
+msgstr "Brochures par boîte"
+
+msgid "Product Image"
+msgstr "Image"
+
+msgid "Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a>a or phone 905-831-0006"
+msgstr "Besoin de modifier une commande? Communiquez avec <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a> ou par téléphone au (905) 831-0006"
+
+msgid "Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a> or phone 905-831-0006"
+msgstr "Besoin de modifier une commande? Communiquez avec <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a> ou par téléphone au (905) 831-0006"
+
+msgid "Login As"
+msgstr "Se connecter sous"
+
+msgid "ENVOY"
+msgstr "ENVOY Networks"
+
+msgid "User Name"
+msgstr "Nom d'utilisateur"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Disclaimer: This site is intended only for Travel Industry Professionals only"
+msgstr "Avertissement: Ce site est strictement réservé aux professionnels de l'industrie du voyage."
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+msgid "Terms &amp; Conditions"
+msgstr "Termes &amp; conditions"
+
+msgid "Brochure details"
+msgstr "Informations sur la brochure"
+
+msgid "Search agent in database"
+msgstr "Recherche d'agent"
+
+msgid "Delivery Type"
+msgstr "Type de livraison"
+
+msgid "Carrier"
+msgstr "Transporteur"
+
+msgid "category"
+msgstr "Type"
+
+msgid "inv_notif_threshold"
+msgstr "Qté alerte"
+
+msgid "Qty Skid"
+msgstr "Qté palette"
+
+msgid "Qty Box"
+msgstr "Qté boîte"
+
+msgid "Inv Balance"
+msgstr "Balance inventaire"
+
+msgid "Created"
+msgstr "Créé le"
+
+msgid "MTD Shipped"
+msgstr "MTD envoyés"
+
+msgid "MTD Received"
+msgstr "MTD reçus"
+
+msgid "PTD Received"
+msgstr "PTD reçus"
+
+msgid "PTD Shipped"
+msgstr "PTD envoyés"
+
+msgid "Edit Brochure"
+msgstr "Modifier la brochure"
+
+msgid "French Brochures"
+msgstr "Brochures en français"
+
+msgid "Home"
+msgstr "Bonjour!"
+
+msgid "The order item could not updated. Please, try again."
+msgstr "Une erreur est survenue, veuillez réessayer."
+
+msgid "You must input a quantity of at least 1 to add to your cart"
+msgstr "Entrez une quantité de brochures avant de commander"
+
+msgid "Maximum quantity for "
+msgstr "Vous avez dépassé la quantité maximale pour "
+
+msgid " was exceeded."
+msgstr "."
+
+msgid "Please complete the following"
+msgstr "Veuillez compléter ceci"
+
+msgid "Not enough units of "
+msgstr "Il n'y a pas assez de "
+
+msgid "  in stock."
+msgstr " en inventaire."
+
+msgid "Brochure was removed from your cart"
+msgstr "Brochure retirée de la commande"
+
+msgid " has been added to your cart"
+msgstr " a été ajouté au panier"
+
+msgid "Your cart"
+msgstr "Votre panier"
+
+msgid "Cart could not be updated. Not enough units in stock for "
+msgstr "Attention! Il n'y a pas assez d'inventaire pour "
+
+msgid "Cart could not be updated. Max order quantity exceeded for "
+msgstr "Attention! Vous avez dépassé la quantité maximale pour "
+
+msgid "Cart updated!"
+msgstr "Panier mis à jour!"
+
+msgid "Cart is empty"
+msgstr "Panier vide"
+
+msgid "Order could not be placed. Not enough units in stock."
+msgstr "La commande ne peut être acceptée, il n'y a pas assez d'inventaire."
+
+msgid "Order has been placed"
+msgstr "Commande complétée."
+
+msgid "Shipping"
+msgstr "Livraison"
+
+msgid "Order"
+msgstr "Commande"
+
+msgid "Please make sure you enter a valid username/email and a valid password"
+msgstr "Veuillez vou assurer d'entrer des informations de connexion valides"
+
+msgid "An unknown error occured"
+msgstr "Une erreur s'est produite"
+
+msgid "Please confim that you are human by entering the correct value in the field below"
+msgstr "Svp confirmez vos bonnes intentions en entrant la réponse attendue"
+
+msgid "Click here to submit a support request"
+msgstr "Cliquez ici pour soumettre votre demande de support"
+
+msgid "Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>"
+msgstr "Vos identifiants de connexion sont incorrects. Si vous éprouvez des difficultés à vous connecter, utilisez votre adresse courriel.<br />Si vous avez oublié votre mot de passe, veuillez <a href="/agent/password/forgot">cliquer ici</a> pour en obtenri un nouveau.<br />Si vous avez toujours des difficultés à accéder au site, <a href="http://' . SSO_PARENT . '/sso-support/">cliquez ici pour faire une demande de support</a>"
+
+msgid "languageLogoAsset"
+msgstr "assets/logo_fr.png"

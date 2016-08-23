@@ -27,8 +27,12 @@ msgid "Supplier"
 msgstr "Supplier"
 
 #: loco:559ca12f14d725e47e8b123
+msgid "Register an Account"
+msgstr "Register"
+
+#: loco:559ca12f14d725e47e8b123
 msgid "Forgot Password"
-msgstr "Forgot Password"
+msgstr "Forgot Password?"
 
 #: loco:559c9fcc14d725107f8b456a
 msgid "Logistics"
@@ -54,9 +58,25 @@ msgstr "Welcome"
 msgid "Brochures"
 msgstr "Brochures"
 
+msgid "Brochure Language"
+msgstr "French Brochure?"
+
 #: loco:559c9fed14d725867f8b456a
 msgid "New Arrivals"
 msgstr "New Arrivals"
+
+msgid "FrenchBrochures"
+msgstr "Brochures in French"
+
+msgid "FrenchBrochure"
+msgstr "French brochure"
+
+msgid "EnglishBrochure"
+msgstr "English brochure"
+
+msgid "#brochures"
+msgstr "# of brochures"
+
 
 #: loco:559c9ff314d725e47e8b456c
 msgid "My Profile"
@@ -193,3 +213,38 @@ msgstr "Tracking Num"
 #: loco:559ca12f14d725e47e8b4574
 msgid "Previous"
 msgstr "Previous"
+
+msgid "languageLogoAsset"
+msgstr "assets/envoy-logo.svg"
+
+msgid "HomePopupLeftCol1"
+msgstr "Serving the Travel<br />and Tourism Industry<br />for over 15 years."
+
+msgid "HomePopupLeftCol2"
+msgstr "and Tourism Industry "
+
+msgid "HomePopupLeftCol3"
+msgstr "for over 15 years."
+
+msgid "HomePopupRightCol1"
+msgstr "Please click on Register if you have never logged into any of these sites."
+
+#: loco:559ca12f14d725e47e8b4574
+msgid "Corporate Office"
+msgstr "ENVOY Network Head Office"
+
+msgid "Eastern Canada Warehouse"
+msgstr "ENVOY Network Eastern Canada Warehouse"
+
+msgid "Western Canada Warehouse"
+msgstr "ENVOY Network Western Canada Warehouse"
+
+msgid "inv_notif_threshold"
+msgstr "Qty Notif."
+
+msgid "ENVOY"
+msgstr "ENVOY Networks"
+
+
+msgid "Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a>a or phone 905-831-0006"
+msgstr "Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a> or phone (905) 831-0006"

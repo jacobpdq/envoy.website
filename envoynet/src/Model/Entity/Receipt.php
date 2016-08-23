@@ -17,6 +17,7 @@ class Receipt extends Entity
     protected $_accessible = [
         'brochure_id' => true,
         'qty' => true,
+        'language' => true,
         'date' => true,
         'carrier' => true,
     ];

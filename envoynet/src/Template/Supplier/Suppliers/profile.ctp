@@ -6,14 +6,14 @@
 
         <?php echo $this->Form->input('id',["hidden"=>"hidden", "label"=>false]); ?>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Company Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Company Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Company Name'); ?>:</div>
             <?php echo $this->Form->input('company', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2','escape'=>false)); ?>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Personal Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Personal Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('First Name'); ?>:</div>
@@ -25,7 +25,7 @@
             <?php echo $this->Form->input('contact_lastname', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Mailing Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Mailing Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Address'); ?>:</div>
@@ -57,7 +57,7 @@
             <?php echo $this->Form->input('country', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Contact Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Contact Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Email'); ?>:</div>
@@ -65,7 +65,7 @@
         </div>
 
            <div class="form_content_field_left">
-            <div class="User_Name_Form_Holder" class="Base_txt">Main Travel Agency Phone Number:</div>
+            <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Main Travel Agency Phone Number'); ?>:</div>
             <ul id="profile-phone-input">
               <li>
                 <?php echo $this->Form->input('digits1', array('div' => false, 'label' => false, 'type' => 'text','minlength'=>'3', 'MAXLENGTH' => '3','class'=>"required number")) ?>
@@ -83,7 +83,7 @@
     </div>
     <div id="profile_info2">
         <div id="profile_submit_Holder">
-            <button type="submit" id="Submit_btn">Submit</button>
+            <button type="submit" id="Submit_btn"><?php echo __('Submit'); ?></button>
         </div>
     </div>
     <?php echo $this->Form->end(); ?>

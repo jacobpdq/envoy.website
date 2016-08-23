@@ -3,12 +3,12 @@
     <table class="index4">
         <tbody>
             <tr>
-                <th width="300px"><?php echo __("Description");?></th>
-                <th width="50px"><?php echo __("Category");?></th>
-                <th width="50px"><?php echo __("SKU");?></th>
-                <th width="50px"><?php echo __("Quantity");?></th>
-                <th width="200px"><?php echo __("Items per box or bundle");?></th>
-                <th width="200px"><?php echo __("Qty in stock");?></th>
+                <th width="300px"><?php echo __('Description');?></th>
+                <th width="50px"><?php echo __('Category');?></th>
+                <th width="50px"><?php echo __('SKU');?></th>
+                <th width="50px"><?php echo __('Quantity');?></th>
+                <th width="200px"><?php echo __('Items per box or bundle');?></th>
+                <th width="200px"><?php echo __('Qty in stock');?></th>
             </tr>
 
         <?php if(!empty($brochures)):?>
@@ -37,7 +37,7 @@
 
     <div id="profile_info">
       
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Company Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Company Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Company Name'); ?>:</div>
@@ -46,10 +46,10 @@
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt">&nbsp;</div>
-            <div id="agent-search-btn">Search agent in database</div>
+            <div id="agent-search-btn"><?php echo __('Search agent in database'); ?></div>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Personal Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Personal Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('First Name'); ?>:</div>
@@ -61,7 +61,7 @@
             <?php echo $this->Form->input('shipping_lastname', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Mailing Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Mailing Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Address'); ?>:</div>
@@ -88,7 +88,7 @@
             <?php echo $this->Form->input('shipping_postalcode', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
         </div>
 
-        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt">Contact Information</span></div>
+        <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Contact Information'); ?></span></div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Email'); ?>:</div>
@@ -104,7 +104,7 @@
     </div>
     <div id="profile_info_shipping">
       <div id="Profile_form_holder" class="Base_red_form_txt">
-      <span class="data_Headers_Bl_txt">Order Delivery Type</span></div>
+      <span class="data_Headers_Bl_txt"><?php echo __('Order Delivery Type'); ?></span></div>
       <ul class="form_radio_btns">
       <?php echo $this->Form->input('priority',array(
                       'type'=>'radio',
@@ -122,7 +122,7 @@
 
         <div id="form_content_discription_left">
           <div id="User_Name_Form_Holder" class="Base_txt">
-            <span class="data_Headers_Bl_txt">Order Must Arrive by:</span>
+            <span class="data_Headers_Bl_txt"><?php echo __('Order Must Arrive by'); ?>:</span>
           </div>
           <div class="blank_form_holder_bg2">
             <input type="text" size="6" placeholder="Click to view Calendar" name="arrival_due_date"  class="date Form_holder_style2">
@@ -145,7 +145,7 @@
 <div class="popup" id="agent-search-popup">
   <?php echo $this->Form->create('Agent',array('url'=>'#','id'=>'ajax-agent-search-form'));?>
   <fieldset>
-    <legend>Company information</legend>
+    <legend><?php echo __('Company information'); ?></legend>
     <ol>
        <li><?php echo $this->Form->input('company',array('label'=>'Company name'));?></li>
        <!--

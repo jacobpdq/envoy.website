@@ -82,6 +82,7 @@ class MainController extends \App\Controller\MainController {
             'id', 
             'sku', 
             'name', 
+            'is_french', 
             'Ontario_inventory', 
             'BC_inventory', 
             'inv_balance'

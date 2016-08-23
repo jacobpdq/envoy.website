@@ -11,7 +11,8 @@ class OrdersController extends \App\Controller\OrdersController {
 
  
   public function index() {
-    
+     $ownerId = $this->Auth->user('id');
+    if (!empty($ownerId)) {
     $this->paginate = [
       'limit' => 50,
       'order' => ['Orders.created' =>  'DESC'],
@@ -19,7 +20,7 @@ class OrdersController extends \App\Controller\OrdersController {
   ];
 
     $this->set('orders', $this->paginate()->toArray());
-  }
+ } }
     
    public function pack() {
     $this->paginate = array(

@@ -1,6 +1,6 @@
 <div class="inner-content-wrapper">
   <div class="tools">
-    <div id="filter-btn">Filter by date</div>
+    <div id="filter-btn"><?php echo __('Filter by date'); ?></div>
        
     
   </div>
@@ -12,19 +12,20 @@
 	
   <table class="index" cellpadding="0" cellspacing="0">
     <tr>
-      <th><?php echo $this->Paginator->sort('sku'); ?></th>
-      <th><?php echo $this->Paginator->sort('name'); ?></th>
-      <th><?php echo $this->Paginator->sort('category'); ?></th>
-      <th><?php echo $this->Paginator->sort('Low Inv','inv_notif_threshold'); ?></th>
-      <th><?php echo $this->Paginator->sort('qty_skid'); ?></th>
-      <th><?php echo $this->Paginator->sort('qty_box'); ?></th>
-      <th><?php echo $this->Paginator->sort('weight'); ?></th>
-      <th><?php echo $this->Paginator->sort('inv_balance'); ?></th>
-      <th><?php echo $this->Paginator->sort('created'); ?></th>
-      <th><?php echo ('MTD Shipped'); ?></th>
-      <th><?php echo ('PTD Shipped'); ?></th>
-      <th><?php echo ('MTD Received'); ?></th>
-      <th><?php echo ('PTD Received'); ?></th>
+      <th><?php echo $this->Paginator->sort(__('sku')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('name')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('is_french')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('category')); ?></th>
+      <th><?php echo $this->Paginator->sort('Low Inv',__('inv_notif_threshold')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('qty_skid')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('qty_box')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('weight')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('inv_balance')); ?></th>
+      <th><?php echo $this->Paginator->sort(__('created')); ?></th>
+      <th><?php echo __('MTD Shipped'); ?></th>
+      <th><?php echo __('PTD Shipped'); ?></th>
+      <th><?php echo __('MTD Received'); ?></th>
+      <th><?php echo __('PTD Received'); ?></th>
      </tr>
     <?php
     $i = 0;
@@ -35,9 +36,10 @@
       }
     ?>
       <tr<?php echo $class; ?>>
-       <td><?php echo $brochure['sku']; ?></td>
-       <td id="brochure_name"><?php echo $brochure['name']; ?></td>
-       <td><?php echo $brochure_categorys[$brochure['category']]; ?></td>
+      <td><?php echo $brochure['sku']; ?></td>
+      <td id="brochure_name"><?php echo $brochure['name']; ?></td>
+      <td><?php if ($brochure->is_french == 1) {echo __('French');} else {echo __('English');}?></td>
+      <td><?php echo $brochure_categorys[$brochure['category']]; ?></td>
       <td><?php echo $brochure['inv_notif_threshold']; ?></td>
       <td><?php echo $brochure['qty_skid']; ?></td>
       <td><?php echo $brochure['qty_box']; ?></td>
@@ -139,7 +141,7 @@
     <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
@@ -155,7 +157,7 @@
  
    <?php echo $this->Form->create('Filter',array('url'=>array('controller'=>'brochures','action'=>'search','prefix' => 'supplier'),'id'=>'orders-filter-form'));?>
   <fieldset>
-    <legend>Select Date Range</legend>
+    <legend><?php echo __('Select Date Range'); ?></legend>
     <ol>
        <li><?php echo $this->Form->input('filter_start_date',array('label'=>'Start date','class'=>'date'));?></li>
        <li><?php echo $this->Form->input('filter_end_date',array('label'=>'End date','class'=>'date'));?></li>
@@ -167,7 +169,7 @@
 <div class="popup" id="csv-report-popup">
   <?php echo $this->Form->create('Report',array('url'=>array('controller'=>'Reports','action'=>'ordersExport','prefix' => 'supplier'),'id'=>'orders-export-form'));?>
   <fieldset>
-    <legend>Select Date Range</legend>
+    <legend><?php echo __('Select Date Range'); ?></legend>
     <ol>
        <li><?php echo $this->Form->input('start_date',array('label'=>'Start date','class'=>'date'));?></li>
        <li><?php echo $this->Form->input('end_date',array('label'=>'End date','class'=>'date'));?></li>

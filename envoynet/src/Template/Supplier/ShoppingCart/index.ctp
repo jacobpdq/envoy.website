@@ -3,8 +3,8 @@
     <table class="index">
         <tbody>
             <tr>
-                <th width="400px"><?php echo __("Brochure");?></th>
-                <th width="300px"><?php echo __("Quantity");?></th>
+                <th width="400px"><?php echo __('Brochure');?></th>
+                <th width="300px"><?php echo __('Quantity');?></th>
                 <th width="100px"></th>
             </tr>
   

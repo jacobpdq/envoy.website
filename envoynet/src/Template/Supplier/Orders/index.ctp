@@ -1,15 +1,18 @@
 <div class="inner-content-wrapper">
-    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn">Place Order</div></a>
-</div>
-<div class="inner-content-wrapper">
   <div class="tools">
-    <div id="filter-btn">Filter by date</div>
+    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>">
+      <div id="place_order_btn">
+        <?php echo __('Place Order'); ?>
+      </div>
+    </a>
+
+    <div id="filter-btn"><?php echo __('Filter by date'); ?></div>
     
     <?php $reportaccess = $this->request->session()->read('Auth.User.restrict_report_access');
 	
 	if ($reportaccess == 0)
 	{ ?>
-    <div id="csv-export-btn">Export to Excel</div>
+    <div id="csv-export-btn"><?php echo __('Export to Excel'); ?></div>
     <?php }?>
   </div>
   <br style="clear:both" />
@@ -18,11 +21,10 @@
 			<th><?php echo $this->Paginator->sort('id',__('Order Number'));?></th>
 			<th><?php echo $this->Paginator->sort('created',__('Date'));?></th>
 			<th><?php echo $this->Paginator->sort('shipping_company',__('Company'));?></th>
-            
-            <th><?php echo $this->Paginator->sort('shipping_city',__('City'));?></th>
-            <th>Qty Ordered</th>
-                      <th><?php echo $this->Paginator->sort('owner_type','Order source');?></th>
-			<th class="actions">View Order</th>
+      <th><?php echo $this->Paginator->sort('shipping_city',__('City'));?></th>
+      <th><?php echo __('Qty Ordered'); ?></th>
+      <th><?php echo $this->Paginator->sort('owner_type',__('Order source'));?></th>
+			<th class="actions"><?php echo __('View Order'); ?></th>
 	</tr>
      
 	 <?php $supplierId222 = $this->request->session()->read('Auth.User.id');?>
@@ -82,7 +84,7 @@
     <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>

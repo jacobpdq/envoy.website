@@ -8,43 +8,41 @@
       <?php echo $title_for_layout; ?>
     </title>
     <?php
-      echo $this->Html->meta('icon');
-      echo $this->Html->css('main');
-      echo $this->Html->css('layout_agent');
-      echo $this->Html->css('layout_supplier');
-      echo $this->Html->css('layout');
-      echo $this->Html->css('typography');
-      echo $this->Html->css('navbar');
-      echo $this->Html->css('common');
-      echo $this->Html->css('col_grid');
-      echo $this->Html->css('advanced_search');
-      echo $this->Html->css('new_btn');
-      echo $this->Html->css('jquery.jscrollpane');
-      echo $this->Html->css('jquery.jscrollpane.lozenge');
-      echo $this->Html->css('jquery.fancybox-1.3.4');
-       echo $this->Html->css('jquery.ui');
+    echo $this->Html->meta('icon');
+    echo $this->Html->css('main');
+    echo $this->Html->css('layout_agent');
+    echo $this->Html->css('layout_supplier');
+    echo $this->Html->css('layout');
+    echo $this->Html->css('typography');
+    echo $this->Html->css('navbar');
+    echo $this->Html->css('common');
+    echo $this->Html->css('col_grid');
+    echo $this->Html->css('advanced_search');
+    echo $this->Html->css('new_btn');
+    echo $this->Html->css('jquery.jscrollpane');
+    echo $this->Html->css('jquery.jscrollpane.lozenge');
+    echo $this->Html->css('jquery.fancybox-1.3.4');
+    echo $this->Html->css('jquery.ui');
 
+    echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js');
+    echo $this->Html->script('jquery.ui-1.8.11.min.js');
+    echo $this->Html->script('jquery.mousewheel-3.0.4.pack.js');
+    echo $this->Html->script('jquery.fancybox-1.3.4.pack.js');
+    echo $this->Html->script('jquery.easing-1.3.pack.js');
+    echo $this->Html->script('jquery.jscrollpane.min.js');
 
-      echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js');
-      echo $this->Html->script('jquery.ui-1.8.11.min.js');
-      echo $this->Html->script('jquery.mousewheel-3.0.4.pack.js');
-      echo $this->Html->script('jquery.fancybox-1.3.4.pack.js');
-      echo $this->Html->script('jquery.easing-1.3.pack.js');
-      echo $this->Html->script('jquery.jscrollpane.min.js');
+    echo $this->Html->script('jquery.validate.min.js');
+    echo $this->Html->script('main.js');
+    echo $this->Html->meta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
+    echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,300,600', ['plugin' => false]);
+    echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,700,400,500,600', ['plugin' => false]);
+    echo $this->Html->css('../dist/css/style.css');
+    echo $this->Html->css('../dist/css/custom2016.css');
 
-      echo $this->Html->script('jquery.validate.min.js');
-      echo $this->Html->script('main.js');
-  echo $this->Html->meta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1']);
-     echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,300,600', ['plugin' => false]);
-     echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,700,400,500,600', ['plugin' => false]);
-     echo $this->Html->css('../dist/css/style.css');
-
-      echo $this->Html->script('jquery.validate.min.js');
+    echo $this->Html->script('jquery.validate.min.js');
     echo $this->Html->script('jquery.autotab-1.1b.js');
-      echo $this->Html->script('main.js');
+    echo $this->Html->script('main.js');
     ?>
-
-    
   
     <?= $this->fetch('script') ?>
 </head>
@@ -56,33 +54,22 @@
 }
 </script>
 
-
-
 <!-- Top Navigation Bar -->
   <header id="top-header">
     <nav >
-
          <section id="login" class="tabs mobile ">
                   <span><?php echo __('Login'); ?></span>
-                   <div class="tabs__tabItem">
+                    <div class="tabs__tabItem">
                        <input type="radio" id="tab-one" name="tab-group-one">
-                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>
-                       
-                <div class="tabs__content">
-
-
-          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
-
-          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
-
-          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
-
-
-          <button class="button" type="submit"><?php echo __(' Login'); ?></button>
-          <?php echo $this->Form->end(); ?>
-
-                       </div> 
-                   </div>
+                       <label for="tab-one"><?php echo __('Travel Agent'); ?></label>        
+                        <div class="tabs__content">
+                          <?php echo $this->Form->create('LoginData', array('url' => array('controller'=>'main', 'action' => 'login', 'prefix' => 'agent'), 'id' => 'agent-login')); ?>
+                          <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text','class'=>'', 'placeholder'=>"Username")) ?>
+                          <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'type'=>'password', 'placeholder'=>"Password")) ?>
+                          <button class="button" type="submit"><?php echo __(' Login'); ?></button>
+                          <?php echo $this->Form->end(); ?>
+                        </div> 
+                    </div>
                     
                     <div class="tabs__tabItem">
 
@@ -90,84 +77,56 @@
                        <label for="tab-two"><?php echo __('Supplier'); ?></label>
                      
                        <div class="tabs__content">
-
-
                         <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
-
                         <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>"Username")) ?>
-
                         <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>"Password")) ?>
-
                         <button class="button" type="submit"><?php echo __('Login'); ?></button>
-
-                         <?php echo $this->Form->end(); ?>
-
+                        <?php echo $this->Form->end(); ?>
                        </div> 
                    </div>
                     
                 </section>
 
-       
-
-            <ul class="language">
-        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'supplier')); ?>">Language: <span class="english">EN</span><span class="french">FR</span></a></li>
+      <ul class="language desktop">
+        <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'language','prefix'=>'agent')); ?>">
+          <span class="english fontsize14 bold">
+            <button class="lang--button button--white">English</button>
+          </span>
+          <span class="french fontsize14 bold">
+            <button class="lang--button button--white">Français</button>
+          </span>
+        </a>
       </ul>
-      
-      <ul class="desktop">
-        <li class="gray-text">TORONTO    ETOBICOKE    RICHMOND</li>
-        <li class="gray-text"><u><a href="tel:9058310006">(905)831-0006</a></u></li>
-        <li class="white-text"><u><a href="mailto:INFO@ENVOYNETWORKS.CA"></u>INFO@ENVOYNETWORKS.CA</a></li>
+      <ul class="topnav">
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('About Us'); ?></a></li>
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
+        <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a></li>
       </ul>
-
-
-
-
-      
+      <ul class="desktop" style="margin-top:-7px !important;">
+        <li class="gray-text">TORONTO    ETOBICOKE    RICHMOND<br /><a href="tel:+19058310006">(905)831-0006</a> &nbsp; <a href="mailto:mail@envoynetworks.ca">mail@envoynetworks.ca</a></li>
+      </ul>
     </nav> 
   </header>
 
-
       <!--Site navbar /-->
 
-
-
-
   <input id="toggle" type="checkbox">
- 
-   <div class="content">
-      
+    <div class="content">
       <header id="main-header" class="section__content " >
-     
            <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>">
             <?php echo $this->Html->image('assets/envoy-logo.svg', array( 'id'=>'logo'));?> </a>
         
           <label for="toggle"> <?php echo $this->Html->image('assets/menu-button.png', array( 'id'=>'menu-button'));?> </label>
 
-      
         <nav class="menu">
           <ul>
-            <li><a href="#"><?php echo __('Services'); ?></a>
-              <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
-              </ul>
-
-            </li>
-            <li><a href="#"><?php echo __('About Us'); ?></a>
-              <ul>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'overview','prefix'=>'agent')); ?>"><?php echo __('Overview'); ?></a></li>
-              <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'meettheteam','prefix'=>'agent')); ?>"><?php echo __('Meet the Team'); ?></a></li>
-              </ul>
-            </li>
-            <li>  <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'contactus','prefix'=>'agent')); ?>"><?php echo __('Contact Us'); ?></a> 
-   </li>
-            </ul>
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'logistics','prefix'=>'agent')); ?>"><?php echo __('Logistics'); ?></a></li> 
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'digital','prefix'=>'agent')) ?>"><?php echo __('Digital Support'); ?></a></li> 
+            <li><a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'marketing','prefix'=>'agent')) ?>"><?php echo __('Marketing Solutions'); ?></a></li> 
+          </ul>
         </nav>
 
       </header>
-
-    
     
     <div id="Main_content_Holder">
 
@@ -182,38 +141,19 @@
     
      <ul id="Main_Navbar_Holder">
      
-     <li>    <a href="<?php echo $this->Url->build(array('controller' => 'suppliers', 'action' => 'profile', 'prefix' => 'supplier')); ?>"><?php echo __('My Profile'); ?></a>  </li>
-      <li>  <a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('Brochures'); ?></a> </li>
-     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Orders'); ?></a>  </li>
-     <li>   <a href="<?php echo $this->Url->build(array('controller' => 'receipts', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Receipts'); ?></a>  </li>
-           <li> </a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'supplier'));?>"><?php echo __('Logout'); ?></a> </li>
+      <li><a href="<?php echo $this->Url->build(array('controller' => 'brochures', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('Brochures'); ?></a> </li>
+      <li><a href="<?php echo $this->Url->build(array('controller' => 'orders', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Orders'); ?></a>  </li>
+      <li><a href="<?php echo $this->Url->build(array('controller' => 'receipts', 'action' => 'index', 'prefix' => 'supplier')); ?>"><?php echo __('My Receipts'); ?></a>  </li>
+      <li><a href="<?php echo $this->Url->build(array('controller' => 'suppliers', 'action' => 'profile', 'prefix' => 'supplier')); ?>"><?php echo __('My Profile'); ?></a>  </li>
+      <li></a><a href="<?php echo $this->Url->build(array('controller'=>'main','action'=>'logout','prefix' => 'supplier'));?>"><?php echo __('Logout'); ?></a> </li>
       
 <?php else: ?>
-         
-          
-          
         </ul>
-        
-        
-        
 <?php endif; ?>
        
- </div>            
-  
+  </div>         
+  </div>  
 
-       
- </div>  
-
-
-
-
-
-
-      
-      
-      
-      
-      
   <!--    <div id="Main_Navbar_Interface">
       <?php if($this->request->session()->check('Auth.User.id')): ?>
       <a href="<?php echo $this->Url->build(array('controller' => 'pages', 'action' => 'display','aboutus','prefix' => 'supplier')); ?>"><div id="AboutUs"></div></a>
@@ -235,15 +175,12 @@
       <?php endif; ?>
       </div>  -->
 
-
    <script type="text/javascript">
           //new FancyZoom('contact', {width:610, height:520});
       </script>
    <!--End Site navbar /-->
 
-
 <div id="main-content">
-
     <div class="inner-content-wrapper">
       <h1><?php echo $title_for_layout; ?></h1>
       <?php if ($this->request->session()->check('Auth.User.id') && $this->request->session()->check('Auth.User.role') == 'supplier'): ?>
@@ -256,7 +193,6 @@
                         $cart = $this->request->session()->read('ShoppingCart');
                         $itemNr = sizeof($cart['Items']);
                         echo $itemNr." items"
-            *
             */
                       ?>
        </span> &nbsp;&nbsp;
@@ -267,18 +203,11 @@
       <?php endif; ?>
         
     </div>
-
     <?php echo $this->Flash->render(); ?>
-
     <?= $this->fetch('content') ?>
-
-     
 </div>
 
-
-
   <!--Start Footer content /-->
-
   <!--Start copyright Line content /-->
 
  <br style="clear:both" />
@@ -286,7 +215,7 @@
   <div class="section__content">
     
     <a href="http://travelweek.ca" target="_blank"><?php echo $this->Html->image('assets/site_logos/logoTravelWeekGroup.svg',array('alt'=>'Travel Week - A Travel Week Company'));?> </a>
-    <p>© Copyright Envoy Network Inc. 2015</p>
+    <p>© Copyright Envoy Networks Inc. <?php echo date("Y"); ?></p>
 </a>
   </div>
   </section>

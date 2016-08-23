@@ -1,10 +1,10 @@
 <table class="index">
   <tr>
-    <th>Company</th>
-    <th>Address</th>
-    <th>City</th>
-    <th>Province</th>
-    <th>Phonenumber</th>
+    <th><?php echo __('Company');?></th>
+    <th><?php echo __('Address');?></th>
+    <th><?php echo __('City');?></th>
+    <th><?php echo __('Province');?></th>
+    <th><?php echo __('Phonenumber');?></th>
   </tr>
   <?php $data = ""; ?>
   <?php foreach ($agents as $agent): ?>

@@ -14,9 +14,7 @@
 		</script>
 
   <div id="brochures-sidebar">
-
     <div class="holder">
-
         <div class="scroll-pane" id="brochures-suppliers-scrollpane">
 
           <!--Start Company Title/-->
@@ -36,6 +34,21 @@
                     array('class'=>$newArrivalsClass));
             ?>
           </li>
+
+          <li>
+            <?php 
+            
+            $frenchBrochuresClass="";
+            
+            if($selectedSupplier!=null )
+            {
+              $frenchBrochuresClass='selected';
+            }
+            echo $this->Html->link(__('FrenchBrochures'),
+                    array('controller'=>'brochures','action'=>'index','prefix' => 'agent', 'francais'),
+                    array('class'=>$frenchBrochuresClass));
+            ?>
+          </li>
           
           <li>
             <?php 
@@ -47,32 +60,27 @@
 				}
             ?>
           </li>
-       
-
              
          <?php foreach ($suppliers as $supplier):?>
          
            <?php 
+            $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
         
             $supplClass='';
-            if($selectedSupplier != null && ($selectedSupplier->first()->id==$supplier->id))
+            if(strpos($url,'francais') != false){
+              } elseif ($selectedSupplier != null && ($selectedSupplier->first()->id==$supplier->id))
               {
-                $supplClass='selected';  
+                $supplClass='selected'; 
               }
             ?> 
             <li>
-            
-            
-            
               <?php
-             if(($supplier->status=='1') && ($supplier->display_on_agent_site =='1')){
-               echo $this->Html->link($supplier->company,
+                if(($supplier->status=='1') && ($supplier->display_on_agent_site =='1')){
+                echo $this->Html->link($supplier->company,
                       array('controller'=>'brochures',$supplier->id,'prefix' => 'agent'),
                       array('class'=>$supplClass));
                       }
-                      ?>  
-                     
-                    
+              ?>  
             </li>
         
           <?php endforeach;?>
@@ -91,42 +99,27 @@
         <span class="Company_Title_txt_lg">
            <?php
            
-           if($selectedSupplier != null)
-            {
-              echo $selectedSupplier->first()->company;
-            } else {
-              echo __("New Arrivals");
-            }
+             $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
+             if(strpos($url,'francais') !== false) {
+                echo __("French Brochures");
+              } elseif ($selectedSupplier != null) {
+                echo $selectedSupplier->first()->company;
+              } else {
+                echo __("New Arrivals");
+              }
            ?>
         </span><br/>
-       <span class="Base_red_txt_nl"> *Click on thumbnail to view larger image</span></div>
-
-
-      <div class="paging" id="paginate_top_Header">
-         <?php 
-          echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
-            'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Prev_btn">'.__('Previous').'</div></span>'
-            ]); 
-          ?>
-
-<div id="paging_numbers" ><?php echo $this->Paginator->numbers();?></div>
-        <?php 
-          echo $this->Paginator->next('<div id="Next_btn">'.__('Next').'</div>',[
-            'escape' => false,
-            'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
-          ]); 
-        ?>
+       <span class="Base_red_txt_nl"><?php echo __('Click on thumbnail to view larger image'); ?></span>
       </div>
-
   </div>
 
-    <?php if($brochures->count() > 0):?>
-    <?php foreach($brochures as $brochure):?>
 
-      <div id="Brochures_Main_Holder_agent">
-  <!--       <?php echo $this->Form->create('OrderItem',array('url'=>array('controller'=>'ShoppingCart','action'=>'placeOrder','prefix' => 'agent'),'id'=>'orderBr'.$brochure->id));?>-->
+
+    <?php if($brochures->count() > 0):?>    
+    <?php foreach($brochures as $brochure):?>
+    
+        <div id="Brochures_Main_Holder_agent">
         <!--Start Product Main Holder/-->
         <!--Start Product/-->
         <div id="product_holder">
@@ -135,14 +128,23 @@
                   <?php 
                   
                     if($brochure->image->filename){
-                      echo $this->ImageResize->resize('brochures' . DS . $brochure->image->filename, 69, 95, false);
+                      echo $this->ImageResize->resize('brochures' . DS . $brochure->image->filename, 187, 260, false);
                       }
                     ?>
             </a>
           </div>
-          <div id="product_header_holder"> <span class="Product_Title_txt"><?php echo $brochure->name;?></span></div>
-          <div id="product_date_holder" class="product_date"><?php echo date("Y F d",strtotime($brochure->created));?></div>
-          <div id="product_txt_holder1" class="Base_Title_txt_discrip"><?php echo $brochure->description;?></div>
+
+          <div id="product_header_holder"> 
+            <span class="Product_Title_txt"><?php echo $brochure->name;?></span><br />
+            <span class="Product_Language_txt"><?php if ($brochure->is_french == 1) {echo __('FrenchBrochure');} else {echo __('EnglishBrochure');}?></span><br />
+            <span id="product_date_holder" class="product_date">
+              <?php echo date("F d\, Y",strtotime($brochure->created));?>
+            </span>
+          </div>
+
+          <div id="product_txt_holder1" class="Base_Title_txt_discrip">
+            <?php echo $brochure->description;?>
+          </div>
         
   <!-- ebrochure button       -->
   <div id="product_date_holder1">
@@ -158,17 +160,17 @@
         <?php endif;?>
     </div>             
           <?php
-			 if ($agttiers->count() == 0) {
-			 $agttier = '';
-			 $agttierlower = 'max_order';
-			 }
-			 else {
-			  $agttier=$agttiers->first()->tier;
-			  $agttierlower = 'max_order_'.strtolower($agttier);
-			 }
-			?>
+      			 if ($agttiers->count() == 0) {
+      			 $agttier = '';
+      			 $agttierlower = 'max_order';
+      			 }
+      			 else {
+      			  $agttier=$agttiers->first()->tier;
+      			  $agttierlower = 'max_order_'.strtolower($agttier);
+      			 }
+			     ?>
           <div id="Max_Items_holder" class="Base_Title_txt_discrip">
-              Maximum <span class="Max_Items_txt_rld"><?php echo $brochure[$agttierlower];?></span> brochures per order
+              Maximum <span class="Max_Items_txt_rld"><?php echo $brochure[$agttierlower];?></span> <?php echo __('brochures per order'); ?>
           </div>
           <div id="requires_approval_holder" class="product_date"></div>
 
@@ -204,13 +206,13 @@
              <?php 
 			  if (!empty($qtychoice)) {
           
-			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','placeholder'=>'# of Brochures','options' => $result1));
+			  echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style3','placeholder'=>'# brochures','options' => $result1));
               foreach($qtychoice as $result2a):
 		      echo $this->Form->input('OrderItem.qty_choice.'.$result2a,array('div'=>false,'value'=>$result2a,'label'=>false,'type'=>'hidden'));
-			  endforeach;
+			         endforeach;
 			  }
 			  else {
-			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1','placeholder'=>'# of Brochures'));
+			   echo $this->Form->input('OrderItem.qty_ordered',array('div'=>false,'label'=>false,'id'=>'Quanity_style1','placeholder'=>'# brochures'));
 			    echo $this->Form->input('OrderItem.qty_choice',array('div'=>false,'value'=>null,'label'=>false,'type'=>'hidden'));
 			   
 			  }
@@ -232,9 +234,9 @@
 
      <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
-    <?php
-        echo $this->Paginator->counter( __('Page {{page}} of {{pages}}'));
-    ?>
+        <?php
+          echo $this->Paginator->counter( __('Page {{page}} / {{pages}}'));
+        ?>
       </div>
          <?php 
           echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>',[
@@ -249,26 +251,12 @@
             'disabledTitle' => '<span class="disabled"><div id="Next_btn">'.__('Next').'</div></span>'
           ]); 
         ?>
-</div>
-
+    </div>
   <!--</form>-->
   </div>
 
-
-
-</div>
-
-
 <div class="inner-content-wrapper ">
-
 </div>
-
-
-
-
-
-
-
 
 <script type="text/javascript" >
     $(document).ready(function() {

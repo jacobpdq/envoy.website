@@ -1,12 +1,12 @@
 <div class="inner-content-wrapper">
 
-<?php $this->set('title_for_layout', __('Receipts'));  ?>
+<?php $this->set('title_for_layout', __('Receipts')); ?>
 
 	<table class="index" cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('date');?></th>
 			<th><?php echo $this->Paginator->sort('brochure_id');?></th>
-            <th><?php echo $this->Paginator->sort('Quantity','qty');?></th>
+            <th><?php echo $this->Paginator->sort('Quantity');?></th>
             <th><?php echo $this->Paginator->sort('carrier');?></th>
   	</tr>
      
@@ -33,7 +33,7 @@
     <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
@@ -44,4 +44,3 @@
     </div>
 	
 </div>
-

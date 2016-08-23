@@ -10,8 +10,8 @@
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Company Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_company']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('First Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_firstname']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"> <span class="Base_txt"><?php echo __('Last Name'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_lastname']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address1'); ?> </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address1']; ?></span><br></div>
-        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address2'); ?> </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address2']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address1'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address1']; ?></span><br></div>
+        <div id="Confirm_order_inset_Holder"><span class="Base_txt"><?php echo __('Address2'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_address2']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('City'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_city']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Province'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_province']; ?></span><br></div>
         <div id="Confirm_order_inset_Holder"><span class="Base_txt"> <?php echo __('Postal Code'); ?>: </span><span class="data_Headers_Bl_txt"><?php echo $order['shipping_postalcode']; ?></span><br>
@@ -33,11 +33,12 @@
   <div id="Confirm_order_inset_Holder"><span class="data_Headers_Bl_txt"><?php echo __('Order Details'); ?></span></div>
 	
 	<?php if (!empty($order['order_items'])):?>
-	<table class="index2">
+	<table class="index2" style="width:100%;">
 	<tr>
 	
 	
 		<th><?php echo __('Brochure Name'); ?></th> 
+        <th><?php echo __('Language'); ?></th> 
 		<th><?php echo __('Qty Ordered'); ?></th>
 		<th><?php echo __('Qty Shipped'); ?></th>
         <th><?php echo __('Status'); ?></th>
@@ -60,7 +61,8 @@
 		<tr<?php echo $class;?>>
 
 			
-<td><?php  echo $orderItem->brochure['name'];?></td>
+            <td><?php echo $orderItem->brochure['name'];?></td>
+            <td><?php if ($orderItem->brochure['is_french'] == 1) {echo __('French');} else {echo __('English');}?></td>
 			<td><?php echo $orderItem['qty_ordered'];?></td>
 			<td><?php echo $orderItem['qty_shipped'];?></td>
             <td><?php echo $order_item_statuses[$orderItem['status']];?></td>
@@ -78,5 +80,5 @@
 </div>
 <br style="clear:both" />
 </div>
-</div> 
+</div>
 <br style="clear:both" />

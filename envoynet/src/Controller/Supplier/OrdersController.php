@@ -13,6 +13,9 @@ class OrdersController extends \App\Controller\OrdersController {
   
   public function index() {
   
+       $ownerId = $this->Auth->user('id');
+    if (!empty($ownerId)) {
+  
     ini_set('memory_limit', '256M');  
 
     $this->set('title_for_layout', __('My Orders'));
@@ -93,6 +96,7 @@ class OrdersController extends \App\Controller\OrdersController {
             'limit' => 50
         );
       }
+    }
     }
 
     $this->set('orders', $this->paginate());

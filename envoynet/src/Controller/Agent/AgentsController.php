@@ -420,7 +420,7 @@ class AgentsController extends \App\Controller\AgentsController {
           <legend>Travelweek Subscription Type</legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for="">Please indicate in which format you would like to receive Travelweek:</label>
+              <label for=""><?php echo __('Please indicate in which format you would like to receive Travelweek'); ?>:</label>
               <?php
               if( $travelweek_sub_type == '' ){ $travelweek_sub_type = 'Print_Digital'; }
               $subscription = array(
@@ -440,14 +440,14 @@ class AgentsController extends \App\Controller\AgentsController {
         <?php } ?>
         
         <fieldset>
-          <legend><?php echo __('Personal Information') ?></legend>
+          <legend><?php echo __('Personal Information'); ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for=""><?php echo __('First Name') ?><span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('First Name'); ?><span class="sso_required_icon">*</span></label>
               <input type="text" name="first_name" value="<?php echo $data['first_name']; ?>" id="first_name">
             </div>
             <div class="fieldHalf">
-              <label for=""><?php echo __('Last Name') ?><span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Last Name'); ?><span class="sso_required_icon">*</span></label>
               <input type="text" name="last_name" value="<?php echo $data['last_name']; ?>" id="last_name">
             </div>
             <div style="clear:both;"></div>
@@ -457,25 +457,25 @@ class AgentsController extends \App\Controller\AgentsController {
         <fieldset>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Username'); ?> <span class="sso_required_icon">*</span></label>
               <input type="text" name="username" value="<?php echo $data['username']; ?>" id="username">
             </div>
             <div class="fieldHalf">
-            <div class="disclaimer"><br><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.') ?></div></div>
+            <div class="disclaimer"><br><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.'); ?></div></div>
             <div style="clear:both;"></div>
           </div>
           
         </fieldset>
         
         <fieldset>
-          <legend><?php echo __('Preferred Email') ?></legend>
+          <legend><?php echo __('Preferred Email'); ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for=""><?php echo __('Email') ?> <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Email'); ?> <span class="sso_required_icon">*</span></label>
               <input type="email" name="email" value="<?php echo $data['email']; ?>" id="email">
             </div>
             <div class="fieldHalf">
-              <label for=""><?php echo __('Confirm Email') ?> <span class="sso_required_icon">*</span></label>
+              <label for=""><?php echo __('Confirm Email'); ?> <span class="sso_required_icon">*</span></label>
               <input type="email" name="email_confirm" value="<?php echo $data['email']; ?>" id="email_confirm">
             </div>
             <div style="clear:both;"></div>
@@ -483,24 +483,24 @@ class AgentsController extends \App\Controller\AgentsController {
         </fieldset>
         
         <fieldset>
-          <legend><?php echo __('Password') ?></legend>
+          <legend><?php echo __('Password'); ?></legend>
           <div class="formGroup">
             <div class="fieldHalf">
-              <label for=""><?php echo __('Password') ?></label>
+              <label for=""><?php echo __('Password'); ?></label>
               <input autocomplete="off" type="password" name="password" value="" id="password">
             </div>
             <div class="fieldHalf">
-              <label for=""><?php echo __('Confirm Password') ?></label>
+              <label for=""><?php echo __('Confirm Password'); ?></label>
               <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
             </div>
             <div style="clear:both;"></div>
-            <div class="disclaimer"><?php echo __('Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>
+            <div class="disclaimer"><?php echo __('Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like'); ?>&nbsp ! " ? $ % ^ & ).</div>
           </div>
         </fieldset>
         
         <?php $this->sso_form_specific( $data, 'profile', $attr ); ?>
 
-        <p><input type="submit" class="button dark" value="<?php echo __('Update Profile') ?> &rarr;"></p>
+        <p><input type="submit" class="button dark" value="<?php echo __('Update Profile'); ?> &rarr;"></p>
         
       </form>
   
@@ -517,7 +517,7 @@ class AgentsController extends \App\Controller\AgentsController {
 	  
   	$_reg_error = '';
 	$_reg_saved = false;
-	
+
 	$broker_url =  Router::url('/', true);
 	$broker_url =  str_replace("http://","",$site_url);
 	$broker_url =  str_replace("https://","",$site_url);
@@ -643,14 +643,14 @@ class AgentsController extends \App\Controller\AgentsController {
       <br />
       <br />
       <fieldset>
-        <legend><?php echo __('Personal Information') ?></legend>
+        <legend><?php echo __('Personal Information'); ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for=""><?php echo __('First Name') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('First Name'); ?> <span class="sso_required_icon">*</span></label>
             <input type="text" name="first_name" value="<?php echo $this->request->data['first_name']; ?>" id="first_name">
           </div>
           <div class="fieldHalf">
-            <label for=""><?php echo __('Last Name') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Last Name'); ?> <span class="sso_required_icon">*</span></label>
             <input type="text" name="last_name" value="<?php echo $this->request->data['last_name']; ?>" id="last_name">
           </div>
           <div style="clear:both;"></div>
@@ -658,14 +658,14 @@ class AgentsController extends \App\Controller\AgentsController {
       </fieldset>
       
       <fieldset>
-        <legend><?php echo __('Preferred Email') ?></legend>
+        <legend><?php echo __('Preferred Email'); ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for=""><?php echo __('Email') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Email'); ?> <span class="sso_required_icon">*</span></label>
             <input type="email" name="email" value="<?php echo $this->request->data['email']; ?>" id="email">
           </div>
           <div class="fieldHalf">
-            <label for=""><?php echo __('Confirm Email') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Confirm Email'); ?> <span class="sso_required_icon">*</span></label>
             <input type="email" name="email_confirm" value="<?php echo $this->request->data['email_confirm']; ?>" id="email_confirm">
           </div>
           <div style="clear:both;"></div>
@@ -673,28 +673,28 @@ class AgentsController extends \App\Controller\AgentsController {
       </fieldset>
       
       <fieldset>
-        <legend><?php echo __('Preferred Username and Password') ?></legend>
+        <legend><?php echo __('Preferred Username and Password'); ?></legend>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for=""><?php echo __('Username') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Username'); ?> <span class="sso_required_icon">*</span></label>
             
             <input type="text" name="username" value="<?php echo $this->request->data['username']; ?>" id="username">
           </div>
-          <div class="fieldHalf disclaimer"><br/><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.') ?></div>
+          <div class="fieldHalf disclaimer"><br/><?php echo __('Username can only consist of letters, numbers, spaces, hyphens and underscores.'); ?></div>
           <div style="clear:both;"></div>
           
         </div>
         <div class="formGroup">
           <div class="fieldHalf">
-            <label for=""><?php echo __('Password') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Password'); ?> <span class="sso_required_icon">*</span></label>
             <input autocomplete="off" type="password" name="password" value="" id="password">
           </div>
           <div class="fieldHalf">
-            <label for=""><?php echo __('Confirm Password') ?> <span class="sso_required_icon">*</span></label>
+            <label for=""><?php echo __('Confirm Password'); ?> <span class="sso_required_icon">*</span></label>
             <input autocomplete="off" type="password" name="password_confirm" value="" id="password_confirm">
           </div>
           <div style="clear:both;"></div>
-          <div class="disclaimer"><?php echo __('Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like') ?>&nbsp ! " ? $ % ^ & ).</div>  
+          <div class="disclaimer"><?php echo __('Hint: the password should be at least eight (8) characters long.  To make it stronger, use upper and lower case letters, numbers and symbols like'); ?>&nbsp ! " ? $ % ^ & ).</div>  
         </div>
       </fieldset>
 
@@ -780,24 +780,24 @@ class AgentsController extends \App\Controller\AgentsController {
 
     ?>
     <fieldset>
-      <legend><?php echo __('Verify Human, agree to Terms of Use, and Submit Registration Form') ?></legend>
+      <legend><?php echo __('Verify Human, agree to Terms of Use, and Submit Registration Form'); ?></legend>
       <?php $number1 = rand(1,10); $number2 = rand(1,10); $answer = MD5($number1+$number2); ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="registration_question"><?php echo __('Confirm that you are human') ?></label>
-          <div class="disclaimer"><?php echo __('Please enter the sum of') ?> <?php echo $number1 ?> + <?php echo $number2; ?> <?php echo __('in the field below.') ?></div>
+          <label for="registration_question"><?php echo __('Confirm that you are human'); ?></label>
+          <div class="disclaimer"><?php echo __('Please enter the sum of'); ?> <?php echo $number1 ?> + <?php echo $number2; ?> <?php echo __('in the field below.'); ?></div>
           <input type="hidden" name="reg_nonce" value="<?php echo $answer; ?>" id="reg_nonce">
           <input type="text" name="registration_question" value="" id="registration_question">
         </div>
         <div class="fieldHalf">
-          <label><input type="checkbox" value="true" id="terms_agree" name="terms_agree" style="display:inline-block;width:auto;"> <?php echo __('I agree to the terms as detailed in the') ?> <?php echo $sso_policy_page; ?></label>
+          <label><input type="checkbox" value="true" id="terms_agree" name="terms_agree" style="display:inline-block;width:auto;"> <?php echo __('I agree to the terms as detailed in the'); ?> <?php echo $sso_policy_page; ?></label>
         </div>
         <div style="clear:both;"></div>
       </div>
       
     </fieldset>
     
-    <p><input type="submit" class="button dark" value="<?php echo __('Register') ?>"></p>
+    <p><input type="submit" class="button dark" value="<?php echo __('Register'); ?>"></p>
     
     </form>
   	
@@ -1005,10 +1005,10 @@ class AgentsController extends \App\Controller\AgentsController {
     
     <?php if( $attr['lc_role_agency'] ){ ?>
     <fieldset>
-      <legend><?php echo __('Professional Information') ?></legend>
+      <legend><?php echo __('Professional Information'); ?></legend>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="phone_no"><?php echo __('Role') ?></label>
+          <label for="phone_no"><?php echo __('Role'); ?></label>
           <select name="job_function" id="job_function">
                     <option value="" disabled="disabled"> -- Select -- </option>
             <?php $lc_role = sso_form_post('lc_role','',false); ?>
@@ -1034,15 +1034,15 @@ class AgentsController extends \App\Controller\AgentsController {
     
     <?php if( $attr['company_job'] || $attr['pro_information'] ){ ?>
     <fieldset>
-      <legend><?php echo __('Professional Information') ?></legend>
+      <legend><?php echo __('Professional Information'); ?></legend>
       <?php if( $attr['company_job'] || $attr['pro_information'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="company"><?php echo __('Company') ?></label>
+          <label for="company"><?php echo __('Company'); ?></label>
           <input type="text" name="company" value="<?php sso_form_post('company'); ?>" id="company">
         </div>
         <div class="fieldHalf">
-          <label for="job_function"><?php echo __('Job Function') ?></label>
+          <label for="job_function"><?php echo __('Job Function'); ?></label>
           <select name="job_function" id="job_function">
                     <option value="" disabled="disabled"> -- Select -- </option>
             <?php $job_function = sso_form_post('job_function','',false); ?>
@@ -1057,7 +1057,7 @@ class AgentsController extends \App\Controller\AgentsController {
       <?php if( $attr['pro_information'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="travel_group"><?php echo __('Travel Group') ?></label>
+          <label for="travel_group"><?php echo __('Travel Group'); ?></label>
           <select name="travel_group" id="travel_group">
             <option value="" disabled="disabled"> -- Select -- </option>
             <?php $travel_group = sso_form_post('travel_group','',false); ?>
@@ -1084,11 +1084,11 @@ class AgentsController extends \App\Controller\AgentsController {
     
     <?php if( $attr['contact_lrg'] || $attr['contact_sml'] ){ ?>
     <fieldset>
-      <legend><?php echo __('Contact Information') ?></legend>
+      <legend><?php echo __('Contact Information'); ?></legend>
       <?php if( $attr['contact_lrg'] ){ ?>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="contact_info_type"><?php echo __('This is my') ?></label>
+          <label for="contact_info_type"><?php echo __('This is my'); ?></label>
           <?php $contact_info_type = sso_form_post('contact_info_type','',false); ?>
           <select name="contact_info_type" id="contact_info_type">
                 <option value="business" <?php if ( $contact_info_type == 'business') echo 'selected="selected"'; ?> >Business Contact Information</option> 
@@ -1099,7 +1099,7 @@ class AgentsController extends \App\Controller\AgentsController {
       </div>
       <div class="formGroup">
         <div class="fieldSingle">
-          <label for="street"><?php echo __('Street') ?></label>
+          <label for="street"><?php echo __('Street'); ?></label>
           <input type="text" style="width:12%;display:inline-block;" name="street" value="<?php sso_form_post('street'); ?>" id="street">
           <input type="text" style="width:83%;margin-left:2%;display:inline-block;" name="streetName" value="<?php sso_form_post('streetName'); ?>" id="streetName">
         </div>
@@ -1107,18 +1107,18 @@ class AgentsController extends \App\Controller\AgentsController {
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="unitApt"><?php echo __('Unit/Apt/Suite') ?></label>
+          <label for="unitApt"><?php echo __('Unit/Apt/Suite'); ?></label>
           <input type="text" name="unitApt" value="<?php sso_form_post('unitApt'); ?>" id="unitApt">
         </div>
         <div class="fieldHalf">
-          <label for="city"><?php echo __('City') ?></label>
+          <label for="city"><?php echo __('City'); ?></label>
           <input type="text" name="city" value="<?php sso_form_post('city'); ?>" id="city">
         </div>
         <div style="clear:both;"></div>
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="province"><?php echo __('Province/State') ?></label>
+          <label for="province"><?php echo __('Province/State'); ?></label>
           <select name="province" id="province">
                     <?php $province = sso_form_post('province','Ontario',false); ?>
             <?php foreach( $province_values as $key => $value  ){ if( $key == $province ){ $selected = ' selected="selected" '; }else{ $selected = ''; } ?>
@@ -1127,14 +1127,14 @@ class AgentsController extends \App\Controller\AgentsController {
           </select>
         </div>
         <div class="fieldHalf">
-          <label for="postal_code"><?php echo __('Postal Code') ?></label>
+          <label for="postal_code"><?php echo __('Postal Code'); ?></label>
           <input type="text" name="postal_code" value="<?php sso_form_post('postal_code'); ?>" id="postal_code">
         </div>
         <div style="clear:both;"></div>
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="phone_no"><?php echo __('Phone') ?></label>
+          <label for="phone_no"><?php echo __('Phone'); ?></label>
           <input type="text" name="phone_no" value="<?php sso_form_post('phone_no'); ?>" id="phone_no">
         </div>
         <div class="fieldHalf">
@@ -1145,7 +1145,7 @@ class AgentsController extends \App\Controller\AgentsController {
       </div>
       <div class="formGroup">
         <div class="fieldHalf">
-          <label for="website"><?php echo __('Website (www.domain.com)') ?></label>
+          <label for="website"><?php echo __('Website (www.domain.com)'); ?></label>
           <input type="text" name="website" value="<?php sso_form_post('website'); ?>" id="website">
         </div>
         <div style="clear:both;"></div>

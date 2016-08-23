@@ -1,10 +1,10 @@
 <div class="inner-content-wrapper">
-    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>"><div id="place_order_btn">Place Order</div></a>
-  </div>
-<div class="inner-content-wrapper">
   <div class="tools">
-    <div id="filter-btn">Filter by date</div>
-    <div id="csv-export-btn">Export to Excel</div>
+    <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'quickOrder','prefix' => 'supplier'));?>">
+      <div id="place_order_btn"><?php echo __('Place Order'); ?></div>
+    </a>
+    <div id="filter-btn"><?php echo __('Filter by date'); ?></div>
+    <div id="csv-export-btn"><?php echo __('Export to Excel'); ?></div>
   </div>
 	
 <table class="index" cellpadding="0" cellspacing="0">
@@ -32,7 +32,7 @@
   <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
@@ -48,7 +48,7 @@
 <div class="popup" id="filter-popup">
   <?php echo $this->Form->create('Filter',array('url'=>array('controller'=>'ebrochureorders','action'=>'search','prefix' => 'supplier'),'id'=>'orders-filter-form'));?>
   <fieldset>
-    <legend>Select Date Range</legend>
+    <legend><?php echo __('Select Date Range'); ?></legend>
     <ol>
        <li><?php echo $this->Form->input('filter_start_date',array('label'=>'Start date','class'=>'date'));?></li>
        <li><?php echo $this->Form->input('filter_end_date',array('label'=>'End date','class'=>'date'));?></li>
@@ -60,7 +60,7 @@
 <div class="popup" id="csv-report-popup">
   <?php echo $this->Form->create('Report',array('url'=>array('controller'=>'Reports','action'=>'ebrochureordersExport','prefix' => 'supplier'),'id'=>'orders-export-form'));?>
   <fieldset>
-    <legend>Select Date Range</legend>
+    <legend><?php echo __('Select Date Range'); ?></legend>
     <ol>
        <li><?php echo $this->Form->input('start_date',array('label'=>'Start date','class'=>'date'));?></li>
        <li><?php echo $this->Form->input('end_date',array('label'=>'End date','class'=>'date'));?></li>

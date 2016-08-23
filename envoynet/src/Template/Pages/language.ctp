@@ -25,7 +25,7 @@ if ($language) {
 ?>
     
 
-    <script type="text/javascript">
+<script type="text/javascript">
 	jQuery(document).ready(function($){
 		$('h1').hide();
 	})

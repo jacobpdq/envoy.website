@@ -6,37 +6,42 @@ use App\Controller\AppController;
 use Cake\Core\Configure;
 use Cake\ORM\TableRegistry;
 
-
 class BrochuresController extends \App\Controller\BrochuresController {
 
   public $name = 'Brochures';
-  public $helpers = array('ImageResize');
-
+  public $helpers = array('ImageResize'); 
+  
   public function initialize()
   {
       parent::initialize();
   }
 
   public function index($supplierId=null) {
-  
- 
 
     $this->set('title_for_layout', __('Brochures'));
 
     $defaultSupplierId = Configure::read('hippo.default_supplier');
 
-    
     if ($supplierId != null && !empty($defaultSupplierId)) {
       $supplierId = $defaultSupplierId;
     }
 
-    if ($supplierId != null) {
+    if ($supplierId == 'francais') {
+
+      $this->paginate['conditions'] = [
+        'Brochures.is_french' => '1',
+        'Brochures.display_on_agent_page' => '1', 
+        'Brochures.status' => '1'
+      ];
+      
+    } elseif ($supplierId != null) {
 
       $this->paginate['conditions'] = [
         'Brochures.supplier_id' => $supplierId, 
         'Brochures.display_on_agent_page' => '1', 
         'Brochures.status' => '1'
       ];
+      
     } else {
 
       $checkDate = mktime(0, 0, 0, date("m"), date("d") - 14, date("Y"));
