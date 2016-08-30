@@ -139,7 +139,7 @@ button:hover {
 
 .tabs {
   position: relative;
-  top: -20px;
+  top: -21px;
   min-height: 300px;
   /* This part sucks */
   clear: both;
@@ -725,7 +725,7 @@ a[href="#"] {
   header#top-header #login {
     display: none; }
   header#top-header ul {
-    float: right; }
+    /*float: right;*/ }
     header#top-header ul li {
       margin-left: 20px;
       color: white;
@@ -1086,7 +1086,22 @@ a.Cart_items:link {
 
 #Cart_Header_items {
   margin: 0 !important; }
-
+/*  
+#Cart_Header_items::before {
+  line-height: 0px;
+  font-size: 20px;
+  width: 10px !important;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  left: -11px;
+  background-color: #FFF;
+  padding: 12px 14px 12px 10px;
+  content: url("../../img/bg_images/envoycart.png");
+}  
+*/
 .Base_red_txt_nl {
   font-family: Arial, Helvetica, sans-serif;
   color: #8bc64b !important; }
