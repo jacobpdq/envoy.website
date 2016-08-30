@@ -33,6 +33,7 @@
      echo $this->Html->css('http://fonts.googleapis.com/css?family=Raleway:400,300,600', ['plugin' => false]);
      echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,700,400,500,600', ['plugin' => false]);
      echo $this->Html->css('../dist/css/style.css');
+     echo $this->Html->css('../dist/css/custom2016.css');
 
       echo $this->Html->script('jquery.validate.min.js');
     echo $this->Html->script('jquery.autotab-1.1b.js');
@@ -83,10 +84,11 @@
           -->
         <a href="<?php echo $this->Url->build(array('controller'=>'orders','action'=>'pack','prefix' => 'admin'));?>"><div id="admin_btn">Shipping</div>
         </a>
-         <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>"><div id="admin_btn">Receipts</div>
+        <a href="<?php echo $this->Url->build(array('controller'=>'receipts','action'=>'index','prefix' => 'admin'));?>"><div id="admin_btn">Receipts</div>
         </a>
         <a href="<?php echo $this->Url->build(array('controller'=>'racks','action'=>'index','prefix' => 'admin'));?>"><div id="admin_btn">Racks</div>
         </a>
+        
       
 
       </div>
