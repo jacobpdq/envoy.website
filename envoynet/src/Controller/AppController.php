@@ -366,11 +366,12 @@ class AppController extends Controller {
     $order_owners = array('0' => 'agent', '1' => 'supplier');
     $order_priorities = array('0' => 'normal', '1' => 'rush');
     $order_statuses = array('0' => 'pending', '1' => 'completed');
+    $french_statuses = array('0' => 'No', '1' => 'Yes');
    $order_item_statuses = array('0' => 'pending', '1' => 'waiting for approval', '2' => 'back ordered', '3'=>'out for delivery', '4'=> 'cancelled', '5'=> 'supplier to ship', '6'=> 'packaged');
     $brochure_statuses = array('0' => 'disabled', '1' => 'active');
     $brochure_categorys = array('0' => 'Brochure', '1' => 'Booth', '2' => 'Flyer', '3' => 'Postcard', '4' => 'Poster', '5' => 'Promotional');
     $shipvia = array("" => '','0' => 'Canpar', '1' => 'UPS', '2' => 'Purolator', '3' => 'Canada Post', '4' => 'Envoy', 'N/A' => '', 'null' => "");
-    $this->set(compact('user_statuses', 'order_owners', 'order_priorities', 'order_statuses','order_item_statuses','brochure_statuses','shipvia', 'brochure_categorys'));
+    $this->set(compact('user_statuses', 'order_owners', 'order_priorities', 'order_statuses','order_item_statuses','brochure_statuses','shipvia', 'brochure_categorys','french_statuses'));
   }
 
   function _initShoppingCart() {

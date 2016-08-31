@@ -10,7 +10,7 @@ class BrochuresTable extends Table {
     {
         $this->table('brochures');
         $this->displayField('name');
-        $this->displayField('language');
+        $this->displayField('is_french');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
         //The Associations below have been created with all possible keys, those that are not needed can be removed

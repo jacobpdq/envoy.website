@@ -6,7 +6,7 @@
       <li><?php echo $this->Form->input('supplier_id'); ?> </li>
       <li><?php echo $this->Form->input('sku'); ?> </li>
       <li><?php echo $this->Form->input('name'); ?> </li>
-      <li><?php echo $this->Form->input('language'); ?> </li>
+      <li><?php echo $this->Form->input('is_french',array('options'=> $french_statuses)); ?> </li>
       <li><?php echo $this->Form->input('category',array('options'=> $brochure_categorys)); ?> </li>
       <li><?php echo $this->Form->input('description'); ?> </li>
       <li><?php echo $this->Form->input('image_id'); ?> </li>

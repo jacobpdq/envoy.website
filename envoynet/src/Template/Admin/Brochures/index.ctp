@@ -7,7 +7,7 @@
       <th><?php echo $this->Paginator->sort('sku'); ?></th>
       <th><?php echo $this->Paginator->sort('supplier_id'); ?></th>
       <th><?php echo $this->Paginator->sort('name'); ?></th>
-      <th><?php echo $this->Paginator->sort('language'); ?></th>
+      <th><?php echo $this->Paginator->sort('is_french'); ?></th>
       <th><?php echo $this->Paginator->sort('max_order'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_skid'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_box'); ?></th>
@@ -30,7 +30,7 @@
       </td>
 
       <td><?php echo $brochure['name']; ?>&nbsp;</td>
-      <td><?php echo $brochure['language']; ?>&nbsp;</td>
+      <td><?php echo $french_statuses[$brochure['is_french']]; ?>&nbsp;</td>
       <td><?php echo $brochure['max_order']; ?>&nbsp;</td>
       <td><?php echo $brochure['qty_skid']; ?>&nbsp;</td>
       <td><?php echo $brochure['qty_box']; ?>&nbsp;</td>
