@@ -7,6 +7,7 @@
       <th><?php echo $this->Paginator->sort('sku'); ?></th>
       <th><?php echo $this->Paginator->sort('supplier_id'); ?></th>
       <th><?php echo $this->Paginator->sort('name'); ?></th>
+      <th><?php echo $this->Paginator->sort('language'); ?></th>
       <th><?php echo $this->Paginator->sort('max_order'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_skid'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_box'); ?></th>
@@ -29,6 +30,7 @@
       </td>
 
       <td><?php echo $brochure['name']; ?>&nbsp;</td>
+      <td><?php echo $brochure['language']; ?>&nbsp;</td>
       <td><?php echo $brochure['max_order']; ?>&nbsp;</td>
       <td><?php echo $brochure['qty_skid']; ?>&nbsp;</td>
       <td><?php echo $brochure['qty_box']; ?>&nbsp;</td>
@@ -47,7 +49,7 @@
       <div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('class' => 'disabled','escape'=>false)); ?>

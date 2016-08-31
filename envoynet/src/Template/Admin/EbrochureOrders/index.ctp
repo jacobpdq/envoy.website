@@ -3,7 +3,7 @@
 	<!--added by glen-->
 <div class="inner-content-wrapper">	
  <div class="tools">
-     <div id="csv-export-btn">Export to Excel</div>
+     <div id="csv-export-btn"><?php echo __('Export to Excel');?></div>
   </div>
 </div> 
 <!--added by glen end-->
@@ -42,6 +42,7 @@
 		<td><?php echo $ebrochureorder['Ebrochureorder']['agent_id']; ?>&nbsp;</td>
 		<td><?php echo $ebrochureorder['Ebrochureorder']['type']; ?>&nbsp;</td>
 		<td><?php echo $ebrochureorder['Brochure']['name'];?></td>
+    <td><?php echo $ebrochureorder['Brochure']['language'];?></td>
 		<td><?php echo $ebrochureorder['Agent']['company'];?></td>
 		</td>
 	</tr>
@@ -50,7 +51,7 @@
 	<div class="paging">
       <div id="paginate_btn" class="paginate_data_txt">
         <?php
-            echo $this->Paginator->counter(__('Page {{page}} of {{pages}}'));
+            echo $this->Paginator->counter(__('Page {{page}} / {{pages}}'));
         ?>
       </div>
       <?php echo $this->Paginator->prev('<div id="Prev_btn">'.__('Previous').'</div>', array('escape'=>false), null, array('class' => 'disabled','escape'=>false)); ?>
