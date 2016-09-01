@@ -38,9 +38,9 @@
 			<?php echo $brochure['name']; ?>
 			&nbsp;
 		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Language'); ?></dt>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('French?'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $brochure['language']; ?>
+			<?php echo $french_statuses[$brochure['is_french']]; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Description'); ?></dt>
