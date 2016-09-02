@@ -5,14 +5,14 @@
   <table cellpadding="0" cellspacing="0">
     <tr>
       <th><?php echo $this->Paginator->sort('sku'); ?></th>
-      <th><?php echo $this->Paginator->sort('supplier_id'); ?></th>
+      <th><?php echo $this->Paginator->sort('Suppliers.company','Supplier'); ?></th>
       <th><?php echo $this->Paginator->sort('name'); ?></th>
       <th><?php echo $this->Paginator->sort('is_french'); ?></th>
       <th><?php echo $this->Paginator->sort('max_order'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_skid'); ?></th>
       <th><?php echo $this->Paginator->sort('qty_box'); ?></th>
       <th><?php echo $this->Paginator->sort('inv_balance'); ?></th>
-      <th><?php echo $this->Paginator->sort('created'); ?></th>
+      <th><?php echo $this->Paginator->sort('Brochures.created','Created'); ?></th>
       <th class="actions"><?php echo __('Actions'); ?></th>
     </tr>
     <?php
@@ -26,7 +26,7 @@
       <tr<?php echo $class; ?>>
         <td><?php echo $brochure['sku']; ?>&nbsp;</td>
         <td>
-        <?php echo $this->Html->link($brochure['Supplier']['company'], array('controller' => 'suppliers', 'action' => 'view', $brochure['Supplier']['id'])); ?>
+        <?php echo $this->Html->link($brochure['supplier']['company'], array('controller' => 'suppliers', 'action' => 'view', $brochure['supplier_id'])); ?>
       </td>
 
       <td><?php echo $brochure['name']; ?>&nbsp;</td>

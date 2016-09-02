@@ -16,7 +16,13 @@ class BrochuresController extends \App\Controller\BrochuresController {
  
 
   public function index() {
-    $this->Brochures->recursive = 0;
+    
+    $this->paginate = [
+        'limit' => 25,
+        'contain' => ['Suppliers'],
+        'sortWhitelist'=>['Suppliers.company','sku','name','is_french','max_order','qty_skid','qty_box','inv_balance','Brochures.created']
+      ];
+    
     $this->set('brochures', $this->paginate());
   }
 
