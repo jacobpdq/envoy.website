@@ -153,7 +153,7 @@ class OrdersController extends \App\Controller\OrdersController {
               $item['brochure']['Ontario_inventory'] = $on_inv_temp;
 
               if ($on_inv_temp <= $item['brochure']['inv_notif_threshold']) {
-                $this->_lowInvNotif($item['brochure']);
+  //              $this->_lowInvNotif($item['brochure']);
               }
             } else {
               
@@ -161,7 +161,7 @@ class OrdersController extends \App\Controller\OrdersController {
               $item['brochure']['BC_inventory'] = $bc_inv_temp;
               
               if ($bc_inv_temp <= $item['brochure']['inv_notif_threshold']) {
-                $this->_lowInvNotif($item['brochure']);
+  //              $this->_lowInvNotif($item['brochure']);
               }
             }
             $this->Brochures->save($item['brochure']);
