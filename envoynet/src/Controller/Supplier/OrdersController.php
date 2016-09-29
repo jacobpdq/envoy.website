@@ -13,6 +13,9 @@ class OrdersController extends \App\Controller\OrdersController {
   
   public function index() {
   
+  
+  $this->request->session()->write('filterdata', []);
+  
        $ownerId = $this->Auth->user('id');
     if (!empty($ownerId)) {
   
@@ -179,6 +182,12 @@ class OrdersController extends \App\Controller\OrdersController {
     $this->set('title_for_layout', __('Place Order'));
 	
 		$mastersupplier = $this->Auth->user('master_supplier');
+
+
+$this->request->data = $this->request->session()->read('filterdata');
+
+
+
 	
     if ($mastersupplier == 0) {
       $supplierId = $this->Auth->user('id'); 
@@ -215,18 +224,22 @@ class OrdersController extends \App\Controller\OrdersController {
   }
 
   public function processOrder() {
+   
+   
     $this->loadModel('Orders');
     $this->loadModel('Brochures');
+
 
     if (!empty($this->request->data)) {
 
       $order = $this->request->data;
       
-      unset($this->request->data['order_items']);
+ //     unset($this->request->data['order_items']);
       
 
 
       $orderItems = [];
+      $restrict_broch_access = $this->Auth->user('restrict_brochure_access');
       
 
 
@@ -236,7 +249,12 @@ class OrdersController extends \App\Controller\OrdersController {
 
           $brochure = $this->Brochures->findById($item['brochure_id'])->first();
           
-   //       if ($item['qty_ordered'] <= $brochure['max_order']) {   //check max order
+          if ($restrict_broch_access == 1 && $brochure['restrict_access'] == 1 && $item['qty_ordered'] > $brochure['max_restricted_qty']) {   //check max order
+            $this->request->session()->write('filterdata', $this->request->data);
+            $this->Flash->error('Order could not be placed. Max order quantity exceeded for '.$brochure['name']);
+            return $this->redirect($this->referer());
+          }
+          else {
             if ($item['qty_ordered'] <= $brochure['inv_balance']) {  //check stock
               
               $orderItem = $this->Orders->OrderItems->newEntity($item);
@@ -256,13 +274,13 @@ class OrdersController extends \App\Controller\OrdersController {
 
               array_push($orderItems, $orderItem);
             } else {
-              $this->Flash->set('Order could not be placed. Not enough units in stock.');
+              $this->request->session()->write('filterdata', $this->request->data);
+              $this->Flash->error('Order could not be placed. Not enough units in stock of '.$brochure['name']);
               return $this->redirect($this->referer());
             }
-     //     } else {
-      //      $this->Flash->set('Order could not be placed. Max order quantity exceeded.');
-       //     return $this->redirect($this->referer());
-       //   }
+         
+            
+          }
         }
       }
       //$processedOrder->OrderItems = $orderItems;
@@ -285,9 +303,12 @@ if (!empty ($orderItems)) {
           $this->_supplierOrderNotif($orderId);
         }
         $this->redirect($this->referer());
+        
+        $this->request->data = [];
+        $this->request->session()->write('filterdata', $this->request->data);
 
       } else {
-        $this->Flash->set('Order could not be placed');
+        $this->Flash->error('Order could not be placed');
         $this->redirect($this->referer());
       }
       }
