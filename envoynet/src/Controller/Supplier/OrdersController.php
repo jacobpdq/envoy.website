@@ -313,6 +313,7 @@ if (!empty ($orderItems)) {
       }
       }
       else {
+      $this->request->session()->write('filterdata', $this->request->data);
       $this->Flash->error('Cart is empty. Please enter a quantity for at least one of the brochures.');
       $this->redirect($this->referer());
       }
