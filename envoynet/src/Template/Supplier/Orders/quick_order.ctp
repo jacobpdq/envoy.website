@@ -20,14 +20,12 @@
                    <td>    <?php echo $brochure['sku'];?> </td>
                     <?php echo $this->Form->input('order_items.'.$id.'.brochure_id',array('value'=>$brochure['id'],'type'=>'hidden'));?>
                  <td>   <?php echo $this->Form->input('order_items.'.$id.'.qty_ordered',array('label'=>''));?></td>
-               <td>     <?php if($brochure['restrict_access'] == 1):
-               
-               
-               echo $brochure['max_restricted_qty'];
-               
-               endif; ?> 
-               
-               
+               <td>     <?php
+                          if($brochure['restrict_access'] == 1):
+                            if($restrict_broch_access == 1):                         
+                              echo $brochure['max_restricted_qty'];
+                            endif; 
+                          endif; ?> 
                </td>     
                <td>     <?php echo $brochure['qty_box'];?> </td>
                <td>    <?php echo $brochure['inv_balance'];?> </td>

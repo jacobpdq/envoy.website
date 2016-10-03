@@ -218,7 +218,9 @@ $this->request->data = $this->request->session()->read('filterdata');
       
       $shippingProvinces = array('AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT','-----', 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY');
       $shippingProvinces = array_combine($shippingProvinces,$shippingProvinces);
-      $this->set(compact('shippingProvinces'));
+       $restrict_broch_access = $this->Auth->user('restrict_brochure_access');
+
+      $this->set(compact('shippingProvinces','restrict_broch_access'));
     
     }
   }
@@ -228,21 +230,17 @@ $this->request->data = $this->request->session()->read('filterdata');
    
     $this->loadModel('Orders');
     $this->loadModel('Brochures');
+    $restrict_broch_access = $this->Auth->user('restrict_brochure_access');
+ 
 
 
     if (!empty($this->request->data)) {
 
       $order = $this->request->data;
-      
- //     unset($this->request->data['order_items']);
-      
-
-
+ 
       $orderItems = [];
       $restrict_broch_access = $this->Auth->user('restrict_brochure_access');
-      
-
-
+ 
       foreach ($order['order_items'] as $item) {
 
         if (!empty($item['qty_ordered'])) {
