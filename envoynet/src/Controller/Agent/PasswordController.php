@@ -48,9 +48,9 @@ parent::initialize();
 					$broker_url =  str_replace("https://","",$broker_url);
 					$broker_url =  str_replace("/","",$broker_url);
 					
-		            $length = 13;
+		            $length = 8;
 					
-		            $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+		            $randomString = substr(str_shuffle("23456789"), 0, $length);
 
 		            //call out to sso parent to verify login
 		            $params = [
