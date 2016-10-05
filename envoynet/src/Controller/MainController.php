@@ -100,7 +100,7 @@ class MainController extends AppController {
 
           $this->layout = 'default';
 
-          $this->Flash->error(__('Invalid username or password. Please try again.'));
+          $this->Flash->error(__('Invalide username or password. Please try again.'));
           $this->redirect(array('controller'=>'main','action'=>'index', 'prefix' => false));
         }
 
