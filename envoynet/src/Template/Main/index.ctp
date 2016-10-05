@@ -121,9 +121,9 @@
     
     if( $_REQUEST['sso_failed'] == 'sso701' ){
       
-      echo '<div class="sso_error sso_alert" style="position:relative">__("Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>").</div>';
+      echo __('<div class="sso_error sso_alert" style="position:relative">Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>.</div>');
     
-    }elseif( $_REQUEST['sso_failed'] == 'sso702' ){
+    } elseif( $_REQUEST['sso_failed'] == 'sso702' ){
       
       echo '<div class="sso_error sso_alert">__("Your IP has been blocked due to multiple invalid login attempts. Please contact support for assistance in removing this block.")<br/><a href="http://' . SSO_PARENT . '/sso-support/">__("Click here to submit a support request").</a></div>';
     

@@ -80,7 +80,7 @@
       </div>
  <div class="form_content_field_left1">
  <br> <br> <br>
-    <small><?php echo __('Note: Should you wish to change any of these settings, please send request to <a href="mail@envoynetworks.ca">mail@envoynetworks.ca</a> or phone 905-831-0006'); ?></small>
+    <small><?php echo __('Note: Should you wish to change any of these settings, please send request to <a href="mailto:mail@envoynetworks.ca">mail@envoynetworks.ca</a> or phone 905-831-0006'); ?></small>
           </div>
     </div>
   </div>

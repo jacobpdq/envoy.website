@@ -1075,8 +1075,8 @@ msgstr "Svp confirmez vos bonnes intentions en entrant la réponse attendue"
 msgid "Click here to submit a support request"
 msgstr "Cliquez ici pour soumettre votre demande de support"
 
-msgid "Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="http://' . SSO_PARENT . '/sso-support/">click here to submit a support request</a>"
-msgstr "Vos identifiants de connexion sont incorrects. Si vous éprouvez des difficultés à vous connecter, utilisez votre adresse courriel.<br />Si vous avez oublié votre mot de passe, veuillez <a href="/agent/password/forgot">cliquer ici</a> pour en obtenri un nouveau.<br />Si vous avez toujours des difficultés à accéder au site, <a href="http://' . SSO_PARENT . '/sso-support/">cliquez ici pour faire une demande de support</a>"
+msgid "<div class="sso_error sso_alert" style="position:relative">Your username/email or password was incorrect. If you are having issues logging in using your username then please use your email.<br/>If you have forgotten your password, please <a href="/agent/password/forgot">click here</a> to reset.<br/>If you are having multiple issues accessing the website then <a href="mailto:mail@envoynetworks.ca">click here to submit a support request</a>.</div>"
+msgstr "<div class="sso_error sso_alert" style="position:relative">Vos identifiants de connexion sont incorrects. Si vous éprouvez des difficultés à vous connecter, utilisez votre adresse courriel.<br />Si vous avez oublié votre mot de passe, veuillez <a href="/agent/password/forgot">cliquer ici</a> pour en obtenri un nouveau.<br />Si vous avez toujours des difficultés à accéder au site, <a href="mailto:mail@envoynetworks.ca">cliquez ici pour faire une demande de support</a>.</div>"
 
 msgid "languageLogoAsset"
 msgstr "assets/logo_fr.png"
