@@ -42,7 +42,7 @@ class MainController extends \App\Controller\MainController {
 				return $this->redirect($this->Auth->redirectUrl());
 			} else {
 				$this->Flash->error('Invalid username or password. Please try again.');
-				$this->redirect(array('controller'=>'main','action'=>'login', 'prefix' => 'supplier'));
+				$this->redirect($this->referer());
 			}
 
 		}
