@@ -198,10 +198,20 @@
 
                       </div> 
                  </div>
-                  
+                              
+                           
+ 
                   <div class="tabs__tabItem">
 
-                     <input type="radio" id="tab-3" name="tab-group-1">
+      <?php 
+      $session = $this->request->session();
+if ($session->check('Flash.flash')) { 
+?>
+
+                     <input type="radio" id="tab-3" name="tab-group-1" checked >
+                     
+                    
+                    
                      <label for="tab-3"><?php echo __('Supplier'); ?></label>
                    
                      <div class="tabs__content">
@@ -216,7 +226,31 @@
 
                      </div> 
                   </div>
-                  
+                   
+                   <?php  } 
+                   
+                   else{ ?>
+                                      <input type="radio" id="tab-3" name="tab-group-1" >
+                     
+                    
+                    
+                     <label for="tab-3"><?php echo __('Supplier'); ?></label>
+                   
+                     <div class="tabs__content">
+
+                      <?php echo $this->Form->create('Supplier',array('url'=>array('controller'=>'main','action'=>'login','prefix' => 'supplier')));?>
+                      <?php echo $this->Form->input('username',array('div'=>false,'label'=>false,'type'=>'text', 'placeholder'=>__('Username'))) ?>
+                      <?php echo $this->Form->input('password',array('div'=>false,'label'=>false,'placeholder'=>__('Password'))) ?>
+
+                      <button class="button" type="submit"><?php echo __('Login'); ?></button>
+
+                       <?php echo $this->Form->end(); ?>
+
+                     </div> 
+                  </div>
+                   <?php  } ?>
+                   
+                   
               </div>
 
               <div class="section__content">
