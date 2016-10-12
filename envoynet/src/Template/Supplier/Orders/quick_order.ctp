@@ -15,7 +15,10 @@
         <?php if(!empty($brochures)):?>
             <?php foreach($brochures  as $id=>$brochure):?>
             <tr>
-                <td id="brochure_name"><?php echo $brochure['name'];?></td>
+                <td id="brochure_name"><?php echo $this->Html->link($brochure['name'],array(
+    'controller' => 'brochures', 'action' => 'edit', $brochure['id']),
+    array('target' => '_blank'));?></td>
+  
                <td>    <?php echo $brochure_categorys[$brochure['category']];?> </td>
                    <td>    <?php echo $brochure['sku'];?> </td>
                     <?php echo $this->Form->input('order_items.'.$id.'.brochure_id',array('value'=>$brochure['id'],'type'=>'hidden'));?>
