@@ -11,6 +11,11 @@
       <div class="User_Name_Form_Holder"><label for="title"><span class="Base_red_form_txt"><em></em></span> <?php echo __('Brochure Language'); ?>:</label></div>
       <?php echo $this->Form->input('is_french', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'disabled' => true)); ?>
     </div>
+    
+        <div class="form_content_field_left2">
+      <div class="User_Name_Form_Holder"><label for="title"><span class="Base_red_form_txt"><em></em></span> <?php echo __('SKU'); ?>:</label></div>
+      <?php echo $this->Form->input('sku', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'disabled' => true)); ?>
+    </div>
 
 
     <div id="form_content_discription_left">
