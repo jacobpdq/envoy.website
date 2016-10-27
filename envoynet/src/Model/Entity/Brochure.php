@@ -18,6 +18,7 @@ class Brochure extends Entity
         'id' => true,
         'supplier_id' => true,
         'name' => true,
+		'sku' => true,
         'is_french' => true,
         'description' => true,
         'image_id' => true,
