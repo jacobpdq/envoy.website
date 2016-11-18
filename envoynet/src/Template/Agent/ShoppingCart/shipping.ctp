@@ -27,7 +27,7 @@
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Address1'); ?>:</div>
-            <?php echo $this->Form->input('shipping_address1', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
+            <?php echo $this->Form->input('shipping_address1', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'required' => true)); ?>
         </div>
 
         <div class="form_content_field_left">
@@ -37,17 +37,17 @@
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('City'); ?>:</div>
-            <?php echo $this->Form->input('shipping_city', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
+            <?php echo $this->Form->input('shipping_city', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'required' => true)); ?>
         </div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Province'); ?>:</div>
-            <?php echo $this->Form->input('shipping_province', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
+            <?php echo $this->Form->input('shipping_province', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'required' => true)); ?>
         </div>
 
         <div class="form_content_field_left">
             <div class="User_Name_Form_Holder" class="Base_txt"><?php echo __('Postal Code'); ?>:</div>
-            <?php echo $this->Form->input('shipping_postalcode', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2')); ?>
+            <?php echo $this->Form->input('shipping_postalcode', array('label' => false, 'div' => 'blank_form_holder_bg2', 'class' => 'Form_holder_style2', 'required' => true)); ?>
         </div>
 
         <div id="Profile_form_holder" class="Base_red_form_txt"> &nbsp;&nbsp;<span class="data_Headers_Bl_txt"><?php echo __('Contact Information'); ?></span></div>
